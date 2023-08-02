@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBE.NUMATICS-G3" Version="1.0" OrderNumber="Numatics G3">
+      <SourceFile OriginalFile="NUMATICS-G3.xdd" TranslationFile="DHZ58EAC.ext" />
+    </Module>
+    <Module ModuleID="FBE.0xED_NORD_TU3_POL_SK54xE_Inverter" Version="1.0" OrderNumber="NORD SK TU3-POL SK54xE Inverter">
+      <SourceFile OriginalFile="0xED_NORD_TU3_POL_SK54xE_Inverter.xdd" TranslationFile="HFMWWBJD.ext" />
+    </Module>
+    <Module ModuleID="FBE.FFFF0002_TLBPOWERLINK" Version="1.0" OrderNumber="NIC 50-RE/PLS">
+      <SourceFile OriginalFile="FFFF0002_TLBPOWERLINK.xdd" TranslationFile="1KRO69IV.ext" />
+    </Module>
+    <Module ModuleID="FBE.0x00000042_PowerlinkRotaryEncoder_OCD_V02-10" Version="1.0" OrderNumber="FRABA Posital Absolute Rotary Encoder">
+      <SourceFile OriginalFile="0x00000042_PowerlinkRotaryEncoder_OCD_V02-10.xdd" TranslationFile="AZ6T0Y96.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>

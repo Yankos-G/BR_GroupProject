@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentAlarms" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="20" left="20" width="1240" height="460" zIndex="0" itemsPerPage="5" nextText="$IAT/Main/Alarm_ButtonNext" previousText="$IAT/Main/AlarmButtonPrevious" permissionOperate="['Administrator', 'Operator', 'Service']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemTimestamp" width="260" zIndex="0" columnType="timestamp" text="$IAT/Main/Alarms_Date" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemName" width="300" zIndex="1" columnType="name" text="$IAT/Main/Alarm_alarm" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemMessage" width="520" zIndex="2" text="$IAT/Main/Alarm_Descrpition" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemState" width="160" zIndex="3" columnType="state" text="$IAT/Main/Alarms_State" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeOne" top="500" left="20" width="400" height="60" zIndex="1" text="$IAT/Main/Alarms_Acknowledge" permissionOperate="['Administrator', 'Operator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeAll" top="500" left="440" width="400" height="60" zIndex="2" text="$IAT/Main/Alarms_AcknowledgeAll" permissionOperate="['Administrator', 'Operator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonHistory" top="500" left="860" width="400" height="60" zIndex="3" text="$IAT/Main/Alarms_AlarmsHistory" permissionOperate="['Administrator', 'Operator', 'Service']" />
+  </Widgets>
+</Content>

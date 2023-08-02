@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Main</prop>
+  </header>
+  <body>
+    <tu tuid="Camera_test">
+      <tuv xml:lang="pl">
+        <seg>Test led</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Test led</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AddUser_AvaibleRoles">
+      <tuv xml:lang="pl">
+        <seg>Dostępne role</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Avaible roles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AddUser_Cancel">
+      <tuv xml:lang="pl">
+        <seg>Anuluj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cancel</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AddUser_Name">
+      <tuv xml:lang="pl">
+        <seg>Imię</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AddUser_UserAccRequirements">
+      <tuv xml:lang="pl">
+        <seg>Wymagania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User account requirements</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm_alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarm:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm_ButtonNext">
+      <tuv xml:lang="pl">
+        <seg>Następna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm_Descrpition">
+      <tuv xml:lang="pl">
+        <seg>Opis:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Description:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm_NewState">
+      <tuv xml:lang="pl">
+        <seg>Nowy stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm_OldState">
+      <tuv xml:lang="pl">
+        <seg>Stary stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Old state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmButtonPrevious">
+      <tuv xml:lang="pl">
+        <seg>Poprzednia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Previous</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms_Acknowledge">
+      <tuv xml:lang="pl">
+        <seg>Zatwierdź</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms_AcknowledgeAll">
+      <tuv xml:lang="pl">
+        <seg>Zatwierdź wszystko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge all</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms_AlarmsHistory">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm history</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms_Date">
+      <tuv xml:lang="pl">
+        <seg>Data:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Date:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms_State">
+      <tuv xml:lang="pl">
+        <seg>Status:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ActualWeight">
+      <tuv xml:lang="pl">
+        <seg>Aktualna waga:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Actual weight:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ActuatingPiston">
+      <tuv xml:lang="pl">
+        <seg>Tłok rozpoczynający:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Dispensing piston:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ButtonRESET">
+      <tuv xml:lang="pl">
+        <seg>WYZERUJ</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>RESET</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ButtonStart">
+      <tuv xml:lang="pl">
+        <seg>START</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>START</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ButtonStop">
+      <tuv xml:lang="pl">
+        <seg>STOP</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>STOP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_CurrConvPos">
+      <tuv xml:lang="pl">
+        <seg>Pozycja taśmy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Conveyor position:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_CurrConvSpeed">
+      <tuv xml:lang="pl">
+        <seg>Prędkość taśmy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Conveyor velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_CurrentMachineStep">
+      <tuv xml:lang="pl">
+        <seg>Obecny krok:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current step:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_DetectedItem">
+      <tuv xml:lang="pl">
+        <seg>Wykryty przedmiot:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Detected item:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_ItemWeight">
+      <tuv xml:lang="pl">
+        <seg>Zapisana waga:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Saved weight:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_MachineStopped">
+      <tuv xml:lang="pl">
+        <seg>Maszyna zatrzymana</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Machine stopped</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_MachineWorking">
+      <tuv xml:lang="pl">
+        <seg>Pracuje...</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Working...</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_NUMBEROF">
+      <tuv xml:lang="pl">
+        <seg>LICZBA PRZEDMIOTÓW W KOMORACH</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>THE NUMBER OF ITEMS IN CHAMBERS:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_PushingPiston">
+      <tuv xml:lang="pl">
+        <seg>Tłok sortujący:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sorting piston:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Diagnostics_WaitLabel">
+      <tuv xml:lang="pl">
+        <seg>Prosimy poczekać na załadowanie strony...</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Please wait for System Diagnostics Manager to fully load...</seg>
+      </tuv>
+    </tu>
+    <tu tuid="EditUser_ResetPassword">
+      <tuv xml:lang="pl">
+        <seg>Zresetuj hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reset password</seg>
+      </tuv>
+    </tu>
+    <tu tuid="EditUser_UserLocked">
+      <tuv xml:lang="pl">
+        <seg>Zablokuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User locked</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_ALARMS">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarms</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_AUTO">
+      <tuv xml:lang="pl">
+        <seg>Tryb auto</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_CHARTS">
+      <tuv xml:lang="pl">
+        <seg>Wykresy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Charts</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_DIAGNOSTICS">
+      <tuv xml:lang="pl">
+        <seg>Diagnostyka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Diagnostics</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_MANUAL">
+      <tuv xml:lang="pl">
+        <seg>Tryb ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_PARAMETERS">
+      <tuv xml:lang="pl">
+        <seg>Parametry</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Parameters</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left_SERVICES">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Services</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_ChangedUser">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik zmieniony na: </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User changed to: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Failed">
+      <tuv xml:lang="pl">
+        <seg>Błąd podczas logowania się!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login  Failed!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Login">
+      <tuv xml:lang="pl">
+        <seg>Zaloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Logout">
+      <tuv xml:lang="pl">
+        <seg>Wyloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logout</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Password">
+      <tuv xml:lang="pl">
+        <seg>Hasło: </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Password: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Success">
+      <tuv xml:lang="pl">
+        <seg>Logowanie powiodło się!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login successful!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login_Username">
+      <tuv xml:lang="pl">
+        <seg>Nazwa: </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Username: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Approve">
+      <tuv xml:lang="pl">
+        <seg>Zatwierdź</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Approve</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_ButtonManualMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_ChangeDirection">
+      <tuv xml:lang="pl">
+        <seg>Zmień kierunek</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Change direction</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_DispensingPiston">
+      <tuv xml:lang="pl">
+        <seg>Tłok wypychający:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Dispensing piston</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_MakePhoto">
+      <tuv xml:lang="pl">
+        <seg>Zrób zjęcie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Take photograph</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_MoveDistance">
+      <tuv xml:lang="pl">
+        <seg>Ruch o odległość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move distance</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_MoveLeft">
+      <tuv xml:lang="pl">
+        <seg>Ruch w lewo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move left</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_MoveRight">
+      <tuv xml:lang="pl">
+        <seg>Ruch w prawo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move right</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_MoveVelocity">
+      <tuv xml:lang="pl">
+        <seg>Ruch prędkością</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move velocity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_PowerOn">
+      <tuv xml:lang="pl">
+        <seg>Zasilanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power on</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_SemiAutoMode">
+      <tuv xml:lang="pl">
+        <seg>Pół-automat</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Semi-auto mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_SortingPiston">
+      <tuv xml:lang="pl">
+        <seg>Tłok sortujący:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sorting piston</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_StopMovement">
+      <tuv xml:lang="pl">
+        <seg>Stop</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MessBox_NoObject">
+      <tuv xml:lang="pl">
+        <seg>Brak przedmiotu!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No object detected in starting area!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MessBox_NoObjectDetected">
+      <tuv xml:lang="pl">
+        <seg>ż przedmiot w obszarze startowym zanim rozpoczniesz.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No object detected in starting area. Place an object before starting.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_LeftBox">
+      <tuv xml:lang="pl">
+        <seg>Lewe pudełko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left box:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_LogoPlacement">
+      <tuv xml:lang="pl">
+        <seg>Położenie loga B&amp;R:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>B&amp;R logo place:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_Optic">
+      <tuv xml:lang="pl">
+        <seg>Optyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Optic</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_OpticsAndWeight">
+      <tuv xml:lang="pl">
+        <seg>Wagowe i optyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Weight and optic</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_RightBox">
+      <tuv xml:lang="pl">
+        <seg>Prawe pudełko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right box:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_SelectSortTypes">
+      <tuv xml:lang="pl">
+        <seg>Wybierz typ sortowania:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select sort types:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_SelectWeight">
+      <tuv xml:lang="pl">
+        <seg>Wybierz wagę graniczną:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select border weight:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_Weight">
+      <tuv xml:lang="pl">
+        <seg>Wagowe</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Weight</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Parameters_WeightPlace">
+      <tuv xml:lang="pl">
+        <seg>Położenie lżejszego klocak:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Lower weight place:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Service_ButtonEditUser">
+      <tuv xml:lang="pl">
+        <seg>Edytuj </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Edit user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_ButtonAddUser">
+      <tuv xml:lang="pl">
+        <seg>Dodaj </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Add user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_ButtonDeleteUser">
+      <tuv xml:lang="pl">
+        <seg>Usuń</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Delete user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_ResetHardwarewError">
+      <tuv xml:lang="pl">
+        <seg>Zresetuj Hardware</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reset hardware error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_ResetMotorError">
+      <tuv xml:lang="pl">
+        <seg>Zresetuj motor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reset motor error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_Role">
+      <tuv xml:lang="pl">
+        <seg>Rola:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Role:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_SelectLanguage">
+      <tuv xml:lang="pl">
+        <seg>Wybierz język:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select language:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_SelectMeasurement">
+      <tuv xml:lang="pl">
+        <seg>Wybierz system miar:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select measurement type:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_UserMngt">
+      <tuv xml:lang="pl">
+        <seg>Zarządzanie użytkownikami:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User menagment:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Services_Username">
+      <tuv xml:lang="pl">
+        <seg>Nazwa:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Username:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Top_ActiveUser">
+      <tuv xml:lang="pl">
+        <seg>Aktywny użytkownik: </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Active user: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_setAuto">
+      <tuv xml:lang="pl">
+        <seg>Auto</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

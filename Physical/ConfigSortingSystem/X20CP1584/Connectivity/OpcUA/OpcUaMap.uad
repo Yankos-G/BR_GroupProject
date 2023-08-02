@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="B4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">-300</Low>
+          <High ValueProvider="Const">300</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">-500</Low>
+          <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+      <EngineeringUnit Id="2" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+      <EngineeringUnit Id="3" UnitId="4674125" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="gram" Symbol="g" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gImageAcq" />
+        <Variable Name="gRecognisedModel" />
+        <Variable Name="gMode" />
+        <Variable Name="gMotorBeltAxisBasic">
+          <Variable Name="Position" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="1" />
+          <Variable Name="Velocity" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="2" />
+          <Variable Name="JogPositive" />
+          <Variable Name="JogNegative" />
+          <Variable Name="MoveActive" />
+          <Variable Name="MoveVelocity" />
+          <Variable Name="Power" />
+          <Variable Name="PowerOn" />
+          <Variable Name="ErrorReset" />
+        </Variable>
+        <Variable Name="gMpRecipeXML_0" RecursiveEnable="1">
+          <Variable Name="Save" />
+        </Variable>
+        <Variable Name="gSortChoiceView" />
+        <Variable Name="gSortChoice" />
+        <Variable Name="gSorting">
+          <Variable Name="RecognisedModel" />
+          <Variable Name="ItemWeightChoosen" EURangesId="3" EngineeringUnitId="3" />
+          <Variable Name="SortLeftMin" />
+          <Variable Name="SortLeftBR" />
+          <Variable Name="SortChoice" />
+        </Variable>
+        <Variable Name="gMpRecipeUI_0" RecursiveEnable="1" />
+        <Variable Name="gUIConnect">
+          <Variable Name="Status" />
+          <Variable Name="Recipe">
+            <Variable Name="List" RecursiveEnable="2" />
+          </Variable>
+          <Variable Name="New" />
+          <Variable Name="MessageBox" />
+          <Variable Name="DefaultLayerStatus" />
+        </Variable>
+        <Variable Name="gUISetup">
+          <Variable Name="RecipeListSize" />
+          <Variable Name="RecipeListScrollWindow" />
+          <Variable Name="Confirmation" />
+          <Variable Name="AutoLoadHeader" />
+        </Variable>
+        <Variable Name="gRecipeXml" />
+        <Variable Name="gAlarmHardware" />
+        <Variable Name="gAlarmHardAck" />
+        <Variable Name="gCTU_QuantityLeft" />
+        <Variable Name="gCTU_QuantityRight" />
+        <Variable Name="gCTU_Reset_Left" />
+        <Variable Name="gCTU_Reset_Right" />
+        <Variable Name="gQuantityLeftStorage" />
+        <Variable Name="gQuantityRightStorage" />
+        <Variable Name="gInWeightMeasure" />
+      </GlobalVariables>
+      <Task Name="Alarms">
+        <Variable Name="MpAlarmXCore_0" />
+        <Variable Name="pendingAlarms" />
+        <Variable Name="enableRedIcon" />
+        <Variable Name="enableYellowIcon" />
+        <Variable Name="test_alarm" />
+        <Variable Name="IsSemiAutoMode" />
+        <Variable Name="IsManualMode" />
+        <Variable Name="ModuleOkActuators" />
+        <Variable Name="ModuleOkCamera" />
+        <Variable Name="ModuleOkEncoder" />
+        <Variable Name="ModuleOkInverter" />
+        <Variable Name="ModuleOkPLC_PLK" />
+        <Variable Name="ModuleOkPneu_X67BC" />
+        <Variable Name="ModuleOkScale" />
+        <Variable Name="ModuleOkServo" />
+      </Task>
+      <Task Name="Auto">
+        <Variable Name="Start" />
+        <Variable Name="Stop" />
+        <Variable Name="State" />
+        <Variable Name="ItemDetected" />
+        <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
+        <Variable Name="ItemWeight" />
+        <Variable Name="ActuatorPushing" />
+        <Variable Name="ActuatorSorting" />
+        <Variable Name="StringRecognisedModel" />
+        <Variable Name="StringState" />
+        <Variable Name="ActuatorNotPushing" />
+        <Variable Name="ActuatorNotSorting" />
+        <Variable Name="MotorVel" EngineeringUnitId="2" />
+        <Variable Name="MotorPos" EngineeringUnitId="1" />
+        <Variable Name="IsEnglishSelected" />
+        <Variable Name="NotSelectedAuto" />
+        <Variable Name="SelectedAuto" />
+        <Variable Name="ShowBRLeft" />
+        <Variable Name="ShowBRRight" />
+        <Variable Name="ShowLightLeft" />
+        <Variable Name="ShowLightRight" />
+        <Variable Name="HMI_ScaleTare" />
+      </Task>
+      <Task Name="Manual">
+        <Variable Name="BeltMoveAdditive" />
+        <Variable Name="BeltMoveVelocityOff" />
+        <Variable Name="BeltMoveVelocityOn" />
+        <Variable Name="ManualActuatorDosing" />
+        <Variable Name="ManualActuatorSorting" />
+        <Variable Name="ManualDistance" EURangesId="1" EngineeringUnitId="1" />
+        <Variable Name="ManualVelocity" EURangesId="2" EngineeringUnitId="2" />
+        <Variable Name="ManualStop" />
+        <Variable Name="DirectionChangeDistance" />
+        <Variable Name="DirectionChangeVelocity" />
+        <Variable Name="StartButtonState" />
+        <Variable Name="ManualActuatorBoth" />
+        <Variable Name="ManualActuatorNone" />
+        <Variable Name="ManualStep" />
+        <Variable Name="FlagActDosing" />
+        <Variable Name="FlagActSorting" />
+        <Variable Name="FlagManual" />
+        <Variable Name="FlagActDosingOff" />
+        <Variable Name="FlagActSortingOff" />
+        <Variable Name="FlagNotManual" />
+        <Variable Name="ManualStepAct" />
+        <Variable Name="NotMoveActive" />
+        <Variable Name="FlagArrowLeft" />
+        <Variable Name="FlagArrowRight" />
+        <Variable Name="AxisPowerOn" />
+        <Variable Name="FlagVelAddOff" />
+        <Variable Name="PhotoShoot" />
+        <Variable Name="JogEnableVar" />
+      </Task>
+      <Task Name="SemiAuto">
+        <Variable Name="ActuatorNotPushing" />
+        <Variable Name="ActuatorNotSorting" />
+        <Variable Name="ActuatorPushing" />
+        <Variable Name="ActuatorSorting" />
+        <Variable Name="ItemDetected" />
+        <Variable Name="ItemWeight" />
+        <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
+        <Variable Name="Start" />
+        <Variable Name="State" />
+        <Variable Name="Stop" />
+        <Variable Name="StringRecognisedModel" />
+        <Variable Name="StringState" />
+        <Variable Name="Approval" />
+        <Variable Name="MotorPos" EngineeringUnitId="1" />
+        <Variable Name="MotorVel" EngineeringUnitId="2" />
+        <Variable Name="IsEnglishSelected" />
+        <Variable Name="SemiAutoModeSelected" />
+      </Task>
+      <Task Name="ProgramRec" />
+      <Task Name="Camera">
+        <Variable Name="ViBaseBuffer" />
+        <Variable Name="URL" />
+        <Variable Name="SET_FOCUS" />
+        <Variable Name="ManualLampTest" />
+        <Variable Name="Base64Buffer" />
+        <Variable Name="CameraLED_OPC" />
+        <Variable Name="Camera_Color" RecursiveEnable="2" />
+        <Variable Name="EXPO_TIME" />
+        <Variable Name="PhotosTaken" />
+        <Variable Name="ReadExposureTime" />
+        <Variable Name="ReadFocus" />
+        <Variable Name="RecognisedModel" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

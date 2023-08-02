@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="dialogAlarmHistory" layoutRefId="layoutAlarmHistory">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="ContentAlarmHistory" areaRefId="area1" />
+  </Assignments>
+</ddef:Dialog>

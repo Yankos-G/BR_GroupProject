@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentServices" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="542" left="1177" zIndex="0" text="Services" visible="false" />
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxUsers" top="20" left="400" width="840" height="540" zIndex="1" text="$IAT/Main/Services_UserMngt" permissionOperate="['Administrator']" permissionView="['Administrator']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.UserList" id="UserList1" top="3" left="19" width="801" height="397" zIndex="0" itemsPerPage="9" nextText="$IAT/Main/Alarm_ButtonNext" previousText="$IAT/Main/AlarmButtonPrevious">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemUsername" width="500" zIndex="0" text="$IAT/Main/Services_Username" />
+            <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemRole" width="300" zIndex="1" columnType="Roles" text="$IAT/Main/Services_Role" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.Button" id="ButtonAddUser" top="420" left="19" width="241" height="60" zIndex="1" text="$IAT/Main/Services_ButtonAddUser" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonDeleteUser" top="423" left="580" width="240" height="60" zIndex="2" text="$IAT/Main/Services_ButtonDeleteUser" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonModifyUser" top="423" left="298" width="243" height="60" zIndex="3" text="$IAT/Main/Service_ButtonEditUser" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="20" left="20" width="360" height="280" zIndex="2" permissionOperate="['Administrator', 'Service']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.LanguageSelector" id="LanguageSelector1" top="19" left="180" width="158" height="80" zIndex="0" />
+        <Widget xsi:type="widgets.brease.MeasurementSystemSelector" id="MeasurementSystemSelector1" top="179" left="180" width="159" height="80" zIndex="1" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelSelectLanguage" top="19" left="19" width="141" height="81" zIndex="2" multiLine="true" text="$IAT/Main/Services_SelectLanguage" wordWrap="true" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelSelectSystem" top="180" left="19" width="141" height="80" zIndex="3" multiLine="true" text="$IAT/Main/Services_SelectMeasurement" wordWrap="true" textAlign="center" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="ButtonReset" top="480" left="20" width="360" height="60" zIndex="3" text="$IAT/Main/Services_ResetHardwarewError" permissionOperate="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonReset1" top="404" left="20" width="360" height="60" zIndex="4" text="$IAT/Main/Services_ResetMotorError" permissionOperate="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonResetScale" top="327" left="20" width="360" height="60" zIndex="5" text="Tara" permissionOperate="['Administrator', 'Service']" />
+  </Widgets>
+</Content>

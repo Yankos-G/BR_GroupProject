@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentCharts" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="285" left="360" zIndex="0" text="Charts" visible="false" />
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxConvPosChart" top="0" left="0" width="640" height="580" zIndex="1" text="$IAT/Main/Auto_CurrConvPos" permissionOperate="['Administrator', 'Operator', 'Service']" permissionView="['Administrator', 'Operator', 'Service']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="0" left="0" width="640" height="580" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
+          <Properties>
+            <yAxis>
+              <Element id="yAxis1" />
+            </yAxis>
+            <xAxis>
+              <Element id="xAxis1" />
+            </xAxis>
+            <graph>
+              <Element id="graph1" yAxisReference="yAxis1" />
+            </graph>
+            <cursor>
+              <Element id="cursor1" />
+            </cursor>
+          </Properties>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxConvSpeedChart" top="0" left="640" width="640" height="580" zIndex="2" text="$IAT/Main/Auto_CurrConvSpeed" permissionOperate="['Administrator', 'Operator', 'Service']" permissionView="['Administrator', 'Operator', 'Service']">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA2" top="0" left="0" width="640" height="580" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
+          <Properties>
+            <yAxis>
+              <Element id="yAxis1" />
+            </yAxis>
+            <xAxis>
+              <Element id="xAxis1" />
+            </xAxis>
+            <graph>
+              <Element id="graph1" yAxisReference="yAxis1" />
+            </graph>
+            <cursor>
+              <Element id="cursor1" />
+            </cursor>
+          </Properties>
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

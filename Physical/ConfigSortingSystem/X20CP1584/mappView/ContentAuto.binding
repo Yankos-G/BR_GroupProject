@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ContentAuto_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ItemWeightMeasured" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputDetectedWeight" attribute="node" />
+</Binding>
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorPushing" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectangleBoxPistonActuatorGreen" attribute="visible" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorPushing" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonRodActuatorGreen" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorPushing" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonActuatorGreen" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorSorting" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectangleBoxPistonPushingGreen" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorSorting" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonPushingGreen" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorSorting" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonRodPushingGreen" attribute="visible" />
+</Binding>
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:StringRecognisedModel" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutputDetectedItem" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:StringState" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutputCurrentStep" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorNotPushing" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectangleBoxPistonActuatorRed" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorNotPushing" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonAcutoatorRed" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorNotSorting" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonPushingRed" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ActuatorNotSorting" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectangleBoxPistonPushingRed" attribute="visible" />
+</Binding>
+
+
+
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSortChoiceView" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="GroupBoxDetectedItem" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:MotorPos" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputDetectedConveyorPosition" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:MotorVel" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputDetectedConveyorSpeed" attribute="node" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="PaperImageAuto" attribute="svgContent" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gQuantityLeftStorage" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputLeftChamber" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gQuantityRightStorage" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputRightChamber" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSortChoiceView" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="PaperImageAuto" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gInWeightMeasure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="NumericOutputActualWeight" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:SelectedAuto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="EllipseAutoDiodeOn" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:SelectedAuto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="GroupBoxMachineState" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:SelectedAuto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="GroupBoxAutoControl" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:SelectedAuto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="GroupBoxCounter" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:NotSelectedAuto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="ButtonSetToAuto" attribute="enable" />
+</Binding>
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowLightLeft" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR2" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowLightLeft" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR3" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowLightRight" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR5" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowLightRight" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR4" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowBRRight" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoAS1" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowBRRight" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR1" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowBRLeft" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:ShowBRLeft" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoAS" attribute="visible" />
+</Binding>
+</Bindings>
+</BindingsSet>

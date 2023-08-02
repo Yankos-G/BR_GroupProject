@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ISO15745ProfileContainer
+	xmlns="http://www.ethernet-powerlink.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ethernet-powerlink.org Powerlink_Main.xsd">
+
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL_Device_Profile</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName />
+			<ProfileSource />
+			<ProfileClassID>Device</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody
+				fileCreationDate="2011-06-20"
+				fileCreator="Numatics"
+				fileModificationDate="2011-08-06"
+				fileModifiedBy="Numatics"
+				fileName="NUMATICS-G3.xdd"
+				fileVersion="1.0"
+				xsi:type="ProfileBody_Device_Powerlink">
+			<DeviceIdentity>
+				<vendorName>Numatics, Inc</vendorName>
+				<vendorID>0x01E1</vendorID>
+				<deviceFamily>
+					<label lang="en" />
+					<description lang="en" />
+				</deviceFamily>
+				<productName>Numatics G3</productName>
+				<productID>240-309</productID>
+				<orderNumber />
+			</DeviceIdentity>
+			<DeviceFunction>
+				<capabilities>
+					<characteristicsList>
+						<characteristic>
+							<characteristicName>
+								<label lang="en" />
+							</characteristicName>
+							<characteristicContent>
+								<label lang="en" />
+							</characteristicContent>
+						</characteristic>
+					</characteristicsList>
+				</capabilities>
+			</DeviceFunction>
+		</ProfileBody>
+	</ISO15745Profile>
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL comm net profile</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName />
+			<ProfileSource />
+			<ProfileClassID>CommunicationNetwork</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody
+				fileCreationDate="2011-06-20"
+				fileCreator="Numatics"
+				fileModificationDate="2011-08-06"
+				fileModifiedBy="Numatics"
+				fileName="NUMATICS-G3.xdd"
+				fileVersion="1.0"
+				xsi:type="ProfileBody_CommunicationNetwork_Powerlink">
+			<ApplicationLayers>
+				<identity>
+					<vendorID>0x01E1</vendorID>
+					<productID>240-309</productID>
+				</identity>
+				<DataTypeList>
+					<defType dataType="0001"> <Boolean />        </defType>
+					<defType dataType="0002"> <Integer8 />       </defType>
+					<defType dataType="0003"> <Integer16 />      </defType>
+					<defType dataType="0004"> <Integer32 />      </defType>
+					<defType dataType="0005"> <Unsigned8 />      </defType>
+					<defType dataType="0006"> <Unsigned16 />     </defType>
+					<defType dataType="0007"> <Unsigned32 />     </defType>
+					<defType dataType="0008"> <Real32 />         </defType>
+					<defType dataType="0009"> <Visible_String /> </defType>
+					<defType dataType="0010"> <Integer24 />      </defType>
+					<defType dataType="0011"> <Real64 />         </defType>
+					<defType dataType="0012"> <Integer40 />      </defType>
+					<defType dataType="0013"> <Integer48 />      </defType>
+					<defType dataType="0014"> <Integer56 />      </defType>
+					<defType dataType="0015"> <Integer64 />      </defType>
+					<defType dataType="000A"> <Octet_String />   </defType>
+					<defType dataType="000B"> <Unicode_String /> </defType>
+					<defType dataType="000C"> <Time_of_Day />    </defType>
+					<defType dataType="000D"> <Time_Diff />      </defType>
+					<defType dataType="000F"> <Domain />         </defType>
+					<defType dataType="0016"> <Unsigned24 />     </defType>
+					<defType dataType="0018"> <Unsigned40 />     </defType>
+					<defType dataType="0019"> <Unsigned48 />     </defType>
+					<defType dataType="001A"> <Unsigned56 />     </defType>
+					<defType dataType="001B"> <Unsigned64 />     </defType>
+					<defType dataType="0401"> <MAC_ADDRESS />    </defType>
+					<defType dataType="0402"> <IP_ADDRESS />     </defType>
+					<defType dataType="0403"> <NETTIME />        </defType>
+				</DataTypeList>
+				<ObjectList>
+					<Object index="1000" name="NMT_DeviceType_U32" accessType="const" dataType="0007" defaultValue="0x0000000" objectType="7" />
+					<Object index="1001" name="ERR_ErrorRegister_U8" accessType="ro" dataType="0005" defaultValue="0" objectType="7" />
+					<Object index="1003" name="ERR_History_ADOM" objectType="8">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="rw" dataType="0005" defaultValue="0" objectType="7" />
+						<SubObject subIndex="01" name="historyEntry01" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="02" name="historyEntry02" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="03" name="historyEntry03" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="04" name="historyEntry04" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="05" name="historyEntry05" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="06" name="historyEntry06" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="07" name="historyEntry07" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="08" name="historyEntry08" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="09" name="historyEntry09" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0A" name="historyEntry0A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0B" name="historyEntry0B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0C" name="historyEntry0C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0D" name="historyEntry0D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0E" name="historyEntry0E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="0F" name="historyEntry0F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="10" name="historyEntry10" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="11" name="historyEntry11" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="12" name="historyEntry12" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="13" name="historyEntry13" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="14" name="historyEntry14" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="15" name="historyEntry15" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="16" name="historyEntry16" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="17" name="historyEntry17" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="18" name="historyEntry18" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="19" name="historyEntry19" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1A" name="historyEntry1A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1B" name="historyEntry1B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1C" name="historyEntry1C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1D" name="historyEntry1D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1E" name="historyEntry1E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="1F" name="historyEntry1F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="20" name="historyEntry20" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="21" name="historyEntry21" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="22" name="historyEntry22" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="23" name="historyEntry23" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="24" name="historyEntry24" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="25" name="historyEntry25" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="26" name="historyEntry26" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="27" name="historyEntry27" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="28" name="historyEntry28" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="29" name="historyEntry29" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2A" name="historyEntry2A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2B" name="historyEntry2B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2C" name="historyEntry2C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2D" name="historyEntry2D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2E" name="historyEntry2E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="2F" name="historyEntry2F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="30" name="historyEntry30" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="31" name="historyEntry31" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="32" name="historyEntry32" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="33" name="historyEntry33" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="34" name="historyEntry34" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="35" name="historyEntry35" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="36" name="historyEntry36" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="37" name="historyEntry37" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="38" name="historyEntry38" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="39" name="historyEntry39" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3A" name="historyEntry3A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3B" name="historyEntry3B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3C" name="historyEntry3C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3D" name="historyEntry3D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3E" name="historyEntry3E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="3F" name="historyEntry3F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="40" name="historyEntry40" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="41" name="historyEntry41" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="42" name="historyEntry42" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="43" name="historyEntry43" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="44" name="historyEntry44" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="45" name="historyEntry45" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="46" name="historyEntry46" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="47" name="historyEntry47" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="48" name="historyEntry48" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="49" name="historyEntry49" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4A" name="historyEntry4A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4B" name="historyEntry4B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4C" name="historyEntry4C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4D" name="historyEntry4D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4E" name="historyEntry4E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="4F" name="historyEntry4F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="50" name="historyEntry50" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="51" name="historyEntry51" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="52" name="historyEntry52" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="53" name="historyEntry53" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="54" name="historyEntry54" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="55" name="historyEntry55" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="56" name="historyEntry56" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="57" name="historyEntry57" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="58" name="historyEntry58" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="59" name="historyEntry59" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5A" name="historyEntry5A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5B" name="historyEntry5B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5C" name="historyEntry5C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5D" name="historyEntry5D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5E" name="historyEntry5E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="5F" name="historyEntry5F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="60" name="historyEntry60" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="61" name="historyEntry61" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="62" name="historyEntry62" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="63" name="historyEntry63" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="64" name="historyEntry64" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="65" name="historyEntry65" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="66" name="historyEntry66" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="67" name="historyEntry67" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="68" name="historyEntry68" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="69" name="historyEntry69" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6A" name="historyEntry6A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6B" name="historyEntry6B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6C" name="historyEntry6C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6D" name="historyEntry6D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6E" name="historyEntry6E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="6F" name="historyEntry6F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="70" name="historyEntry70" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="71" name="historyEntry71" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="72" name="historyEntry72" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="73" name="historyEntry73" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="74" name="historyEntry74" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="75" name="historyEntry75" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="76" name="historyEntry76" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="77" name="historyEntry77" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="78" name="historyEntry78" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="79" name="historyEntry79" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7A" name="historyEntry7A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7B" name="historyEntry7B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7C" name="historyEntry7C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7D" name="historyEntry7D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7E" name="historyEntry7E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="7F" name="historyEntry7F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="80" name="historyEntry80" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="81" name="historyEntry81" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="82" name="historyEntry82" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="83" name="historyEntry83" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="84" name="historyEntry84" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="85" name="historyEntry85" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="86" name="historyEntry86" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="87" name="historyEntry87" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="88" name="historyEntry88" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="89" name="historyEntry89" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8A" name="historyEntry8A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8B" name="historyEntry8B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8C" name="historyEntry8C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8D" name="historyEntry8D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8E" name="historyEntry8E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="8F" name="historyEntry8F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="90" name="historyEntry90" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="91" name="historyEntry91" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="92" name="historyEntry92" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="93" name="historyEntry93" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="94" name="historyEntry94" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="95" name="historyEntry95" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="96" name="historyEntry96" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="97" name="historyEntry97" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="98" name="historyEntry98" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="99" name="historyEntry99" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9A" name="historyEntry9A" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9B" name="historyEntry9B" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9C" name="historyEntry9C" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9D" name="historyEntry9D" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9E" name="historyEntry9E" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="9F" name="historyEntry9F" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A0" name="historyEntryA0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A1" name="historyEntryA1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A2" name="historyEntryA2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A3" name="historyEntryA3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A4" name="historyEntryA4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A5" name="historyEntryA5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A6" name="historyEntryA6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A7" name="historyEntryA7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A8" name="historyEntryA8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="A9" name="historyEntryA9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AA" name="historyEntryAA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AB" name="historyEntryAB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AC" name="historyEntryAC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AD" name="historyEntryAD" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AE" name="historyEntryAE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="AF" name="historyEntryAF" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B0" name="historyEntryB0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B1" name="historyEntryB1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B2" name="historyEntryB2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B3" name="historyEntryB3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B4" name="historyEntryB4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B5" name="historyEntryB5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B6" name="historyEntryB6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B7" name="historyEntryB7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B8" name="historyEntryB8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="B9" name="historyEntryB9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BA" name="historyEntryBA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BB" name="historyEntryBB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BC" name="historyEntryBC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BD" name="historyEntryBD" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BE" name="historyEntryBE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="BF" name="historyEntryBF" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C0" name="historyEntryC0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C1" name="historyEntryC1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C2" name="historyEntryC2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C3" name="historyEntryC3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C4" name="historyEntryC4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C5" name="historyEntryC5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C6" name="historyEntryC6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C7" name="historyEntryC7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C8" name="historyEntryC8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="C9" name="historyEntryC9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CA" name="historyEntryCA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CB" name="historyEntryCB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CC" name="historyEntryCC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CD" name="historyEntryCD" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CE" name="historyEntryCE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="CF" name="historyEntryCF" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D0" name="historyEntryD0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D1" name="historyEntryD1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D2" name="historyEntryD2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D3" name="historyEntryD3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D4" name="historyEntryD4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D5" name="historyEntryD5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D6" name="historyEntryD6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D7" name="historyEntryD7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D8" name="historyEntryD8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="D9" name="historyEntryD9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DA" name="historyEntryDA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DB" name="historyEntryDB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DC" name="historyEntryDC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DD" name="historyEntryDD" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DE" name="historyEntryDE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="DF" name="historyEntryDF" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E0" name="historyEntryE0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E1" name="historyEntryE1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E2" name="historyEntryE2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E3" name="historyEntryE3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E4" name="historyEntryE4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E5" name="historyEntryE5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E6" name="historyEntryE6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E7" name="historyEntryE7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E8" name="historyEntryE8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="E9" name="historyEntryE9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="EA" name="historyEntryEA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="EB" name="historyEntryEB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="EC" name="historyEntryEC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="ED" name="historyEntryED" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="EE" name="historyEntryEE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="EF" name="historyEntryEF" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F0" name="historyEntryF0" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F1" name="historyEntryF1" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F2" name="historyEntryF2" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F3" name="historyEntryF3" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F4" name="historyEntryF4" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F5" name="historyEntryF5" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F6" name="historyEntryF6" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F7" name="historyEntryF7" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F8" name="historyEntryF8" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="F9" name="historyEntryF9" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="FA" name="historyEntryFA" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="FB" name="historyEntryFB" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="FC" name="historyEntryFC" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="FD" name="historyEntryFD" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+						<SubObject subIndex="FE" name="historyEntryFE" accessType="ro" dataType="000f" defaultValue="" objectType="7" />
+					</Object>
+					<Object index="1006" name="NMT_CycleLen_U32" accessType="rw" dataType="0007" defaultValue="1000" objectType="7" />
+					<Object index="1018" name="NMT_IdentityObject_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x4" objectType="7" />
+						<SubObject subIndex="01" name="VendorId_U32" accessType="const" dataType="0007" defaultValue="0x44" objectType="7" />
+						<SubObject subIndex="02" name="ProductCode_U32" accessType="const" dataType="0007" defaultValue="0x16" objectType="7" />
+						<SubObject subIndex="03" name="RevisionNo_U32" accessType="const" dataType="0007" defaultValue="0x1" objectType="7" />
+						<SubObject subIndex="04" name="SerialNo_U32" accessType="const" dataType="0007" defaultValue="0x0" objectType="7" />
+					</Object>
+					<Object index="1020" name="CFM_VerifyConfiguration_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x2" objectType="7" />
+						<SubObject subIndex="01" name="ConfDate_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ConfTime_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+					</Object>
+					<Object index="1030" name="NMT_InterfaceGroup_0h_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x9" objectType="7" />
+						<SubObject subIndex="01" name="InterfaceIndex_U16" accessType="ro" dataType="0006" defaultValue="1" objectType="7" />
+						<SubObject subIndex="02" name="InterfaceDescription_VSTR" accessType="const" dataType="0009" defaultValue="EPL Cn Interface" objectType="7" />
+						<SubObject subIndex="03" name="InterfaceType_U8" accessType="const" dataType="0005" defaultValue="0x6" objectType="7" />
+						<SubObject subIndex="04" name="InterfaceMtu_U16" accessType="const" dataType="0006" defaultValue="1500" objectType="7" />
+						<SubObject subIndex="05" name="InterfacePhysAddress_OSTR" accessType="const" dataType="000A" objectType="7" />
+						<SubObject subIndex="06" name="InterfaceName_VSTR" accessType="ro" dataType="0009" defaultValue="eplcn0" objectType="7" />
+						<SubObject subIndex="07" name="InterfaceOperStatus_U8" accessType="ro" dataType="0005" defaultValue="1" objectType="7" />
+						<SubObject subIndex="08" name="InterfaceAdminState_U8" accessType="rw" dataType="0005" defaultValue="1" objectType="7" />
+						<SubObject subIndex="09" name="Valid_BOOL" accessType="rw" dataType="0001" defaultValue="true" objectType="7" />
+					</Object>
+					<Object index="1101" name="DIA_NMTTelegrCount_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="8" objectType="7" />
+						<SubObject subIndex="01" name="IsochrCyc_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="02" name="IsochrRx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="03" name="IsochrTx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="04" name="AsyncRx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="05" name="AsyncTx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="06" name="SdoRx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="07" name="SdoTx_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="08" name="Status_U32" accessType="ro" dataType="0007" objectType="7" />
+					</Object>
+					<Object index="1102" name="DIA_ERRStatistics_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="7" objectType="7" />
+						<SubObject subIndex="01" name="HistoryEntryWrite_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="02" name="EmergencyQueueWrite_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="03" name="EmergencyQueueOverflow_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="04" name="StatusEntryChanged_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="05" name="StaticErrorBitFieldChanged_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="06" name="ExceptionResetEdgePos_U32" accessType="ro" dataType="0007" objectType="7" />
+						<SubObject subIndex="07" name="ExceptionNewEdge_U32" accessType="ro" dataType="0007" objectType="7" />
+					</Object>
+					<Object index="1300" name="SDO_SequLayerTimeout_U32" accessType="rw" dataType="0007" defaultValue="30000" highLimit="0xFFFFFFFF" lowLimit="00000000" objectType="7" />
+					<Object index="1400" name="PDO_RxCommParam_00h_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x2" objectType="7" />
+						<SubObject subIndex="01" name="NodeID_U8" accessType="ro" dataType="0005" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="MappingVersion_U8" accessType="ro" dataType="0005" defaultValue="0x00" objectType="7" />
+					</Object>
+					<Object index="1600" name="PDO_RxMappParam_00h_AU64" objectType="8">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="ro" dataType="0005" defaultValue="0x4B" objectType="7" />
+						<!-- Mapping is given by the default value:
+						             0xAAAABBBBCCDDEEEE
+						             AAAA - Length in bits
+						             BBBB - Offset in bits
+						               CC - Reserved
+						               DD - Sub-index
+						             EEEE - Index
+
+							Update PReqActPayloadLimit_U16 and PResActPayloadLimit_U16 if these sizes change.
+						 -->
+						<!--                                                                                        0xAAAABBBBCCDDEEEE -->
+						<SubObject subIndex="01" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010000000003201" objectType="7" />
+						<SubObject subIndex="02" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010001000003202" objectType="7" />
+						<SubObject subIndex="03" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010002000003203" objectType="7" />
+						<SubObject subIndex="04" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010003000003204" objectType="7" />
+						<SubObject subIndex="05" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010004000003205" objectType="7" />
+						<SubObject subIndex="06" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010005000003206" objectType="7" />
+						<SubObject subIndex="07" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010006000003207" objectType="7" />
+						<SubObject subIndex="08" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010007000003208" objectType="7" />
+						<SubObject subIndex="09" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010008000003209" objectType="7" />
+						<SubObject subIndex="0A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000900000320A" objectType="7" />
+						<SubObject subIndex="0B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000A00000320B" objectType="7" />
+						<SubObject subIndex="0C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000B00000320C" objectType="7" />
+						<SubObject subIndex="0D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000C00000320D" objectType="7" />
+						<SubObject subIndex="0E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000D00000320E" objectType="7" />
+						<SubObject subIndex="0F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000E00000320F" objectType="7" />
+						<SubObject subIndex="10" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000F000003210" objectType="7" />
+						<SubObject subIndex="11" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010010000003211" objectType="7" />
+						<SubObject subIndex="12" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010011000003212" objectType="7" />
+						<SubObject subIndex="13" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010012000003213" objectType="7" />
+						<SubObject subIndex="14" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010013000003214" objectType="7" />
+						<SubObject subIndex="15" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010014000003215" objectType="7" />
+						<SubObject subIndex="16" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010015000003216" objectType="7" />
+						<SubObject subIndex="17" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010016000003217" objectType="7" />
+						<SubObject subIndex="18" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010017000003218" objectType="7" />
+						<SubObject subIndex="19" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010018000003219" objectType="7" />
+						<SubObject subIndex="1A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001900000321A" objectType="7" />
+						<SubObject subIndex="1B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001A00000321B" objectType="7" />
+						<SubObject subIndex="1C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001B00000321C" objectType="7" />
+						<SubObject subIndex="1D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001C00000321D" objectType="7" />
+						<SubObject subIndex="1E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001D00000321F" objectType="7" />
+						<SubObject subIndex="1F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001E000003220" objectType="7" />
+						<SubObject subIndex="20" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001F000003221" objectType="7" />
+						<SubObject subIndex="21" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010020000003222" objectType="7" />
+						<SubObject subIndex="22" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010021000003223" objectType="7" />
+						<SubObject subIndex="23" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010022000003224" objectType="7" />
+						<SubObject subIndex="24" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010023000003225" objectType="7" />
+						<SubObject subIndex="25" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010024000003226" objectType="7" />
+						<SubObject subIndex="26" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010025000003226" objectType="7" />
+						<SubObject subIndex="27" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010026000003227" objectType="7" />
+						<SubObject subIndex="28" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010027000003228" objectType="7" />
+						<SubObject subIndex="29" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010028000003229" objectType="7" />
+						<SubObject subIndex="2A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002900000322A" objectType="7" />
+						<SubObject subIndex="2B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002A00000322B" objectType="7" />
+						<SubObject subIndex="2C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002B00000322C" objectType="7" />
+						<SubObject subIndex="2D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002C00000322D" objectType="7" />
+						<SubObject subIndex="2E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002D00000322E" objectType="7" />
+						<SubObject subIndex="2F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002E00000322F" objectType="7" />
+						<SubObject subIndex="30" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002F000003230" objectType="7" />
+						<SubObject subIndex="31" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010030000003231" objectType="7" />
+						<SubObject subIndex="32" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010031000003232" objectType="7" />
+						<SubObject subIndex="33" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010032000003233" objectType="7" />
+						<SubObject subIndex="34" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010033000003234" objectType="7" />
+						<SubObject subIndex="35" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010034000003235" objectType="7" />
+						<SubObject subIndex="36" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010035000003236" objectType="7" />
+						<SubObject subIndex="37" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010036000003237" objectType="7" />
+						<SubObject subIndex="38" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010037000003238" objectType="7" />
+						<SubObject subIndex="39" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010038000003239" objectType="7" />
+						<SubObject subIndex="3A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003900000323A" objectType="7" />
+						<SubObject subIndex="3B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003A00000323B" objectType="7" />
+						<SubObject subIndex="3C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003B00000323C" objectType="7" />
+						<SubObject subIndex="3D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003C00000323D" objectType="7" />
+						<SubObject subIndex="3E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003D00000323E" objectType="7" />
+						<SubObject subIndex="3F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003E00000323F" objectType="7" />
+						<SubObject subIndex="40" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003F000003240" objectType="7" />
+						<SubObject subIndex="41" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010040000003241" objectType="7" />
+						<SubObject subIndex="42" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010041000003242" objectType="7" />
+						<SubObject subIndex="43" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010042000003243" objectType="7" />
+						<SubObject subIndex="44" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010043000003244" objectType="7" />
+						<SubObject subIndex="45" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010044000003245" objectType="7" />
+						<SubObject subIndex="46" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010045000003246" objectType="7" />
+						<SubObject subIndex="47" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010046000003247" objectType="7" />
+						<SubObject subIndex="48" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010047000003248" objectType="7" />
+						<SubObject subIndex="49" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010048000003249" objectType="7" />
+						<SubObject subIndex="4A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001004900000324A" objectType="7" />
+						<SubObject subIndex="4B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001004A00000324B" objectType="7" />
+					</Object>
+					<Object index="1800" name="PDO_TxCommParam_00h_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x2" objectType="7" />
+						<SubObject subIndex="01" name="NodeID_U8" accessType="ro" dataType="0005" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="MappingVersion_U8" accessType="ro" dataType="0005" defaultValue="0x00" objectType="7" />
+					</Object>
+					<Object index="1A00" name="PDO_TxMappParam_00h_AU64" objectType="8">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="ro" dataType="0005" defaultValue="0x4B" objectType="7" />
+						<!-- Mapping is given by the default value:
+						             0xAAAABBBBCCDDEEEE
+						             AAAA - Length in bits
+						             BBBB - Offset in bits
+						               CC - Reserved
+						               DD - Sub-index
+						             EEEE - Index
+
+							Update PReqActPayloadLimit_U16 and PResActPayloadLimit_U16 if these sizes change.
+						 -->
+						<!--                                                                                        0xAAAABBBBCCDDEEEE -->
+						<SubObject subIndex="01" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010000000003401" objectType="7" />
+						<SubObject subIndex="02" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010001000003402" objectType="7" />
+						<SubObject subIndex="03" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010002000003403" objectType="7" />
+						<SubObject subIndex="04" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010003000003404" objectType="7" />
+						<SubObject subIndex="05" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010004000003405" objectType="7" />
+						<SubObject subIndex="06" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010005000003406" objectType="7" />
+						<SubObject subIndex="07" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010006000003407" objectType="7" />
+						<SubObject subIndex="08" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010007000003408" objectType="7" />
+						<SubObject subIndex="09" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010008000003409" objectType="7" />
+						<SubObject subIndex="0A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000900000340A" objectType="7" />
+						<SubObject subIndex="0B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000A00000340B" objectType="7" />
+						<SubObject subIndex="0C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000B00000340C" objectType="7" />
+						<SubObject subIndex="0D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000C00000340D" objectType="7" />
+						<SubObject subIndex="0E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000D00000340E" objectType="7" />
+						<SubObject subIndex="0F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000E00000340F" objectType="7" />
+						<SubObject subIndex="10" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001000F000003410" objectType="7" />
+						<SubObject subIndex="11" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010010000003411" objectType="7" />
+						<SubObject subIndex="12" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010011000003412" objectType="7" />
+						<SubObject subIndex="13" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010012000003413" objectType="7" />
+						<SubObject subIndex="14" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010013000003414" objectType="7" />
+						<SubObject subIndex="15" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010014000003415" objectType="7" />
+						<SubObject subIndex="16" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010015000003416" objectType="7" />
+						<SubObject subIndex="17" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010016000003417" objectType="7" />
+						<SubObject subIndex="18" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010017000003418" objectType="7" />
+						<SubObject subIndex="19" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010018000003419" objectType="7" />
+						<SubObject subIndex="1A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001900000341A" objectType="7" />
+						<SubObject subIndex="1B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001A00000341B" objectType="7" />
+						<SubObject subIndex="1C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001B00000341C" objectType="7" />
+						<SubObject subIndex="1D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001C00000341D" objectType="7" />
+						<SubObject subIndex="1E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001D00000341F" objectType="7" />
+						<SubObject subIndex="1F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001E000003420" objectType="7" />
+						<SubObject subIndex="20" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001001F000003421" objectType="7" />
+						<SubObject subIndex="21" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010020000003422" objectType="7" />
+						<SubObject subIndex="22" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010021000003423" objectType="7" />
+						<SubObject subIndex="23" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010022000003424" objectType="7" />
+						<SubObject subIndex="24" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010023000003425" objectType="7" />
+						<SubObject subIndex="25" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010024000003426" objectType="7" />
+						<SubObject subIndex="26" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010025000003426" objectType="7" />
+						<SubObject subIndex="27" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010026000003427" objectType="7" />
+						<SubObject subIndex="28" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010027000003428" objectType="7" />
+						<SubObject subIndex="29" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010028000003429" objectType="7" />
+						<SubObject subIndex="2A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002900000342A" objectType="7" />
+						<SubObject subIndex="2B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002A00000342B" objectType="7" />
+						<SubObject subIndex="2C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002B00000342C" objectType="7" />
+						<SubObject subIndex="2D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002C00000342D" objectType="7" />
+						<SubObject subIndex="2E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002D00000342E" objectType="7" />
+						<SubObject subIndex="2F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002E00000342F" objectType="7" />
+						<SubObject subIndex="30" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001002F000003430" objectType="7" />
+						<SubObject subIndex="31" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010030000003431" objectType="7" />
+						<SubObject subIndex="32" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010031000003432" objectType="7" />
+						<SubObject subIndex="33" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010032000003433" objectType="7" />
+						<SubObject subIndex="34" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010033000003434" objectType="7" />
+						<SubObject subIndex="35" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010034000003435" objectType="7" />
+						<SubObject subIndex="36" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010035000003436" objectType="7" />
+						<SubObject subIndex="37" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010036000003437" objectType="7" />
+						<SubObject subIndex="38" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010037000003438" objectType="7" />
+						<SubObject subIndex="39" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010038000003439" objectType="7" />
+						<SubObject subIndex="3A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003900000343A" objectType="7" />
+						<SubObject subIndex="3B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003A00000343B" objectType="7" />
+						<SubObject subIndex="3C" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003B00000343C" objectType="7" />
+						<SubObject subIndex="3D" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003C00000343D" objectType="7" />
+						<SubObject subIndex="3E" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003D00000343E" objectType="7" />
+						<SubObject subIndex="3F" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003E00000343F" objectType="7" />
+						<SubObject subIndex="40" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001003F000003440" objectType="7" />
+						<SubObject subIndex="41" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010040000003441" objectType="7" />
+						<SubObject subIndex="42" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010041000003442" objectType="7" />
+						<SubObject subIndex="43" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010042000003443" objectType="7" />
+						<SubObject subIndex="44" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010043000003444" objectType="7" />
+						<SubObject subIndex="45" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010044000003445" objectType="7" />
+						<SubObject subIndex="46" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010045000003446" objectType="7" />
+						<SubObject subIndex="47" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010046000003447" objectType="7" />
+						<SubObject subIndex="48" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010047000003448" objectType="7" />
+						<SubObject subIndex="49" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x0010048000003449" objectType="7" />
+						<SubObject subIndex="4A" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001004900000344A" objectType="7" />
+						<SubObject subIndex="4B" name="ObjectMapping" accessType="ro" dataType="001B" defaultValue="0x001004A00000344B" objectType="7" />
+					</Object>
+					<Object index="1C0A" name="DLL_CNCollision_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+					<Object index="1C0B" name="DLL_CNLossSoC_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+					<Object index="1C0C" name="DLL_CNLossSoA_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+					<Object index="1C0D" name="DLL_CNLossPReq_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+          <!--
+					<Object index="1C0E" name="DLL_CNSoCJitter_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+          -->
+					<Object index="1C0F" name="DLL_CNCRCError_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="CumulativeCnt_U32" accessType="rw" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="02" name="ThresholdCnt_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="Threshold_U32" accessType="rw" dataType="0007" defaultValue="15" objectType="7" />
+					</Object>
+					<Object index="1C13" name="DLL_CNSoCJitterRange_U32" accessType="rw" dataType="0007" defaultValue="2000" objectType="7" />
+					<Object index="1C14" name="DLL_CNLossOfSocTolerance_U32" accessType="rw" dataType="0007" defaultValue="100000" objectType="7" />
+					<Object index="1E40" name="NWL_IpAddrTable_0h_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x5" objectType="7" />
+						<SubObject subIndex="01" name="IfIndex_U16" accessType="ro" dataType="0006" defaultValue="1" objectType="7" />
+						<SubObject subIndex="02" name="Addr_IPAD" accessType="ro" dataType="0402" defaultValue="0" objectType="7" />
+						<SubObject subIndex="03" name="NetMask_IPAD" accessType="ro" dataType="0402" defaultValue="255.255.255.0" objectType="7" />
+						<SubObject subIndex="04" name="ReasmMaxSize_U16" accessType="ro" dataType="0006" defaultValue="0" objectType="7" />
+						<SubObject subIndex="05" name="DefaultGateway_IPAD" accessType="rw" dataType="0402" defaultValue="0xC0A864FE" objectType="7" />
+					</Object>
+					<Object index="1E4A" name="NWL_IpGroup_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="Forwarding_BOOL" accessType="ro" dataType="0001" defaultValue="false" objectType="7" />
+						<SubObject subIndex="02" name="DefaultTTL_U16" accessType="rw" dataType="0006" defaultValue="0x40" objectType="7" />
+						<SubObject subIndex="03" name="ForwardDatagrams_U32" accessType="ro" dataType="0007" defaultValue="0" objectType="7" />
+					</Object>
+					<!--
+					    Feature flags:
+						0x00000001      0 Isochronous
+						0x00000002      1 SDO by UDP/IP
+						0x00000004      2 SDO by ASnd
+						0x00000008      3 SDO by PDO
+						0x00000010      4 NMT Info Services
+						0x00000020      5 Extended NMT State Commands
+						0x00000040      6 Dynamic PDO Mapping
+						0x00000080      7 NMT Service by UDP/IP
+						0x00000100      8 Configuration Manager
+						0x00000200      9 Multiplexed Access
+						0x00000400     10 NodeID setup by SW
+						0x00000800     11 MN Basic Ethernet Mode MN
+						0x00001000     12 Routing Type 1 Support
+						0x00002000     13 Routing Type 2 Support
+						0x00004000     14 SDO Read/Write All by Index
+						0x00008000     15 SDO Read/Write Multiple Parameter by Index
+						0x00010000     16 reserved Used by EPSG DS302-B [2]
+						0x00020000     17 Reserved Used by EPSG DS302-A [1]
+						0x00FC0000 18..23 reserved
+						0xFF000000 24..31 reserved
+					-->
+					<Object index="1F82" name="NMT_FeatureFlags_U32" accessType="const" dataType="0007" defaultValue="0x000006A7" objectType="7" />
+					<Object index="1F83" name="NMT_EPLVersion_U8" accessType="const" dataType="0005" defaultValue="0x20" objectType="7" />
+					<Object index="1F8C" name="NMT_CurrNMTState_U8" accessType="ro" dataType="0005" defaultValue="0x1c" objectType="7" />
+					<Object index="1F93" name="NMT_EPLNodeID_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x3" objectType="7" />
+						<SubObject subIndex="01" name="NodeID_U8" accessType="ro" dataType="0005" defaultValue="0x1" objectType="7" />
+						<SubObject subIndex="02" name="NodeIDByHW_BOOL" accessType="ro" dataType="0001" defaultValue="false" objectType="7" />
+						<SubObject subIndex="03" name="SWNodeID_U8" accessType="rw" dataType="0005" defaultValue="1" objectType="7" />
+					</Object>
+					<Object index="1F98" name="NMT_CycleTiming_REC" objectType="9">
+						<SubObject subIndex="00" name="NumberOfEntries" accessType="const" dataType="0005" defaultValue="0x9" objectType="7" />
+						<SubObject subIndex="01" name="IsochrTxMaxPayload_U16" accessType="const" dataType="0006" defaultValue="1490" objectType="7" />
+						<SubObject subIndex="02" name="IsochrRxMaxPayload_U16" accessType="const" dataType="0006" defaultValue="1490" objectType="7" />
+						<SubObject subIndex="03" name="PResMaxLatency_U32" accessType="const" dataType="0007" defaultValue="2000" objectType="7" />
+						<SubObject subIndex="04" name="PReqActPayloadLimit_U16" accessType="rw" dataType="0006" defaultValue="150" objectType="7" />
+						<SubObject subIndex="05" name="PResActPayloadLimit_U16" accessType="rw" dataType="0006" defaultValue="150" objectType="7" />
+						<SubObject subIndex="06" name="ASndMaxLatency_U32" accessType="const" dataType="0007" defaultValue="2000" objectType="7" />
+						<SubObject subIndex="07" name="MultiplCycleCnt_U8" accessType="rw" dataType="0005" defaultValue="0" objectType="7" />
+						<SubObject subIndex="08" name="AsyncMTU_U16" accessType="rw" dataType="0006" defaultValue="1482" objectType="7" />
+						<SubObject subIndex="09" name="Prescaler_U16" accessType="rw" dataType="0006" defaultValue="2" objectType="7" />
+					</Object>
+					<Object index="1F99" name="NMT_CNBasicEthernetTimeout_U32" accessType="rw" dataType="0007" defaultValue="5000000" objectType="7" />
+					<Object index="1F9A" name="NMT_HostName_VSTR" accessType="rw" dataType="0009" objectType="7" />
+					<Object index="1F9E" name="NMT_ResetCmd_U8" accessType="rw" dataType="0005" defaultValue="0xff" objectType="7" />
+
+					<!-- Manufacturer Specific Profile Area (0x2000 to 0x5FFF) -->
+
+					<!-- Configuration fields -->
+<!--
+					<Object index="6000" name="FailSafeAction" PDOmapping="no" accessType="rw" dataType="0005" objectType="7" defaultValue="0" />
+-->
+					<!-- Output data (PLC to G3). -->
+					<Object index="3201" name="Out01" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3202" name="Out02" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3203" name="Out03" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3204" name="Out04" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3205" name="Out05" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3206" name="Out06" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3207" name="Out07" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3208" name="Out08" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3209" name="Out09" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320A" name="Out0A" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320B" name="Out0B" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320C" name="Out0C" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320D" name="Out0D" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320E" name="Out0E" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="320F" name="Out0F" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3210" name="Out10" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3211" name="Out11" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3212" name="Out12" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3213" name="Out13" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3214" name="Out14" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3215" name="Out15" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3216" name="Out16" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3217" name="Out17" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3218" name="Out18" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3219" name="Out19" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321A" name="Out1A" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321B" name="Out1B" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321C" name="Out1C" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321D" name="Out1D" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321E" name="Out1E" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="321F" name="Out1F" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3220" name="Out20" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3221" name="Out21" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3222" name="Out22" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3223" name="Out23" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3224" name="Out24" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3225" name="Out25" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3226" name="Out26" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3227" name="Out27" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3228" name="Out28" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3229" name="Out29" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322A" name="Out2A" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322B" name="Out2B" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322C" name="Out2C" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322D" name="Out2D" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322E" name="Out2E" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="322F" name="Out2F" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3230" name="Out30" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3231" name="Out31" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3232" name="Out32" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3233" name="Out33" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3234" name="Out34" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3235" name="Out35" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3236" name="Out36" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3237" name="Out37" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3238" name="Out38" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3239" name="Out39" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323A" name="Out3A" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323B" name="Out3B" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323C" name="Out3C" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323D" name="Out3D" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323E" name="Out3E" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="323F" name="Out3F" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3240" name="Out40" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3241" name="Out41" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3242" name="Out42" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3243" name="Out43" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3244" name="Out44" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3245" name="Out45" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3246" name="Out46" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3247" name="Out47" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3248" name="Out48" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="3249" name="Out49" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="324A" name="Out4A" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+					<Object index="324B" name="Out4B" PDOmapping="default" accessType="rw" dataType="0006" objectType="7" />
+
+					<!-- Output data (G3 to PLC). -->
+					<Object index="3401" name="In01" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3402" name="In02" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3403" name="In03" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3404" name="In04" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3405" name="In05" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3406" name="In06" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3407" name="In07" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3408" name="In08" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3409" name="In09" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340A" name="In0A" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340B" name="In0B" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340C" name="In0C" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340D" name="In0D" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340E" name="In0E" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="340F" name="In0F" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3410" name="In10" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3411" name="In11" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3412" name="In12" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3413" name="In13" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3414" name="In14" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3415" name="In15" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3416" name="In16" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3417" name="In17" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3418" name="In18" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3419" name="In19" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341A" name="In1A" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341B" name="In1B" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341C" name="In1C" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341D" name="In1D" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341E" name="In1E" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="341F" name="In1F" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3420" name="In20" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3421" name="In21" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3422" name="In22" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3423" name="In23" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3424" name="In24" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3425" name="In25" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3426" name="In26" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3427" name="In27" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3428" name="In28" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3429" name="In29" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342A" name="In2A" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342B" name="In2B" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342C" name="In2C" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342D" name="In2D" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342E" name="In2E" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="342F" name="In2F" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3430" name="In30" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3431" name="In31" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3432" name="In32" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3433" name="In33" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3434" name="In34" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3435" name="In35" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3436" name="In36" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3437" name="In37" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3438" name="In38" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3439" name="In39" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343A" name="In3A" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343B" name="In3B" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343C" name="In3C" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343D" name="In3D" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343E" name="In3E" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="343F" name="In3F" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3440" name="In40" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3441" name="In41" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3442" name="In42" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3443" name="In43" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3444" name="In44" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3445" name="In45" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3446" name="In46" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3447" name="In47" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3448" name="In48" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="3449" name="In49" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="344A" name="In4A" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+					<Object index="344B" name="In4B" PDOmapping="default" accessType="ro" dataType="0006" objectType="7" />
+
+				</ObjectList>
+			</ApplicationLayers>
+			<TransportLayers>
+			</TransportLayers>
+			<NetworkManagement>
+				<GeneralFeatures
+					DLLFeatureMN="false"
+					NMTBootTimeNotActive="8000000"
+					NMTCycleTimeMax="1000000"
+					NMTCycleTimeMin="200"
+					NMTErrorEntries="32"
+					NMTEmergencyQueueSize="1"
+					NWLIPSupport="true"
+					PDORPDOChannels="1"
+					SDOCmdReadAllByIndex="false"
+					SDOCmdReadByName="false"
+					SDOCmdWriteAllByIndex="false"
+					SDOCmdWriteByName="false"
+					SDOCmdWriteMultParam="false"
+					SDOMaxConnections="5"
+					SDOMaxParallelConnections="5"
+					SDOServer="true" />
+				<CNFeatures DLLCNFeatureMultiplex="true" NMTCNSoC2PReq="0" />
+				<Diagnostic>
+				</Diagnostic>
+			</NetworkManagement>
+		</ProfileBody>
+	</ISO15745Profile>
+</ISO15745ProfileContainer>

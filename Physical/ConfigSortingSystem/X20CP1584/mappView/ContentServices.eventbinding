@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentServices_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="ContentServices.ButtonAddUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonAddUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="ContentServices" widgetRefId="UserList1">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenAddUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonDeleteUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonDeleteUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="ContentServices" widgetRefId="UserList1">
+            <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonModifyUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonModifyUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="ContentServices" widgetRefId="UserList1">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenModifyUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LanguageSelector">
+      <Source xsi:type="widgets.brease.LanguageSelector.Event" contentRefId="ContentServices" widgetRefId="LanguageSelector1" event="SelectedIndexChanged" />
+      <Operand datatype="ANY_INT" name="Index">
+        <ReadTarget xsi:type="widgets.brease.LanguageSelector.ReadAction" contentRefId="ContentServices" widgetRefId="LanguageSelector1">
+          <Method xsi:type="widgets.brease.LanguageSelector.Action.GetSelectedIndex" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="Index = 0">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:IsEnglishSelected">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SemiAuto:IsEnglishSelected">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="Index = 1">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:IsEnglishSelected">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SemiAuto:IsEnglishSelected">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonReset.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonReset" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gAlarmHardAck">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonReset1.MouseDown">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonReset1" event="MouseDown" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMotorBeltAxisBasic.Power">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMotorBeltAxisBasic.ErrorReset">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonReset1.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonReset1" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMotorBeltAxisBasic.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonResetScale.MouseDown">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonResetScale" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auto:HMI_ScaleTare">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentServices.ButtonResetScale.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonResetScale" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auto:HMI_ScaleTare">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

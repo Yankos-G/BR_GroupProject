@@ -1,0 +1,393 @@
+PROGRAM _INIT
+	// NEED ONLY FOR WATCH
+	gAxis_1;
+	gMotorBeltParType;
+	gMotorBeltAxisBasic;
+END_PROGRAM
+//po namyœle mo¿na by³o u¿yæ struktur do zmiennych :P 
+PROGRAM _CYCLIC
+
+	SelectedAuto := (gMode = 0);
+	NotSelectedAuto := NOT SelectedAuto;
+	
+	// CODE WORKS ONLY WHEN AUTO IS ACTIVE
+	IF  SelectedAuto THEN
+		// MOTOR MANAGEMENT
+		gMotorBeltAxisBasic.Enable 		:= TRUE;
+		gMotorBeltAxisBasic.MpLink 		:= ADR(gAxis_1);
+		gMotorBeltAxisBasic.Parameters 	:= ADR(gMotorBeltParType);
+		MotorMoveDone 					:= gMotorBeltAxisBasic.MoveDone;
+		gMotorBeltAxisBasic.Power 		:= MotorPower;
+		gMotorBeltAxisBasic.Home 		:= MotorHome;
+		
+		gMotorBeltAxisBasic();
+		
+		// IN STATE STOP VALUES DOESN'T FLUCTUATE
+		IF gMotorBeltAxisBasic.Velocity > 15 THEN
+			MotorVel := gMotorBeltAxisBasic.Velocity;
+		ELSE
+			MotorVel := 0;
+		END_IF;
+		IF gMotorBeltAxisBasic.Position > 5 THEN
+			MotorPos := gMotorBeltAxisBasic.Position;
+		ELSE
+			MotorPos := 0;
+		END_IF;
+		
+		// ASSIGNING MOTION PARAMETERS
+		gMotorBeltParType.Acceleration 	:= MotorReqAcc; 
+		gMotorBeltParType.Deceleration 	:= MotorReqDec; 
+		gMotorBeltParType.Velocity 		:= MotorReqVel;
+		gMotorBeltParType.Position 		:= MotorReqPosition;
+	
+		// ASSIGNING GLOBAL VARIABLES TO LOCAL VARIABLES
+		gActuatorByte					 := ActuatorByte;
+		gMotorBeltAxisBasic.Power 		 := MotorPower;
+		gMotorBeltAxisBasic.MoveAbsolute := MotorMoveAbsolute;
+		gStopState 						 := (State = 0);
+		
+		// ASSIGNING LOCAL VARIABLES TO GLOBAL VARIABLES
+		MotorInPosition 				 := gMotorBeltAxisBasic.InPosition;
+		ItemWeight 						 := gInWeightMeasure;							 
+
+		// ITEM DETECTION CONDITION 
+		ItemDetected := (ItemWeight > 1);
+		gWeightDetected := ItemDetected;
+		
+		// TIMERS
+		// actuator
+		TimerTonActuator(IN := TimerTonActuatorIn, PT := TIME_TON_ACTUATOR);
+		TimerActuatorOut := TimerTonActuator.Q;
+		// camera
+		TimerTonCamera(IN := gImageAcq , PT := TIME_TON_CAMERA);
+		TimerCameraPicDone := TimerTonCamera.Q;
+		// delay after detection
+		TimerTonDetect.IN := ItemDetected;
+		TimerTonDetect.PT := TIME_TON_DETECT;
+		TimerAfterDetect := TimerTonDetect.Q;
+		TimerTonDetect();
+	
+		
+	END_IF; 
+		
+	
+	// ALARM OR STOP OR AUTO NOT ACTIVE
+	IF	gAlarmHardware THEN	
+		IF NOT (State = ERROR) THEN
+			State := ERROR;
+		END_IF;
+	ELSIF Stop OR gMode <> 0 OR gAlarmExist THEN 
+		Stop := FALSE;
+		State := STOP;
+	END_IF; 
+	
+	// PROGRAM AUTO
+	CASE State OF
+		STOP:
+			IF SelectedAuto THEN
+				MotorPower 		  := FALSE;
+				MotorMoveAbsolute := FALSE;
+				MotorHome 		  := FALSE;
+			END_IF;		
+			MotorPos := 0;
+			MotorVel := 0;
+			StringState := 'Stop';
+			TimerTonActuatorIn 	  := FALSE;
+			ActuatorSorting 	  := FALSE;
+			ActuatorPushing  	  := FALSE;
+			IF Start THEN
+				State := INIT;
+			END_IF;
+			
+		INIT:
+			StringState 		:= 'Inicjalizacja';
+			gAddToRight 		:= FALSE;
+			gAddToLeft 			:= FALSE;
+			TimerTonActuatorIn 	:= FALSE;
+			ActuatorSorting 	:= FALSE;
+			ActuatorPushing 	:= FALSE;
+			MotorMoveAbsolute 	:= FALSE;
+			MotorPower 			:= TRUE;
+			MotorHome 			:= TRUE;
+			gPicNotRecognised	:= FALSE;
+			State 				:= START;
+			
+		START: 
+			StringState 		:= 'Gotowy do startu';
+			IF ItemDetected THEN
+				ItemWeightMeasured 	:= RESET_ITEM_MEM_WEIGHT;
+				State := DETECTION;
+			END_IF;
+			
+		DETECTION:
+			MotorHome 	:= FALSE;
+			StringState := 'Wykrycie detalu';
+			IF TimerAfterDetect THEN
+				ItemWeightMeasured := ItemWeight;
+				State := CATEGORIZATION;
+			END_IF;
+				
+		CATEGORIZATION: 
+			StringState := 'Kategoryzacja detalu';
+			IF gSorting.SortChoice = WEIGHT THEN
+				State := DROP;
+			ELSIF gSorting.SortChoice = OPTIC THEN
+				State := TAKE_PICT_CAMERA;
+			END_IF;
+			
+		TAKE_PICT_CAMERA:
+			StringState := 'Robienie zdjecia';
+			gImageAcq 	:= TRUE;
+			IF TimerCameraPicDone THEN
+				gDisplayImg := TRUE;
+				IF gSorting.RecognisedModel = 0 THEN 						//0
+					gImageAcq 			  := FALSE;
+					StringRecognisedModel := 'Unrecognised';
+					State 				  := UNRECOGNISED_PIC;
+				ELSE 
+					State 				  := DROP;
+				END_IF;
+			END_IF;
+				
+		DROP:
+			StringState := 'Dozowanie detalu';
+			ActuatorPushing := TRUE;
+			IF TimerActuatorOut THEN
+				ActuatorPushing := FALSE;
+				IF gSorting.SortChoice = OPTIC THEN
+					gSortChoiceView := TRUE;
+					State := SORT_OPTIC;
+				ELSIF gSorting.SortChoice = WEIGHT THEN
+					gSortChoiceView := FALSE;
+					State := SORT_WEIGHT;
+				END_IF;
+			END_IF;
+			
+			// ABOVE 1 TO ItemWeightChoosen ITEM FALL INTO THE LEFT, EQUAL AND ABOVE ItemWeightChoosen INTO THE RIGHT	
+		SORT_WEIGHT: 
+			StringState := 'Sortowanie wagowe';
+			IF ItemWeightMeasured > 1 AND ItemWeightMeasured < gSorting.ItemWeightChoosen THEN
+				IF gSorting.SortLeftMin THEN
+					State := GO_STORAGE_LEFT;
+				ELSE
+					State := GO_STORAGE_RIGHT;
+				END_IF;
+			ELSIF ItemWeightMeasured >= gSorting.ItemWeightChoosen THEN 
+				IF gSorting.SortLeftMin THEN
+					State := GO_STORAGE_RIGHT;
+				ELSE
+					State := GO_STORAGE_LEFT;
+				END_IF;
+			END_IF;
+			
+		SORT_OPTIC:
+			StringState := 'Sortowanie optyczne';
+			IF gSorting.RecognisedModel = 1 THEN	
+				gImageAcq 			  := FALSE;
+				StringRecognisedModel := 'B&R';							//1
+				IF gSorting.SortLeftBR THEN
+					State := GO_STORAGE_LEFT;
+				ELSE
+					State := GO_STORAGE_RIGHT;
+				END_IF;
+			
+			ELSIF gSorting.RecognisedModel = 2 THEN						
+				gImageAcq 			  := FALSE;
+				StringRecognisedModel := 'AS';							//2
+				IF gSorting.SortLeftBR THEN
+					State := GO_STORAGE_RIGHT;
+				ELSE
+					State := GO_STORAGE_LEFT;
+				END_IF;
+			END_IF;
+			
+			
+		GO_STORAGE_LEFT:
+			StringState := 'Transport detalu do lewego zbiornika';
+			MotorReqPosition := MOTOR_DIST_LEFT;
+			MotorMoveAbsolute := TRUE;
+			IF MotorInPosition AND MotorMoveDone THEN
+				State := SORT_STORAGE_LEFT;
+			END_IF;
+
+		GO_STORAGE_RIGHT:
+			StringState := 'Transport detalu do prawego zbiornika';
+			MotorReqPosition  := MOTOR_DIST_RIGHT;
+			MotorMoveAbsolute := TRUE;
+			IF MotorInPosition AND MotorMoveDone THEN
+				State := SORT_STORAGE_RIGHT;				
+			END_IF;
+			
+		SORT_STORAGE_LEFT:
+			StringState := 'Zepchniecie detalu z tasmy do zbiornika lewego';
+			MotorMoveAbsolute := FALSE;
+			ActuatorSorting   := TRUE;
+			gAddToLeft 		  := TRUE;
+			IF TimerActuatorOut THEN
+				State := INIT;
+			END_IF;
+
+		SORT_STORAGE_RIGHT:
+			gAddToRight := TRUE;
+			MotorMoveAbsolute := FALSE;
+			State := INIT;
+		
+		UNRECOGNISED_PIC:
+			StringState := 'Nie rozpoznano zdjecia';
+			gPicNotRecognised := TRUE; 
+			State := STOP;
+			
+		ERROR: // SPONTANICZNA DECYZJA CTRL V Z STOP DLA LEPSZEJ FUNKCJONALNOŒCI - BRAKLO CZASU NA DOKLADNIEJSZE POPRAWKI
+			IF gMode = 0 THEN
+				MotorPower 		  := FALSE;
+				MotorMoveAbsolute := FALSE;
+				MotorHome 		  := FALSE;
+			END_IF;		
+			MotorPos := 0;
+			MotorVel := 0;
+			TimerTonActuatorIn 	  := FALSE;
+			ActuatorSorting 	  := FALSE;
+			ActuatorPushing  	  := FALSE;
+			StringState := 'Wystapil blad';
+			gErrorState := TRUE;
+			IF gAlarmHardAck THEN
+				IF NOT gAlarmHardware THEN
+					gAlarmHardAck := FALSE;
+					gErrorState := FALSE;
+					State := STOP;
+				END_IF;
+			END_IF;
+		
+	END_CASE;
+
+	
+	// TIMER INPUT TRIGGER TO DELAY ACTUATORS
+	IF ActuatorPushing OR ActuatorSorting THEN
+		TimerTonActuatorIn := TRUE;
+	ELSE
+		TimerTonActuatorIn := FALSE;
+	END_IF;
+	
+	// OPERATION OF BYTE ACTUATORS WITH TIMER
+	IF ActuatorPushing THEN
+		ActuatorByte := ACTUATOR_BYTE_PUSH;	
+		IF TimerActuatorOut THEN
+			ActuatorPushing := FALSE;
+		END_IF;
+	ELSIF ActuatorSorting THEN
+		ActuatorByte := ACTUATOR_BYTE_SORT;
+		IF TimerActuatorOut THEN
+			ActuatorSorting := FALSE;
+		END_IF;
+	ELSE
+		ActuatorByte := ACTUATOR_BYTE_NOT_ACTIV; 
+	END_IF;
+	
+	// COUNTERS
+	gCTU_QuantityLeft(CU := gAddToLeft, RESET := gCTU_Reset_Left, PV := gMaxLeftStorage);
+	gCTU_QuantityRight(CU := gAddToRight, RESET := gCTU_Reset_Right, PV := gMaxRightStorage);
+	gQuantityLeftStorage  := gCTU_QuantityLeft.CV;
+	gQuantityRightStorage := gCTU_QuantityRight.CV;
+	
+	gCTU_QuantityLeft();
+	gCTU_QuantityRight();
+	
+	// HMI GUYS WANTED SOME VARIABLES
+	IF gSorting.SortChoice = OPTIC THEN
+		gSortChoiceView := TRUE;
+		ShowLightLeft := FALSE;
+		ShowLightRight := FALSE;
+		IF gSorting.SortLeftBR THEN
+			ShowBRLeft := TRUE;
+			ShowBRRight := FALSE;
+		ELSE
+			ShowBRRight := TRUE;
+			ShowBRLeft := FALSE;
+		END_IF;
+	ELSIF gSorting.SortChoice = WEIGHT THEN
+		gSortChoiceView := FALSE;
+		ShowBRLeft := FALSE;
+		ShowBRRight := FALSE;
+		IF gSorting.SortLeftMin THEN
+			ShowLightLeft := TRUE;
+			ShowLightRight := FALSE;
+		ELSE
+			ShowLightRight := TRUE;
+			ShowLightLeft := FALSE;
+		END_IF;
+	END_IF;
+	
+	
+	
+	
+	ActuatorNotSorting := NOT ActuatorSorting;
+	ActuatorNotPushing 	:= NOT ActuatorPushing;
+	
+	IF Start THEN
+		Start := FALSE;
+	END_IF;
+	
+	//Added by Jakub; Responsibler for changing machine state between English and Polish
+	IF IsEnglishSelected THEN
+		IF StringState = 'Inicjalizacja' THEN
+			StringState := 'Initialization';
+			
+		ELSIF StringState = 'Gotowy do startu' THEN
+			StringState := 'Ready';
+		
+		ELSIF StringState = 'Wykrycie detalu' THEN
+			StringState := 'Item detection';
+			
+		ELSIF StringState = 'Kategoryzacja detalu' THEN
+			StringState := 'Item categorization';
+			
+		ELSIF StringState = 'Robienie zdjecia' THEN
+			StringState := 'Taking a picture';
+			
+		ELSIF StringState = 'Dozowanie detalu' THEN
+			StringState := 'Item dosing';
+			
+		ELSIF StringState = 'Sortowanie wagowe' THEN
+			StringState := 'Sorting by weight';
+			
+		ELSIF StringState = 'Sortowanie optyczne' THEN
+			StringState := 'Optical sorting';
+			
+		ELSIF StringState = 'Transport detalu do lewego zbiornika' THEN
+			StringState := 'Item transport to the left tank';
+			
+		ELSIF StringState = 'Transport detalu do prawego zbiornika' THEN
+			StringState := 'Item transport to the right tank';
+			
+		ELSIF StringState = 'Zepchniecie detalu z tasmy do zbiornika lewego' THEN
+			StringState := 'Pushing the item from the belt to the left tank';
+			
+		ELSIF StringState = 'Nie rozpoznano zdjecia' THEN
+			StringState := 'Photo not recognized';
+			
+		ELSIF StringState = 'Stop' THEN
+			StringState := 'Stop';
+			
+		ELSIF StringState = 'Wystapil blad' THEN
+			StringState := 'Error';
+			
+		ELSIF StringState = 'Gotowy do startu' THEN
+			StringState := 'Ready to start';
+		END_IF;
+	END_IF;
+	
+	//SERVICE PAGE
+	//SCALE WEIGHT RESET
+	IF HMI_ScaleTare THEN
+		ScaleTare := 2#1000;
+	ELSE
+		ScaleTare := 2#0000;
+	END_IF;
+	
+		END_PROGRAM
+
+PROGRAM _EXIT
+
+	 
+		END_PROGRAM
+

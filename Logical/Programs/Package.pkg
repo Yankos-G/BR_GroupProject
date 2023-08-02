@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">Auto</Object>
+    <Object Type="Program" Language="IEC">Manual</Object>
+    <Object Type="Program" Language="IEC">SemiAuto</Object>
+    <Object Type="Program" Language="IEC">RecipesMgmnt</Object>
+    <Object Type="Program" Language="IEC">Camera</Object>
+    <Object Type="Program" Language="IEC">Alarms</Object>
+  </Objects>
+</Package>

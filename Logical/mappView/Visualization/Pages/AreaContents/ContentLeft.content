@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentLeft" height="580" width="200" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonAuto" top="20" left="20" width="120" height="40" zIndex="1" pageId="PageAuto" text="$IAT/Main/Left_AUTO" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonManual" top="100" left="20" width="120" height="40" zIndex="2" pageId="PageManual" text="$IAT/Main/Left_MANUAL" permissionOperate="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonParameters" top="180" left="20" width="120" height="40" zIndex="3" pageId="PageParameters" text="$IAT/Main/Left_PARAMETERS" permissionOperate="['Administrator', 'Operator', 'Service']" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonServices" top="260" left="20" width="120" height="40" zIndex="4" pageId="PageServices" text="$IAT/Main/Left_SERVICES" permissionOperate="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonAlarms" top="340" left="20" width="120" height="40" zIndex="5" pageId="PageAlarms" text="$IAT/Main/Left_ALARMS" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonCharts" top="420" left="20" width="120" height="40" zIndex="6" pageId="PageCharts" text="$IAT/Main/Left_CHARTS" permissionOperate="['Administrator', 'Operator', 'Service']" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButtonDiagnostics" top="499" left="20" width="120" height="40" zIndex="7" pageId="PageDiagnostics" text="$IAT/Main/Left_DIAGNOSTICS" permissionOperate="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="RectangleContentLeftBackground" top="0" left="-2" width="174" height="620" zIndex="0" borderWidth="0px" backColor="rgba(255, 140, 0, 1)" />
+  </Widgets>
+</Content>

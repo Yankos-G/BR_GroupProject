@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="SorterPowerlink" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="PageAuto" />
+  <Pages>
+    <Page refId="PageAuto" />
+    <Page refId="PageManual" />
+    <Page refId="PageParameters" />
+    <Page refId="PageServices" />
+    <Page refId="PageAlarms" />
+    <Page refId="PageCharts" />
+    <Page refId="PageDiagnostics" />
+  </Pages>
+  <Navigations />
+  <BindingsSets>
+    <BindingsSet refId="ContentAlarmHistory_binding" />
+    <BindingsSet refId="ContentAlarms_binding" />
+    <BindingsSet refId="ContentTop_binding" />
+    <BindingsSet refId="ContentManual_binding" />
+    <BindingsSet refId="ContentAuto_binding" />
+    <BindingsSet refId="ContentCharts_binding" />
+    <BindingsSet refId="ContentParameters_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="ContentTop_eventbinding" />
+    <EventBindingsSet refId="ContentAlarms_eventbinding" />
+    <EventBindingsSet refId="ContentManual_eventbinding" />
+    <EventBindingsSet refId="ContentAuto_eventbinding" />
+    <EventBindingsSet refId="ContentLeft_eventbinding" />
+    <EventBindingsSet refId="ContentServices_eventbinding" />
+    <EventBindingsSet refId="ContentParameters_eventbinding" />
+    <EventBindingsSet refId="contentMessageBoxLogin_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="dialogMessageBoxLogin" />
+    <Dialog refId="dialogAlarmHistory" />
+  </Dialogs>
+  <Contents>
+    <Content refId="ContentTop" />
+    <Content refId="ContentLeft" />
+    <Content refId="ContentAuto" />
+    <Content refId="ContentManual" />
+    <Content refId="ContentServices" />
+    <Content refId="ContentAlarms" />
+    <Content refId="ContentCharts" />
+    <Content refId="contentMessageBoxLogin" />
+    <Content refId="ContentDiagnostics" />
+    <Content refId="ContentAlarmHistory" />
+    <Content refId="ContentParameters" />
+  </Contents>
+  <SnippetsSets />
+  <VariablesSets />
+  <ExpressionsSets />
+  <StartTheme themeRefId="BuRTheme1" />
+  <Themes>
+    <Theme refId="BuRTheme1" />
+  </Themes>
+  <Configurations>
+    <Configuration key="zoom" value="true" />
+    <Configuration key="activityCount" value="false" />
+    <Gestures>
+      <!--<SystemGesture1 touchPoints="2" />
+		  <SystemGesture2 touchPoints="2" />
+		  <SystemGesture3 touchPoints="2" />-->
+    </Gestures>
+    <VirtualKeyboards>
+      <!--<InputProcessing onKeyDown="true" />-->
+    </VirtualKeyboards>
+  </Configurations>
+</vdef:Visualization>

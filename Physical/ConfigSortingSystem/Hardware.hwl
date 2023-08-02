@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="ConfigSortingSystem.Hardware.hw" LastWriteTime="08/01/2023 13:29:50" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20CP1584" Type="X20CP1584" X="100" Y="100" />
+    <Module Name="X20IF1082" Type="X20IF1082" X="212" Y="100" />
+    <Module Name="Numatics_G3" Type="FBE.NUMATICS-G3" X="152" Y="356" />
+    <Module Name="NORD_SK_TU3-POL_SK54xE_Inverter" Type="FBE.0xED_NORD_TU3_POL_SK54xE_Inverter" X="558" Y="100" />
+    <Module Name="NIC_50-RE/PLS" Type="FBE.FFFF0002_TLBPOWERLINK" X="427" Y="99" />
+    <Module Name="FRABA_Posital_Absolute_Rotary_Encoder" Type="FBE.0x00000042_PowerlinkRotaryEncoder_OCD_V02-10" X="301" Y="99" />
+    <Module Name="X67BC8321-1" Type="X67BC8321-1" X="277" Y="334" />
+    <Module Name="0AC808.9" Type="0AC808.9" X="250" Y="249" />
+    <Module Name="80VD100PD.C022-01" Type="80VD100PD.C022-01" X="485" Y="334" />
+    <Module Name="8LVA13.R0030D000-0b" Type="8LVA13.R0030D000-0" X="499" Y="511" />
+    <Module Name="VSS112Q22.042P-000" Type="VSS112Q22.042P-000" X="658" Y="186" />
+    <Module Name="VSS112Q22.042P-000a" Type="VSS112Q22.042P-000" X="809" Y="186" />
+  </Modules>
+  <Links>
+    <Link From="0AC808.9" To="X20CP1584" FromPort="ETH1" ToPort="IF3" IsRoutedByUser="False">
+      <Point X="276" Y="260" />
+      <Point X="276" Y="260" />
+      <Point X="276" Y="248" />
+      <Point X="276" Y="235" />
+      <Point X="156" Y="235" />
+      <Point X="156" Y="200" />
+      <Point X="156" Y="187" />
+      <Point X="156" Y="187" />
+    </Link>
+    <Link From="0AC808.9" To="FRABA_Posital_Absolute_Rotary_Encoder" FromPort="ETH2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="289" Y="260" />
+      <Point X="289" Y="260" />
+      <Point X="289" Y="248" />
+      <Point X="289" Y="235" />
+      <Point X="334" Y="235" />
+      <Point X="334" Y="150" />
+      <Point X="334" Y="143" />
+      <Point X="334" Y="143" />
+    </Link>
+    <Link From="0AC808.9" To="NIC_50-RE/PLS" FromPort="ETH3" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="302" Y="260" />
+      <Point X="302" Y="260" />
+      <Point X="302" Y="248" />
+      <Point X="302" Y="214" />
+      <Point X="460" Y="214" />
+      <Point X="460" Y="150" />
+      <Point X="460" Y="143" />
+      <Point X="460" Y="143" />
+    </Link>
+    <Link From="0AC808.9" To="NORD_SK_TU3-POL_SK54xE_Inverter" FromPort="ETH4" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="315" Y="260" />
+      <Point X="315" Y="260" />
+      <Point X="315" Y="248" />
+      <Point X="315" Y="228" />
+      <Point X="591" Y="228" />
+      <Point X="591" Y="151" />
+      <Point X="591" Y="144" />
+      <Point X="591" Y="144" />
+    </Link>
+    <Link From="0AC808.9" To="Numatics_G3" FromPort="ETH5" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="276" Y="273" />
+      <Point X="276" Y="273" />
+      <Point X="276" Y="293" />
+      <Point X="276" Y="305" />
+      <Point X="265" Y="305" />
+      <Point X="265" Y="415" />
+      <Point X="185" Y="415" />
+      <Point X="185" Y="407" />
+      <Point X="185" Y="400" />
+      <Point X="185" Y="400" />
+    </Link>
+    <Link From="0AC808.9" To="X67BC8321-1" FromPort="ETH6" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="289" Y="273" />
+      <Point X="289" Y="273" />
+      <Point X="289" Y="293" />
+      <Point X="287" Y="293" />
+      <Point X="287" Y="333" />
+      <Point X="287" Y="346" />
+      <Point X="287" Y="346" />
+    </Link>
+    <Link From="0AC808.9" To="80VD100PD.C022-01" FromPort="ETH8" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="524" Y="408" />
+      <Point X="524" Y="393" />
+      <Point X="543" Y="393" />
+      <Point X="555" Y="393" />
+      <Point X="555" Y="298" />
+      <Point X="315" Y="298" />
+      <Point X="315" Y="293" />
+      <Point X="315" Y="273" />
+      <Point X="315" Y="273" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA13.R0030D000-0b" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
+      <Point X="493" Y="387" />
+      <Point X="493" Y="387" />
+      <Point X="484" Y="387" />
+      <Point X="475" Y="387" />
+      <Point X="475" Y="482" />
+      <Point X="520.5" Y="482" />
+      <Point X="520.5" Y="510.099976" />
+      <Point X="520.5" Y="517.1" />
+      <Point X="520.5" Y="517.1" />
+    </Link>
+    <Link From="80VD100PD.C022-01" To="8LVA13.R0030D000-0b" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+      <Point X="504" Y="458" />
+      <Point X="504" Y="458" />
+      <Point X="504" Y="469" />
+      <Point X="504" Y="475" />
+      <Point X="548.5" Y="475" />
+      <Point X="548.5" Y="510.099976" />
+      <Point X="548.5" Y="517.1" />
+      <Point X="548.5" Y="517.1" />
+    </Link>
+    <Link From="NORD_SK_TU3-POL_SK54xE_Inverter" To="VSS112Q22.042P-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="616" Y="144" />
+      <Point X="616" Y="144" />
+      <Point X="616" Y="151" />
+      <Point X="616" Y="315" />
+      <Point X="676" Y="315" />
+      <Point X="676" Y="309" />
+      <Point X="676" Y="304" />
+      <Point X="676" Y="304" />
+    </Link>
+    <Link From="VSS112Q22.042P-000a" To="VSS112Q22.042P-000" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="827" Y="304" />
+      <Point X="827" Y="304" />
+      <Point X="827" Y="309" />
+      <Point X="827" Y="315" />
+      <Point X="721" Y="315" />
+      <Point X="721" Y="309" />
+      <Point X="721" Y="304" />
+      <Point X="721" Y="304" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

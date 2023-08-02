@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentDiagnostics" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.WebViewer" id="WebViewerSDM" top="20" left="20" width="780" height="540" zIndex="1" borderWidth="0px 0px 0px 0px" permissionView="['Administrator', 'Service']" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelSMDLoading" top="240" left="140" width="487" height="40" zIndex="0" text="$IAT/Main/Diagnostics_WaitLabel" />
+  </Widgets>
+</Content>

@@ -1,0 +1,66 @@
+VAR
+	ATON1 : TON;
+	ATON2 : TON;
+	ATON3 : TON;
+	Base64Buffer : STRING[2500000];
+	Base64srcLen : UDINT;
+	CameraLED : USINT := 0;
+	CameraLED_2 : USINT := 0;
+	CameraLED_OPC : USINT := 0;
+	CTU_HowManyBlink : CTU;
+	EXPO_TIME_COLOR : {REDUND_UNREPLICABLE} UDINT := 3000;
+	EXPO_TIME : {REDUND_UNREPLICABLE} UDINT := 15000;
+	FLASH_COLOR : {REDUND_UNREPLICABLE} USINT := 1;
+	FLASH_SEGMENT : {REDUND_UNREPLICABLE} USINT := 1;
+	httpDecodeBase64_0 : httpDecodeBase64;
+	httpEncodeBase64_0 : httpEncodeBase64;
+	ImageProcess : USINT;
+	ImgProcessingActive : BOOL;
+END_VAR
+VAR CONSTANT
+	LED_BLUE : USINT := 4;
+END_VAR
+VAR
+	Camera_Color : CameraG := (Enable:=TRUE,NumSearchMax:=1,RegionFeatures:=FALSE,EnhancedBlobInfo:=FALSE,Alignment:=0,Input_1:=0,Input_2:=0,Input_3:=0,Input_4:=0,Input_5:=0,ImageAcq:=FALSE,Set_Focus:=17500,Set_Expo:=3000,FlashColor:=1,FlashSegments:=4);
+	ColorResultsMatch : USINT;
+	ColorIdModel : USINT;
+END_VAR
+VAR CONSTANT
+	LED_GREEN : USINT := 2;
+	LED_NOTHING : USINT := 1;
+	LED_PLC_STATUS : USINT := 0;
+	LED_RED : USINT := 3;
+END_VAR
+VAR
+	ManualLampTest : BOOL;
+	MatchEnable : BOOL := TRUE;
+	MatchScore : USINT;
+	MAX_OVERLAP : USINT := 0;
+	MIN_SCORE : USINT := 44;
+	NewEncodeReq : BOOL;
+	NumberMatches : USINT;
+	NUM_SEARCH_MAX : USINT;
+	OneMoreBlink : BOOL;
+	PhotosTaken : USINT;
+	ReadExposureTime : UDINT;
+	ReadFocus : UINT;
+	RecognisedModel : USINT;
+	SET_FOCUS : UINT := 17500;
+	sStep : INT;
+	TestStringURL : STRING[2600000];
+	TimerTonCameraLED : TON;
+	TimerTonCameraLED_2 : TON;
+END_VAR
+VAR CONSTANT
+	TIMER_TIME_BLINK : TIME := T#500MS;
+	TIMER_TIME_BLINK_100MS : TIME := T#100MS;
+	TIMER_TIME_BLINK_500MS : TIME := T#500MS;
+	TIME_LAMP_TEST : TIME := T#500MS;
+END_VAR
+VAR
+	URL : STRING[2600000];
+	URLLength : UDINT;
+	ViBaseBuffer : ARRAY[0..1500000] OF USINT := [1500001(1)];
+	ViBaseGetImage_0 : ViBaseGetImage;
+	VIBASE_GETIMG_QUALITY : USINT := 5;
+END_VAR

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentAuto" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="585" left="1201" zIndex="0" text="auto" visible="false" />
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxAutoControl" top="26" left="25" width="650" height="534" zIndex="1" borderWidth="5px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.Button" id="ButtonAutoStart" top="431" left="17" width="290" height="60" zIndex="2" text="$IAT/Main/Auto_ButtonStart" cornerRadius="15px" textColor="rgba(0, 128, 0, 1)" fontSize="25px" permissionOperate="['Administrator', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonAutoStop" top="430" left="330" width="290" height="60" zIndex="3" text="$IAT/Main/Auto_ButtonStop" imageColor="rgba(0, 0, 0, 1)" cornerRadius="15px" textColor="rgba(255, 0, 0, 1)" fontSize="25px" permissionOperate="['Administrator', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStarted" top="350" left="140" width="341" height="76" zIndex="0" text="$IAT/Main/Auto_MachineWorking" textColor="rgba(0, 192, 0, 1)" textAlign="center" fontSize="20px" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStopped" top="350" left="140" width="341" height="76" zIndex="1" text="$IAT/Main/Auto_MachineStopped" textColor="rgba(255, 0, 0, 1)" textAlign="center" fontSize="20px" visible="false" />
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxDetectedItem" top="310" left="140" width="340" height="40" zIndex="4" borderWidth="3px" visible="false">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Label" id="LabelItemdetected" top="-2" left="-2" width="159" height="41" zIndex="0" text="$IAT/Main/Auto_DetectedItem" textAlign="left" fontSize="15px" />
+            <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputDetectedItem" top="-2" left="180" width="161" height="43" zIndex="1" textAlign="right" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.Paper" id="PaperImageAuto" top="30" left="150" width="320" height="256" zIndex="5" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMachineState" top="25" left="700" width="548" height="335" zIndex="2" borderWidth="5px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedWeight" top="74" left="301" width="151" height="29" zIndex="0" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorPosition" top="172" left="302" width="151" zIndex="1" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorSpeed" top="222" left="302" width="151" zIndex="2" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelItemWeight" top="75" left="19" width="179" height="28" zIndex="3" text="$IAT/Main/Auto_ItemWeight" textAlign="left" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelConveyorPosition" top="172" left="19" width="179" zIndex="4" text="$IAT/Main/Auto_CurrConvPos" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelConveyorSpeed" top="222" left="19" width="179" zIndex="5" text="$IAT/Main/Auto_CurrConvSpeed" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStep" top="24" left="18" width="201" height="29" zIndex="6" text="$IAT/Main/Auto_CurrentMachineStep" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputCurrentStep" top="4" left="279" width="250" height="70" zIndex="7" multiLine="true" wordWrap="true" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelPistonActuatorStatus" top="275" left="19" width="151" zIndex="8" text="$IAT/Main/Auto_ActuatingPiston" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelPistonPushingStatus" top="275" left="313" width="126" zIndex="9" text="$IAT/Main/Auto_PushingPiston" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorRed" top="276" left="196" width="35" height="30" zIndex="13" backColor="rgba(255, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonAcutoatorRed" top="272" left="231" width="5" height="38" zIndex="10" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonPushingGreen" top="274" left="444" width="38" height="30" zIndex="15" backColor="rgba(0, 192, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonPushingGreen" top="272" left="519" width="5" height="34" zIndex="11" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodPushingGreen" top="280" left="479" width="45" height="16" zIndex="12" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonPushingRed" top="274" left="444" width="35" height="30" zIndex="14" backColor="rgba(255, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonPushingRed" top="269" left="479" width="5" height="38" zIndex="16" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorGreen" top="276" left="195" width="38" height="30" zIndex="19" backColor="rgba(0, 192, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonActuatorGreen" top="270" left="270" width="5" height="38" zIndex="17" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="282" left="230" width="45" height="16" zIndex="18" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualWeight" top="125" left="300" width="151" height="29" zIndex="20" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight" top="126" left="18" width="179" height="28" zIndex="21" text="$IAT/Main/Auto_ActualWeight" textAlign="left" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCounter" top="375" left="700" width="550" height="185" zIndex="3" borderWidth="5px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.Button" id="ButtonResetRightChamber" top="130" left="342" width="159" zIndex="0" text="$IAT/Main/Auto_ButtonRESET" permissionOperate="['Administrator', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonResetLeftChamber" top="130" left="55" width="151" zIndex="1" text="$IAT/Main/Auto_ButtonRESET" permissionOperate="['Administrator', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelChamberCaunter" top="4" left="79" width="401" zIndex="2" text="$IAT/Main/Auto_NUMBEROF" textAlign="center top" />
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftChamber" top="60" left="55" width="150" height="60" zIndex="3">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightChamber" top="60" left="345" width="150" height="60" zIndex="4">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputRightChamber" top="-2" left="8" width="135" height="60" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputLeftChamber" top="60" left="55" width="150" height="60" zIndex="5" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" textAlign="left" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleLeftBoxBottom" top="120" left="215" width="45" height="10" zIndex="6" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleRightBoxBottom" top="120" left="290" width="45" height="10" zIndex="7" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="80" left="215" width="5" height="40" zIndex="8" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="80" left="255" width="5" height="40" zIndex="9" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="80" left="330" width="5" height="40" zIndex="10" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="80" left="290" width="5" height="40" zIndex="11" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL1" top="110" left="222" width="31" height="10" zIndex="12" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL2" top="100" left="222" width="31" height="10" zIndex="13" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL3" top="90" left="222" width="31" height="10" zIndex="14" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL4" top="80" left="222" width="31" height="10" zIndex="15" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR1" top="110" left="297" width="31" height="10" zIndex="16" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR2" top="100" left="297" width="31" height="10" zIndex="17" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR3" top="90" left="297" width="31" height="10" zIndex="18" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR4" top="80" left="297" width="31" height="10" zIndex="19" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR" top="135" left="220" width="36" zIndex="20" text="BR" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoAS" top="135" left="297" width="32" zIndex="21" text="AS" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoAS1" top="135" left="222" width="32" zIndex="22" text="AS" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR1" top="135" left="295" width="36" zIndex="23" text="BR" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR2" top="135" left="214" width="47" zIndex="24" text="Light" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR3" top="138" left="289" width="47" height="24" zIndex="25" text="Heavy" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR4" top="135" left="214" width="47" zIndex="26" text="Heavy" textAlign="center" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAutoBR5" top="135" left="289" width="47" zIndex="27" text="Light" textAlign="center" bold="true" visible="false" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="ButtonSetToAuto" top="40" left="34" zIndex="4" text="$IAT/Main/Auto_setAuto" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeBack" top="88" left="36" width="40" height="40" zIndex="5" backColor="rgba(169, 169, 169, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeOn" top="88" left="36" width="40" height="40" zIndex="6" backColor="rgba(127, 255, 0, 1)" visible="false" />
+  </Widgets>
+</Content>
