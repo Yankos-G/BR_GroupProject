@@ -12,5 +12,33 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortChoice" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadialSlider1" attribute="value" />
 </Binding>
-</Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Names" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ListBox1" attribute="dataProvider" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.PageUp" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.PageDown" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMpRecipeXML_0.Save" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMpRecipeXML_0.Load" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMpRecipeXML_0.Save" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Names" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem1" attribute="stringValue" />
+</Binding>
+	</Bindings>
 </BindingsSet>

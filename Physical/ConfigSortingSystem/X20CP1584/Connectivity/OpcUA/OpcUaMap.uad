@@ -50,7 +50,6 @@
         </Variable>
         <Variable Name="gSortChoiceView" />
         <Variable Name="gSorting">
-          <Variable Name="RecognisedModel" />
           <Variable Name="ItemWeightChoosen" EURangesId="3" EngineeringUnitId="3" />
           <Variable Name="SortLeftMin" />
           <Variable Name="SortLeftBR" />
@@ -84,6 +83,7 @@
         <Variable Name="gQuantityRightStorage" />
         <Variable Name="gInWeightMeasure" />
         <Variable Name="gProgCamera" RecursiveEnable="2" />
+        <Variable Name="gRecognisedModel" />
       </GlobalVariables>
       <Task Name="Alarms">
         <Variable Name="MpAlarmXCore_0" />
@@ -174,7 +174,9 @@
         <Variable Name="IsEnglishSelected" />
         <Variable Name="SemiAutoModeSelected" />
       </Task>
-      <Task Name="ProgramRec" />
+      <Task Name="ProgramRec">
+        <Variable Name="SelectedIndex" />
+      </Task>
       <Task Name="Camera">
         <Variable Name="ViBaseBuffer" />
         <Variable Name="URL" />

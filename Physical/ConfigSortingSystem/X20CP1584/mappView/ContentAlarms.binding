@@ -13,5 +13,39 @@
 <Source xsi:type="opcUa" refId="::Alarms:pendingAlarms" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentAlarms" widgetRefId="ButtonAcknowledgeAll" attribute="enable" />
 </Binding>
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.SelectedIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ListBox1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightChoosen" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftMin" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftGrey" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftBR" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput1" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:SelectedIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Table1" attribute="selectedRow" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Sizes" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem2" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

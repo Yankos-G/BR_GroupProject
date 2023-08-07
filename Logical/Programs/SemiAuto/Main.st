@@ -147,7 +147,7 @@ PROGRAM _CYCLIC
 				gProgCamera.DisplayPhoto := TRUE;
 				StringState := 'Zdjecie zrobione';
 				Approval := 0;
-				IF gSorting.RecognisedModel = 0 THEN 						//0
+				IF gRecognisedModel = 0 THEN 						//0
 					gProgCamera.ImageAcq 			  := FALSE;
 					StringRecognisedModel := 'Unrecognised';
 					State 				  := UNRECOGNISED_PIC;
@@ -193,7 +193,7 @@ PROGRAM _CYCLIC
 			
 		SORT_OPTIC:
 			StringState := 'Sortowanie optyczne';
-			IF gSorting.RecognisedModel = 1 THEN	
+			IF gRecognisedModel = 1 THEN	
 				gProgCamera.ImageAcq 			  := FALSE;
 				StringRecognisedModel := 'B&R';					//1
 				IF gSorting.SortLeftBR AND Approval THEN
@@ -206,7 +206,7 @@ PROGRAM _CYCLIC
 					END_IF;
 				END_IF;
 			
-			ELSIF gSorting.RecognisedModel = 2 THEN						//2
+			ELSIF gRecognisedModel = 2 THEN						//2
 				gProgCamera.ImageAcq 			  := FALSE;
 				StringRecognisedModel := 'AS';
 				IF gSorting.SortLeftBR AND Approval THEN

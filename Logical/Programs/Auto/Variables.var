@@ -61,4 +61,5 @@ VAR
 	ShowBRRight : BOOL := FALSE;
 	ShowLightLeft : BOOL := FALSE;
 	ShowLightRight : BOOL := FALSE;
+	CfgSetFTPServer_0 : CfgSetFTPServer;
 END_VAR

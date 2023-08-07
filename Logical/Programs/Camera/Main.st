@@ -27,7 +27,7 @@ PROGRAM _CYCLIC
 		gProgCamera.PhotoTaken := Color.PhotoTaken;
 		gProgCamera.ReadExpo := Color.ReadExpo;
 		gProgCamera.ReadFocus := Color.ReadFocus;
-		gSorting.RecognisedModel := Color.Model_ID;
+		gRecognisedModel := Color.Model_ID;
 		gProgCamera.Model_ID := Color.Model_ID;
 	END_IF;
 	
@@ -139,9 +139,9 @@ PROGRAM _CYCLIC
 
 	//setting variable for recognised model with acknowledgement of 2 different types of B&R logos
 	IF (gProgCamera.Model_ID=1) OR (gProgCamera.Model_ID=3) THEN
-		gSorting.RecognisedModel := 1;
+		gRecognisedModel := 1;
 	ELSE
-		gSorting.RecognisedModel := gProgCamera.Model_ID;
+		gRecognisedModel := gProgCamera.Model_ID;
 	END_IF
 		
 	//displaying last taken photo

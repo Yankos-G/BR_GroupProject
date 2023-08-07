@@ -764,7 +764,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_22">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RecognisedModel" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gRecognisedModel" event="ValueChanged" />
       <EventHandler condition="newValue = 0">
         <Sequence>
           <Step order="0">

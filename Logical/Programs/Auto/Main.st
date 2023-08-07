@@ -7,6 +7,7 @@ END_PROGRAM
 //po namyœle mo¿na by³o u¿yæ struktur do zmiennych :P 
 PROGRAM _CYCLIC
 
+	
 	SelectedAuto := (gMode = 0);
 	NotSelectedAuto := NOT SelectedAuto;
 	
@@ -134,7 +135,7 @@ PROGRAM _CYCLIC
 			gProgCamera.ImageAcq 	:= TRUE;
 			IF TimerCameraPicDone THEN
 				gProgCamera.DisplayPhoto := TRUE;
-				IF gSorting.RecognisedModel = 0 THEN 						//0
+				IF gRecognisedModel = 0 THEN 						//0
 					gProgCamera.ImageAcq  := FALSE;
 					State 				  := UNRECOGNISED_PIC;
 				ELSE 
@@ -160,13 +161,13 @@ PROGRAM _CYCLIC
 			
 			// ABOVE 1 TO ItemWeightChoosen ITEM FALL INTO THE LEFT, EQUAL AND ABOVE ItemWeightChoosen INTO THE RIGHT	
 		SORT_WEIGHT: 
-			IF ItemWeightMeasured > 1 AND ItemWeightMeasured < gSorting.ItemWeightChoosen THEN
+			IF ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured < gSorting.ItemWeightLeftMax THEN
 				IF gSorting.SortLeftMin THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			ELSIF ItemWeightMeasured >= gSorting.ItemWeightChoosen THEN 
+			ELSIF gSorting.ItemWeightRightMin >= gSorting.ItemWeightChoosen AND gSorting.ItemWeightLeftMin <= gSorting.ItemWeightRightMax THEN 
 				IF gSorting.SortLeftMin THEN
 					State := GO_STORAGE_RIGHT;
 				ELSE
@@ -175,14 +176,14 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		SORT_OPTIC_LOGO:
-			IF gSorting.RecognisedModel = 1 THEN	
+			IF gRecognisedModel = 1 THEN	
 				gProgCamera.ImageAcq 			  := FALSE;					//1
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			ELSIF gSorting.RecognisedModel = 2 THEN						
+			ELSIF gRecognisedModel = 2 THEN						
 				gProgCamera.ImageAcq 			  := FALSE;						//2
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_RIGHT;
@@ -192,14 +193,14 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		SORT_OPTIC_COLOR:
-			IF gSorting.RecognisedModel = 1 THEN	
+			IF gRecognisedModel = 1 THEN	
 				gProgCamera.ImageAcq 			  := FALSE;						//1
 				IF gSorting.SortLeftGrey THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			ELSIF gSorting.RecognisedModel = 2 THEN						
+			ELSIF gRecognisedModel = 2 THEN						
 				gProgCamera.ImageAcq 			  := FALSE;					//2
 				IF gSorting.SortLeftGrey THEN
 					State := GO_STORAGE_RIGHT;

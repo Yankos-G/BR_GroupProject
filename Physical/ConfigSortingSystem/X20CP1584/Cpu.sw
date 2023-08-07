@@ -88,5 +88,6 @@
     <LibraryObject Name="arcert" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ashw" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aseth" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

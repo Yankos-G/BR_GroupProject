@@ -8,7 +8,6 @@ VAR
 	gAlarmHardAck : BOOL := FALSE;
 	gAlarmHardware : BOOL := FALSE;
 	gAutoRecipe : USINT;
-	gProgCamera : Camera_enum_main := (ImageAcq:=FALSE,DisplayPhoto:=FALSE);
 	gCTU_QuantityLeft : CTU;
 	gCTU_QuantityRight : CTU;
 	gCTU_Reset_Left : BOOL := FALSE;
@@ -25,8 +24,10 @@ VAR
 	gMpRecipeUI_0 : MpRecipeUI;
 	gMpRecipeXML_0 : MpRecipeXml;
 	gPicNotRecognised : BOOL := FALSE;
+	gProgCamera : Camera_enum_main := (ImageAcq:=FALSE,DisplayPhoto:=FALSE);
 	gQuantityLeftStorage : UINT := 0;
 	gQuantityRightStorage : UINT := 0;
+	gRecognisedModel : ModelEnum := Unrecognised;
 	gSortChoiceView : BOOL;
 	gSorting : SortingType;
 	gStopBlink : BOOL := TRUE;

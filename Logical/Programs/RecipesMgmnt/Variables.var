@@ -1,4 +1,5 @@
 VAR
 	Save : BOOL;
 	FileName : STRING[80];
+	SelectedIndex : UDINT;
 END_VAR

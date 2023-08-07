@@ -14,12 +14,15 @@ TYPE
 		Milk : REAL;
 	END_STRUCT;
 	SortingType : 	STRUCT 
-		RecognisedModel : ModelEnum; (*Model rozpoznany*)
 		ItemWeightChoosen : USINT;
 		SortLeftMin : BOOL; (*Mniejsze detale sortowane s¹ na lewo gdy 1, a wieksze na prawo gdy 1.*)
 		SortLeftBR : BOOL; (*Gdy ustawiona na 1 sortuje BR na lewo, a AS na prawo*)
 		SortChoice : SortChoiceEnum;
 		SortLeftGrey : BOOL; (*Gdy ustawiona na 1 sortuje Szary na lewo, pomarancz na prawo*)
+		ItemWeightLeftMin : USINT;
+		ItemWeightLeftMax : USINT;
+		ItemWeightRightMin : USINT;
+		ItemWeightRightMax : USINT;
 	END_STRUCT;
 	SortChoiceEnum : 
 		(

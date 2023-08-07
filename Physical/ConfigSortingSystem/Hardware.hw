@@ -215,12 +215,14 @@
     <Parameter ID="TaskClassIdleTime" Value="2000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CF" />
-    <Parameter ID="FileDevicePath1" Value="C:\Users\Szkolenie\Desktop\Recipies" />
-    <Group ID="FileDevice2" />
-    <Parameter ID="FileDeviceName2" Value="TegesSmeges" />
-    <Parameter ID="FileDevicePath2" Value="C:\Users\barto\OneDrive\Pulpit\Folder na receptury" />
+    <Parameter ID="FileDevicePath1" Value="F:\" />
     <Parameter ID="TimeZone" Value="160" />
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="admin" />
+    <Parameter ID="FtpUserPassword1" Value="pLIjtxfjhNIKS5s0QuLYIcbouLHHfaapObsSOtJdzFs=" Description="12345" />
+    <Parameter ID="FtpUserSalt1" Value="1uoq8eNH" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
