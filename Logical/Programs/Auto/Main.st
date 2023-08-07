@@ -59,7 +59,7 @@ PROGRAM _CYCLIC
 		TimerTonActuator(IN := TimerTonActuatorIn, PT := TIME_TON_ACTUATOR);
 		TimerActuatorOut := TimerTonActuator.Q;
 		// camera
-		TimerTonCamera(IN := gImageAcq , PT := TIME_TON_CAMERA);
+		TimerTonCamera(IN := gProgCamera.ImageAcq , PT := TIME_TON_CAMERA);
 		TimerCameraPicDone := TimerTonCamera.Q;
 		// delay after detection
 		TimerTonDetect.IN := ItemDetected;
@@ -131,11 +131,11 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		TAKE_PICT_CAMERA:
-			gImageAcq 	:= TRUE;
+			gProgCamera.ImageAcq 	:= TRUE;
 			IF TimerCameraPicDone THEN
-				gDisplayImg := TRUE;
+				gProgCamera.DisplayPhoto := TRUE;
 				IF gSorting.RecognisedModel = 0 THEN 						//0
-					gImageAcq 			  := FALSE;
+					gProgCamera.ImageAcq  := FALSE;
 					State 				  := UNRECOGNISED_PIC;
 				ELSE 
 					State 				  := DROP;
@@ -176,14 +176,14 @@ PROGRAM _CYCLIC
 			
 		SORT_OPTIC_LOGO:
 			IF gSorting.RecognisedModel = 1 THEN	
-				gImageAcq 			  := FALSE;					//1
+				gProgCamera.ImageAcq 			  := FALSE;					//1
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
 			ELSIF gSorting.RecognisedModel = 2 THEN						
-				gImageAcq 			  := FALSE;						//2
+				gProgCamera.ImageAcq 			  := FALSE;						//2
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_RIGHT;
 				ELSE
@@ -193,14 +193,14 @@ PROGRAM _CYCLIC
 			
 		SORT_OPTIC_COLOR:
 			IF gSorting.RecognisedModel = 1 THEN	
-				gImageAcq 			  := FALSE;						//1
+				gProgCamera.ImageAcq 			  := FALSE;						//1
 				IF gSorting.SortLeftGrey THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
 			ELSIF gSorting.RecognisedModel = 2 THEN						
-				gImageAcq 			  := FALSE;					//2
+				gProgCamera.ImageAcq 			  := FALSE;					//2
 				IF gSorting.SortLeftGrey THEN
 					State := GO_STORAGE_RIGHT;
 				ELSE

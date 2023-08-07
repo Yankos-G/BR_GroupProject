@@ -1,41 +1,43 @@
 
 TYPE
 	Camera_enum_color : 	STRUCT 
+		LED : USINT;
+		ModuleOK : BOOL;
 		Enable : BOOL;
 		NumSearchMax : USINT;
 		RegionFeatures : BOOL;
 		EnhancedBlobInfo : BOOL;
 		Alignment : USINT;
-		Input_1 : DINT;
-		Input_2 : DINT;
-		Input_3 : INT;
-		Input_4 : DINT;
-		Input_5 : DINT;
-		ModuleOK : BOOL;
 		ImageAcq : BOOL;
-		Set_Focus : UINT;
-		Set_Expo : UDINT;
 		FlashColor : USINT;
 		FlashSegments : USINT;
+		SetFocus : UINT;
+		SetExpo : UDINT;
+		ReadFocus : UINT;
+		ReadExpo : UDINT;
+		Model_ID : USINT;
+		ResultsMatch : USINT;
+		PhotoTaken : USINT;
+		ImgProcessingActive : BOOL;
 	END_STRUCT;
 	Camera_enum_logo : 	STRUCT 
 		ModuleOK : BOOL;
-		LED_OPC : USINT;
+		LED : USINT;
 		PhotoTaken : USINT;
-		ReadFocus : USINT;
-		ReadExpo : USINT;
+		ReadFocus : UINT;
+		ReadExpo : UDINT;
 		SetFocus : UINT;
 		SetExpo : UDINT;
 		FlashColor : USINT;
 		FlashSegments : USINT;
-		ImgProcessingActive : USINT;
+		ImgProcessingActive : BOOL;
 		ImageAcq : BOOL;
 		Enable : BOOL;
 		NumSearchMax : USINT;
 		MIN_SCORE : USINT;
 		MAX_OVERLAP : USINT;
 		NumberMatches : USINT;
-		RecognizedModel : USINT;
+		Model_ID : USINT;
 		MatchScore : USINT;
 	END_STRUCT;
 END_TYPE

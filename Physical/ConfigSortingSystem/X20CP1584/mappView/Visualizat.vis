@@ -9,6 +9,8 @@
     <Page refId="PageAlarms" />
     <Page refId="PageCharts" />
     <Page refId="PageDiagnostics" />
+    <Page refId="PageAudit" />
+    <Page refId="PageFiles" />
   </Pages>
   <Navigations />
   <BindingsSets>
@@ -29,6 +31,7 @@
     <EventBindingsSet refId="ContentServices_eventbinding" />
     <EventBindingsSet refId="ContentParameters_eventbinding" />
     <EventBindingsSet refId="contentMessageBoxLogin_eventbinding" />
+    <EventBindingsSet refId="ContentCharts_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="dialogMessageBoxLogin" />
@@ -46,6 +49,8 @@
     <Content refId="ContentDiagnostics" />
     <Content refId="ContentAlarmHistory" />
     <Content refId="ContentParameters" />
+    <Content refId="ContentAudit" />
+    <Content refId="ContentFiles" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
@@ -56,9 +61,9 @@
   </Themes>
   <Configurations>
     <Configuration key="zoom" value="true" />
-		<Configuration key="activityCount" value="false" />
-		<Configuration key="keyboardOperation" value="true" /> 
-	<Gestures>
+    <Configuration key="activityCount" value="false" />
+    <Configuration key="keyboardOperation" value="true" />
+    <Gestures>
       <!--<SystemGesture1 touchPoints="2" />
 		  <SystemGesture2 touchPoints="2" />
 		  <SystemGesture3 touchPoints="2" />-->

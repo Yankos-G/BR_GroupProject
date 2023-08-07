@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentAudit" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="50" left="70" width="1140" height="470" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" width="270" zIndex="0" columnType="timestamp" text="Time" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="270" zIndex="1" columnType="operator name" text="Operator" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="600" zIndex="2" text="Action" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

@@ -32,22 +32,11 @@
     <EventBinding id="EventBinding_6">
       <Source xsi:type="widgets.brease.Login.Event" contentRefId="contentMessageBoxLogin" widgetRefId="LoginBox" event="LoginSuccess" />
       <EventHandler>
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="clientSystem.Action">
-                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="dialogMessageBoxLogin" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="clientSystem.Action">
-                <Method xsi:type="clientSystem.Action.Navigate" pageId="PageAuto" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="dialogMessageBoxLogin" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>

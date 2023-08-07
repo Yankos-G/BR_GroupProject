@@ -10,7 +10,8 @@
         <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxDetectedItem" top="310" left="140" width="340" height="40" zIndex="4" borderWidth="3px" visible="false">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="LabelItemdetected" top="-2" left="-2" width="159" height="41" zIndex="0" text="$IAT/Main/Auto_DetectedItem" textAlign="left" fontSize="15px" />
-            <Widget xsi:type="widgets.brease.Label" id="LabelDetectedString" top="6" left="170" width="160" height="23" zIndex="1" multiLine="true" text="text" textAlign="right" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelDetectedStringLogo" top="6" left="170" width="160" height="23" zIndex="1" multiLine="true" text="text" textAlign="right" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelDetectedStringColor" top="6" left="170" width="160" height="23" zIndex="2" multiLine="true" text="text" textAlign="right" bold="true" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.Paper" id="PaperImageAuto" top="30" left="150" width="320" height="256" zIndex="5" />
@@ -39,7 +40,7 @@
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="282" left="230" width="45" height="16" zIndex="17" backColor="rgba(0, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualWeight" top="125" left="240" width="151" height="29" zIndex="19" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight" top="123" left="18" width="179" height="28" zIndex="20" text="$IAT/Main/Auto_ActualWeight" textAlign="left" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelCurrentStep" top="20" left="141" width="350" zIndex="21" multiLine="true" text="text" textAlign="center" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelCurrentStep" top="24" left="141" width="350" zIndex="21" multiLine="true" text="text" textAlign="center bottom" bold="true" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCounter" top="375" left="700" width="550" height="185" zIndex="2" borderWidth="5px">

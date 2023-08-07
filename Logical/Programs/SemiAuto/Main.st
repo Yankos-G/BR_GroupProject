@@ -60,7 +60,7 @@ PROGRAM _CYCLIC
 		TimerTonActuator(IN := TimerTonActuatorIn, PT := TIME_TON_ACTUATOR);
 		TimerActuatorOut := TimerTonActuator.Q;
 		// camera
-		TimerTonCamera(IN := gImageAcq , PT := TIME_TON_CAMERA);
+		TimerTonCamera(IN := gProgCamera.ImageAcq , PT := TIME_TON_CAMERA);
 		TimerCameraPicDone := TimerTonCamera.Q;
 		// delay after detection
 		TimerTonDetect.IN := ItemDetected;
@@ -142,13 +142,13 @@ PROGRAM _CYCLIC
 			
 		TAKE_PICT_CAMERA:
 			StringState := 'Robienie zdjecia';
-			gImageAcq 	:= TRUE;
+			gProgCamera.ImageAcq 	:= TRUE;
 			IF TimerCameraPicDone AND Approval THEN
-				gDisplayImg := TRUE;
+				gProgCamera.DisplayPhoto := TRUE;
 				StringState := 'Zdjecie zrobione';
 				Approval := 0;
 				IF gSorting.RecognisedModel = 0 THEN 						//0
-					gImageAcq 			  := FALSE;
+					gProgCamera.ImageAcq 			  := FALSE;
 					StringRecognisedModel := 'Unrecognised';
 					State 				  := UNRECOGNISED_PIC;
 				ELSE 
@@ -194,7 +194,7 @@ PROGRAM _CYCLIC
 		SORT_OPTIC:
 			StringState := 'Sortowanie optyczne';
 			IF gSorting.RecognisedModel = 1 THEN	
-				gImageAcq 			  := FALSE;
+				gProgCamera.ImageAcq 			  := FALSE;
 				StringRecognisedModel := 'B&R';					//1
 				IF gSorting.SortLeftBR AND Approval THEN
 					Approval := 0;
@@ -207,7 +207,7 @@ PROGRAM _CYCLIC
 				END_IF;
 			
 			ELSIF gSorting.RecognisedModel = 2 THEN						//2
-				gImageAcq 			  := FALSE;
+				gProgCamera.ImageAcq 			  := FALSE;
 				StringRecognisedModel := 'AS';
 				IF gSorting.SortLeftBR AND Approval THEN
 					Approval := 0;

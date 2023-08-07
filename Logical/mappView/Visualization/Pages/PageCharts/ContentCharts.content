@@ -4,7 +4,7 @@
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="285" left="360" zIndex="0" text="Charts" visible="false" />
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxConvPosChart" top="0" left="0" width="640" height="580" zIndex="1" text="$IAT/Main/Auto_CurrConvPos" permissionOperate="['Administrator', 'Operator', 'Service']" permissionView="['Administrator', 'Operator', 'Service']">
       <Widgets>
-        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="0" left="0" width="640" height="580" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
+        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="0" left="0" width="640" height="480" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
           <Properties>
             <yAxis>
               <Element id="yAxis1" />
@@ -20,11 +20,13 @@
             </cursor>
           </Properties>
         </Widget>
+        <Widget xsi:type="widgets.brease.Button" id="Button1" top="493" left="509" zIndex="1" text="Unfreeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button2" top="493" left="399" zIndex="2" text="Freeze" textAlign="center" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxConvSpeedChart" top="0" left="640" width="640" height="580" zIndex="2" text="$IAT/Main/Auto_CurrConvSpeed" permissionOperate="['Administrator', 'Operator', 'Service']" permissionView="['Administrator', 'Operator', 'Service']">
       <Widgets>
-        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA2" top="0" left="0" width="640" height="580" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
+        <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA2" top="0" left="0" width="640" height="480" zIndex="0" updateBufferTime="1000" updateChartTime="1000">
           <Properties>
             <yAxis>
               <Element id="yAxis1" />
@@ -40,6 +42,8 @@
             </cursor>
           </Properties>
         </Widget>
+        <Widget xsi:type="widgets.brease.Button" id="Button3" top="493" left="519" zIndex="1" text="Unfreeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button4" top="493" left="409" zIndex="2" text="Freeze" textAlign="center" />
       </Widgets>
     </Widget>
   </Widgets>

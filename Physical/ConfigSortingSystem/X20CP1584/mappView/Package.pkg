@@ -19,5 +19,6 @@
     <Object Type="File">ContentParameters.binding</Object>
     <Object Type="File">ContentParameters.eventbinding</Object>
     <Object Type="File">contentMessageBoxLogin.eventbinding</Object>
+    <Object Type="File">ContentCharts.eventbinding</Object>
   </Objects>
 </Package>

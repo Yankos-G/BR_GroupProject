@@ -33,7 +33,6 @@
   <DefaultView>
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
-        <Variable Name="gImageAcq" />
         <Variable Name="gMode" />
         <Variable Name="gMotorBeltAxisBasic">
           <Variable Name="Position" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="1" />
@@ -84,6 +83,7 @@
         <Variable Name="gQuantityLeftStorage" />
         <Variable Name="gQuantityRightStorage" />
         <Variable Name="gInWeightMeasure" />
+        <Variable Name="gProgCamera" RecursiveEnable="2" />
       </GlobalVariables>
       <Task Name="Alarms">
         <Variable Name="MpAlarmXCore_0" />
@@ -94,7 +94,6 @@
         <Variable Name="IsSemiAutoMode" />
         <Variable Name="IsManualMode" />
         <Variable Name="ModuleOkActuators" />
-        <Variable Name="ModuleOkCamera" />
         <Variable Name="ModuleOkEncoder" />
         <Variable Name="ModuleOkInverter" />
         <Variable Name="ModuleOkPLC_PLK" />
@@ -179,16 +178,8 @@
       <Task Name="Camera">
         <Variable Name="ViBaseBuffer" />
         <Variable Name="URL" />
-        <Variable Name="SET_FOCUS" />
         <Variable Name="ManualLampTest" />
         <Variable Name="Base64Buffer" />
-        <Variable Name="CameraLED_OPC" />
-        <Variable Name="Camera_Color" RecursiveEnable="2" />
-        <Variable Name="EXPO_TIME" />
-        <Variable Name="PhotosTaken" />
-        <Variable Name="ReadExposureTime" />
-        <Variable Name="ReadFocus" />
-        <Variable Name="RecognisedModel" />
       </Task>
     </Module>
   </DefaultView>

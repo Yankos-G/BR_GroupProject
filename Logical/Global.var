@@ -8,14 +8,12 @@ VAR
 	gAlarmHardAck : BOOL := FALSE;
 	gAlarmHardware : BOOL := FALSE;
 	gAutoRecipe : USINT;
+	gProgCamera : Camera_enum_main := (ImageAcq:=FALSE,DisplayPhoto:=FALSE);
 	gCTU_QuantityLeft : CTU;
 	gCTU_QuantityRight : CTU;
 	gCTU_Reset_Left : BOOL := FALSE;
 	gCTU_Reset_Right : BOOL := FALSE;
-	gDisplayImg : BOOL;
 	gErrorState : BOOL := FALSE;
-	gExposureTime : UDINT;
-	gImageAcq : BOOL := FALSE; (*Enabling image acquisition therefore starting matching procedure, rising edge*)
 	gInWeightMeasure : USINT;
 	gItemWeightChoosen : USINT := 10;
 	gMaxLeftStorage : USINT := 4;
@@ -29,7 +27,6 @@ VAR
 	gPicNotRecognised : BOOL := FALSE;
 	gQuantityLeftStorage : UINT := 0;
 	gQuantityRightStorage : UINT := 0;
-	gSetFocus : USINT;
 	gSortChoiceView : BOOL;
 	gSorting : SortingType;
 	gStopBlink : BOOL := TRUE;

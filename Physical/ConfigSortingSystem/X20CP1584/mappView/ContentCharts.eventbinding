@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentCharts_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="ContentCharts.OnlineChartHDA1.Click">
+      <Source xsi:type="widgets.brease.OnlineChartHDA.Event" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA1">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Freeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_23">
+      <Source xsi:type="widgets.brease.OnlineChartHDA.Event" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA2">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Freeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentCharts.Button2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentCharts" widgetRefId="Button2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA1">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Freeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_24">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentCharts" widgetRefId="Button1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA1">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Unfreeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_25">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentCharts" widgetRefId="Button3" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA2">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Unfreeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_26">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentCharts" widgetRefId="Button4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.OnlineChartHDA.Action" contentRefId="ContentCharts" widgetRefId="OnlineChartHDA2">
+            <Method xsi:type="widgets.brease.OnlineChartHDA.Action.Freeze" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

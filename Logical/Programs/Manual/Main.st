@@ -14,8 +14,7 @@ PROGRAM _CYCLIC
 	
 	//-------VAR---CALL-------//
 	gAxis_1;
-	gExposureTime;
-	gSetFocus;
+
 	ImageShootTON.PT := T#500ms;
 	ImageDisplayTON.PT := T#500ms;
 	
@@ -188,34 +187,27 @@ PROGRAM _CYCLIC
 			CAMERA_PHOTO_SHOOT_WAIT:
 				IF PhotoShoot THEN	
 					PhotoShoot :=0;
-					gImageAcq 	:= 1;
+					gProgCamera.ImageAcq 	:= 1;
 					sCamera := CAMERA_PHOTO_DISPLAY_INIT;
 				END_IF;
 			CAMERA_PHOTO_DISPLAY_INIT: 
 				ImageShootTON.IN := 1;
 				IF ImageShootTON.Q THEN
 					ImageShootTON.IN := 0;
-					gImageAcq 	:= 0;
+					gProgCamera.ImageAcq 	:= 0;
 					sCamera := CAMERA_PHOTO_DISPLAY;
 				END_IF;
 			CAMERA_PHOTO_DISPLAY:
 				ImageDisplayTON.IN := 1;
 				IF ImageDisplayTON.Q THEN
 					ImageDisplayTON.IN := 0;
-					gImageAcq 	:= 0;
-					gDisplayImg := TRUE;					
+					gProgCamera.ImageAcq 	:= 0;
+					gProgCamera.DisplayPhoto := TRUE;					
 					sCamera := CAMERA_INIT;
 				END_IF;
 			
 		END_CASE;
-	
-//		IF PhotoShow THEN					//displaying a photo
-//			gDisplayImg := 1;
-//		ELSE
-//			gDisplayImg := 0;
-//		END_IF;
-		//---------END---OF---PHOTO---FUNCTIONS------------//
-		
+			
 	END_IF;
 	
 	

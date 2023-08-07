@@ -569,6 +569,20 @@
               </Target>
             </Action>
           </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 2">
@@ -582,33 +596,47 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageWeight">
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageLogo">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="3">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageLogo">
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageWeight">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="4">
             <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="5">
+          <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
@@ -661,14 +689,14 @@
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.SortLeftBR" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Sequence>
-          <Step order="0">
+          <Step order="1">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_3BR" />
               </Target>
             </Action>
           </Step>
-          <Step order="1">
+          <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_4AS" />
@@ -700,14 +728,14 @@
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.SortLeftGrey" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Sequence>
-          <Step order="0">
+          <Step order="1">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_5Grey" />
               </Target>
             </Action>
           </Step>
-          <Step order="1">
+          <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_6Orange" />
@@ -738,25 +766,58 @@
     <EventBinding id="EventBinding_22">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RecognisedModel" event="ValueChanged" />
       <EventHandler condition="newValue = 0">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedString">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Unrec" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Unrec" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Unrec" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 1">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedString">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_BR" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_BR" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Grey" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 2">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedString">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_AS" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_AS" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Orang" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

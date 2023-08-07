@@ -13,7 +13,6 @@ VAR
 	ModuleOkPLC_PLK : BOOL;
 	ModuleOkInverter : BOOL;
 	ModuleOkEncoder : BOOL;
-	ModuleOkCamera : BOOL;
 	ModuleOkActuators : BOOL;
 	IsSemiAutoMode : BOOL;
 	IsManualMode : BOOL;

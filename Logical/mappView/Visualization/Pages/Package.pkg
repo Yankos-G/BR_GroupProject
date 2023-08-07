@@ -10,5 +10,7 @@
     <Object Type="Package">PageAlarms</Object>
     <Object Type="Package">PageCharts</Object>
     <Object Type="Package">PageDiagnostics</Object>
+    <Object Type="Package">PageAudit</Object>
+    <Object Type="Package">PageFiles</Object>
   </Objects>
 </Package>
