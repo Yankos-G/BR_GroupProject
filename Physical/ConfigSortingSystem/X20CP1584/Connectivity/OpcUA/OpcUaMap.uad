@@ -34,7 +34,6 @@
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
         <Variable Name="gImageAcq" />
-        <Variable Name="gRecognisedModel" />
         <Variable Name="gMode" />
         <Variable Name="gMotorBeltAxisBasic">
           <Variable Name="Position" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="1" />
@@ -51,13 +50,13 @@
           <Variable Name="Save" />
         </Variable>
         <Variable Name="gSortChoiceView" />
-        <Variable Name="gSortChoice" />
         <Variable Name="gSorting">
           <Variable Name="RecognisedModel" />
           <Variable Name="ItemWeightChoosen" EURangesId="3" EngineeringUnitId="3" />
           <Variable Name="SortLeftMin" />
           <Variable Name="SortLeftBR" />
           <Variable Name="SortChoice" />
+          <Variable Name="SortLeftGrey" />
         </Variable>
         <Variable Name="gMpRecipeUI_0" RecursiveEnable="1" />
         <Variable Name="gUIConnect">

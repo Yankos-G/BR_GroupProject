@@ -35,19 +35,7 @@
 <Source xsi:type="opcUa" refId="::Auto:ActuatorSorting" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectanglePistonRodPushingGreen" attribute="visible" />
 </Binding>
-
-
-
-
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:StringRecognisedModel" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutputDetectedItem" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:StringState" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutputCurrentStep" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Auto:ActuatorNotPushing" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="RectangleBoxPistonActuatorRed" attribute="visible" />
 </Binding>
@@ -123,42 +111,6 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Auto:NotSelectedAuto" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="ButtonSetToAuto" attribute="enable" />
-</Binding>
-
-
-
-
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowLightLeft" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR2" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowLightLeft" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR3" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowLightRight" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR5" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowLightRight" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR4" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowBRRight" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoAS1" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowBRRight" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR1" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowBRLeft" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoBR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowBRLeft" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="LabelAutoAS" attribute="visible" />
 </Binding>
 </Bindings>
 </BindingsSet>

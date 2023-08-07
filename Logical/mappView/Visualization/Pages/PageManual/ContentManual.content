@@ -18,10 +18,10 @@
         <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorGreen" top="44" left="274" width="30" height="30" zIndex="14" backColor="rgba(0, 192, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonActuatorGreen" top="42" left="339" width="5" height="34" zIndex="13" backColor="rgba(0, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="51" left="299" width="45" height="16" zIndex="12" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputDistance" top="228" left="33" width="180" height="40" zIndex="10" maxValue="300" minValue="-300" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputDistance" top="228" left="33" width="180" height="40" zIndex="10" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="300" minValue="-300" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonMoveRight" top="406" left="626" width="144" height="59" zIndex="9" text="$IAT/Main/Manual_MoveRight" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonMoveLeft" top="405" left="461" width="143" height="59" zIndex="8" text="$IAT/Main/Manual_MoveLeft" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputVelocity" top="228" left="258" width="180" height="40" zIndex="4" maxValue="500" minValue="-500" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputVelocity" top="228" left="258" width="180" height="40" zIndex="4" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="500" minValue="-500" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonChangeDirectionAdditive" top="291" left="33" width="180" height="40" zIndex="3" text="$IAT/Main/Manual_ChangeDirection" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonChangeDirectionVelocity" top="291" left="258" width="180" height="40" zIndex="2" text="$IAT/Main/Manual_ChangeDirection" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorRed" top="44" left="274" width="30" height="30" zIndex="19" backColor="rgba(255, 0, 0, 1)" />
@@ -39,12 +39,12 @@
         <Widget xsi:type="widgets.brease.Button" id="btnTestLed" top="17" left="1032" width="180" height="40" zIndex="30" text="$IAT/Main/Camera_test" />
         <Widget xsi:type="widgets.brease.Label" id="Label2" top="121" left="760" width="140" height="40" zIndex="31" text="Set exposure time" />
         <Widget xsi:type="widgets.brease.Label" id="Label3" top="52" left="787" zIndex="32" text="Set focus" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="165" left="777" zIndex="33" textAlign="center" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="86" left="777" zIndex="34" textAlign="center" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="165" left="777" zIndex="33" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" textAlign="center" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="86" left="777" zIndex="34" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" textAlign="center" />
         <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight2" top="60" left="403" width="179" height="28" zIndex="35" text="Actual speed:" textAlign="left" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualSpeed" top="60" left="521" width="151" height="29" zIndex="36" unit="{'metric':'MTS','imperial':'MTS','imperial-us':'MTS'}" unitAlign="right" textAlign="left" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="243" left="777" zIndex="37" textAlign="center" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="322" left="777" zIndex="38" textAlign="center" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="243" left="777" zIndex="37" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" textAlign="center" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="322" left="777" zIndex="38" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" textAlign="center" />
         <Widget xsi:type="widgets.brease.Label" id="Label4" top="278" left="760" width="134" height="40" zIndex="39" text="Exposure time" textAlign="center" />
         <Widget xsi:type="widgets.brease.Label" id="Label5" top="199" left="760" width="134" height="40" zIndex="40" text="Focus" textAlign="center" />
       </Widgets>

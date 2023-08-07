@@ -669,5 +669,240 @@
         <seg>Auto</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_Weight">
+      <tuv xml:lang="pl">
+        <seg>Wagowo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Weight</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Logo">
+      <tuv xml:lang="pl">
+        <seg>Logo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Color">
+      <tuv xml:lang="pl">
+        <seg>Kolor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Color</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Stop">
+      <tuv xml:lang="pl">
+        <seg>Stop</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Init">
+      <tuv xml:lang="pl">
+        <seg>Inicjalizacja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Initialization</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Start">
+      <tuv xml:lang="pl">
+        <seg>Gotowy do startu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Ready</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Detect">
+      <tuv xml:lang="pl">
+        <seg>Wykrycie detalu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item detection</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Category">
+      <tuv xml:lang="pl">
+        <seg>Kategoryzacja detalu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item categorization</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Take_PIC">
+      <tuv xml:lang="pl">
+        <seg>Zrobiono zdjęcie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Picture done</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Drop">
+      <tuv xml:lang="pl">
+        <seg>Dozowanie detalu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item dosing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Weight">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie wagowe</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sorting by weight</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Logo">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie optyczne - logo
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Optical logo sorting</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Color">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie optyczne - kolor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Optical sorting - color</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Go_left">
+      <tuv xml:lang="pl">
+        <seg>Transport detalu do lewego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item transport to the left tank</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Go_Right">
+      <tuv xml:lang="pl">
+        <seg>Transport detalu do prawego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item transport to the right tank</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Left">
+      <tuv xml:lang="pl">
+        <seg>Zepchniecie detalu z taśmy do zbiornika lewego</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pushing the item from the belt to the left tank</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Unrecog">
+      <tuv xml:lang="pl">
+        <seg>Nie rozpoznano detalu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Item not recognized</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Error">
+      <tuv xml:lang="pl">
+        <seg>Wystapił błąd
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_1Heavy">
+      <tuv xml:lang="pl">
+        <seg>Cieżkie
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heavy</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_2Light">
+      <tuv xml:lang="pl">
+        <seg>Lekkie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Light</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_3BR">
+      <tuv xml:lang="pl">
+        <seg>Logo BR</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo BR</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_4AS">
+      <tuv xml:lang="pl">
+        <seg>Logo AS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo AS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_5Grey">
+      <tuv xml:lang="pl">
+        <seg>Szary</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Grey</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_6Orange">
+      <tuv xml:lang="pl">
+        <seg>Oranż</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Orange</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_BR">
+      <tuv xml:lang="pl">
+        <seg>BR</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>BR</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_AS">
+      <tuv xml:lang="pl">
+        <seg>AS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Unrec">
+      <tuv xml:lang="pl">
+        <seg>Nie rozpoznano</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Unrecognized</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Grey">
+      <tuv xml:lang="pl">
+        <seg>Szary</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Grey</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Orang">
+      <tuv xml:lang="pl">
+        <seg>Oranż</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Orange</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

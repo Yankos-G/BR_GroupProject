@@ -136,7 +136,7 @@ PROGRAM _CYCLIC
 			StringState := 'Kategoryzacja detalu';
 			IF gSorting.SortChoice = WEIGHT THEN
 				State := DROP;
-			ELSIF gSorting.SortChoice = OPTIC THEN
+			ELSE
 				State := TAKE_PICT_CAMERA;
 			END_IF;
 			
@@ -161,7 +161,7 @@ PROGRAM _CYCLIC
 			ActuatorPushing := TRUE;
 			IF TimerActuatorOut THEN
 				ActuatorPushing := FALSE;
-				IF gSorting.SortChoice = OPTIC THEN
+				IF gSorting.SortChoice = OPTIC_LOGO OR gSorting.SortChoice = OPTIC_COLOR THEN
 					gSortChoiceView := TRUE;
 					State := SORT_OPTIC;
 				ELSIF gSorting.SortChoice = WEIGHT THEN
@@ -295,7 +295,7 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	// HMI GUYS WANTED SOME VARIABLES
-	IF gSorting.SortChoice = OPTIC THEN
+	IF gSorting.SortChoice = OPTIC_LOGO OR gSorting.SortChoice = OPTIC_COLOR THEN
 		gSortChoiceView := TRUE;
 	ELSIF gSorting.SortChoice = WEIGHT THEN
 		gSortChoiceView := FALSE;

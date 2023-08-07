@@ -1,6 +1,6 @@
 
 TYPE
-	CameraG : 	STRUCT 
+	Camera_enum_color : 	STRUCT 
 		Enable : BOOL;
 		NumSearchMax : USINT;
 		RegionFeatures : BOOL;
@@ -17,5 +17,25 @@ TYPE
 		Set_Expo : UDINT;
 		FlashColor : USINT;
 		FlashSegments : USINT;
+	END_STRUCT;
+	Camera_enum_logo : 	STRUCT 
+		ModuleOK : BOOL;
+		LED_OPC : USINT;
+		PhotoTaken : USINT;
+		ReadFocus : USINT;
+		ReadExpo : USINT;
+		SetFocus : UINT;
+		SetExpo : UDINT;
+		FlashColor : USINT;
+		FlashSegments : USINT;
+		ImgProcessingActive : USINT;
+		ImageAcq : BOOL;
+		Enable : BOOL;
+		NumSearchMax : USINT;
+		MIN_SCORE : USINT;
+		MAX_OVERLAP : USINT;
+		NumberMatches : USINT;
+		RecognizedModel : USINT;
+		MatchScore : USINT;
 	END_STRUCT;
 END_TYPE

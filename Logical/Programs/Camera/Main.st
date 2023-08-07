@@ -12,6 +12,13 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	IF gSorting.SortChoice = OPTIC_LOGO THEN
+		//zmienna ogolna := Camera_Logo.Enable;
+		
+	ELSIF  gSorting.SortChoice = OPTIC_COLOR THEN
+		//zmienna ogolna := Camera_Color.Enable;
+	END_IF;
+	
 	
 //-------------CAMERA LED--Blinking-Auto-And-Semiauto-----------//
 //0 - PLC State
@@ -69,7 +76,8 @@ PROGRAM _CYCLIC
 		END_IF;
 	END_IF;
 
-
+	TimerTonCameraLED();
+	TimerTonCameraLED_2();
 
 	//-----------------TEST--CAMERA-----------------------//
 
@@ -117,8 +125,6 @@ PROGRAM _CYCLIC
 		END_CASE;
 	END_IF;
 
-	TimerTonCameraLED();
-	TimerTonCameraLED_2();
 
 	//setting variable for recognised model with acknowledgement of 2 different types of B&R logos
 	IF (RecognisedModel=1) OR (RecognisedModel=3) THEN
@@ -152,7 +158,7 @@ PROGRAM _CYCLIC
 			END_IF
 								
 		1:	// get the image which is saved on the camera
-			ViBaseGetImage_0.MpLink := ADR(gCamera);
+			ViBaseGetImage_0.MpLink := ADR(gCamera); //DO DODADANIA IF Z WYBOREM CAMERY
 			ViBaseGetImage_0.Type := viBASE_IMAGE_TYPE_BMP;
 			ViBaseGetImage_0.QualityLevel := VIBASE_GETIMG_QUALITY;
 			ViBaseGetImage_0.Buffer := ADR(ViBaseBuffer);

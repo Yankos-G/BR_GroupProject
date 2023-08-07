@@ -21,8 +21,8 @@ VAR CONSTANT
 	LED_BLUE : USINT := 4;
 END_VAR
 VAR
-	Camera_Color : CameraG := (Enable:=TRUE,NumSearchMax:=1,RegionFeatures:=FALSE,EnhancedBlobInfo:=FALSE,Alignment:=0,Input_1:=0,Input_2:=0,Input_3:=0,Input_4:=0,Input_5:=0,ImageAcq:=FALSE,Set_Focus:=17500,Set_Expo:=3000,FlashColor:=1,FlashSegments:=4);
-	ColorResultsMatch : USINT;
+	Camera_Logo : Camera_enum_logo := (Enable:=TRUE,ImageAcq:=FALSE,Set_Focus:=17000,Set_Expo:=15000,FlashColor:=1,FlashSegments:=1);
+	Camera_Color : Camera_enum_color := (Enable:=TRUE,NumSearchMax:=1,RegionFeatures:=FALSE,EnhancedBlobInfo:=FALSE,Alignment:=0,Input_1:=0,Input_2:=0,Input_3:=0,Input_4:=0,Input_5:=0,ImageAcq:=FALSE,Set_Focus:=17500,Set_Expo:=3000,FlashColor:=1,FlashSegments:=4);
 	ColorIdModel : USINT;
 END_VAR
 VAR CONSTANT

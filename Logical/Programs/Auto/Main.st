@@ -91,7 +91,6 @@ PROGRAM _CYCLIC
 			END_IF;		
 			MotorPos := 0;
 			MotorVel := 0;
-			StringState := 'Stop';
 			TimerTonActuatorIn 	  := FALSE;
 			ActuatorSorting 	  := FALSE;
 			ActuatorPushing  	  := FALSE;
@@ -100,7 +99,6 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		INIT:
-			StringState 		:= 'Inicjalizacja';
 			gAddToRight 		:= FALSE;
 			gAddToLeft 			:= FALSE;
 			TimerTonActuatorIn 	:= FALSE;
@@ -113,7 +111,6 @@ PROGRAM _CYCLIC
 			State 				:= START;
 			
 		START: 
-			StringState 		:= 'Gotowy do startu';
 			IF ItemDetected THEN
 				ItemWeightMeasured 	:= RESET_ITEM_MEM_WEIGHT;
 				State := DETECTION;
@@ -121,28 +118,24 @@ PROGRAM _CYCLIC
 			
 		DETECTION:
 			MotorHome 	:= FALSE;
-			StringState := 'Wykrycie detalu';
 			IF TimerAfterDetect THEN
 				ItemWeightMeasured := ItemWeight;
 				State := CATEGORIZATION;
 			END_IF;
 				
 		CATEGORIZATION: 
-			StringState := 'Kategoryzacja detalu';
 			IF gSorting.SortChoice = WEIGHT THEN
 				State := DROP;
-			ELSIF gSorting.SortChoice = OPTIC THEN
+			ELSE
 				State := TAKE_PICT_CAMERA;
 			END_IF;
 			
 		TAKE_PICT_CAMERA:
-			StringState := 'Robienie zdjecia';
 			gImageAcq 	:= TRUE;
 			IF TimerCameraPicDone THEN
 				gDisplayImg := TRUE;
 				IF gSorting.RecognisedModel = 0 THEN 						//0
 					gImageAcq 			  := FALSE;
-					StringRecognisedModel := 'Unrecognised';
 					State 				  := UNRECOGNISED_PIC;
 				ELSE 
 					State 				  := DROP;
@@ -150,13 +143,15 @@ PROGRAM _CYCLIC
 			END_IF;
 				
 		DROP:
-			StringState := 'Dozowanie detalu';
 			ActuatorPushing := TRUE;
 			IF TimerActuatorOut THEN
 				ActuatorPushing := FALSE;
-				IF gSorting.SortChoice = OPTIC THEN
+				IF gSorting.SortChoice = OPTIC_LOGO THEN
 					gSortChoiceView := TRUE;
-					State := SORT_OPTIC;
+					State := SORT_OPTIC_LOGO;
+				ELSIF gSorting.SortChoice = OPTIC_COLOR THEN
+					gSortChoiceView := TRUE;
+					State := SORT_OPTIC_COLOR;
 				ELSIF gSorting.SortChoice = WEIGHT THEN
 					gSortChoiceView := FALSE;
 					State := SORT_WEIGHT;
@@ -165,7 +160,6 @@ PROGRAM _CYCLIC
 			
 			// ABOVE 1 TO ItemWeightChoosen ITEM FALL INTO THE LEFT, EQUAL AND ABOVE ItemWeightChoosen INTO THE RIGHT	
 		SORT_WEIGHT: 
-			StringState := 'Sortowanie wagowe';
 			IF ItemWeightMeasured > 1 AND ItemWeightMeasured < gSorting.ItemWeightChoosen THEN
 				IF gSorting.SortLeftMin THEN
 					State := GO_STORAGE_LEFT;
@@ -180,20 +174,16 @@ PROGRAM _CYCLIC
 				END_IF;
 			END_IF;
 			
-		SORT_OPTIC:
-			StringState := 'Sortowanie optyczne';
+		SORT_OPTIC_LOGO:
 			IF gSorting.RecognisedModel = 1 THEN	
-				gImageAcq 			  := FALSE;
-				StringRecognisedModel := 'B&R';							//1
+				gImageAcq 			  := FALSE;					//1
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_LEFT;
 				ELSE
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			
 			ELSIF gSorting.RecognisedModel = 2 THEN						
-				gImageAcq 			  := FALSE;
-				StringRecognisedModel := 'AS';							//2
+				gImageAcq 			  := FALSE;						//2
 				IF gSorting.SortLeftBR THEN
 					State := GO_STORAGE_RIGHT;
 				ELSE
@@ -201,9 +191,24 @@ PROGRAM _CYCLIC
 				END_IF;
 			END_IF;
 			
+		SORT_OPTIC_COLOR:
+			IF gSorting.RecognisedModel = 1 THEN	
+				gImageAcq 			  := FALSE;						//1
+				IF gSorting.SortLeftGrey THEN
+					State := GO_STORAGE_LEFT;
+				ELSE
+					State := GO_STORAGE_RIGHT;
+				END_IF;
+			ELSIF gSorting.RecognisedModel = 2 THEN						
+				gImageAcq 			  := FALSE;					//2
+				IF gSorting.SortLeftGrey THEN
+					State := GO_STORAGE_RIGHT;
+				ELSE
+					State := GO_STORAGE_LEFT;
+				END_IF;
+			END_IF;
 			
 		GO_STORAGE_LEFT:
-			StringState := 'Transport detalu do lewego zbiornika';
 			MotorReqPosition := MOTOR_DIST_LEFT;
 			MotorMoveAbsolute := TRUE;
 			IF MotorInPosition AND MotorMoveDone THEN
@@ -211,7 +216,6 @@ PROGRAM _CYCLIC
 			END_IF;
 
 		GO_STORAGE_RIGHT:
-			StringState := 'Transport detalu do prawego zbiornika';
 			MotorReqPosition  := MOTOR_DIST_RIGHT;
 			MotorMoveAbsolute := TRUE;
 			IF MotorInPosition AND MotorMoveDone THEN
@@ -219,7 +223,6 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		SORT_STORAGE_LEFT:
-			StringState := 'Zepchniecie detalu z tasmy do zbiornika lewego';
 			MotorMoveAbsolute := FALSE;
 			ActuatorSorting   := TRUE;
 			gAddToLeft 		  := TRUE;
@@ -233,7 +236,6 @@ PROGRAM _CYCLIC
 			State := INIT;
 		
 		UNRECOGNISED_PIC:
-			StringState := 'Nie rozpoznano zdjecia';
 			gPicNotRecognised := TRUE; 
 			State := STOP;
 			
@@ -248,7 +250,6 @@ PROGRAM _CYCLIC
 			TimerTonActuatorIn 	  := FALSE;
 			ActuatorSorting 	  := FALSE;
 			ActuatorPushing  	  := FALSE;
-			StringState := 'Wystapil blad';
 			gErrorState := TRUE;
 			IF gAlarmHardAck THEN
 				IF NOT gAlarmHardware THEN
@@ -293,7 +294,7 @@ PROGRAM _CYCLIC
 	gCTU_QuantityRight();
 	
 	// HMI GUYS WANTED SOME VARIABLES
-	IF gSorting.SortChoice = OPTIC THEN
+	IF gSorting.SortChoice = OPTIC_LOGO OR gSorting.SortChoice = OPTIC_COLOR THEN
 		gSortChoiceView := TRUE;
 		ShowLightLeft := FALSE;
 		ShowLightRight := FALSE;
@@ -317,9 +318,6 @@ PROGRAM _CYCLIC
 		END_IF;
 	END_IF;
 	
-	
-	
-	
 	ActuatorNotSorting := NOT ActuatorSorting;
 	ActuatorNotPushing 	:= NOT ActuatorPushing;
 	
@@ -327,54 +325,6 @@ PROGRAM _CYCLIC
 		Start := FALSE;
 	END_IF;
 	
-	//Added by Jakub; Responsibler for changing machine state between English and Polish
-	IF IsEnglishSelected THEN
-		IF StringState = 'Inicjalizacja' THEN
-			StringState := 'Initialization';
-			
-		ELSIF StringState = 'Gotowy do startu' THEN
-			StringState := 'Ready';
-		
-		ELSIF StringState = 'Wykrycie detalu' THEN
-			StringState := 'Item detection';
-			
-		ELSIF StringState = 'Kategoryzacja detalu' THEN
-			StringState := 'Item categorization';
-			
-		ELSIF StringState = 'Robienie zdjecia' THEN
-			StringState := 'Taking a picture';
-			
-		ELSIF StringState = 'Dozowanie detalu' THEN
-			StringState := 'Item dosing';
-			
-		ELSIF StringState = 'Sortowanie wagowe' THEN
-			StringState := 'Sorting by weight';
-			
-		ELSIF StringState = 'Sortowanie optyczne' THEN
-			StringState := 'Optical sorting';
-			
-		ELSIF StringState = 'Transport detalu do lewego zbiornika' THEN
-			StringState := 'Item transport to the left tank';
-			
-		ELSIF StringState = 'Transport detalu do prawego zbiornika' THEN
-			StringState := 'Item transport to the right tank';
-			
-		ELSIF StringState = 'Zepchniecie detalu z tasmy do zbiornika lewego' THEN
-			StringState := 'Pushing the item from the belt to the left tank';
-			
-		ELSIF StringState = 'Nie rozpoznano zdjecia' THEN
-			StringState := 'Photo not recognized';
-			
-		ELSIF StringState = 'Stop' THEN
-			StringState := 'Stop';
-			
-		ELSIF StringState = 'Wystapil blad' THEN
-			StringState := 'Error';
-			
-		ELSIF StringState = 'Gotowy do startu' THEN
-			StringState := 'Ready to start';
-		END_IF;
-	END_IF;
 	
 	//SERVICE PAGE
 	//SCALE WEIGHT RESET

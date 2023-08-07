@@ -29,9 +29,7 @@ VAR
 	gPicNotRecognised : BOOL := FALSE;
 	gQuantityLeftStorage : UINT := 0;
 	gQuantityRightStorage : UINT := 0;
-	gRecognisedModel : ModelEnum := Unrecognised; (*Value showing recognised model 1- B&R, 2- AS, 0- not recognised*)
 	gSetFocus : USINT;
-	gSortChoice : SortChoiceEnum := WEIGHT;
 	gSortChoiceView : BOOL;
 	gSorting : SortingType;
 	gStopBlink : BOOL := TRUE;
