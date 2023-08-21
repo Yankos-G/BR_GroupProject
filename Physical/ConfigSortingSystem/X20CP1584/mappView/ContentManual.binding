@@ -177,10 +177,7 @@
 <Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="slow" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="PaperImageSemi" attribute="svgContent" />
 </Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="PaperImageManual" attribute="svgContent" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Manual:NotMoveActive" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="ButtonChangeDirectionAdditive" attribute="enable" />
@@ -238,6 +235,63 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gProgCamera.ReadExpo" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="NumericOutput2" attribute="node" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="fast" />
+<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="PaperImageManual" attribute="svgContent" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Sizes" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.LastModified" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem2" attribute="stringValue" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Names" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem1" attribute="stringValue" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftGrey" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftBR" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortChoice" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput13" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightBorderWeight" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput9" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightLeftMin" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput5" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightLeftMax" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput8" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightRightMin" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput7" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightRightMax" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput6" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftMin" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.SelectedIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Table1" attribute="selectedRow" />
 </Binding>
 </Bindings>
 </BindingsSet>

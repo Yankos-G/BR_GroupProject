@@ -3,7 +3,9 @@
 <OpcUaSource FileVersion="9" ArVersion="B4.93">
   <Aliases>
     <ACLAliases />
-    <EURangeViolationAliases />
+    <EURangeViolationAliases>
+      <EURangeViolation Id="1" Mode="2" />
+    </EURangeViolationAliases>
     <EURangesAliases>
       <EURanges Id="1">
         <EURange>
@@ -17,10 +19,34 @@
           <High ValueProvider="Const">500</High>
         </EURange>
       </EURanges>
-      <EURanges Id="3">
+      <EURanges Id="6">
         <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">100</High>
+          <Low ValueProvider="PV">::gSorting.ItemWeightRightMin</Low>
+          <High ValueProvider="Const">250</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="8">
+        <EURange>
+          <Low ValueProvider="PV">::Auto:ItemWeighLeftMaxBorder</Low>
+          <High ValueProvider="PV">::gSorting.ItemWeightRightMax</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="9">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.ItemWeightLeftMin</Low>
+          <High ValueProvider="PV">::Auto:ItemWeighRightMinBorder</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="10">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="Const">250</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="11">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::gSorting.ItemWeightLeftMax</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -50,16 +76,21 @@
         </Variable>
         <Variable Name="gSortChoiceView" />
         <Variable Name="gSorting">
-          <Variable Name="ItemWeightChoosen" EURangesId="3" EngineeringUnitId="3" />
           <Variable Name="SortLeftMin" />
           <Variable Name="SortLeftBR" />
           <Variable Name="SortChoice" />
           <Variable Name="SortLeftGrey" />
+          <Variable Name="ItemWeightLeftMin" EURangeViolationId="1" EURangesId="11" />
+          <Variable Name="ItemWeightLeftMax" EURangeViolationId="1" EURangesId="9" />
+          <Variable Name="ItemWeightRightMin" EURangeViolationId="1" EURangesId="8" />
+          <Variable Name="ItemWeightRightMax" EURangesId="6" />
+          <Variable Name="Threshold" />
+          <Variable Name="ItemWeightBorderWeight" EURangeViolationId="1" EURangesId="10" />
         </Variable>
         <Variable Name="gMpRecipeUI_0" RecursiveEnable="1" />
-        <Variable Name="gUIConnect">
+        <Variable Name="gUIConnect" RecursiveEnable="2">
           <Variable Name="Status" />
-          <Variable Name="Recipe">
+          <Variable Name="Recipe" RecursiveEnable="2">
             <Variable Name="List" RecursiveEnable="2" />
           </Variable>
           <Variable Name="New" />
@@ -124,6 +155,13 @@
         <Variable Name="ShowLightLeft" />
         <Variable Name="ShowLightRight" />
         <Variable Name="HMI_ScaleTare" />
+        <Variable Name="ShowRange" />
+        <Variable Name="ShowThreshold" />
+        <Variable Name="ItemWeighLeftMaxBorder" />
+        <Variable Name="ItemWeighRightMinBorder" />
+        <Variable Name="SortLeftBR_USINT" />
+        <Variable Name="SortLeftGrey_USINT" />
+        <Variable Name="SortLeftMin_USINT" />
       </Task>
       <Task Name="Manual">
         <Variable Name="BeltMoveAdditive" />

@@ -172,23 +172,21 @@ PROGRAM _CYCLIC
 			
 		// ABOVE 1 TO ItemWeightChoosen ITEM FALL INTO THE LEFT, EQUAL AND ABOVE ItemWeightChoosen INTO THE RIGHT	
 		SORT_WEIGHT: 
-			StringState := 'Sortowanie wagowe';
-			IF ItemWeightMeasured > 1 AND ItemWeightMeasured < gSorting.ItemWeightChoosen AND Approval THEN
+			IF (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured < gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured < gSorting.ItemWeightRightMax)  THEN
 				IF gSorting.SortLeftMin THEN
-					Approval := 0;
 					State := GO_STORAGE_LEFT;
 				ELSE
-					Approval := 0;
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			ELSIF ItemWeightMeasured >= gSorting.ItemWeightChoosen AND Approval THEN 
+			ELSIF (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured < gSorting.ItemWeightRightMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured < gSorting.ItemWeightLeftMax) THEN 
 				IF gSorting.SortLeftMin THEN
-					Approval := 0;
 					State := GO_STORAGE_RIGHT;
 				ELSE
-					Approval := 0;
 					State := GO_STORAGE_LEFT;
 				END_IF;
+			ELSE
+				State := ERROR;
+				//ALARM
 			END_IF;
 			
 		SORT_OPTIC:

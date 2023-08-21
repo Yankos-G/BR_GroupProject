@@ -904,5 +904,13 @@
         <seg>Orange</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_Advance">
+      <tuv xml:lang="pl">
+        <seg>Zaawans.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Advanced</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

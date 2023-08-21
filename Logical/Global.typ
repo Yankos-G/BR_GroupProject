@@ -14,7 +14,6 @@ TYPE
 		Milk : REAL;
 	END_STRUCT;
 	SortingType : 	STRUCT 
-		ItemWeightChoosen : USINT;
 		SortLeftMin : BOOL; (*Mniejsze detale sortowane s¹ na lewo gdy 1, a wieksze na prawo gdy 1.*)
 		SortLeftBR : BOOL; (*Gdy ustawiona na 1 sortuje BR na lewo, a AS na prawo*)
 		SortChoice : SortChoiceEnum;
@@ -23,12 +22,15 @@ TYPE
 		ItemWeightLeftMax : USINT;
 		ItemWeightRightMin : USINT;
 		ItemWeightRightMax : USINT;
+		ItemWeightBorderWeight : USINT;
+		Threshold : BOOL;
 	END_STRUCT;
 	SortChoiceEnum : 
 		(
 		WEIGHT := 0,
 		OPTIC_LOGO := 1,
-		OPTIC_COLOR := 2
+		OPTIC_COLOR := 2,
+		ADVANCED := 3
 		);
 	Camera_enum_main : 	STRUCT 
 		ModuleOK : BOOL;

@@ -33,7 +33,9 @@ PROGRAM _CYCLIC
 		MpAlarmXCheckState(gAlarmXCore, 'Left box is full', mpALARMX_STATE_ACKNOWLEDGED) AND
 		MpAlarmXCheckState(gAlarmXCore, 'Hardware error', mpALARMX_STATE_ACKNOWLEDGED) AND
 		MpAlarmXCheckState(gAlarmXCore, 'Motor error', mpALARMX_STATE_ACKNOWLEDGED) AND
-		MpAlarmXCheckState(gAlarmXCore, 'Right box is full', mpALARMX_STATE_ACKNOWLEDGED)) THEN
+		MpAlarmXCheckState(gAlarmXCore, 'Right box is full', mpALARMX_STATE_ACKNOWLEDGED)) AND
+		MpAlarmXCheckState(gAlarmXCore, 'Incorrect max left value', mpALARMX_STATE_ACKNOWLEDGED) AND
+		MpAlarmXCheckState(gAlarmXCore, 'Incorrect min left value', mpALARMX_STATE_ACKNOWLEDGED) THEN
 		isAcknowledged := TRUE;
 	ELSE
 		isAcknowledged := FALSE;

@@ -15,8 +15,6 @@ PROGRAM _CYCLIC
 	gMpRecipeXML_0.DeviceName :=	ADR('CF'); 
 	gMpRecipeXML_0.FileName := 		ADR('Recipies'); 
 	
-	SelectedIndex;
-	
 	gMpRecipeUI_0.MpLink :=			ADR(gRecipeXml);
 	gMpRecipeUI_0.Enable := 		TRUE;
 	gMpRecipeUI_0.UISetup := 		gUISetup;

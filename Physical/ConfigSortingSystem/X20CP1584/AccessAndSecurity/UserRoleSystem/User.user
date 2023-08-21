@@ -5,26 +5,25 @@
     <Property ID="UserID" Value="1" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Everyone" />
-      <Property ID="Role[2]" Value="" />
     </Group>
   </Element>
   <Element ID="admin" Type="User">
     <Property ID="UserID" Value="2" />
-    <Property ID="Password" Value="4oaRUcpS9AMvQKixmgX7Q2CMiYkghA0pT3hI88CUI2+u24qt6L0=" Description="12345" />
+    <Property ID="Password" Value="Rxxq809Z0X/vhtsZPn+lG3LX952QV45fWO2nffEEL1I0rZ2vvEM=" Description="admin" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Administrator" />
     </Group>
   </Element>
   <Element ID="operator" Type="User">
     <Property ID="UserID" Value="3" />
-    <Property ID="Password" Value="waBqMJIyi2WlW1HpSIhVFxxvfJXS/YmNVetj0oT+FubQw6rE+BA=" Description="12345" />
+    <Property ID="Password" Value="7+qLrSWnV7tiuOc+9Kl7Mpq8dyb9KLgRylEr2fg5NjFKPT1so8c=" Description="operator" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Operator" />
     </Group>
   </Element>
   <Element ID="service" Type="User">
     <Property ID="UserID" Value="4" />
-    <Property ID="Password" Value="Uss8ePurWnVqNRQJuu9b8U4Vg0fXP+r/scbF/VnaCVLtx0I6QBI=" Description="12345" />
+    <Property ID="Password" Value="I29PSt+fsxQaKQSMWg5vmi1RNjsYhBe9Gjrr7omfkybGYgCUUQo=" Description="service" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Service" />
     </Group>

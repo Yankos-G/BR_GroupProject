@@ -1,65 +1,73 @@
 VAR
-	TIME_TON_DETECT : TIME := T#2S;
-END_VAR
-VAR CONSTANT
-	TIME_TON_CAMERA : TIME := T#4S;
-	TIME_TON_ACTUATOR : TIME := T#500MS;
-END_VAR
-VAR
-	TimerTonDetect : TON;
-	TimerTonCamera : TON;
-	TimerTonActuatorIn : BOOL := FALSE;
-	TimerTonActuator : TON;
-	TimerCameraPicDone : BOOL;
-	TimerAfterDetect : BOOL;
-	TimerActuatorOut : BOOL;
-	StringState : STRING[80];
-	HMI_ScaleTare : BOOL := FALSE;
-	ScaleTare : USINT := 0;
-	StringRecognisedModel : STRING[80];
-	Stop : BOOL := FALSE;
-	State : ProgramStatesEnum := STOP;
-	Start : BOOL := FALSE;
-	SelectedAuto : BOOL;
-	RESET_ITEM_MEM_WEIGHT : {REDUND_UNREPLICABLE} USINT := 0;
-	NotSelectedAuto : BOOL;
-END_VAR
-VAR CONSTANT
-	MOTOR_DIST_RIGHT : UINT := 320;
-	MOTOR_DIST_LEFT : UINT := 90;
-END_VAR
-VAR
-	MotorVel : REAL;
-	MotorResetError : BOOL := FALSE;
-	MotorReqVel : {REDUND_UNREPLICABLE} UINT := 300;
-	MotorReqPosition : UINT := 0;
-	MotorReqDec : UINT := 700;
-	MotorReqAcc : UINT := 700;
-	MotorPower : BOOL := FALSE;
-	MotorPos : LREAL;
-	MotorMoveDone : BOOL;
-	MotorMoveAbsolute : BOOL := FALSE;
-	MotorInPosition : BOOL;
-	MotorHome : BOOL;
-	ItemWeightMeasured : USINT;
-	ItemWeight : USINT;
-	ItemDetected : BOOL := FALSE;
-	IsEnglishSelected : BOOL := TRUE;
-END_VAR
-VAR CONSTANT
-	ACTUATOR_BYTE_SORT : INT := 2#0000000000000001;
-	ACTUATOR_BYTE_PUSH : INT := 2#0000000000000100;
-	ACTUATOR_BYTE_NOT_ACTIV : USINT := 2#0000000000000000;
-END_VAR
-VAR
-	ActuatorSorting : BOOL := FALSE;
-	ActuatorPushing : BOOL := FALSE;
-	ActuatorNotSorting : BOOL;
-	ActuatorNotPushing : BOOL;
 	ActuatorByte : INT := 2#0000000000000000;
+	ActuatorNotPushing : BOOL;
+	ActuatorNotSorting : BOOL;
+	ActuatorPushing : BOOL := FALSE;
+	ActuatorSorting : BOOL := FALSE;
+END_VAR
+VAR CONSTANT
+	ACTUATOR_BYTE_NOT_ACTIV : USINT := 2#0000000000000000;
+	ACTUATOR_BYTE_PUSH : INT := 2#0000000000000100;
+	ACTUATOR_BYTE_SORT : INT := 2#0000000000000001;
+END_VAR
+VAR
+	BOOLIK : BOOL;
+	CfgSetFTPServer_0 : CfgSetFTPServer;
+	HMI_ScaleTare : BOOL := FALSE;
+	IsEnglishSelected : BOOL := TRUE;
+	ItemDetected : BOOL := FALSE;
+	ItemWeighLeftMaxBorder : USINT;
+	ItemWeighRightMinBorder : USINT;
+	ItemWeight : USINT;
+	ItemWeightMeasured : USINT;
+	MotorHome : BOOL;
+	MotorInPosition : BOOL;
+	MotorMoveAbsolute : BOOL := FALSE;
+	MotorMoveDone : BOOL;
+	MotorPos : LREAL;
+	MotorPower : BOOL := FALSE;
+	MotorReqAcc : UINT := 700;
+	MotorReqDec : UINT := 700;
+	MotorReqPosition : UINT := 0;
+	MotorReqVel : {REDUND_UNREPLICABLE} UINT := 300;
+	MotorResetError : BOOL := FALSE;
+	MotorVel : REAL;
+END_VAR
+VAR CONSTANT
+	MOTOR_DIST_LEFT : UINT := 90;
+	MOTOR_DIST_RIGHT : UINT := 320;
+END_VAR
+VAR
+	NotSelectedAuto : BOOL;
+	RESET_ITEM_MEM_WEIGHT : {REDUND_UNREPLICABLE} USINT := 0;
+	ScaleTare : USINT := 0;
+	SelectedAuto : BOOL;
 	ShowBRLeft : BOOL := FALSE;
 	ShowBRRight : BOOL := FALSE;
 	ShowLightLeft : BOOL := FALSE;
 	ShowLightRight : BOOL := FALSE;
-	CfgSetFTPServer_0 : CfgSetFTPServer;
+	ShowRange : BOOL;
+	ShowThreshold : BOOL;
+	SortLeftBR_USINT : USINT;
+	SortLeftGrey_USINT : USINT;
+	SortLeftMin_USINT : USINT;
+	Start : BOOL := FALSE;
+	State : ProgramStatesEnum := STOP;
+	Stop : BOOL := FALSE;
+	StringRecognisedModel : STRING[80];
+	StringState : STRING[80];
+	TimerActuatorOut : BOOL;
+	TimerAfterDetect : BOOL;
+	TimerCameraPicDone : BOOL;
+	TimerTonActuator : TON;
+	TimerTonActuatorIn : BOOL := FALSE;
+	TimerTonCamera : TON;
+	TimerTonDetect : TON;
+END_VAR
+VAR CONSTANT
+	TIME_TON_ACTUATOR : TIME := T#500MS;
+	TIME_TON_CAMERA : TIME := T#4S;
+END_VAR
+VAR
+	TIME_TON_DETECT : TIME := T#2S;
 END_VAR

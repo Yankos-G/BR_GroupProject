@@ -15,37 +15,47 @@
 </Binding>
 
 
-
-
-
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.SelectedIndex" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ListBox1" attribute="selectedIndex" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightChoosen" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput3" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftMin" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput4" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftGrey" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput2" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftBR" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutput1" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.Threshold" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight" attribute="value" />
 </Binding>
 
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::ProgramRec:SelectedIndex" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Table1" attribute="selectedRow" />
+<Source xsi:type="opcUa" refId="::Auto:SortLeftMin_USINT" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort" attribute="selectedIndex" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.Sizes" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="TableItem2" attribute="value" />
+<Source xsi:type="opcUa" refId="::Auto:SortLeftBR_USINT" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:SortLeftGrey_USINT" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Rename" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Refresh" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Save" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Rename" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentRecipeRename" widgetRefId="MomentaryPushButton1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.NewFileName" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentRecipeRename" widgetRefId="TextInput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMpRecipeXML_0.Info.LastLoadedRecipe" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutput1" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

@@ -72,52 +72,45 @@
               </Target>
             </Action>
           </Step>
-          <Step order="1">
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="2">
+          <Step order="4">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="3">
+          <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="5">
+          <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="6">
+          <Step order="8">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="7">
-            <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxWeightSort">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
@@ -141,42 +134,35 @@
           </Step>
           <Step order="2">
             <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="3">
+          <Step order="4">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="5">
+          <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="6">
-            <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="7">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxWeightSort">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -189,13 +175,6 @@
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
                 <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Color" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
-                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -215,33 +194,106 @@
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
+                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="6">
+          <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = 3">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Advance" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
+                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
+                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
+                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
           <Step order="7">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxWeightSort">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton8.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton8" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="dialogRecipeCreate" mode="modal" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton6.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton6" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="dialog_RecipeRename" mode="modal" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>

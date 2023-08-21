@@ -77,6 +77,7 @@
         <Widget xsi:type="widgets.brease.Label" id="LabelLeftStorageLogo" top="140" left="205" width="65" height="23" zIndex="23" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelLeftStorageWeight" top="140" left="205" width="65" height="23" zIndex="24" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelRightStorageWeight" top="140" left="280" width="65" height="23" zIndex="25" multiLine="true" text="text" textAlign="center" bold="true" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="40" left="180" width="190" zIndex="26" textAlign="center" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Button" id="ButtonSetToAuto" top="40" left="34" zIndex="3" text="$IAT/Main/Auto_setAuto" />

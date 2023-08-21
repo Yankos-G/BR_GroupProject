@@ -4,7 +4,7 @@
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="592" left="1204" zIndex="4" text="manual" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="ButtonManualMode" top="20" left="80" width="180" height="40" zIndex="5" text="$IAT/Main/Manual_ButtonManualMode" permissionOperate="['Administrator', 'Service']" />
     <Widget xsi:type="widgets.brease.Button" id="ButtonSemiAuto" top="20" left="300" width="180" height="40" zIndex="6" text="$IAT/Main/Manual_SemiAutoMode" permissionOperate="['Administrator', 'Service']" />
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManualMode" top="80" left="20" width="1240" height="480" zIndex="0" permissionOperate="['Administrator', 'Service']" permissionView="['Administrator', 'Service']">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManualMode" top="80" left="20" width="1240" height="480" zIndex="1" permissionOperate="['Administrator', 'Service']" permissionView="['Administrator', 'Service']">
       <Widgets>
         <Widget xsi:type="widgets.brease.Button" id="ButtonMoveDistance" top="351" left="33" width="180" height="40" zIndex="0" text="$IAT/Main/Manual_MoveDistance" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonStopMovement" top="410" left="146" width="181" height="59" zIndex="1" text="$IAT/Main/Manual_StopMovement" />
@@ -53,7 +53,7 @@
     <Widget xsi:type="widgets.brease.Ellipse" id="EllipseSemiDiodeBack" top="20" left="500" width="40" height="40" zIndex="2" backColor="rgba(169, 169, 169, 1)" />
     <Widget xsi:type="widgets.brease.Ellipse" id="EllipseManualDiodeOn" top="20" left="20" width="40" height="40" zIndex="7" backColor="rgba(127, 255, 0, 1)" />
     <Widget xsi:type="widgets.brease.Ellipse" id="EllipseSemiDiodeOn" top="20" left="500" width="40" height="40" zIndex="8" backColor="rgba(127, 255, 0, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxSemiMode" top="80" left="20" width="1240" height="490" zIndex="1" permissionView="['Administrator', 'Service']">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxSemiMode" top="80" left="20" width="1240" height="490" zIndex="0" permissionView="['Administrator', 'Service']">
       <Widgets>
         <Widget xsi:type="widgets.brease.Button" id="ButtonApproveSemi" top="409" left="899" width="321" height="55" zIndex="0" text="$IAT/Main/Manual_Approve" />
         <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMachineState" top="9" left="39" width="561" height="301" zIndex="1" borderWidth="5px">

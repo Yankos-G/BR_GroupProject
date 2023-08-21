@@ -3,11 +3,11 @@ PROGRAM _INIT
 	gAxis_1;
 	gMotorBeltParType;
 	gMotorBeltAxisBasic;
+	BOOLIK;
 END_PROGRAM
-//po namyœle mo¿na by³o u¿yæ struktur do zmiennych :P 
+
 PROGRAM _CYCLIC
 
-	
 	SelectedAuto := (gMode = 0);
 	NotSelectedAuto := NOT SelectedAuto;
 	
@@ -126,7 +126,11 @@ PROGRAM _CYCLIC
 				
 		CATEGORIZATION: 
 			IF gSorting.SortChoice = WEIGHT THEN
-				State := DROP;
+				IF NOT gSorting.Threshold AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) THEN
+					State := UNRECOGNISED_PIC;
+				ELSE 
+					State := DROP;
+				END_IF;
 			ELSE
 				State := TAKE_PICT_CAMERA;
 			END_IF;
@@ -152,26 +156,36 @@ PROGRAM _CYCLIC
 					State := SORT_OPTIC_LOGO;
 				ELSIF gSorting.SortChoice = OPTIC_COLOR THEN
 					gSortChoiceView := TRUE;
-					State := SORT_OPTIC_COLOR;
+					State := SORT_OPTIC_COLOR; 
 				ELSIF gSorting.SortChoice = WEIGHT THEN
 					gSortChoiceView := FALSE;
 					State := SORT_WEIGHT;
+				ELSIF gSorting.SortChoice = ADVANCED THEN
+					gSortChoiceView := FALSE;
+					State := SORT_ADVANCED;
 				END_IF;
 			END_IF;
-			
-			// ABOVE 1 TO ItemWeightChoosen ITEM FALL INTO THE LEFT, EQUAL AND ABOVE ItemWeightChoosen INTO THE RIGHT	
-		SORT_WEIGHT: 
-			IF ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured < gSorting.ItemWeightLeftMax THEN
-				IF gSorting.SortLeftMin THEN
+			//LONG IF TO PREVENT PROGRAM KAPUT
+		SORT_WEIGHT:
+			IF NOT gSorting.Threshold THEN
+				IF (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax)  THEN
 					State := GO_STORAGE_LEFT;
-				ELSE
+				ELSIF (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) THEN 
 					State := GO_STORAGE_RIGHT;
 				END_IF;
-			ELSIF gSorting.ItemWeightRightMin >= gSorting.ItemWeightChoosen AND gSorting.ItemWeightLeftMin <= gSorting.ItemWeightRightMax THEN 
-				IF gSorting.SortLeftMin THEN
-					State := GO_STORAGE_RIGHT;
-				ELSE
-					State := GO_STORAGE_LEFT;
+			ELSE
+				IF ItemWeightMeasured < gSorting.ItemWeightBorderWeight THEN
+					IF gSorting.SortLeftMin THEN
+						State := GO_STORAGE_LEFT;
+					ELSE
+						State := GO_STORAGE_RIGHT;
+					END_IF;
+				ELSIF ItemWeightMeasured >= gSorting.ItemWeightBorderWeight THEN 
+					IF gSorting.SortLeftMin THEN
+						State := GO_STORAGE_RIGHT;
+					ELSE
+						State := GO_STORAGE_LEFT;
+					END_IF;
 				END_IF;
 			END_IF;
 			
@@ -208,6 +222,11 @@ PROGRAM _CYCLIC
 					State := GO_STORAGE_LEFT;
 				END_IF;
 			END_IF;
+			
+						
+		SORT_ADVANCED:
+			//dopisz kod
+			
 			
 		GO_STORAGE_LEFT:
 			MotorReqPosition := MOTOR_DIST_LEFT;
@@ -259,7 +278,6 @@ PROGRAM _CYCLIC
 					State := STOP;
 				END_IF;
 			END_IF;
-		
 	END_CASE;
 
 	
@@ -295,21 +313,34 @@ PROGRAM _CYCLIC
 	gCTU_QuantityRight();
 	
 	// HMI GUYS WANTED SOME VARIABLES
+	
+	
+	
 	IF gSorting.SortChoice = OPTIC_LOGO OR gSorting.SortChoice = OPTIC_COLOR THEN
 		gSortChoiceView := TRUE;
-		ShowLightLeft := FALSE;
-		ShowLightRight := FALSE;
+		ShowLightLeft 	:= FALSE;
+		ShowLightRight 	:= FALSE;
+		ShowRange 		:= FALSE;
+		ShowThreshold 	:= FALSE;
 		IF gSorting.SortLeftBR THEN
-			ShowBRLeft := TRUE;
+			ShowBRLeft	:= TRUE;
 			ShowBRRight := FALSE;
 		ELSE
 			ShowBRRight := TRUE;
-			ShowBRLeft := FALSE;
+			ShowBRLeft 	:= FALSE;
 		END_IF;
 	ELSIF gSorting.SortChoice = WEIGHT THEN
 		gSortChoiceView := FALSE;
-		ShowBRLeft := FALSE;
-		ShowBRRight := FALSE;
+		ShowBRLeft 		:= FALSE;
+		ShowBRRight 	:= FALSE;
+		IF gSorting.Threshold THEN
+			ShowRange 		:= FALSE;
+			ShowThreshold := TRUE;
+		ELSE
+			ShowRange := TRUE;
+			ShowThreshold := FALSE;
+		END_IF;
+		
 		IF gSorting.SortLeftMin THEN
 			ShowLightLeft := TRUE;
 			ShowLightRight := FALSE;
@@ -318,6 +349,14 @@ PROGRAM _CYCLIC
 			ShowLightLeft := FALSE;
 		END_IF;
 	END_IF;
+	
+	SortLeftMin_USINT := BOOL_TO_USINT(gSorting.SortLeftMin);
+	SortLeftBR_USINT := BOOL_TO_USINT(gSorting.SortLeftBR); 
+	SortLeftGrey_USINT := BOOL_TO_USINT(gSorting.SortLeftGrey);
+	
+	//OPC UA - Threshold
+	ItemWeighLeftMaxBorder := gSorting.ItemWeightLeftMax + 1;
+	ItemWeighRightMinBorder := gSorting.ItemWeightRightMin - 1;
 	
 	ActuatorNotSorting := NOT ActuatorSorting;
 	ActuatorNotPushing 	:= NOT ActuatorPushing;

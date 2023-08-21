@@ -32,10 +32,14 @@
     <EventBindingsSet refId="ContentParameters_eventbinding" />
     <EventBindingsSet refId="contentMessageBoxLogin_eventbinding" />
     <EventBindingsSet refId="ContentCharts_eventbinding" />
+    <EventBindingsSet refId="ContentRecipeCreate_eventbinding" />
+    <EventBindingsSet refId="ContentRecipeRename_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="dialogMessageBoxLogin" />
     <Dialog refId="dialogAlarmHistory" />
+    <Dialog refId="dialogRecipeCreate" />
+    <Dialog refId="dialog_RecipeRename" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -51,6 +55,8 @@
     <Content refId="ContentParameters" />
     <Content refId="ContentAudit" />
     <Content refId="ContentFiles" />
+    <Content refId="ContentRecipeCreate" />
+    <Content refId="ContentRecipeRename" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

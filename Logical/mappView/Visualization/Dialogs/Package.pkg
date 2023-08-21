@@ -5,5 +5,7 @@
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">DialogAlarmHistory</Object>
     <Object Type="Package">DialogLogin</Object>
+    <Object Type="Package">DialogRecipeCreate</Object>
+    <Object Type="Package">DialogRecipeRename</Object>
   </Objects>
 </Package>

@@ -220,8 +220,8 @@
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
     <Parameter ID="FtpUsername1" Value="admin" />
-    <Parameter ID="FtpUserPassword1" Value="pLIjtxfjhNIKS5s0QuLYIcbouLHHfaapObsSOtJdzFs=" Description="12345" />
-    <Parameter ID="FtpUserSalt1" Value="1uoq8eNH" />
+    <Parameter ID="FtpUserPassword1" Value="WeMTPAcm1nzSLzz2jYHCDrnHk4ZzO0PbajRql3XcDX4=" Description="admin" />
+    <Parameter ID="FtpUserSalt1" Value="5SVs8NA4" />
     <Parameter ID="FTPAccessRight1" Value="0" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
