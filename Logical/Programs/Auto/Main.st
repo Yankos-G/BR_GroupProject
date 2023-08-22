@@ -225,7 +225,21 @@ PROGRAM _CYCLIC
 			
 						
 		SORT_ADVANCED:
-			//dopisz kod
+			IF gRecognisedModel = 1 THEN	
+				gProgCamera.ImageAcq 			  := FALSE;						//1
+				IF gSorting.SortLeftGrey THEN
+					State := GO_STORAGE_LEFT;
+				ELSE
+					State := GO_STORAGE_RIGHT;
+				END_IF;
+			ELSIF gRecognisedModel = 2 THEN						
+				gProgCamera.ImageAcq 			  := FALSE;					//2
+				IF gSorting.SortLeftGrey THEN
+					State := GO_STORAGE_RIGHT;
+				ELSE
+					State := GO_STORAGE_LEFT;
+				END_IF;
+			END_IF;
 			
 			
 		GO_STORAGE_LEFT:

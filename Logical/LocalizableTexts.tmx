@@ -912,5 +912,21 @@
         <seg>Advanced</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_True">
+      <tuv xml:lang="pl">
+        <seg>TAK</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>TRUE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_False">
+      <tuv xml:lang="pl">
+        <seg>NIE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>FALSE</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
