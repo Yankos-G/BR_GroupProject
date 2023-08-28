@@ -22,5 +22,7 @@
     <Object Type="File">ContentCharts.eventbinding</Object>
     <Object Type="File">ContentRecipeCreate.eventbinding</Object>
     <Object Type="File">ContentRecipeRename.eventbinding</Object>
+    <Object Type="File">ContentFiles.eventbinding</Object>
+    <Object Type="File">SubContentParamLeft.eventbinding</Object>
   </Objects>
 </Package>

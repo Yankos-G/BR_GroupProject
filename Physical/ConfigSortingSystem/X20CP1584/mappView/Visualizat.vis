@@ -34,6 +34,8 @@
     <EventBindingsSet refId="ContentCharts_eventbinding" />
     <EventBindingsSet refId="ContentRecipeCreate_eventbinding" />
     <EventBindingsSet refId="ContentRecipeRename_eventbinding" />
+    <EventBindingsSet refId="ContentFiles_eventbinding" />
+    <EventBindingsSet refId="SubContentParamLeft_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="dialogMessageBoxLogin" />

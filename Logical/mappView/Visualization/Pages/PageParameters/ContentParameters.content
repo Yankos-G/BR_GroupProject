@@ -1,22 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentParameters" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
   <Widgets>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight" top="320" left="30" width="240" height="120" zIndex="2" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxWeightSort" top="320" left="310" width="240" height="120" zIndex="17" text="$IAT/Main/Parameters_WeightPlace" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.RadioButtonGroup" id="RadioButtonGroupWeightSort" top="3" left="19" width="201" height="77" zIndex="0">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.RadioButton" id="RadioButtonWeightSortRight" top="0" left="0" width="200" zIndex="0" text="$IAT/Main/Parameters_RightBox" tabIndex="3" />
-            <Widget xsi:type="widgets.brease.RadioButton" id="RadioButtonWeightSortLeft" top="40" left="0" width="200" zIndex="1" text="$IAT/Main/Parameters_LeftBox" tabIndex="2" />
-          </Widgets>
-        </Widget>
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxOpticSort" top="320" left="170" width="240" height="120" zIndex="16" text="$IAT/Main/Parameters_LogoPlacement" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxOpticSort" top="320" left="170" width="240" height="120" zIndex="1" text="$IAT/Main/Parameters_LogoPlacement" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
       <Widgets>
         <Widget xsi:type="widgets.brease.RadioButtonGroup" id="RadioButtonGroupOpticSort" top="3" left="19" width="200" height="80" zIndex="0">
           <Widgets>
@@ -26,9 +11,9 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.RadialSlider" id="RadialSlider1" top="60" left="165" zIndex="3" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="3" showValueDisplay="false" value="0" bold="false" italic="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="150" left="220" width="140" height="50" zIndex="4" text="text" textAlign="center" fontSize="29px" bold="true" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="20" left="580" width="10" height="540" zIndex="5" backColor="rgba(255, 140, 0, 1)" />
+    <Widget xsi:type="widgets.brease.RadialSlider" id="RadialSlider1" top="60" left="165" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="3" showValueDisplay="false" value="0" bold="false" italic="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="150" left="220" width="142" height="50" zIndex="3" text="text" textAlign="center" fontSize="29px" bold="true" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="20" left="580" width="10" height="540" zIndex="4" backColor="rgba(255, 140, 0, 1)" />
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxOpticSortColor" top="320" left="170" width="240" height="120" zIndex="0" text="Gray color place" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
       <Widgets>
         <Widget xsi:type="widgets.brease.RadioButtonGroup" id="RadioButtonGroupOpticSort1" top="3" left="19" width="200" height="80" zIndex="0">
@@ -39,44 +24,21 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="860" width="170" height="50" zIndex="6" text="Receptury" textAlign="center" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="80" width="420" height="50" zIndex="7" text="Kryteria sortowania" textAlign="center" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="370" left="720" zIndex="8" text="Load" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="370" left="610" zIndex="9" text="Delete" />
-    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight" top="510" left="210" width="165" zIndex="10" mouseDownText="Threshold" text="Range" visible="false" />
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMaxLeft" top="410" left="30" width="240" height="80" zIndex="11" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMin" top="320" left="30" width="240" height="80" zIndex="1" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMax" top="410" left="310" width="240" height="80" zIndex="12" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMin" top="320" left="310" width="240" height="80" zIndex="13" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="LabelLeftRange" top="280" left="70" width="160" zIndex="14" text="Left storage range" textAlign="center" bold="true" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelRightRange" top="280" left="330" width="200" zIndex="15" text="Right storage range" textAlign="center" bold="true" visible="false" />
-    <Widget xsi:type="widgets.brease.Table" id="Table1" top="70" left="620" width="280" height="250" zIndex="18">
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="860" width="170" height="50" zIndex="5" text="Receptury" textAlign="center" fontSize="30px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="80" width="420" height="50" zIndex="6" text="Kryteria sortowania" textAlign="center" fontSize="30px" bold="true" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="370" left="720" zIndex="7" text="Load" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="370" left="610" zIndex="8" text="Delete" />
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="70" left="620" width="280" height="250" zIndex="9">
       <Widgets>
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="110" text="Name" />
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" columnWidth="170" text="Date" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="370" left="830" zIndex="19" text="Rename" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="330" left="720" zIndex="20" text="Save" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="330" left="610" zIndex="21" text="Create" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="330" left="830" zIndex="22" text="Refresh" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="60" left="970" width="290" height="320" zIndex="23" gridSize="145px" modifyAnimation="true">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="370" left="830" zIndex="10" text="Rename" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="330" left="720" zIndex="11" text="Save" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="330" left="610" zIndex="12" text="Create" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="330" left="830" zIndex="13" text="Refresh" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="60" left="970" width="290" height="320" zIndex="14" gridSize="145px" modifyAnimation="true">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem4" zIndex="0" collapsedSize="2">
           <Widgets>
@@ -90,20 +52,20 @@
             <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel2" top="20" left="140" width="120" height="160" zIndex="2" alignment="vertical">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelSortChoiceTXT" top="0" left="0" width="100" zIndex="0" text="text" textAlign="right" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelThresholdTXT" top="0" left="0" width="100" zIndex="2" text="text" textAlign="right" />
                 <Widget xsi:type="widgets.brease.Label" id="LabelSortLightLeftTXT" top="0" left="0" width="100" zIndex="3" text="text" textAlign="right" />
                 <Widget xsi:type="widgets.brease.Label" id="LabelSortBRLeftTXT" top="0" left="0" width="100" zIndex="4" text="text" textAlign="right" />
                 <Widget xsi:type="widgets.brease.Label" id="LabelSortGreyLeftTXT" top="0" left="0" width="100" zIndex="1" text="text" textAlign="right" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelThresholdTXT" top="0" left="0" width="100" zIndex="2" text="text" textAlign="right" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.Label" id="Label79" top="10" left="80" width="120" zIndex="0" text="Actual values" bold="true" />
             <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel1" top="20" left="0" width="140" height="160" zIndex="1" alignment="vertical" childMainAlign="start" childCrossAlign="start">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelSortChoice" top="0" left="0" width="120" zIndex="3" text="Sort choice:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelLightLeft" top="0" left="0" width="120" zIndex="2" text="Sort Light Left:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelBRLeft" top="0" left="0" width="120" zIndex="0" text="Sort BR Left:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelGreyLeft" top="0" left="0" width="120" zIndex="1" text="Sort Grey Left:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelThreshold" top="0" left="0" width="120" zIndex="4" text="Threshold:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelThreshold" top="0" left="0" width="120" zIndex="4" text="Weight mode:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelLightLeft" top="0" left="0" width="120" zIndex="2" text="Sort light:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelBRLeft" top="0" left="0" width="120" zIndex="0" text="Sort BR:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelGreyLeft" top="0" left="0" width="120" zIndex="1" text="Sort grey:" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelWeightN1" top="209" left="110" width="70" height="70" zIndex="4" alignment="vertical" childMainAlign="end" childCrossAlign="start">
@@ -120,9 +82,151 @@
             </Widget>
             <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelWeight" top="180" left="0" width="140" height="100" zIndex="5" alignment="vertical" childMainAlign="end" childCrossAlign="start">
               <Widgets>
-                <Widget xsi:type="widgets.brease.Label" id="LabelWeight" top="0" left="0" width="120" zIndex="0" text="Split Weight:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelLeftCriteria" top="0" left="0" width="120" zIndex="1" text="Left Criteria:" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelRightCriteria" top="0" left="0" width="120" zIndex="2" text="Right Criteria:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelWeight" top="0" left="0" width="120" zIndex="0" text="Split weight:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelLeftCriteria" top="0" left="0" width="120" zIndex="1" text="Left criteria:" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelRightCriteria" top="0" left="0" width="120" zIndex="2" text="Right criteria:" />
+              </Widgets>
+            </Widget>
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.FlexBox" id="FlexBox2" top="250" left="380" width="180" height="250" zIndex="15">
+      <Widgets />
+    </Widget>
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineADVANCED" top="280" left="10" width="570" height="320" zIndex="19" gridSize="190px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.FlexBox" id="FlexBox1" top="-1" left="-1" width="181" height="281" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.FlexBoxItem" id="FlexBoxItemL" zIndex="0" text="Left criteria" shadow="4px 4px 5px rgba(62, 79, 92, 0.75)">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.Image" id="ImageBinLeft" top="183" left="67" width="25" height="27" zIndex="0" image="Media/SymbolLib/Edit/Delete.svg" borderStyle="none" borderWidth="0px" />
+                    <Widget xsi:type="widgets.brease.Rectangle" id="RectangleLeft" top="180" left="-10" width="190" height="40" zIndex="1" borderStyle="groove" borderWidth="2px" />
+                    <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel4" top="-11" left="-10" width="160" height="181" zIndex="2" alignment="vertical" childMainAlign="start" childCrossAlign="center">
+                      <Widgets>
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonBRL" top="0" left="0" zIndex="0" draggable="true" text="BR" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonASL" top="0" left="0" zIndex="1" draggable="true" text="AS" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonGreyL" top="0" left="0" zIndex="2" draggable="true" text="Grey" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonOrangeL" top="0" left="0" zIndex="3" draggable="true" text="Orange" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonLightL" top="0" left="0" zIndex="4" draggable="true" text="Light" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonHeavyL" top="0" left="0" zIndex="5" draggable="true" text="Heavy" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonRangeL" top="0" left="0" zIndex="6" draggable="true" text="Range" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonThresholdL" top="0" left="0" zIndex="7" draggable="true" text="Threshold" margin="4px" visible="false" />
+                      </Widgets>
+                    </Widget>
+                  </Widgets>
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.FlexBox" id="FlexBox3" top="-1" left="379" width="180" height="281" zIndex="1">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.FlexBoxItem" id="FlexBoxItemR" zIndex="0" text="Right criteria" shadow="4px 4px 5px rgba(62, 79, 92, 0.75)">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.Image" id="ImageBinRight" top="183" left="67" width="25" height="27" zIndex="0" image="Media/SymbolLib/Edit/Delete.svg" borderStyle="none" borderWidth="0px" />
+                    <Widget xsi:type="widgets.brease.Rectangle" id="RectangleRight" top="180" left="-10" width="190" height="40" zIndex="1" borderStyle="groove" borderWidth="2px" />
+                    <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel3" top="-11" left="-10" width="160" height="181" zIndex="2" alignment="vertical" childMainAlign="start" childCrossAlign="center">
+                      <Widgets>
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonBRR" top="0" left="0" zIndex="0" draggable="true" text="BR" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonASR" top="0" left="0" zIndex="1" draggable="true" text="AS" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonGreyR" top="0" left="0" zIndex="2" draggable="true" text="Grey" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonOrangeR" top="0" left="0" zIndex="3" draggable="true" text="Orange" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonLightR" top="0" left="0" zIndex="4" draggable="true" text="Light" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonHeavyR" top="0" left="0" zIndex="5" draggable="true" text="Heavy" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonRangeR" top="0" left="0" zIndex="6" draggable="true" text="Range" margin="4px" visible="false" />
+                        <Widget xsi:type="widgets.brease.Button" id="ButtonThresholdR" top="0" left="0" zIndex="7" draggable="true" text="Threshold" margin="4px" visible="false" />
+                      </Widgets>
+                    </Widget>
+                  </Widgets>
+                </Widget>
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="ButtonBR" top="10" left="230" zIndex="2" draggable="true" text="BR" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonAS" top="44" left="230" zIndex="3" draggable="true" text="AS" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonLight" top="147" left="230" zIndex="6" draggable="true" text="Light" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonHeavy" top="181" left="230" zIndex="7" draggable="true" text="Heavy" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonGrey" top="79" left="230" zIndex="4" draggable="true" text="Grey" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonOrange" top="113" left="230" zIndex="5" draggable="true" text="Orange" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonRange" top="216" left="230" zIndex="8" draggable="true" text="Range" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonThreshold" top="250" left="230" zIndex="9" draggable="true" text="Threshold" shadow="4px 4px 12px rgba(62, 79, 92, 0.75)" />
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight" top="250" left="20" width="165" zIndex="20" mouseDownText="Threshold" text="Range" visible="false" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight1" top="250" left="390" width="165" zIndex="21" imageAlign="right" mouseDownText="Light left" text="Light right" visible="false" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeight" top="300" left="10" width="570" height="270" zIndex="18" gridSize="190px">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMax" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMin" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMax" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMin" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRange" top="10" left="60" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelRightRange" top="10" left="320" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight" top="10" left="160" width="240" height="120" zIndex="6" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
+              </Widgets>
+            </Widget>
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="276" width="30" height="30" zIndex="17" image="Media/SymbolLib/Arrow/Down2.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="276" width="30" height="30" zIndex="16" image="Media/SymbolLib/Arrow/Up2.svg" visible="false" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="420" left="640" width="570" height="320" zIndex="22" gridSize="190px" visible="false">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange1" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMax1" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMin1" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput7" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMax1" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput8" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMin1" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput9" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRange1" top="10" left="60" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelRightRange1" top="10" left="320" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight1" top="230" left="20" width="240" height="120" zIndex="6" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput10" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight2" top="230" left="300" width="240" height="120" zIndex="7" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput11" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
               </Widgets>
             </Widget>
           </Widgets>

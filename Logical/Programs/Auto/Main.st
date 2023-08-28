@@ -84,6 +84,7 @@ PROGRAM _CYCLIC
 	
 	// PROGRAM AUTO
 	CASE State OF
+
 		STOP:
 			IF SelectedAuto THEN
 				MotorPower 		  := FALSE;
@@ -100,6 +101,8 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		INIT:
+			Sort_left			:= FALSE;
+			Sort_right 			:= FALSE;
 			gAddToRight 		:= FALSE;
 			gAddToLeft 			:= FALSE;
 			TimerTonActuatorIn 	:= FALSE;
@@ -127,9 +130,9 @@ PROGRAM _CYCLIC
 		CATEGORIZATION: 
 			IF gSorting.SortChoice = WEIGHT THEN
 				IF NOT gSorting.Threshold AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) THEN
-					State := UNRECOGNISED_PIC;
+					State := UNRECOGNISED_PIC;//POTEM TO PRZENIES
 				ELSE 
-					State := DROP;
+					State := CHOOSE_SORT_MODE;
 				END_IF;
 			ELSE
 				State := TAKE_PICT_CAMERA;
@@ -143,35 +146,36 @@ PROGRAM _CYCLIC
 					gProgCamera.ImageAcq  := FALSE;
 					State 				  := UNRECOGNISED_PIC;
 				ELSE 
-					State 				  := DROP;
+					State 				  := CHOOSE_SORT_MODE;
 				END_IF;
 			END_IF;
 				
-		DROP:
-			ActuatorPushing := TRUE;
-			IF TimerActuatorOut THEN
-				ActuatorPushing := FALSE;
-				IF gSorting.SortChoice = OPTIC_LOGO THEN
-					gSortChoiceView := TRUE;
-					State := SORT_OPTIC_LOGO;
-				ELSIF gSorting.SortChoice = OPTIC_COLOR THEN
-					gSortChoiceView := TRUE;
-					State := SORT_OPTIC_COLOR; 
-				ELSIF gSorting.SortChoice = WEIGHT THEN
-					gSortChoiceView := FALSE;
-					State := SORT_WEIGHT;
-				ELSIF gSorting.SortChoice = ADVANCED THEN
-					gSortChoiceView := FALSE;
-					State := SORT_ADVANCED;
-				END_IF;
+		CHOOSE_SORT_MODE:
+			IF gSorting.SortChoice = OPTIC_LOGO THEN
+				State := SORT_OPTIC_LOGO;
+			ELSIF gSorting.SortChoice = OPTIC_COLOR THEN
+				State := SORT_OPTIC_COLOR; 
+			ELSIF gSorting.SortChoice = WEIGHT THEN
+				State := SORT_WEIGHT;
+			ELSIF gSorting.SortChoice = ADVANCED THEN
+				State := SORT_ADVANCED;
 			END_IF;
+			
 			//LONG IF TO PREVENT PROGRAM KAPUT
 		SORT_WEIGHT:
 			IF NOT gSorting.Threshold THEN
 				IF (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax)  THEN
-					State := GO_STORAGE_LEFT;
+					IF gSorting.SortLeftMin THEN
+						State := GO_STORAGE_LEFT;
+					ELSE 
+						State := GO_STORAGE_RIGHT;
+					END_IF;
 				ELSIF (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) THEN 
-					State := GO_STORAGE_RIGHT;
+					IF gSorting.SortLeftMin THEN
+						State := GO_STORAGE_RIGHT;
+					ELSE 
+						State := GO_STORAGE_LEFT;
+					END_IF;
 				END_IF;
 			ELSE
 				IF ItemWeightMeasured < gSorting.ItemWeightBorderWeight THEN
@@ -222,27 +226,170 @@ PROGRAM _CYCLIC
 					State := GO_STORAGE_LEFT;
 				END_IF;
 			END_IF;
-			
-						
+				
 		SORT_ADVANCED:
-			IF gRecognisedModel = 1 THEN	
-				gProgCamera.ImageAcq 			  := FALSE;						//1
-				IF gSorting.SortLeftGrey THEN
-					State := GO_STORAGE_LEFT;
-				ELSE
-					State := GO_STORAGE_RIGHT;
-				END_IF;
-			ELSIF gRecognisedModel = 2 THEN						
-				gProgCamera.ImageAcq 			  := FALSE;					//2
-				IF gSorting.SortLeftGrey THEN
-					State := GO_STORAGE_RIGHT;
-				ELSE
-					State := GO_STORAGE_LEFT;
-				END_IF;
+			gProgCamera.ImageAcq  := FALSE;
+			CASE State_ADV OF
+				WAIT:
+					IF LeftCriteria.AS OR LeftCriteria.BR OR RightCriteria.AS OR RightCriteria.BR THEN
+						State_ADV := LOGO;
+					ELSIF LeftCriteria.Grey OR LeftCriteria.Orange OR RightCriteria.Grey OR RightCriteria.Orange THEN
+						State_ADV := COLOR;
+					ELSIF LeftCriteria.Heavy OR LeftCriteria.Light OR RightCriteria.Heavy OR RightCriteria.Light THEN
+						State_ADV := ADV_WEIGHT;
+					ELSE 
+						State := UNRECOGNISED_PIC;
+					END_IF;
+					
+				LOGO:
+					//--------------------LEFT----------------------
+					IF LeftCriteria.BR AND gRecognisedModel = 1 THEN
+						IF LeftCriteria.Threshold THEN
+							State_ADV := THRESHOLD_LEFT;
+						ELSIF LeftCriteria.Range THEN
+							State_ADV := RANGE_LEFT;
+						ELSE
+							Sort_left := TRUE;
+							State := DROP;
+						END_IF;
+					ELSIF LeftCriteria.AS AND gRecognisedModel = 2 THEN
+						IF LeftCriteria.Threshold THEN
+							State_ADV := THRESHOLD_LEFT;
+						ELSIF LeftCriteria.Range THEN
+							State_ADV := RANGE_LEFT;
+						ELSE
+							Sort_left := TRUE;
+							State := DROP;
+						END_IF;
+						//--------------------RIGHT----------------------
+					ELSIF RightCriteria.BR AND gRecognisedModel = 1 THEN
+						IF RightCriteria.Threshold THEN
+							State_ADV := THRESHOLD_RIGHT;
+						ELSIF RightCriteria.Range THEN
+							State_ADV := RANGE_RIGHT;
+						ELSE
+							Sort_right := TRUE;
+							State := DROP;
+						END_IF;
+					ELSIF RightCriteria.AS AND gRecognisedModel = 2 THEN
+						IF RightCriteria.Threshold THEN
+							State_ADV := THRESHOLD_RIGHT;
+						ELSIF RightCriteria.Range THEN
+							State_ADV := RANGE_RIGHT;
+						ELSE
+							Sort_right := TRUE;
+							State := DROP;
+						END_IF;
+					ELSE 
+						State := UNRECOGNISED_PIC;
+					END_IF;
+					
+				COLOR://DO ZMIANY
+					//--------------------LEFT----------------------
+					IF LeftCriteria.Grey AND gRecognisedModel = 1 THEN
+						IF LeftCriteria.Threshold THEN
+							State_ADV := THRESHOLD_LEFT;
+						ELSIF LeftCriteria.Range THEN
+							State_ADV := RANGE_LEFT;
+						ELSE
+							State := GO_STORAGE_LEFT;
+						END_IF;
+					ELSIF LeftCriteria.Orange AND gRecognisedModel = 2 THEN
+						IF LeftCriteria.Threshold THEN
+							State_ADV := THRESHOLD_LEFT;
+						ELSIF LeftCriteria.Range THEN
+							State_ADV := RANGE_LEFT;
+						ELSE
+							State := GO_STORAGE_LEFT;
+						END_IF;
+					END_IF;
+					//--------------------RIGHT----------------------
+					IF RightCriteria.Grey AND gRecognisedModel = 1 THEN
+						IF RightCriteria.Threshold THEN
+							State_ADV := THRESHOLD_RIGHT;
+						ELSIF RightCriteria.Range THEN
+							State_ADV := RANGE_RIGHT;
+						ELSE
+							State := GO_STORAGE_RIGHT;
+						END_IF;
+					ELSIF RightCriteria.Orange AND gRecognisedModel = 2 THEN
+						IF RightCriteria.Threshold THEN
+							State_ADV := THRESHOLD_RIGHT;
+						ELSIF RightCriteria.Range THEN
+							State_ADV := RANGE_RIGHT;
+						ELSE
+							State := GO_STORAGE_RIGHT;
+						END_IF;
+					END_IF;
+					
+				ADV_WEIGHT:
+					
+					//dopisz
+					
+				THRESHOLD_LEFT://DO ZMIANY
+					IF ItemWeightMeasured < gSorting.ItemWeightBorderWeight THEN
+						IF LeftCriteria.Light THEN
+							State := GO_STORAGE_LEFT;
+						ELSE 
+							State := UNRECOGNISED_PIC;
+						END_IF;
+					ELSIF ItemWeightMeasured >= gSorting.ItemWeightBorderWeight THEN 
+						IF LeftCriteria.Heavy THEN
+							State := GO_STORAGE_LEFT;
+						ELSE 
+							State := UNRECOGNISED_PIC;
+						END_IF;
+					END_IF;
+				
+				
+				
+				THRESHOLD_RIGHT:
+					IF ItemWeightMeasured < gSorting.ItemWeightBorderWeight THEN
+						IF RightCriteria.Light THEN
+							Sort_right := TRUE;
+							State := DROP;
+						ELSE 
+							State := UNRECOGNISED_PIC;
+						END_IF;
+					ELSIF ItemWeightMeasured >= gSorting.ItemWeightBorderWeight THEN 
+						IF RightCriteria.Heavy THEN
+							Sort_right := TRUE;
+							State := DROP;
+						ELSE 
+							State := UNRECOGNISED_PIC;
+						END_IF;
+					END_IF;	
+					
+				RANGE_LEFT://NIE PRZEROBIONE
+					IF (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax)  THEN
+						Sort_right := TRUE;
+						State := DROP;
+					ELSIF (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) THEN 
+						Sort_left := TRUE;
+						State := DROP;
+					END_IF;
+			
+				RANGE_RIGHT:
+				
+			END_CASE;
+		
+		DROP:
+			State_ADV := WAIT;
+			ActuatorPushing := TRUE;
+			IF TimerActuatorOut THEN
+				ActuatorPushing := FALSE;
+				State := DECIDE_WHERE;
 			END_IF;
 			
+		DECIDE_WHERE:
+			IF Sort_left THEN
+	  			State := GO_STORAGE_LEFT;
+			ELSIF Sort_right THEN
+				State := GO_STORAGE_RIGHT;	
+			END_IF;
 			
 		GO_STORAGE_LEFT:
+			
 			MotorReqPosition := MOTOR_DIST_LEFT;
 			MotorMoveAbsolute := TRUE;
 			IF MotorInPosition AND MotorMoveDone THEN
@@ -250,6 +397,7 @@ PROGRAM _CYCLIC
 			END_IF;
 
 		GO_STORAGE_RIGHT:
+			
 			MotorReqPosition  := MOTOR_DIST_RIGHT;
 			MotorMoveAbsolute := TRUE;
 			IF MotorInPosition AND MotorMoveDone THEN
@@ -270,6 +418,7 @@ PROGRAM _CYCLIC
 			State := INIT;
 		
 		UNRECOGNISED_PIC:
+			State_ADV := WAIT;
 			gPicNotRecognised := TRUE; 
 			State := STOP;
 			
@@ -327,10 +476,8 @@ PROGRAM _CYCLIC
 	gCTU_QuantityRight();
 	
 	// HMI GUYS WANTED SOME VARIABLES
-	
-	
-	
-	IF gSorting.SortChoice = OPTIC_LOGO OR gSorting.SortChoice = OPTIC_COLOR THEN
+
+	IF gSorting.SortChoice <> WEIGHT THEN
 		gSortChoiceView := TRUE;
 		ShowLightLeft 	:= FALSE;
 		ShowLightRight 	:= FALSE;
@@ -342,7 +489,7 @@ PROGRAM _CYCLIC
 		ELSE
 			ShowBRRight := TRUE;
 			ShowBRLeft 	:= FALSE;
-		END_IF;
+		END_IF;	
 	ELSIF gSorting.SortChoice = WEIGHT THEN
 		gSortChoiceView := FALSE;
 		ShowBRLeft 		:= FALSE;
@@ -379,6 +526,8 @@ PROGRAM _CYCLIC
 		Start := FALSE;
 	END_IF;
 	
+
+				
 	
 	//SERVICE PAGE
 	//SCALE WEIGHT RESET

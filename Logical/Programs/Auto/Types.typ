@@ -1,5 +1,26 @@
 
 TYPE
+	State_ADVANCED : 
+		(
+		WAIT,
+		LOGO,
+		COLOR,
+		THRESHOLD_LEFT,
+		THRESHOLD_RIGHT,
+		RANGE_LEFT,
+		RANGE_RIGHT,
+		ADV_WEIGHT
+		);
+	Critieria : 	STRUCT 
+		BR : BOOL;
+		AS : BOOL;
+		Light : BOOL;
+		Heavy : BOOL;
+		Grey : BOOL;
+		Orange : BOOL;
+		Threshold : BOOL;
+		Range : BOOL;
+	END_STRUCT;
 	ProgramStatesEnum : 
 		(
 		STOP,

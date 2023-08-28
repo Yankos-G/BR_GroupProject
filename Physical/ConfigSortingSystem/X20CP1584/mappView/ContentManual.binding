@@ -170,15 +170,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSortChoiceView" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="GroupBoxDetectedItem" attribute="visible" />
 </Binding>
-
-
-
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="PaperImageSemi" attribute="svgContent" />
-</Binding>
-
-<Binding mode="twoWay">
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Manual:NotMoveActive" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="ButtonChangeDirectionAdditive" attribute="enable" />
 </Binding>
@@ -212,10 +204,7 @@
 <Source xsi:type="opcUa" refId="::Manual:JogEnableVar" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="ButtonMoveRight" attribute="enable" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotorBeltAxisBasic.Velocity" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="NumericOutputActualSpeed" attribute="value" />
-</Binding>
+
 
 
 
@@ -237,7 +226,7 @@
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="NumericOutput2" attribute="node" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="fast" />
+<Source xsi:type="opcUa" refId="::Camera:URL" attribute="value" samplingRate="slow" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="PaperImageManual" attribute="svgContent" />
 </Binding>
 
@@ -252,6 +241,18 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.List.SelectedIndex" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Table1" attribute="selectedRow" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Manual:MotorVelManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="NumericOutputActualSpeed" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Manual:MotorPosManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="NumericOutputActualSpeed1" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

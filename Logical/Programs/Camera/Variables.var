@@ -2,7 +2,7 @@ VAR
 	ATON1 : TON;
 	ATON2 : TON;
 	ATON3 : TON;
-	Base64Buffer : STRING[2500000];
+	Base64Buffer : STRING[150000];
 	Base64srcLen : UDINT;
 	CameraLED : USINT := 0;
 	CameraLED_2 : USINT := 0;
@@ -26,7 +26,6 @@ VAR
 	ManualLampTest : BOOL;
 	NewEncodeReq : BOOL;
 	sStep : INT;
-	TestStringURL : STRING[2600000];
 	TimerTonCameraLED : TON;
 	ImageProcess : USINT := 0;
 	TimerTonCameraLED_2 : TON;
@@ -38,9 +37,14 @@ VAR CONSTANT
 	TIME_LAMP_TEST : TIME := T#500MS;
 END_VAR
 VAR
-	URL : STRING[2600000];
+	URL : STRING[150000];
 	URLLength : UDINT;
-	ViBaseBuffer : ARRAY[0..1500000] OF USINT := [1500001(1)];
+	ViBaseBuffer : ARRAY[0..150000] OF USINT := [150001(1)];
 	ViBaseGetImage_0 : ViBaseGetImage;
-	VIBASE_GETIMG_QUALITY : USINT := 5;
+	VIBASE_GETIMG_QUALITY : USINT := 40;
+	oldFocus : UINT;
+	oldExpo : UDINT;
+	oldFocusColor : UINT;
+	oldExpoColor : UDINT;
+	CameraMode : STRING[80];
 END_VAR

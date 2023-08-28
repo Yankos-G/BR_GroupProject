@@ -24,7 +24,7 @@ VAR
 	gMpRecipeUI_0 : MpRecipeUI;
 	gMpRecipeXML_0 : MpRecipeXml;
 	gPicNotRecognised : BOOL := FALSE;
-	gProgCamera : Camera_enum_main := (SetFocus:=17500,SetExpo:=5000,ImageAcq:=FALSE,DisplayPhoto:=FALSE);
+	gProgCamera : Camera_enum_main := (ImageAcq:=FALSE,DisplayPhoto:=FALSE);
 	gQuantityLeftStorage : UINT := 0;
 	gQuantityRightStorage : UINT := 0;
 	gRecognisedModel : ModelEnum := Unrecognised;

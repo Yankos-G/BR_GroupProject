@@ -20,6 +20,7 @@ VAR
 	ItemWeighRightMinBorder : USINT;
 	ItemWeight : USINT;
 	ItemWeightMeasured : USINT;
+	LeftCriteria : Critieria := (BR:=FALSE,AS:=FALSE,Light:=FALSE,Heavy:=FALSE,Grey:=FALSE,Orange:=FALSE);
 	MotorHome : BOOL;
 	MotorInPosition : BOOL;
 	MotorMoveAbsolute : BOOL := FALSE;
@@ -40,6 +41,7 @@ END_VAR
 VAR
 	NotSelectedAuto : BOOL;
 	RESET_ITEM_MEM_WEIGHT : {REDUND_UNREPLICABLE} USINT := 0;
+	RightCriteria : Critieria := (BR:=FALSE,AS:=FALSE,Light:=FALSE,Heavy:=FALSE,Grey:=FALSE,Orange:=FALSE);
 	ScaleTare : USINT := 0;
 	SelectedAuto : BOOL;
 	ShowBRLeft : BOOL := FALSE;
@@ -53,6 +55,7 @@ VAR
 	SortLeftMin_USINT : USINT;
 	Start : BOOL := FALSE;
 	State : ProgramStatesEnum := STOP;
+	State_ADV : State_ADVANCED;
 	Stop : BOOL := FALSE;
 	StringRecognisedModel : STRING[80];
 	StringState : STRING[80];

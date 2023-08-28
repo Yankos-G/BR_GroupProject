@@ -255,7 +255,7 @@
               </Target>
             </Action>
           </Step>
-          <Step order="1">
+          <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentManual" widgetRefId="ButtonSemiAuto">
                 <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="=(gMode &lt; 2)" />
@@ -263,6 +263,20 @@
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+      <EventHandler condition="gMode = 1 OR gMode = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Paper.Action" contentRefId="ContentManual" widgetRefId="PaperImageManual">
+            <Method xsi:type="widgets.brease.Paper.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="gMode = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Paper.Action" contentRefId="ContentManual" widgetRefId="PaperImageManual">
+            <Method xsi:type="widgets.brease.Paper.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentManual.ButtonApproveSemi.Click">

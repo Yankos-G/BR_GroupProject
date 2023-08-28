@@ -46,6 +46,16 @@ PROGRAM _CYCLIC
 	IF gMode = 1 THEN									//assigning variables value of distance and velocity
 		gMotorBeltParType.Distance := ManualDistance;
 		gMotorBeltParType.Velocity := ManualVelocity;
+		IF gMotorBeltAxisBasic.Velocity > 20 OR gMotorBeltAxisBasic.Velocity < -20 THEN
+			MotorVelManual := gMotorBeltAxisBasic.Velocity;
+		ELSE
+			MotorVelManual := 0;
+		END_IF;
+		IF gMotorBeltAxisBasic.Position > 5 OR gMotorBeltAxisBasic.Position < -5 THEN
+			MotorPosManual := gMotorBeltAxisBasic.Position;
+		ELSE
+			MotorPosManual := 0;
+		END_IF;
 	END_IF;
 	
 	//-----------------MANUAL---STOP-----------------//

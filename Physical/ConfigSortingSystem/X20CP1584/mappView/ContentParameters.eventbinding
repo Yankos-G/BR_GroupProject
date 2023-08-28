@@ -21,26 +21,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="ContentParameters.RadioButtonWeightSortLeft.Click">
-      <Source xsi:type="widgets.brease.RadioButton.Event" contentRefId="ContentParameters" widgetRefId="RadioButtonWeightSortLeft" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.SortLeftMin">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ContentParameters.RadioButtonWeightSortRight.Click">
-      <Source xsi:type="widgets.brease.RadioButton.Event" contentRefId="ContentParameters" widgetRefId="RadioButtonWeightSortRight" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.SortLeftMin">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="ContentParameters.RadioButtonColorSortLeft.Click">
       <Source xsi:type="widgets.brease.RadioButton.Event" contentRefId="ContentParameters" widgetRefId="RadioButtonColorSortLeft" event="Click" />
       <EventHandler>
@@ -79,38 +59,66 @@
               </Target>
             </Action>
           </Step>
-          <Step order="7">
+          <Step order="8">
             <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
-                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="8">
+          <Step order="9">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="9">
+          <Step order="10">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="10">
+          <Step order="11">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="11">
+          <Step order="12">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineADVANCED">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="14">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeight">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="15">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="16">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -125,13 +133,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
-                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
@@ -141,12 +142,19 @@
           </Step>
           <Step order="3">
             <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="4">
+          <Step order="5">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
@@ -164,6 +172,34 @@
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineADVANCED">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeight">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -192,13 +228,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
-                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="5">
             <Action>
               <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
@@ -208,15 +237,50 @@
           </Step>
           <Step order="6">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineADVANCED">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeight">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="12">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -231,13 +295,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
-                <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="3">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">
@@ -247,29 +304,64 @@
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupWeightSort">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
                 <Method xsi:type="widgets.brease.RadioButtonGroup.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="5">
+          <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
                 <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="6">
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="7">
+          <Step order="10">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSortColor">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineADVANCED">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeight">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="12">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -307,9 +399,30 @@
               </Target>
             </Action>
           </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLightLeft">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelBRLeft">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -323,22 +436,15 @@
           </Step>
           <Step order="12">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="15">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="16">
-            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
@@ -346,48 +452,6 @@
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="21">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight2">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="22">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="23">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLightLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="24">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight3">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="25">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeightN1">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="26">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -411,7 +475,21 @@
           </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelBRLeft">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
@@ -425,28 +503,14 @@
           </Step>
           <Step order="12">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="14">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="15">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="16">
-            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -455,34 +519,6 @@
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="19">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeightN1">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="20">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight3">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="21">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight2">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="22">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -506,7 +542,21 @@
           </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelBRLeft">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -520,29 +570,15 @@
           </Step>
           <Step order="12">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="14">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="15">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="16">
-            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -550,34 +586,6 @@
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="19">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeightN1">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="20">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight3">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="21">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight2">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="22">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -595,70 +603,56 @@
           <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLightLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelBRLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="11">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelGreyLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="12">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="14">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="15">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="16">
-            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThreshold">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="17">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="21">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight2">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="22">
-            <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -668,18 +662,54 @@
     <EventBinding id="EventBinding_29">
       <Source xsi:type="opcUa.Event" refId="::Auto:SortLeftMin_USINT" event="ValueChanged" />
       <EventHandler condition="newValue = 0">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_False" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Right" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_RStorage" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_LStorage" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 1">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_True" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Left" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_LStorage" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_RStorage" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_30">
@@ -687,14 +717,14 @@
       <EventHandler condition="newValue = 0">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_False" />
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Right" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = 1">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortBRLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_True" />
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Left" />
           </Target>
         </Action>
       </EventHandler>
@@ -704,14 +734,14 @@
       <EventHandler condition="newValue = 0">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_False" />
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Right" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = 1">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortGreyLeftTXT">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_True" />
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Left" />
           </Target>
         </Action>
       </EventHandler>
@@ -723,77 +753,56 @@
           <Step order="0">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_False" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Range" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLightLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="3">
             <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputSplit">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMin">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelWeight">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMax">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="5">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftCriteria">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMin">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="6">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightCriteria">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMax">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="7">
             <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight3">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="8">
             <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeightN1">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="9">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputRMax">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="10">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputLMax">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
@@ -804,77 +813,732 @@
           <Step order="0">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelThresholdTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_True" />
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Threshold" />
               </Target>
             </Action>
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelSortLightLeftTXT">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLightLeft">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMin">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="3">
             <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputSplit">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMax">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelWeight">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMin">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="5">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftCriteria">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMax">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="6">
             <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightCriteria">
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRange">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="7">
             <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeight3">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRange">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="8">
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.FlexBoxItem1.OnDrop">
+      <Source xsi:type="widgets.brease.FlexBoxItem.Event" contentRefId="ContentParameters" widgetRefId="FlexBoxItemL" event="OnDrop" />
+      <Operand datatype="BOOL" name="AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.AS">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.BR">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="BR_R">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.BR">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="AS_R">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.AS">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="GREY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Grey">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="GREY_R">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Grey">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="ORANGE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Orange">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="ORANGE_R">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Orange">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="LIGHT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Light">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="HEAVY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Heavy">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="RANGE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Range">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="THRESHOLD">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Threshold">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="widgetId = &quot;ButtonBR&quot; AND AS = FALSE AND GREY = FALSE AND ORANGE = FALSE AND ORANGE_R = FALSE AND GREY_R = FALSE">
+        <Sequence>
+          <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentParameters" widgetRefId="FlexLayoutPanelWeightN1">
-                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="9">
+          <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputRMax">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="false" />
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.BR">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="11">
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonAS&quot; AND BR = FALSE AND GREY = FALSE AND ORANGE = FALSE AND ORANGE_R = FALSE AND GREY_R = FALSE">
+        <Sequence>
+          <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.NumericOutput.Action" contentRefId="ContentParameters" widgetRefId="NumericOutputLMax">
-                <Method xsi:type="widgets.brease.NumericOutput.Action.SetVisible" value="false" />
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.AS">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonGrey&quot; AND ORANGE = FALSE AND AS = FALSE AND BR = FALSE AND BR_R = FALSE AND AS_R = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Grey">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonOrange&quot; AND GREY = FALSE AND AS = FALSE AND BR = FALSE AND BR_R = FALSE AND AS_R = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Orange">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonLight&quot; AND HEAVY = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Light">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonHeavy&quot; AND LIGHT = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Heavy">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonThreshold&quot; AND RANGE = FALSE AND THRESHOLD = FALSE">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Threshold">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonRange&quot; AND THRESHOLD = FALSE AND RANGE = FALSE">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Range">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_33">
+      <Source xsi:type="widgets.brease.FlexBoxItem.Event" contentRefId="ContentParameters" widgetRefId="FlexBoxItemR" event="OnDrop" />
+      <Operand datatype="BOOL" name="BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.BR">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="BR_L">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.BR">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.AS">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="AS_L">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.AS">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="GREY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Grey">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="GREY_L">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Grey">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="ORANGE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Orange">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="ORANGE_L">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Orange">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="LIGHT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Light">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="HEAVY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Heavy">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="THRESHOLD">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Threshold">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="RANGE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Range">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="widgetId = &quot;ButtonBR&quot; AND AS = FALSE AND GREY = FALSE AND ORANGE = FALSE AND ORANGE_L = FALSE AND GREY_L = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBRR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonAS&quot; AND BR = FALSE AND GREY = FALSE AND ORANGE = FALSE AND ORANGE_L = FALSE AND GREY_L = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonASR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonGrey&quot; AND ORANGE = FALSE AND BR = FALSE AND AS = FALSE AND BR_L = FALSE AND AS_L = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGreyR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonOrange&quot; AND GREY = FALSE AND BR = FALSE AND AS = FALSE AND BR_L = FALSE AND AS_L = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrangeR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonLight&quot; AND HEAVY = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLightR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonHeavy&quot; AND LIGHT = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavyR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonThreshold&quot; AND THRESHOLD = FALSE AND RANGE = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonThresholdR">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonRange&quot; AND THRESHOLD = FALSE AND RANGE = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonRangeR">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.RectangleRight.OnDrop">
+      <Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="ContentParameters" widgetRefId="RectangleRight" event="OnDrop" />
+      <EventHandler condition="widgetId = &quot;ButtonLightR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLightR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonHeavyR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavyR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonASR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonASR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonBRR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBRR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonGreyR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGreyR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonOrangeR&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrangeR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonThresholdR&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonThresholdR">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonRangeR&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonRangeR">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_34">
+      <Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="ContentParameters" widgetRefId="RectangleLeft" event="OnDrop" />
+      <EventHandler condition="widgetId = &quot;ButtonLightL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLightL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonHeavyL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavyL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonASL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonASL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonBRL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBRL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonGreyL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGreyL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonOrangeL&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrangeL">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonThresholdL&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonThresholdL">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="widgetId = &quot;ButtonRangeL&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonRangeL">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.Image1.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentParameters" widgetRefId="Image1" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.Image2.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentParameters" widgetRefId="Image2" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
+                <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>

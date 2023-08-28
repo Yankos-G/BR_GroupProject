@@ -6,39 +6,14 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightBorderWeight" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput1" attribute="node" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxMaxLeft" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMin" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMin" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMax" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="LabelLeftRange" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="LabelRightRange" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowThreshold" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeight" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:ShowThreshold" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="GroupBoxWeightSort" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
+
+
+
+
+
+
+
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightRightMax" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput3" attribute="node" />
 </Binding>
@@ -55,7 +30,7 @@
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput6" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortChoice" attribute="value" samplingRate="fast" />
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortChoice" attribute="value" samplingRate="fast" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadialSlider1" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
@@ -73,6 +48,27 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.New.FileName" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentRecipeCreate" widgetRefId="TextInput1" attribute="value" />
+</Binding>
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Threshold" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Range" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonRangeL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Range" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonRangeR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Threshold" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdR" attribute="visible" />
 </Binding>
 </Bindings>
 </BindingsSet>

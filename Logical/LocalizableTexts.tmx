@@ -928,5 +928,61 @@
         <seg>FALSE</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_Left">
+      <tuv xml:lang="pl">
+        <seg>Lewy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Right">
+      <tuv xml:lang="pl">
+        <seg>Prawy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Threshold">
+      <tuv xml:lang="pl">
+        <seg>Graniczna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Threshold</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Range">
+      <tuv xml:lang="pl">
+        <seg>Zakres</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_LStorage">
+      <tuv xml:lang="pl">
+        <seg>Zakres lewego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left storage range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_RStorage">
+      <tuv xml:lang="pl">
+        <seg>Zakres prawego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right storage range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Mode">
+      <tuv xml:lang="pl">
+        <seg>Tryb kamery:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Camera mode:</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

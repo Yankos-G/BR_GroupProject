@@ -41,4 +41,6 @@ VAR
 	FlagVel : BOOL; (*Flag that enables user to see if velocity  move is active*)
 	sCamera : CameraEnum;
 	ImageShootTON : TON;
+	MotorVelManual : REAL;
+	MotorPosManual : LREAL;
 END_VAR
