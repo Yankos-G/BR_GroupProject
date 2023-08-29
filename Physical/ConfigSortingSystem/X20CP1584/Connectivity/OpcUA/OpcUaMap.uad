@@ -3,9 +3,7 @@
 <OpcUaSource FileVersion="9" ArVersion="B4.93">
   <Aliases>
     <ACLAliases />
-    <EURangeViolationAliases>
-      <EURangeViolation Id="1" Mode="2" />
-    </EURangeViolationAliases>
+    <EURangeViolationAliases />
     <EURangesAliases>
       <EURanges Id="1">
         <EURange>
@@ -17,36 +15,6 @@
         <EURange>
           <Low ValueProvider="Const">-500</Low>
           <High ValueProvider="Const">500</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="6">
-        <EURange>
-          <Low ValueProvider="PV">::gSorting.ItemWeightRightMin</Low>
-          <High ValueProvider="Const">250</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="8">
-        <EURange>
-          <Low ValueProvider="PV">::Auto:ItemWeighLeftMaxBorder</Low>
-          <High ValueProvider="PV">::gSorting.ItemWeightRightMax</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="9">
-        <EURange>
-          <Low ValueProvider="PV">::gSorting.ItemWeightLeftMin</Low>
-          <High ValueProvider="PV">::Auto:ItemWeighRightMinBorder</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="10">
-        <EURange>
-          <Low ValueProvider="Const">1</Low>
-          <High ValueProvider="Const">250</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="11">
-        <EURange>
-          <Low ValueProvider="Const">1</Low>
-          <High ValueProvider="PV">::gSorting.ItemWeightLeftMax</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -108,12 +76,7 @@
           <Variable Name="SortLeftBR" />
           <Variable Name="SortChoice" />
           <Variable Name="SortLeftGrey" />
-          <Variable Name="ItemWeightLeftMin" EURangeViolationId="1" EURangesId="11" />
-          <Variable Name="ItemWeightLeftMax" EURangeViolationId="1" EURangesId="9" />
-          <Variable Name="ItemWeightRightMin" EURangeViolationId="1" EURangesId="8" />
-          <Variable Name="ItemWeightRightMax" EURangesId="6" />
           <Variable Name="Threshold" />
-          <Variable Name="ItemWeightBorderWeight" EURangeViolationId="1" EURangesId="10" />
         </Variable>
       </GlobalVariables>
       <Task Name="Alarms">
@@ -162,8 +125,6 @@
         <Variable Name="SortLeftBR_USINT" />
         <Variable Name="SortLeftGrey_USINT" />
         <Variable Name="SortLeftMin_USINT" />
-        <Variable Name="LeftCriteria" RecursiveEnable="2" />
-        <Variable Name="RightCriteria" RecursiveEnable="2" />
       </Task>
       <Task Name="Manual">
         <Variable Name="BeltMoveAdditive" />

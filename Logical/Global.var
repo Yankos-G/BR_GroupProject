@@ -29,7 +29,7 @@ VAR
 	gQuantityRightStorage : UINT := 0;
 	gRecognisedModel : ModelEnum := Unrecognised;
 	gSortChoiceView : BOOL;
-	gSorting : SortingType := (SortLeftMin:=TRUE,SortLeftBR:=TRUE,SortChoice:=WEIGHT,SortLeftGrey:=TRUE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=FALSE);
+	gSorting : SortingType;
 	gStopBlink : BOOL := TRUE;
 	gStopState : BOOL := TRUE;
 	gUIConnect : MpRecipeUIConnectType;

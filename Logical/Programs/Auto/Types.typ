@@ -11,16 +11,6 @@ TYPE
 		RANGE_RIGHT,
 		ADV_WEIGHT
 		);
-	Critieria : 	STRUCT 
-		BR : BOOL;
-		AS : BOOL;
-		Light : BOOL;
-		Heavy : BOOL;
-		Grey : BOOL;
-		Orange : BOOL;
-		Threshold : BOOL;
-		Range : BOOL;
-	END_STRUCT;
 	ProgramStatesEnum : 
 		(
 		STOP,
@@ -39,6 +29,8 @@ TYPE
 		SORT_STORAGE_LEFT,
 		SORT_STORAGE_RIGHT,
 		UNRECOGNISED_PIC,
-		ERROR
+		ERROR,
+		CHOOSE_SORT_MODE,
+		DECIDE_WHERE
 		);
 END_TYPE

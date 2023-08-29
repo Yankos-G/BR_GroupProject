@@ -161,5 +161,29 @@
 <Source xsi:type="opcUa" refId="::Camera:CameraMode" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="TextOutputMode" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.WeightMin" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput7" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.WeightMax" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput4" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.WeightBorder" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput10" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.WeightBorder" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput11" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.WeightMax" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput8" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.WeightMin" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput9" attribute="node" />
+</Binding>
 </Bindings>
 </BindingsSet>

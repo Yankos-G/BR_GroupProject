@@ -20,13 +20,12 @@ VAR
 	ItemWeighRightMinBorder : USINT;
 	ItemWeight : USINT;
 	ItemWeightMeasured : USINT;
-	LeftCriteria : Critieria := (BR:=FALSE,AS:=FALSE,Light:=FALSE,Heavy:=FALSE,Grey:=FALSE,Orange:=FALSE);
 	MotorHome : BOOL;
 	MotorInPosition : BOOL;
 	MotorMoveAbsolute : BOOL := FALSE;
 	MotorMoveDone : BOOL;
 	MotorPos : LREAL;
-	MotorPower : BOOL := FALSE;
+	MotorPower : BOOL;
 	MotorReqAcc : UINT := 700;
 	MotorReqDec : UINT := 700;
 	MotorReqPosition : UINT := 0;
@@ -41,7 +40,6 @@ END_VAR
 VAR
 	NotSelectedAuto : BOOL;
 	RESET_ITEM_MEM_WEIGHT : {REDUND_UNREPLICABLE} USINT := 0;
-	RightCriteria : Critieria := (BR:=FALSE,AS:=FALSE,Light:=FALSE,Heavy:=FALSE,Grey:=FALSE,Orange:=FALSE);
 	ScaleTare : USINT := 0;
 	SelectedAuto : BOOL;
 	ShowBRLeft : BOOL := FALSE;
@@ -73,4 +71,6 @@ VAR CONSTANT
 END_VAR
 VAR
 	TIME_TON_DETECT : TIME := T#2S;
+	Sort_left : BOOL;
+	Sort_right : BOOL;
 END_VAR

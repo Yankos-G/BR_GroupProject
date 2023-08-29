@@ -193,38 +193,38 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="276" width="30" height="30" zIndex="17" image="Media/SymbolLib/Arrow/Down2.svg" />
     <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="276" width="30" height="30" zIndex="16" image="Media/SymbolLib/Arrow/Up2.svg" visible="false" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="420" left="640" width="570" height="320" zIndex="22" gridSize="190px" visible="false">
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="300" left="10" width="570" height="270" zIndex="22" gridSize="190px" visible="false">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange1" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMax1" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMaxAdv" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMin1" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMinAdv" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput7" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMax1" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMaxAdv" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput8" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMin1" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMinAdv" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput9" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRange1" top="10" left="60" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" />
-            <Widget xsi:type="widgets.brease.Label" id="LabelRightRange1" top="10" left="320" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" />
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight1" top="230" left="20" width="240" height="120" zIndex="6" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRangeAdv" top="20" left="340" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelRightRangeAdv" top="20" left="40" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeightAdvLeft" top="70" left="20" width="240" height="120" zIndex="6" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput10" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeight2" top="230" left="300" width="240" height="120" zIndex="7" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeightAdvRight" top="70" left="300" width="240" height="120" zIndex="7" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput11" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
               </Widgets>
