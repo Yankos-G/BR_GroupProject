@@ -3,7 +3,9 @@
 <OpcUaSource FileVersion="9" ArVersion="B4.93">
   <Aliases>
     <ACLAliases />
-    <EURangeViolationAliases />
+    <EURangeViolationAliases>
+      <EURangeViolation Id="1" Mode="2" />
+    </EURangeViolationAliases>
     <EURangesAliases>
       <EURanges Id="1">
         <EURange>
@@ -15,6 +17,72 @@
         <EURange>
           <Low ValueProvider="Const">-500</Low>
           <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::gSorting.ItemWeightLeftMax</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="6">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.ItemWeightRightMin</Low>
+          <High ValueProvider="Const">255</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="12">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="Const">255</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="14">
+        <EURange>
+          <Low ValueProvider="PV">::Auto:ItemWeighRightMinBorder</Low>
+          <High ValueProvider="PV">::gSorting.ItemWeightRightMax</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="15">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.ItemWeightLeftMin</Low>
+          <High ValueProvider="PV">::Auto:ItemWeighLeftMaxBorder</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="16">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.ItemWeightLeftMin</Low>
+          <High ValueProvider="Const">255</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="17">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::gSorting.ItemWeightRightMax</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="18">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::gSorting.RightCriteria.WeightMax</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="19">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.RightCriteria.WeightMin</Low>
+          <High ValueProvider="Const">255</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="20">
+        <EURange>
+          <Low ValueProvider="PV">::gSorting.LeftCriteria.WeightMin</Low>
+          <High ValueProvider="Const">255</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="21">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="PV">::gSorting.LeftCriteria.WeightMax</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -71,12 +139,27 @@
         <Variable Name="gInWeightMeasure" />
         <Variable Name="gProgCamera" RecursiveEnable="2" />
         <Variable Name="gRecognisedModel" />
-        <Variable Name="gSorting" RecursiveEnable="2">
+        <Variable Name="gSorting" RecursiveEnable="2" MinimumSamplingInterval="Timer2">
           <Variable Name="SortLeftMin" />
           <Variable Name="SortLeftBR" />
           <Variable Name="SortChoice" />
           <Variable Name="SortLeftGrey" />
           <Variable Name="Threshold" />
+          <Variable Name="ItemWeightLeftMin" EURangeViolationId="1" EURangesId="3" />
+          <Variable Name="ItemWeightLeftMax" EURangeViolationId="1" EURangesId="15" />
+          <Variable Name="ItemWeightRightMin" EURangeViolationId="1" EURangesId="14" />
+          <Variable Name="ItemWeightRightMax" EURangeViolationId="1" EURangesId="6" />
+          <Variable Name="LeftCriteria">
+            <Variable Name="WeightMin" EURangeViolationId="1" EURangesId="21" />
+            <Variable Name="WeightMax" EURangeViolationId="1" EURangesId="20" />
+            <Variable Name="WeightBorder" EURangeViolationId="1" EURangesId="12" />
+          </Variable>
+          <Variable Name="RightCriteria">
+            <Variable Name="WeightMin" EURangeViolationId="1" EURangesId="18" />
+            <Variable Name="WeightMax" EURangeViolationId="1" EURangesId="19" />
+            <Variable Name="WeightBorder" EURangeViolationId="1" EURangesId="12" />
+          </Variable>
+          <Variable Name="ItemWeightBorderWeight" EURangeViolationId="1" EURangesId="12" />
         </Variable>
       </GlobalVariables>
       <Task Name="Alarms">

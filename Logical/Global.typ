@@ -24,6 +24,8 @@ TYPE
 		ItemWeightRightMax : USINT;
 		ItemWeightBorderWeight : USINT;
 		Threshold : BOOL;
+		LeftCriteria : Criteria;
+		RightCriteria : Criteria;
 	END_STRUCT;
 	SortChoiceEnum : 
 		(
@@ -43,5 +45,18 @@ TYPE
 		ReadExpo : UDINT;
 		ImageAcq : BOOL;
 		DisplayPhoto : BOOL;
+	END_STRUCT;
+	Criteria : 	STRUCT 
+		AS : BOOL;
+		BR : BOOL;
+		Grey : BOOL;
+		Orange : BOOL;
+		Threshold : BOOL;
+		Range : BOOL;
+		Heavy : BOOL;
+		Light : BOOL;
+		WeightMin : USINT;
+		WeightMax : USINT;
+		WeightBorder : USINT;
 	END_STRUCT;
 END_TYPE

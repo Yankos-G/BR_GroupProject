@@ -94,7 +94,7 @@
     <Widget xsi:type="widgets.brease.FlexBox" id="FlexBox2" top="250" left="380" width="180" height="250" zIndex="15">
       <Widgets />
     </Widget>
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineADVANCED" top="280" left="10" width="570" height="320" zIndex="19" gridSize="190px">
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineADVANCED" top="280" left="10" width="570" height="320" zIndex="17" gridSize="190px">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>
@@ -154,9 +154,9 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight" top="250" left="20" width="165" zIndex="20" mouseDownText="Threshold" text="Range" visible="false" />
-    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight1" top="250" left="390" width="165" zIndex="21" imageAlign="right" mouseDownText="Light left" text="Light right" visible="false" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeight" top="300" left="10" width="570" height="270" zIndex="18" gridSize="190px">
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight" top="250" left="20" width="165" zIndex="19" mouseDownText="Threshold" text="Range" visible="false" />
+    <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchBorderWeight1" top="250" left="390" width="165" zIndex="20" imageAlign="right" mouseDownText="Light left" text="Light right" visible="false" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeight" top="300" left="10" width="570" height="270" zIndex="16" gridSize="190px">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>
@@ -191,34 +191,34 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="276" width="30" height="30" zIndex="17" image="Media/SymbolLib/Arrow/Down2.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="276" width="30" height="30" zIndex="16" image="Media/SymbolLib/Arrow/Up2.svg" visible="false" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="300" left="10" width="570" height="270" zIndex="22" gridSize="190px" visible="false">
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="275" width="30" height="30" zIndex="21" image="Media/SymbolLib/Arrow/Down2.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="275" width="30" height="30" zIndex="22" image="Media/SymbolLib/Arrow/Up2.svg" visible="false" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="300" left="10" width="570" height="270" zIndex="18" gridSize="190px" visible="false">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange1" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMaxAdv" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMaxAdv" top="140" left="20" width="240" height="80" zIndex="1" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMinAdv" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxLeftMinAdv" top="50" left="20" width="240" height="80" zIndex="0" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput7" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMaxAdv" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMaxAdv" top="140" left="300" width="240" height="80" zIndex="2" text="Maximal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput8" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMinAdv" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxRightMinAdv" top="50" left="300" width="240" height="80" zIndex="3" text="Minimal Weight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput9" top="3" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRangeAdv" top="20" left="340" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" />
-            <Widget xsi:type="widgets.brease.Label" id="LabelRightRangeAdv" top="20" left="40" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelRightRangeAdv" top="20" left="340" width="160" zIndex="4" text="Right storage range" textAlign="center" bold="true" visible="false" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelLeftRangeAdv" top="20" left="40" width="200" zIndex="5" text="Left storage range" textAlign="center" bold="true" visible="false" />
             <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxBorderWeightAdvLeft" top="70" left="20" width="240" height="120" zIndex="6" text="$IAT/Main/Parameters_SelectWeight" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
               <Widgets>
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput10" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
@@ -229,6 +229,10 @@
                 <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput11" top="23" left="19" width="199" height="33" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" tabIndex="1" />
               </Widgets>
             </Widget>
+            <Widget xsi:type="widgets.brease.Label" id="LabelNoOptionAdvL" top="90" left="80" width="120" height="70" zIndex="8" breakWord="true" multiLine="true" text="Choose range or threshold option" textAlign="center" visible="false" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelNoOptionAdvR" top="90" left="360" width="120" height="70" zIndex="9" breakWord="true" multiLine="true" text="Choose range or threshold option" textAlign="center" visible="false" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelLeftThresholdAdv" top="20" left="35" width="210" zIndex="10" text="Left storage threshold" textAlign="center" bold="true" visible="false" />
+            <Widget xsi:type="widgets.brease.Label" id="LabelRightThresholdAdv" top="20" left="315" width="210" zIndex="11" text="Right storage threshold" textAlign="center" bold="true" visible="false" />
           </Widgets>
         </Widget>
       </Widgets>

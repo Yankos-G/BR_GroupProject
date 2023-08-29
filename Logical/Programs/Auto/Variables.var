@@ -11,7 +11,6 @@ VAR CONSTANT
 	ACTUATOR_BYTE_SORT : INT := 2#0000000000000001;
 END_VAR
 VAR
-	BOOLIK : BOOL;
 	CfgSetFTPServer_0 : CfgSetFTPServer;
 	HMI_ScaleTare : BOOL := FALSE;
 	IsEnglishSelected : BOOL := TRUE;
@@ -51,6 +50,8 @@ VAR
 	SortLeftBR_USINT : USINT;
 	SortLeftGrey_USINT : USINT;
 	SortLeftMin_USINT : USINT;
+	Sort_left : BOOL;
+	Sort_right : BOOL;
 	Start : BOOL := FALSE;
 	State : ProgramStatesEnum := STOP;
 	State_ADV : State_ADVANCED;
@@ -71,6 +72,15 @@ VAR CONSTANT
 END_VAR
 VAR
 	TIME_TON_DETECT : TIME := T#2S;
-	Sort_left : BOOL;
-	Sort_right : BOOL;
+	LeftWeightAdvMinHigh : USINT;
+	LeftWeightAdvMaxLow : USINT;
+	RightWeightAdvMinHigh : USINT;
+	RightWeightAdvMaxLow : USINT;
+END_VAR
+VAR CONSTANT
+	TIME_TON_SHOW_PHOTO : TIME := T#500MS;
+END_VAR
+VAR
+	TimerShowPhoto : BOOL;
+	TimerTonsPhotoDisplay : TON;
 END_VAR

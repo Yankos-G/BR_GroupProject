@@ -122,6 +122,13 @@
               </Target>
             </Action>
           </Step>
+          <Step order="17">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 1">
@@ -200,6 +207,13 @@
             <Action>
               <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
                 <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="12">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -284,6 +298,13 @@
               </Target>
             </Action>
           </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 3">
@@ -332,33 +353,40 @@
           </Step>
           <Step order="9">
             <Action>
+              <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
+                <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxOpticSort">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="10">
+          <Step order="11">
             <Action>
               <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineADVANCED">
                 <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="11">
+          <Step order="12">
             <Action>
               <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeight">
                 <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="12">
+          <Step order="13">
             <Action>
               <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image1">
                 <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="13">
+          <Step order="14">
             <Action>
               <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentParameters" widgetRefId="Image2">
                 <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
@@ -872,62 +900,62 @@
     <EventBinding id="ContentParameters.FlexBoxItem1.OnDrop">
       <Source xsi:type="widgets.brease.FlexBoxItem.Event" contentRefId="ContentParameters" widgetRefId="FlexBoxItemL" event="OnDrop" />
       <Operand datatype="BOOL" name="AS">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="BR">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.BR">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="BR_R">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.BR">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="AS_R">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="GREY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Grey">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="GREY_R">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Grey">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="ORANGE">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Orange">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Orange">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="ORANGE_R">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Orange">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Orange">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="LIGHT">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Light">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Light">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="HEAVY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Heavy">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Heavy">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="RANGE">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Range">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Range">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="THRESHOLD">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Threshold">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Threshold">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -942,7 +970,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.BR">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.BR">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -960,7 +988,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.AS">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.AS">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -978,7 +1006,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Grey">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Grey">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -996,7 +1024,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Orange">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Orange">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -1014,7 +1042,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Light">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Light">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -1032,7 +1060,7 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Heavy">
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Heavy">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -1041,14 +1069,14 @@
       </EventHandler>
       <EventHandler condition="widgetId = &quot;ButtonThreshold&quot; AND RANGE = FALSE AND THRESHOLD = FALSE">
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Threshold">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Threshold">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="widgetId = &quot;ButtonRange&quot; AND THRESHOLD = FALSE AND RANGE = FALSE">
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Auto:LeftCriteria.Range">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Range">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -1057,62 +1085,62 @@
     <EventBinding id="EventBinding_33">
       <Source xsi:type="widgets.brease.FlexBoxItem.Event" contentRefId="ContentParameters" widgetRefId="FlexBoxItemR" event="OnDrop" />
       <Operand datatype="BOOL" name="BR">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.BR">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="BR_L">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.BR">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="AS">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="AS_L">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.AS">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="GREY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Grey">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="GREY_L">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Grey">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="ORANGE">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Orange">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Orange">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="ORANGE_L">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:LeftCriteria.Orange">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Orange">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="LIGHT">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Light">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Light">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="HEAVY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Heavy">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Heavy">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="THRESHOLD">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Threshold">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Threshold">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="RANGE">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Auto:RightCriteria.Range">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Range">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -1491,6 +1519,26 @@
     </EventBinding>
     <EventBinding id="ContentParameters.Image1.Click">
       <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentParameters" widgetRefId="Image1" event="Click" />
+      <Operand datatype="BOOL" name="THRESHOLD_LEFT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Threshold">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="THRESHOLD_RIGHT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Threshold">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="RANGE_LEFT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.Range">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="RANGE_RIGHT">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Range">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler>
         <Sequence>
           <Step order="0">
@@ -1511,6 +1559,282 @@
             <Action>
               <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
                 <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="THRESHOLD_LEFT = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvLeft">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvL">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="RANGE_LEFT = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvLeft">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvL">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="THRESHOLD_RIGHT= TRUE">
+        <Sequence>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvRight">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvR">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="RANGE_RIGHT= TRUE">
+        <Sequence>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvRight">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvR">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="THRESHOLD_RIGHT = FALSE AND RANGE_RIGHT = FALSE">
+        <Sequence>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxRightMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvRight">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvR">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelRightThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="THRESHOLD_LEFT = FALSE AND RANGE_LEFT = FALSE">
+        <Sequence>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMinAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxLeftMaxAdv">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentParameters" widgetRefId="GroupBoxBorderWeightAdvLeft">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelNoOptionAdvL">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftRangeAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="LabelLeftThresholdAdv">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>

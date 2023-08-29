@@ -54,20 +54,24 @@
 
 
 
+
+
+
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Threshold" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Range" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Range" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonRangeL" attribute="visible" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Range" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Threshold" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Range" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonRangeR" attribute="visible" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Threshold" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Threshold" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdR" attribute="visible" />
 </Binding>
 </Bindings>

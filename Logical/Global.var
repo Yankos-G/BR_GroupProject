@@ -29,7 +29,7 @@ VAR
 	gQuantityRightStorage : UINT := 0;
 	gRecognisedModel : ModelEnum := Unrecognised;
 	gSortChoiceView : BOOL;
-	gSorting : SortingType;
+	gSorting : SortingType := (SortChoice:=WEIGHT,SortLeftMin:=FALSE,SortLeftBR:=FALSE,SortLeftGrey:=FALSE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,LeftCriteria:=(WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(WeightMin:=1,WeightMax:=10,WeightBorder:=10));
 	gStopBlink : BOOL := TRUE;
 	gStopState : BOOL := TRUE;
 	gUIConnect : MpRecipeUIConnectType;

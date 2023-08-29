@@ -105,54 +105,18 @@
 <Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="LabelLeftCriteria" attribute="visible" />
 </Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Orange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrangeL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Grey" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonGreyL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Heavy" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavyL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.Light" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonLightL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.AS" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonASL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:LeftCriteria.BR" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonBRL" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Orange" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrangeR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Grey" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonGreyR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Heavy" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavyR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.Light" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonLightR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.AS" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonASR" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Auto:RightCriteria.BR" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonBRR" attribute="visible" />
-</Binding>
+	
+
+
+
+
+
+
+
+
+
+
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftMin" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1" attribute="value" />
@@ -184,6 +148,54 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.WeightMin" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput9" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.BR" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonBRL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.AS" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonASL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Grey" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonGreyL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Orange" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrangeL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Light" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonLightL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.Heavy" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavyL" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.BR" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonBRR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.AS" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonASR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Grey" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonGreyR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Orange" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrangeR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Light" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonLightR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Heavy" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavyR" attribute="visible" />
 </Binding>
 </Bindings>
 </BindingsSet>
