@@ -26,19 +26,19 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="860" width="170" height="50" zIndex="5" text="Receptury" textAlign="center" fontSize="30px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="80" width="420" height="50" zIndex="6" text="Kryteria sortowania" textAlign="center" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="370" left="720" zIndex="7" text="Load" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="370" left="610" zIndex="8" text="Delete" />
-    <Widget xsi:type="widgets.brease.Table" id="Table1" top="70" left="620" width="280" height="250" zIndex="9">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="400" left="720" zIndex="7" text="Load" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="400" left="610" zIndex="8" text="Delete" />
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="620" width="280" height="250" zIndex="9">
       <Widgets>
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="110" text="Name" />
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" columnWidth="170" text="Date" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="370" left="830" zIndex="10" text="Rename" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="330" left="720" zIndex="11" text="Save" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="330" left="610" zIndex="12" text="Create" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="330" left="830" zIndex="13" text="Refresh" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="60" left="970" width="290" height="320" zIndex="14" gridSize="145px" modifyAnimation="true">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="400" left="830" zIndex="10" text="Rename" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="360" left="720" zIndex="11" text="Save" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="360" left="610" zIndex="12" text="Create" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="360" left="830" zIndex="13" text="Refresh" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="80" left="970" width="290" height="330" zIndex="14" gridSize="145px" modifyAnimation="true">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem4" zIndex="0" collapsedSize="2">
           <Widgets>

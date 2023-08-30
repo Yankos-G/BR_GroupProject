@@ -45,6 +45,7 @@ TYPE
 		ReadExpo : UDINT;
 		ImageAcq : BOOL;
 		DisplayPhoto : BOOL;
+		ImageProcessingActive : BOOL;
 	END_STRUCT;
 	Criteria : 	STRUCT 
 		AS : BOOL;

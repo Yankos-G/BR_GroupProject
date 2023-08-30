@@ -10,7 +10,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::Auto:State" />
             <Group ID="TriggerValues">
-              <Property ID="[0]" Value="14" />
+              <Property ID="[0]" Value="17" />
             </Group>
           </Group>
         </Selector>
