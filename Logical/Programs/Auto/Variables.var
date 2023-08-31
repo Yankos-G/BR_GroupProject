@@ -68,7 +68,7 @@ VAR
 END_VAR
 VAR CONSTANT
 	TIME_TON_ACTUATOR : TIME := T#500MS;
-	TIME_TON_CAMERA : TIME := T#4S;
+	TIME_TON_CAMERA : TIME := T#1S;
 END_VAR
 VAR
 	TIME_TON_DETECT : TIME := T#2S;
@@ -76,11 +76,8 @@ VAR
 	LeftWeightAdvMaxLow : USINT;
 	RightWeightAdvMinHigh : USINT;
 	RightWeightAdvMaxLow : USINT;
-END_VAR
-VAR CONSTANT
-	TIME_TON_SHOW_PHOTO : TIME := T#500MS;
-END_VAR
-VAR
-	TimerShowPhoto : BOOL;
-	TimerTonsPhotoDisplay : TON;
+	TIME_TON_SHOW_PHOTO : TIME := T#1S;
+	TimerTONShowPhoto : TON;
+	ShowPhoto : BOOL;
+	ShowDetectedLabel : BOOL;
 END_VAR

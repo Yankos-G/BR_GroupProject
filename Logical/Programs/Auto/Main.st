@@ -67,6 +67,12 @@ PROGRAM _CYCLIC
 		TimerTonDetect.PT := TIME_TON_DETECT;
 		TimerAfterDetect := TimerTonDetect.Q;
 		TimerTonDetect();
+		// delay 
+		TimerTONShowPhoto.IN := gProgCamera.ImageAcq;
+		TimerTONShowPhoto.PT := TIME_TON_SHOW_PHOTO;
+		ShowPhoto := TimerTONShowPhoto.Q;
+		TimerTONShowPhoto();
+		
 
 		
 	END_IF; 
@@ -141,15 +147,24 @@ PROGRAM _CYCLIC
 			
 		TAKE_PICT_CAMERA:
 			gProgCamera.ImageAcq 	:= TRUE;
-			IF TimerCameraPicDone THEN
+			State := TAKE_PICT_CAMERA_2;
+
+			
+		TAKE_PICT_CAMERA_2:
+			IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone THEN
 				gProgCamera.DisplayPhoto := TRUE;
-				IF gRecognisedModel = 0 THEN 						//0
-					gProgCamera.ImageAcq  := FALSE;
-					State 				  := UNRECOGNISED_PIC;
-				ELSE 
-					State 				  := CHOOSE_SORT_MODE;
+				IF gPhotoShowed THEN
+					gPhotoShowed := FALSE;
+					IF gRecognisedModel = 0 THEN 						
+						gProgCamera.ImageAcq  := FALSE;
+						State 				  := UNRECOGNISED_PIC;
+					ELSE 
+						State 				  := CHOOSE_SORT_MODE;
+					END_IF;
 				END_IF;
+				
 			END_IF;
+
 				
 		CHOOSE_SORT_MODE:
 			IF gSorting.SortChoice = OPTIC_LOGO THEN
@@ -514,8 +529,15 @@ PROGRAM _CYCLIC
 	
 	// HMI GUYS WANTED SOME VARIABLES
 
+
+	
 	IF gSorting.SortChoice <> WEIGHT THEN
 		gSortChoiceView := TRUE;
+		IF gSorting.SortChoice = ADVANCED THEN
+			ShowDetectedLabel := FALSE;
+		ELSE
+			ShowDetectedLabel := TRUE;
+		END_IF;
 		ShowLightLeft 	:= FALSE;
 		ShowLightRight 	:= FALSE;
 		ShowRange 		:= FALSE;
@@ -528,6 +550,7 @@ PROGRAM _CYCLIC
 			ShowBRLeft 	:= FALSE;
 		END_IF;	
 	ELSIF gSorting.SortChoice = WEIGHT THEN
+		ShowDetectedLabel := FALSE;
 		gSortChoiceView := FALSE;
 		ShowBRLeft 		:= FALSE;
 		ShowBRRight 	:= FALSE;

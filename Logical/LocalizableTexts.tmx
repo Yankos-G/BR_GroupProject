@@ -984,5 +984,13 @@
         <seg>Camera mode:</seg>
       </tuv>
     </tu>
+    <tu tuid="State_Sort_Advanc">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie zaawansowane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Advanced sorting</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

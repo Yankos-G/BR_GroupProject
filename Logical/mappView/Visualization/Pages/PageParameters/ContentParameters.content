@@ -38,7 +38,7 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="360" left="720" zIndex="11" text="Save" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="360" left="610" zIndex="12" text="Create" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="360" left="830" zIndex="13" text="Refresh" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="80" left="970" width="290" height="330" zIndex="14" gridSize="145px" modifyAnimation="true">
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="60" left="940" width="620" height="330" zIndex="14" gridSize="145px" modifyAnimation="true">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem4" zIndex="0" collapsedSize="2">
           <Widgets>
@@ -87,6 +87,11 @@
                 <Widget xsi:type="widgets.brease.Label" id="LabelRightCriteria" top="0" left="0" width="120" zIndex="2" text="Right criteria:" />
               </Widgets>
             </Widget>
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem5" zIndex="1" collapsedSize="2">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Label" id="Label80" top="10" left="80" width="120" zIndex="0" text="Recipe values" bold="true" />
           </Widgets>
         </Widget>
       </Widgets>

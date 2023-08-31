@@ -49,18 +49,6 @@
           <High ValueProvider="PV">::Auto:ItemWeighLeftMaxBorder</High>
         </EURange>
       </EURanges>
-      <EURanges Id="16">
-        <EURange>
-          <Low ValueProvider="PV">::gSorting.ItemWeightLeftMin</Low>
-          <High ValueProvider="Const">255</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="17">
-        <EURange>
-          <Low ValueProvider="Const">1</Low>
-          <High ValueProvider="PV">::gSorting.ItemWeightRightMax</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="18">
         <EURange>
           <Low ValueProvider="Const">1</Low>
@@ -208,6 +196,7 @@
         <Variable Name="SortLeftBR_USINT" />
         <Variable Name="SortLeftGrey_USINT" />
         <Variable Name="SortLeftMin_USINT" />
+        <Variable Name="ShowDetectedLabel" />
       </Task>
       <Task Name="Manual">
         <Variable Name="BeltMoveAdditive" />

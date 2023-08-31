@@ -27,6 +27,7 @@ VAR
 	gProgCamera : Camera_enum_main := (ImageAcq:=FALSE,DisplayPhoto:=FALSE);
 	gQuantityLeftStorage : UINT := 0;
 	gQuantityRightStorage : UINT := 0;
+	gPhotoShowed : BOOL;
 	gRecognisedModel : ModelEnum := Unrecognised;
 	gSortChoiceView : BOOL;
 	gSorting : SortingType := (SortChoice:=WEIGHT,SortLeftMin:=FALSE,SortLeftBR:=FALSE,SortLeftGrey:=FALSE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,LeftCriteria:=(WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(WeightMin:=1,WeightMax:=10,WeightBorder:=10));

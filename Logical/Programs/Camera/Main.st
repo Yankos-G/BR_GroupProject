@@ -26,7 +26,7 @@ PROGRAM _CYCLIC
 		gProgCamera.ModuleOK := Logo.ModuleOK;
 		gProgCamera.PhotoTaken := Logo.PhotoTaken;
 		gProgCamera.Model_ID := Logo.Model_ID;
-
+		gProgCamera.ImageProcessingActive := Logo.ImgProcessingActive;
 	ELSIF Color.ModuleOK THEN
 		CameraMode := 'Color';
 		IF gProgCamera.SetFocus <> oldFocusColor  THEN
@@ -47,6 +47,7 @@ PROGRAM _CYCLIC
 		gProgCamera.PhotoTaken := Color.PhotoTaken;
 		gRecognisedModel := Color.Model_ID;
 		gProgCamera.Model_ID := Color.Model_ID;
+		gProgCamera.ImageProcessingActive := Color.ImgProcessingActive;
 	END_IF;
 	
 	
@@ -161,9 +162,7 @@ PROGRAM _CYCLIC
 	ELSE
 		gRecognisedModel := gProgCamera.Model_ID;
 	END_IF
-	IF gProgCamera.DisplayPhoto THEN
-		ImageProcess := 0;
-	END_IF;
+
 	//displaying last taken photo
 	
 	CASE ImageProcess OF	// state machine to process the picture to different destinations
@@ -184,10 +183,17 @@ PROGRAM _CYCLIC
 			ViBaseGetImage_0.Buffer := ADR(ViBaseBuffer);
 			ViBaseGetImage_0.BufferSize := SIZEOF(ViBaseBuffer);
 			ViBaseGetImage_0.Execute := TRUE;
-			
+			//jakby cos sie dzialo zlego to usun
+			IF ViBaseGetImage_0.Error THEN
+				ViBaseGetImage_0.Execute := FALSE;
+				gProgCamera.DisplayPhoto := TRUE;
+				ImageProcess := 0;
+			END_IF;
+			//dotad
 			IF ViBaseGetImage_0.Done THEN
 				Base64srcLen := ViBaseGetImage_0.BufferLen;	// save length of buffer on a local variable
 				ViBaseGetImage_0.Execute := FALSE;
+				
 				ImageProcess := 2;
 			END_IF
 			
@@ -207,15 +213,17 @@ PROGRAM _CYCLIC
 			URLLength := strlen(ADR(URL));
 			
 			IF NOT(httpEncodeBase64_0.destLen=0) THEN
+				gPhotoShowed := TRUE;
 				strcat(ADR(Base64Buffer), ADR('$' />')) ; // Abschluss des Image Elements
 				strcat(ADR(URL), ADR(Base64Buffer));
 				
 				NewEncodeReq := TRUE;
 				URLLength := strlen(ADR(URL));
 				httpEncodeBase64_0.enable := FALSE;
+				
 				ImageProcess := 0;
 			END_IF;
-		
+		//dodaj zakonczenie procesu
 	END_CASE;
 	ViBaseGetImage_0();	// call FUB
 	httpEncodeBase64_0();	// call FUB
