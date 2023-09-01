@@ -21,6 +21,7 @@
     <BindingsSet refId="ContentAuto_binding" />
     <BindingsSet refId="ContentCharts_binding" />
     <BindingsSet refId="ContentParameters_binding" />
+    <BindingsSet refId="ContentFiles_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="ContentTop_eventbinding" />

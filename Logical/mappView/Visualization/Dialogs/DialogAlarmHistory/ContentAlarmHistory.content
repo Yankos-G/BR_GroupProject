@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentAlarmHistory" height="510" width="960" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory" top="20" left="20" width="920" height="460" zIndex="0" itemsPerPage="5" nextText="$IAT/Main/Alarm_ButtonNext" previousText="$IAT/Main/AlarmButtonPrevious">
+    <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory" top="20" left="20" width="920" height="430" zIndex="0" itemsPerPage="5" nextText="$IAT/Main/Alarm_ButtonNext" previousText="$IAT/Main/AlarmButtonPrevious">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemTimestamp" zIndex="0" columnType="timestamp" text="$IAT/Main/Alarms_Date" />
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemName" width="180" zIndex="1" columnType="name" text="$IAT/Main/Alarm_alarm" />
@@ -10,5 +10,6 @@
         <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemNewState" width="120" zIndex="4" columnType="new state" text="$IAT/Main/Alarm_NewState" />
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="460" left="20" width="140" zIndex="1" text="Export history" />
   </Widgets>
 </Content>

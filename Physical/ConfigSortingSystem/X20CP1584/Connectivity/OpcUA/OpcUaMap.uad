@@ -165,6 +165,12 @@
         <Variable Name="ModuleOkPneu_X67BC" />
         <Variable Name="ModuleOkScale" />
         <Variable Name="ModuleOkServo" />
+        <Variable Name="ExportBool" />
+        <Variable Name="FileUIConnect" RecursiveEnable="2" />
+        <Variable Name="FileUISetup" RecursiveEnable="2" />
+        <Variable Name="FileLastModified" RecursiveEnable="2" />
+        <Variable Name="FileName" RecursiveEnable="2" />
+        <Variable Name="FileSize" RecursiveEnable="2" />
       </Task>
       <Task Name="Auto">
         <Variable Name="Start" />

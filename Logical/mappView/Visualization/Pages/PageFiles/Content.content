@@ -1,4 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="ContentFiles" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets />
+<Content id="ContentFiles" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="190" width="520" height="380" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="100" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="Size" />
+        <Widget xsi:type="widgets.brease.TableItemDateTime" id="TableItemDateTime1" zIndex="2" columnWidth="320" text="Date" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="110" left="720" width="130" zIndex="1" text="Refresh" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="151" left="720" width="130" zIndex="2" text="Folder Up" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="193" left="720" width="130" zIndex="3" text="Enter Folder" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="234" left="720" width="130" zIndex="4" text="Copy" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="275" left="720" width="130" zIndex="5" text="Cut" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="320" left="720" width="130" zIndex="6" text="Paste" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="358" left="720" width="130" zIndex="7" text="Delete" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="399" left="720" width="130" zIndex="8" text="Create" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="440" left="720" width="130" zIndex="9" text="Rename" />
+    <Widget xsi:type="widgets.brease.TextInput" id="TextInput1" top="310" left="930" width="180" zIndex="10" />
+  </Widgets>
 </Content>

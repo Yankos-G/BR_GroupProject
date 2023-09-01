@@ -24,5 +24,6 @@
     <Object Type="File">ContentRecipeRename.eventbinding</Object>
     <Object Type="File">ContentFiles.eventbinding</Object>
     <Object Type="File">SubContentParamLeft.eventbinding</Object>
+    <Object Type="File">ContentFiles.binding</Object>
   </Objects>
 </Package>
