@@ -3,57 +3,87 @@
   <Bindings>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileLastModified" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TableItemDateTime1" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileSize" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TableItem2" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileName" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileName" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TableItem1" attribute="stringValue" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.EnterFolder" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton5" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileSize" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TableItem2" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.FolderUp" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton2" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileLastModified" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TableItemDateTime1" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Refresh" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Refresh" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton1" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Copy" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton6" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.FolderUp" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton2" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Cut" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton7" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.EnterFolder" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton5" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Paste" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton8" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Delete" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Rename" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton11" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Delete" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton9" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.CreateFolder" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton10" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Paste" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton8" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.Rename" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton11" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Cut" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton7" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:FileUIConnect.File.NewName" attribute="value" />
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Copy" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.NewName" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TextInput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:idx" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="Table1" attribute="selectedRow" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.NewName" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TextInput2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.CreateFolder" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:FileUIConnect.File.Filter" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="TextInput3" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:Filter_sort_type" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentFiles" widgetRefId="DropDownBox1" attribute="selectedIndex" />
 </Binding>
 </Bindings>
 </BindingsSet>

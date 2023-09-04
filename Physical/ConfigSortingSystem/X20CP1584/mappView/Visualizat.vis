@@ -22,6 +22,8 @@
     <BindingsSet refId="ContentCharts_binding" />
     <BindingsSet refId="ContentParameters_binding" />
     <BindingsSet refId="ContentFiles_binding" />
+    <BindingsSet refId="contentFileDelete_binding" />
+    <BindingsSet refId="ContentAudit_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="ContentTop_eventbinding" />
@@ -37,12 +39,14 @@
     <EventBindingsSet refId="ContentRecipeRename_eventbinding" />
     <EventBindingsSet refId="ContentFiles_eventbinding" />
     <EventBindingsSet refId="SubContentParamLeft_eventbinding" />
+    <EventBindingsSet refId="contentFileDelete_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="dialogMessageBoxLogin" />
     <Dialog refId="dialogAlarmHistory" />
     <Dialog refId="dialogRecipeCreate" />
     <Dialog refId="dialog_RecipeRename" />
+    <Dialog refId="DialogFilesDelete" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -60,6 +64,7 @@
     <Content refId="ContentFiles" />
     <Content refId="ContentRecipeCreate" />
     <Content refId="ContentRecipeRename" />
+    <Content refId="contentFileDelete" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

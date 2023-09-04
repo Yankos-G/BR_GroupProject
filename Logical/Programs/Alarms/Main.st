@@ -5,22 +5,6 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	(* Insert code here *)
-	
-	MpFileManagerUI_0(MpLink := ADR(gFileManagUI), Enable := TRUE , UISetup := FileUISetup, UIConnect := ADR(FileUIConnect) );
-	FileUIConnect.DeviceList.DeviceNames[0] := 'EF';
-	i := 0;
-	FOR i := 0 TO FileUIConnect.File.PathInfo.FolderCount DO
-		FileName[i] := FileUIConnect.File.List.Items[i].Name;
-		FileLastModified[i] := FileUIConnect.File.List.Items[i].LastModified;
-		FileSize[i] := FileUIConnect.File.List.Items[i].Size;
-		i := i+1;
-		IF i = FileUIConnect.File.PathInfo.FolderCount THEN
-	  		EXIT;
-		END_IF;
-	END_FOR;
-	
-	
 	
 	MpAlarmXCore_0.Enable := TRUE;
 	MpAlarmXCore_0.MpLink := ADR(gAlarmXCore);

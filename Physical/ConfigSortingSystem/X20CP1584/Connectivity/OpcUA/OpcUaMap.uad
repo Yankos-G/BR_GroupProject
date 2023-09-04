@@ -83,7 +83,7 @@
   <DefaultView>
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
-        <Variable Name="gMode" />
+        <Variable AuditEvents="True" Name="gMode" />
         <Variable Name="gMotorBeltAxisBasic">
           <Variable Name="Position" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="1" />
           <Variable Name="Velocity" Historizing="True" HistoryBufferSize="200" HistorySamplingInterval="Timer2" EngineeringUnitId="2" />
@@ -166,16 +166,11 @@
         <Variable Name="ModuleOkScale" />
         <Variable Name="ModuleOkServo" />
         <Variable Name="ExportBool" />
-        <Variable Name="FileUIConnect" RecursiveEnable="2" />
-        <Variable Name="FileUISetup" RecursiveEnable="2" />
-        <Variable Name="FileLastModified" RecursiveEnable="2" />
-        <Variable Name="FileName" RecursiveEnable="2" />
-        <Variable Name="FileSize" RecursiveEnable="2" />
       </Task>
       <Task Name="Auto">
         <Variable Name="Start" />
         <Variable Name="Stop" />
-        <Variable Name="State" />
+        <Variable AuditEvents="True" Name="State" />
         <Variable Name="ItemDetected" />
         <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
         <Variable Name="ItemWeight" />
@@ -194,7 +189,7 @@
         <Variable Name="ShowBRRight" />
         <Variable Name="ShowLightLeft" />
         <Variable Name="ShowLightRight" />
-        <Variable Name="HMI_ScaleTare" />
+        <Variable AuditEvents="True" Name="HMI_ScaleTare" />
         <Variable Name="ShowRange" />
         <Variable Name="ShowThreshold" />
         <Variable Name="ItemWeighLeftMaxBorder" />
@@ -257,6 +252,18 @@
       </Task>
       <Task Name="ProgramRec">
         <Variable Name="SelectedIndex" />
+        <Variable Name="Configer" RecursiveEnable="2" />
+        <Variable Name="FileLastModified" RecursiveEnable="2" />
+        <Variable Name="FileName" RecursiveEnable="2" />
+        <Variable Name="FileSize" RecursiveEnable="2" />
+        <Variable Name="FileUIConnect" RecursiveEnable="2" />
+        <Variable Name="FileUISetup" RecursiveEnable="2" />
+        <Variable Name="idx" />
+        <Variable Name="CurrentFile" />
+        <Variable Name="Filter_sort_type" />
+        <Variable Name="MpAuditTrailUI_0" RecursiveEnable="2" />
+        <Variable Name="AuditUIConnect" RecursiveEnable="2" />
+        <Variable Name="ClearAudit" />
       </Task>
       <Task Name="Camera">
         <Variable Name="ViBaseBuffer" />

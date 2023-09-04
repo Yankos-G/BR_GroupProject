@@ -7,5 +7,5 @@
     <Object Type="Cpu" Description="Project that includes both HMI visualization and script of controling conveyor belt and sorting system.">X20CP1584</Object>
     <Object Type="File">Hardware.jpg</Object>
   </Objects>
-  <Sources Download="false" IncludeUpgrades="true" Mode="ProjectTransfer" Option="Complete" />
+  <Sources Download="false" IncludeUpgrades="true" Mode="ProjectTransfer" Option="Complete" Password="admin" />
 </Configuration>

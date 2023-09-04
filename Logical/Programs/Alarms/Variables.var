@@ -20,14 +20,4 @@ VAR
 	enableYellowIcon : BOOL;
 	enableRedIcon : BOOL;
 	ExportBool : BOOL;
-	FileUISetup : MpFileManagerUISetupType;
-	FileUIConnect : MpFileManagerUIConnectType;
-	MpFileManagerUI_0 : MpFileManagerUI;
-	MpFileManagerConfig_0 : MpFileManagerConfig;
-	Configer : MpFileManagerConfigType;
-	List : ARRAY[0..49] OF STRING[80];
-	i : UDINT;
-	FileName : ARRAY[0..48] OF STRING[80];
-	FileLastModified : ARRAY[0..49] OF DATE_AND_TIME;
-	FileSize : ARRAY[0..49] OF UDINT;
 END_VAR

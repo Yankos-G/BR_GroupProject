@@ -7,5 +7,7 @@
     <Object Type="File">gRecipeXML.mprecipexml</Object>
     <Object Type="File">Config_3.mpuserx</Object>
     <Object Type="File">Config_5.mpfilemanagerui</Object>
+    <Object Type="File">Config_4.mpaudittrail</Object>
+    <Object Type="File">Config_6.mpreportcore</Object>
   </Objects>
 </Package>

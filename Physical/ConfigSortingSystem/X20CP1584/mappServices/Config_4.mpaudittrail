@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gAuditTrail" Type="mpaudittrail">
+    <Group ID="Audit">
+      <Group ID="Events">
+        <Property ID="[0]" Value="2" />
+        <Property ID="[1]" Value="113" />
+        <Property ID="[2]" Value="48" />
+        <Property ID="[3]" Value="33" />
+        <Property ID="[4]" Value="96" />
+        <Property ID="[5]" Value="19" />
+      </Group>
+      <Selector ID="Archive" Value="On" />
+      <Group ID="Export">
+        <Property ID="FileType" Value="2" />
+        <Property ID="Encrypt" Value="FALSE" />
+        <Property ID="PassPhrase" Value="" />
+        <Group ID="PDF">
+          <Property ID="OwnerPassword" Value="" />
+          <Property ID="UserPassword" Value="" />
+        </Group>
+      </Group>
+    </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
+  </Element>
+</Configuration>

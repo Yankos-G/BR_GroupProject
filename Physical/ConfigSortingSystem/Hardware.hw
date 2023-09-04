@@ -222,6 +222,9 @@
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="EF" />
     <Parameter ID="FileDevicePath3" Value="F:\" />
+    <Group ID="FileDevice4" />
+    <Parameter ID="FileDeviceName4" Value="CF_Au" />
+    <Parameter ID="FileDevicePath4" Value="F:\Audit" />
     <Parameter ID="TimeZone" Value="160" />
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
@@ -230,6 +233,8 @@
     <Parameter ID="FtpUserSalt1" Value="5SVs8NA4" />
     <Parameter ID="FTPAccessRight1" Value="0" />
     <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaActivateAuditEvents" Value="1" />
+    <Parameter ID="OpcUa_Security_AdminRole" Value="Administrator" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
   <Module Name="X20IF1082" Type="X20IF1082" Version="1.11.0.0">

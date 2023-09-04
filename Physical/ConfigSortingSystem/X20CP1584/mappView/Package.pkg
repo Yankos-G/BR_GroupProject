@@ -25,5 +25,8 @@
     <Object Type="File">ContentFiles.eventbinding</Object>
     <Object Type="File">SubContentParamLeft.eventbinding</Object>
     <Object Type="File">ContentFiles.binding</Object>
+    <Object Type="File">contentFileDelete.binding</Object>
+    <Object Type="File">contentFileDelete.eventbinding</Object>
+    <Object Type="File">ContentAudit.binding</Object>
   </Objects>
 </Package>

@@ -9,10 +9,9 @@
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3">
     <Task Name="Camera" Source="Programs.Camera.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-  </TaskClass>
-  <TaskClass Name="Cyclic#4">
     <Task Name="ProgramRec" Source="Programs.RecipesMgmnt.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#4" />
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6">
     <Task Name="Alarms" Source="Programs.Alarms.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -59,6 +58,7 @@
     <BinaryObject Name="viComp4" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="viComp1" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ViApplicat" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_5" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="viComp" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
@@ -95,5 +95,7 @@
     <LibraryObject Name="aseth" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asusb" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpAudit" Source="Libraries.MpAudit.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpReport" Source="Libraries.MpReport.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

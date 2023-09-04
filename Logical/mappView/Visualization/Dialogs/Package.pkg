@@ -7,5 +7,6 @@
     <Object Type="Package">DialogLogin</Object>
     <Object Type="Package">DialogRecipeCreate</Object>
     <Object Type="Package">DialogRecipeRename</Object>
+    <Object Type="Package">DialogFileDelete</Object>
   </Objects>
 </Package>

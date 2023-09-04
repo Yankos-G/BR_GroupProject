@@ -4,6 +4,8 @@
   <Element ID="gRecipeXml" Type="mprecipexml">
     <Group ID="mapp.Recipe.Xml">
       <Selector ID="AutoSave" Value="Time" />
+      <Selector ID="Auditing" Value="MpAudit" />
     </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>
