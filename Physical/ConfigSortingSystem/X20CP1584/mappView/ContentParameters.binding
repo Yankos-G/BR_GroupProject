@@ -33,18 +33,9 @@
 			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortChoice" attribute="value" samplingRate="fast" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="RadialSlider1" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Load" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton4" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.Delete" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton5" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.New.Create" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentRecipeCreate" widgetRefId="MomentaryPushButton1" attribute="value" />
-</Binding>
+
+
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.New.FileName" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentRecipeCreate" widgetRefId="TextInput1" attribute="value" />

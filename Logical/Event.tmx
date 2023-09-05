@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Audit/Event</prop>
+  </header>
+  <body>
+    <tu tuid="Root">
+      <tuv xml:lang="pl">
+        <seg>ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Event ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="113">
+      <tuv xml:lang="pl">
+        <seg> [%act$[TEXT=Audit/File]]</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>[%act$[TEXT=Audit/File]]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="pl">
+        <seg> [%act$[TEXT=Audit/UserX]]</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>[%act$[TEXT=Audit/UserX]]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="pl">
+        <seg> [%act$[TEXT=Audit/Recipes]]</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>[%act$[TEXT=Audit/Recipes]]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="pl">
+        <seg>Alarm '[%name]' aktywowany: "[%msg]"</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm '[%name]' has been activated: "[%msg]"</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2457">
+      <tuv xml:lang="pl">
+        <seg>Buffor audytów został zresetowany</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit buffer was reset</seg>
+      </tuv>
+    </tu>
+    <tu tuid="19">
+      <tuv xml:lang="pl">
+        <seg>Zmienna '[%nodename]' została zmieniona z [%old] na [%new]</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Variable '[%nodename]' has been changed from [%old] to [%new]</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

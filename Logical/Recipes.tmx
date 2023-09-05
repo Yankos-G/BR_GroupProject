@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Audit/Recipes</prop>
+  </header>
+  <body>
+    <tu tuid="0">
+      <tuv xml:lang="pl">
+        <seg>Rozpoczęło się ładowanie do [%dev] przepisu [%file].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The loading to [%dev] of a recipe [%file]  has been started.</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1">
+      <tuv xml:lang="pl">
+        <seg>Ładowanie do [%dev] przepisu [%file] zostało zakończone.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The loading to [%dev] of a recipe [%file]  has been completed.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="pl">
+        <seg>Zapisywanie przepisu [%file].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Saving a recipe [%file].</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="pl">
+        <seg>Zmiana nazwy przepisu [%file].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Renaming a recipe [%file].</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="pl">
+        <seg>Usuwanie przepisu [%file].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Deleting a recipe [%file].</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

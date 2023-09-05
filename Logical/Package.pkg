@@ -9,7 +9,10 @@
     <Object Type="Package">Programs</Object>
     <Object Type="File">Project.language</Object>
     <Object Type="File">LocalizableTexts.tmx</Object>
-    <Object Type="File">LocalizableTexts1.tmx</Object>
+    <Object Type="File">Event.tmx</Object>
+    <Object Type="File">Recipes.tmx</Object>
+    <Object Type="File">UserX.tmx</Object>
+    <Object Type="File">File.tmx</Object>
     <Object Type="Package">Documentation</Object>
   </Objects>
 </Package>

@@ -5,12 +5,11 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="510" left="1090" width="120" zIndex="1" text="Clear list" />
     <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="40" left="70" width="1140" height="450" zIndex="2" itemsPerPage="10">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" width="290" zIndex="0" columnType="timestamp" text="Time" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" zIndex="1" columnType="operator name" text="Operator" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="470" zIndex="2" text="Activity" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem4" width="50" zIndex="3" columnType="id" text="ID" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" width="60" zIndex="4" columnType="old" text="Old" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem6" width="70" zIndex="5" columnType="new" text="New" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="100" zIndex="0" columnType="operator name" text="Operator" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="630" zIndex="1" text="Activity" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" width="70" zIndex="2" columnType="old" text="Old" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem6" width="70" zIndex="3" columnType="new" text="New" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" width="270" zIndex="4" columnType="timestamp" text="Time" />
       </Widgets>
     </Widget>
   </Widgets>

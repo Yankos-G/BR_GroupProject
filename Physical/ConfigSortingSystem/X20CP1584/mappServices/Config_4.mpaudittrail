@@ -8,18 +8,28 @@
         <Property ID="[1]" Value="113" />
         <Property ID="[2]" Value="48" />
         <Property ID="[3]" Value="33" />
-        <Property ID="[4]" Value="96" />
-        <Property ID="[5]" Value="19" />
+        <Property ID="[4]" Value="19" />
       </Group>
+      <Selector ID="TextSource" Value="TXT">
+        <Property ID="Name" Value="" />
+        <Property ID="OutputFormat" Value="Audit/Event/Root" />
+      </Selector>
       <Selector ID="Archive" Value="On" />
       <Group ID="Export">
         <Property ID="FileType" Value="2" />
-        <Property ID="Encrypt" Value="FALSE" />
-        <Property ID="PassPhrase" Value="" />
+        <Property ID="PassPhrase" Value="admin" />
         <Group ID="PDF">
-          <Property ID="OwnerPassword" Value="" />
           <Property ID="UserPassword" Value="" />
+          <Property ID="Header" Value="" />
+          <Selector ID="Title">
+            <Property ID="Text" Value="" />
+          </Selector>
         </Group>
+      </Group>
+    </Group>
+    <Group ID="Monitor">
+      <Group ID="0">
+        <Property ID="pv" Value="::Auto:State" />
       </Group>
     </Group>
     <Selector ID="Alarms" Value="MpAlarmX" />

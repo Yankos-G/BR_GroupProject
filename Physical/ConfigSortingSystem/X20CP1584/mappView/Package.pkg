@@ -28,5 +28,6 @@
     <Object Type="File">contentFileDelete.binding</Object>
     <Object Type="File">contentFileDelete.eventbinding</Object>
     <Object Type="File">ContentAudit.binding</Object>
+    <Object Type="File">ContentAudit.eventbinding</Object>
   </Objects>
 </Package>

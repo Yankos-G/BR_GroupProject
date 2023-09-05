@@ -170,7 +170,7 @@
       <Task Name="Auto">
         <Variable Name="Start" />
         <Variable Name="Stop" />
-        <Variable AuditEvents="True" Name="State" />
+        <Variable Name="State" />
         <Variable Name="ItemDetected" />
         <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
         <Variable Name="ItemWeight" />
@@ -189,7 +189,11 @@
         <Variable Name="ShowBRRight" />
         <Variable Name="ShowLightLeft" />
         <Variable Name="ShowLightRight" />
-        <Variable AuditEvents="True" Name="HMI_ScaleTare" />
+        <Variable AuditEvents="True" Name="HMI_ScaleTare">
+          <NodeDescription>
+            <DisplayName>Tara wagi</DisplayName>
+          </NodeDescription>
+        </Variable>
         <Variable Name="ShowRange" />
         <Variable Name="ShowThreshold" />
         <Variable Name="ItemWeighLeftMaxBorder" />

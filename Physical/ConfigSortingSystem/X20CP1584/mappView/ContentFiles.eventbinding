@@ -11,5 +11,85 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton5.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton5" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.EnterFolder">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton2.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.FolderUp">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton6.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton6" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.Copy">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton7.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.Cut">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton8.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton8" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.Paste">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton1.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.Refresh">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton12.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton12" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.CreateFolder">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentFiles.MomentaryPushButton11.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentFiles" widgetRefId="MomentaryPushButton11" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:FileUIConnect.File.Rename">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

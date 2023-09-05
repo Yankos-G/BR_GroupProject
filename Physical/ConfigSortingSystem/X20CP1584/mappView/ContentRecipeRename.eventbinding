@@ -14,11 +14,22 @@
     <EventBinding id="ContentRecipeRename.MomentaryPushButton1.Click">
       <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentRecipeRename" widgetRefId="MomentaryPushButton1" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="dialog_RecipeRename" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="dialog_RecipeRename" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gUIConnect.Recipe.Rename">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

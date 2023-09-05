@@ -54,8 +54,16 @@
       </Group>
       <Group ID="Reports">
         <Group ID="[0]">
+          <Property ID="Name" Value="Report" />
           <Property ID="PageLayout" Value="Default" />
-          <Group ID="[0]" />
+          <Group ID="[0]">
+            <Property ID="StartOnNewPage" Value="TRUE" />
+            <Group ID="Heading">
+              <Property ID="Text" Value="Audyt 2023" />
+              <Property ID="HorizontalAlign" Value="1" />
+              <Property ID="TextStyle" Value="Default" />
+            </Group>
+          </Group>
         </Group>
       </Group>
     </Group>

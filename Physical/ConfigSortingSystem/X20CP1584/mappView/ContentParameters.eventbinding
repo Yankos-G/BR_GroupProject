@@ -1915,5 +1915,45 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton9.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton9" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gUIConnect.Recipe.Refresh">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton4.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gUIConnect.Recipe.Load">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton5.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton5" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gUIConnect.Recipe.Delete">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton7.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gUIConnect.Recipe.Save">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
