@@ -5,8 +5,8 @@
     <Widget xsi:type="widgets.brease.Image" id="ImageLogin" top="4" left="1398" width="70" height="68" zIndex="0" image="Media/SymbolLib/User/User.svg" />
     <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput1" top="8" left="740" width="648" height="60" zIndex="3" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="25px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBackground" top="75" left="-5" width="1511" height="16" zIndex="2" borderWidth="0px" backColor="rgba(255, 140, 0, 1)" />
-    <Widget xsi:type="widgets.brease.Image" id="ImageAlarmRed" top="12" left="680" width="46" height="54" zIndex="4" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 0, 0, 1)" />
-    <Widget xsi:type="widgets.brease.Image" id="ImageAlarmYellow" top="12" left="680" width="46" height="48" zIndex="5" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 255, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Image" id="ImageAlarmRed" top="12" left="680" width="46" height="48" zIndex="4" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 0, 0, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="ImageAlarmYellow" top="12" left="680" width="46" height="48" zIndex="5" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 255, 0, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.Label" id="LabelActiveUser" top="20" left="260" width="180" height="40" zIndex="6" text="$IAT/Main/Top_ActiveUser" textAlign="right" />
     <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="20" left="460" width="200" height="40" zIndex="7" />
   </Widgets>

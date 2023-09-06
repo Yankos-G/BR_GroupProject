@@ -5,12 +5,12 @@
     <prop type="x-BR-TS:Namespace">Audit/File</prop>
   </header>
   <body>
-    <tu tuid="0">
+    <tu tuid="1">
       <tuv xml:lang="pl">
-        <seg>MpFile - Nieznana akcja</seg>
+        <seg>Utworzono folder/plik.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>MpFile - Unknown action</seg>
+        <seg>A folder/file was created.</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>Servus Welt!</seg>
@@ -19,116 +19,92 @@
         <seg>Bonjour tout le monde!</seg>
       </tuv>
     </tu>
-    <tu tuid="1">
-      <tuv xml:lang="pl">
-        <seg>Zalogował się użytkownik [%op].</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>A user [%op] was logged in.</seg>
-      </tuv>
-    </tu>
     <tu tuid="2">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%op] został wylogowany.</seg>
+        <seg>Folder/plik został nadpisany.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>A user [%op] was logged out.</seg>
+        <seg>A folder/file was overwritten.</seg>
       </tuv>
     </tu>
     <tu tuid="3">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%op] został automatycznie wylogowany.</seg>
+        <seg>Dodano folder/plik.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>A user [%op] was logged out automatically.</seg>
+        <seg>A folder/file was added.</seg>
       </tuv>
     </tu>
     <tu tuid="4">
       <tuv xml:lang="pl">
-        <seg>Dodano użytkownika [%usr].</seg>
+        <seg>Folder/plik został usunięty.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>A user [%usr] has been added.</seg>
+        <seg>A folder/file was deleted.</seg>
       </tuv>
     </tu>
     <tu tuid="5">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%usr] został usunięty.</seg>
+        <seg>Zmieniono nazwę folderu/pliku.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The user [%usr]was deleted.</seg>
+        <seg>A folder/file was renamed.</seg>
       </tuv>
     </tu>
     <tu tuid="6">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%usr] został zablokowany.</seg>
+        <seg>Odczytano folder/plik.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The user [%usr] was locked.</seg>
+        <seg>A folder/file was read.</seg>
       </tuv>
     </tu>
     <tu tuid="7">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%usr] został odblokowany.</seg>
+        <seg>Folder/plik został skopiowany.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The user [%usr] was unblocked.</seg>
+        <seg>A folder/file was copied.</seg>
       </tuv>
     </tu>
     <tu tuid="8">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%usr] został zablokowany z powodu zbyt częstego wprowadzenia nieprawidłowego hasła.</seg>
+        <seg>Folder/plik został wycięty.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The user [%usr] was blocked for entering an incorrect password too many times.</seg>
+        <seg>A folder/file was cut.</seg>
       </tuv>
     </tu>
     <tu tuid="9">
       <tuv xml:lang="pl">
-        <seg>Użytkownik [%op] zmienił hasło.</seg>
+        <seg>Folder/plik został najpierw skopiowany, a następnie wklejony. Utworzono nowy folder/plik.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The user [%op] changed the password.</seg>
+        <seg>A folder/file was first copied and then pasted. A new folder/file was created.</seg>
       </tuv>
     </tu>
     <tu tuid="10">
       <tuv xml:lang="pl">
-        <seg>Wprowadzono nieprawidłową nazwę użytkownika.</seg>
+        <seg>Folder/plik został najpierw skopiowany, a następnie wklejony. Istniejący folder/plik został nadpisany.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>An invalid username was entered.</seg>
+        <seg>A folder/file was first copied and then pasted. The existing folder/file was overwritten.</seg>
       </tuv>
     </tu>
     <tu tuid="11">
       <tuv xml:lang="pl">
-        <seg>Wprowadzono nieprawidłowe hasło.</seg>
+        <seg>Folder/plik został zablokowany.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>An invalid password was entered.</seg>
+        <seg>A folder/file was locked.</seg>
       </tuv>
     </tu>
     <tu tuid="12">
       <tuv xml:lang="pl">
-        <seg>Rola [%usr] dodana przez [%op].</seg>
+        <seg>Folder/plik został odblokowany.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Role [%usr] added by [%op].</seg>
-      </tuv>
-    </tu>
-    <tu tuid="13">
-      <tuv xml:lang="pl">
-        <seg>Rola [%usr] usunięta przez [%op].</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Role [%usr] deleted by [%op].</seg>
-      </tuv>
-    </tu>
-    <tu tuid="14">
-      <tuv xml:lang="pl">
-        <seg>Wprowadzono nieprawidłowe dane uwierzytelniające.</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Invalid credentials entered.</seg>
+        <seg>A folder/file was unlocked.</seg>
       </tuv>
     </tu>
   </body>

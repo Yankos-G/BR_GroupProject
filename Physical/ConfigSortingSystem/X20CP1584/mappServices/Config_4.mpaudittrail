@@ -14,10 +14,9 @@
         <Property ID="Name" Value="" />
         <Property ID="OutputFormat" Value="Audit/Event/Root" />
       </Selector>
-      <Selector ID="Archive" Value="On" />
       <Group ID="Export">
         <Property ID="FileType" Value="2" />
-        <Property ID="PassPhrase" Value="admin" />
+        <Property ID="Encrypt" Value="FALSE" />
         <Group ID="PDF">
           <Property ID="UserPassword" Value="" />
           <Property ID="Header" Value="" />

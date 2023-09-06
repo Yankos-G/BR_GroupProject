@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentAudit" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="510" left="70" width="120" zIndex="0" text="Export data" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="510" left="1090" width="120" zIndex="1" text="Clear list" />
-    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="40" left="70" width="1140" height="450" zIndex="2" itemsPerPage="10">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="510" left="70" width="150" zIndex="0" text="$IAT/Main/Audit_export" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="510" left="1060" width="150" zIndex="1" text="$IAT/Main/Audit_clear" />
+    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="40" left="70" width="1140" height="450" zIndex="2" itemsPerPage="10" nextText="$IAT/Main/Alarm_ButtonNext" previousText="$IAT/Main/AlarmButtonPrevious">
       <Widgets>
         <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="100" zIndex="0" columnType="operator name" text="Operator" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="630" zIndex="1" text="Activity" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="630" zIndex="1" text="$IAT/Main/Audit_activity" />
         <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" width="70" zIndex="2" columnType="old" text="Old" />
         <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem6" width="70" zIndex="3" columnType="new" text="New" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" width="270" zIndex="4" columnType="timestamp" text="Time" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" width="270" zIndex="4" columnType="timestamp" text="$IAT/Main/Audit_time" />
       </Widgets>
     </Widget>
   </Widgets>

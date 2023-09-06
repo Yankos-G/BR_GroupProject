@@ -29,10 +29,10 @@
     </tu>
     <tu tuid="2">
       <tuv xml:lang="pl">
-        <seg> [%act$[TEXT=Audit/UserX]]</seg>
+        <seg> [%act$[TEXT=Audit/User]]</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>[%act$[TEXT=Audit/UserX]]</seg>
+        <seg> [%act$[TEXT=Audit/User]]</seg>
       </tuv>
     </tu>
     <tu tuid="48">

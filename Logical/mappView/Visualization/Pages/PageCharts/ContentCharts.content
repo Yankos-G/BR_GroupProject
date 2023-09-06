@@ -20,8 +20,8 @@
             </cursor>
           </Properties>
         </Widget>
-        <Widget xsi:type="widgets.brease.Button" id="Button1" top="493" left="509" zIndex="1" text="Unfreeze" textAlign="center" />
-        <Widget xsi:type="widgets.brease.Button" id="Button2" top="493" left="399" zIndex="2" text="Freeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button1" top="493" left="509" zIndex="1" text="$IAT/Main/Charts_UnFreeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button2" top="493" left="399" zIndex="2" text="$IAT/Main/Charts_Freeze" textAlign="center" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxConvSpeedChart" top="0" left="640" width="640" height="580" zIndex="2" text="$IAT/Main/Auto_CurrConvSpeed" permissionOperate="['Administrator', 'Operator', 'Service']" permissionView="['Administrator', 'Operator', 'Service']">
@@ -42,8 +42,8 @@
             </cursor>
           </Properties>
         </Widget>
-        <Widget xsi:type="widgets.brease.Button" id="Button3" top="493" left="519" zIndex="1" text="Unfreeze" textAlign="center" />
-        <Widget xsi:type="widgets.brease.Button" id="Button4" top="493" left="409" zIndex="2" text="Freeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button3" top="493" left="519" zIndex="1" text="$IAT/Main/Charts_UnFreeze" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Button" id="Button4" top="493" left="409" zIndex="2" text="$IAT/Main/Charts_Freeze" textAlign="center" />
       </Widgets>
     </Widget>
   </Widgets>

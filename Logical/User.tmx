@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Audit/User</prop>
+  </header>
+  <body>
+    <tu tuid="0">
+      <tuv xml:lang="pl">
+        <seg>MpFile - Nieznana akcja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MpFile - Unknown action</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1">
+      <tuv xml:lang="pl">
+        <seg>Zalogował się użytkownik [%op].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>A user [%op] was logged in.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%op] został wylogowany.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>A user [%op] was logged out.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%op] został automatycznie wylogowany.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>A user [%op] was logged out automatically.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="pl">
+        <seg>Dodano użytkownika [%usr].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>A user [%usr] has been added.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%usr] został usunięty.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The user [%usr]was deleted.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%usr] został zablokowany.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The user [%usr] was locked.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%usr] został odblokowany.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The user [%usr] was unblocked.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%usr] został zablokowany z powodu zbyt częstego wprowadzenia nieprawidłowego hasła.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The user [%usr] was blocked for entering an incorrect password too many times.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik [%op] zmienił hasło.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The user [%op] changed the password.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="pl">
+        <seg>Wprowadzono nieprawidłową nazwę użytkownika.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>An invalid username was entered.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="pl">
+        <seg>Wprowadzono nieprawidłowe hasło.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>An invalid password was entered.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="pl">
+        <seg>Rola [%usr] dodana przez [%op].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Role [%usr] added by [%op].</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="pl">
+        <seg>Rola [%usr] usunięta przez [%op].</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Role [%usr] deleted by [%op].</seg>
+      </tuv>
+    </tu>
+    <tu tuid="14">
+      <tuv xml:lang="pl">
+        <seg>Wprowadzono nieprawidłowe dane uwierzytelniające.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Invalid credentials entered.</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

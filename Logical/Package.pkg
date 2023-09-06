@@ -11,8 +11,8 @@
     <Object Type="File">LocalizableTexts.tmx</Object>
     <Object Type="File">Event.tmx</Object>
     <Object Type="File">Recipes.tmx</Object>
-    <Object Type="File">UserX.tmx</Object>
     <Object Type="File">File.tmx</Object>
+    <Object Type="File">User.tmx</Object>
     <Object Type="Package">Documentation</Object>
   </Objects>
 </Package>

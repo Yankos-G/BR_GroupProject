@@ -13,6 +13,9 @@
     <Group ID="TargetFiles">
       <Property ID="TargetFile[1]" Value="LocalizableTexts.tmx" />
       <Property ID="TargetFile[2]" Value="Event.tmx" />
+      <Property ID="TargetFile[3]" Value="Recipes.tmx" />
+      <Property ID="TargetFile[4]" Value="File.tmx" />
+      <Property ID="TargetFile[5]" Value="User.tmx" />
     </Group>
   </Element>
 </Configuration>

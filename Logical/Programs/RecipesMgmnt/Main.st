@@ -50,15 +50,12 @@ PROGRAM _CYCLIC
 	
 	gMpRecipeXML_0.MpLink := 		ADR(gRecipeXml);
 	gMpRecipeXML_0.Enable := 		TRUE;
-	gMpRecipeXML_0.DeviceName :=	ADR('CF'); 
-	gMpRecipeXML_0.FileName := 		ADR('Recipies'); 
+	gMpRecipeXML_0.DeviceName :=	ADR('CF');  
 	
 	gMpRecipeUI_0.MpLink :=			ADR(gRecipeXml);
 	gMpRecipeUI_0.Enable := 		TRUE;
 	gMpRecipeUI_0.UISetup := 		gUISetup;
 	gMpRecipeUI_0.UIConnect := 		ADR(gUIConnect);
-
-	gSorting;
 	
 	gMpRecipeRegPar_0();
 	gMpRecipeXML_0();

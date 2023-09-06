@@ -14,7 +14,9 @@
             <Widget xsi:type="widgets.brease.Label" id="LabelDetectedStringColor" top="6" left="170" width="160" height="23" zIndex="2" multiLine="true" text="text" textAlign="right" bold="true" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.Paper" id="PaperImageAuto" top="49" left="150" width="320" height="256" zIndex="5" />
+        <Widget xsi:type="widgets.brease.Paper" id="PaperImageAuto" top="49" left="150" width="320" height="256" zIndex="5" visible="false" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeOn" top="4" left="10" width="40" height="40" zIndex="7" backColor="rgba(127, 255, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeBack" top="4" left="10" width="40" height="40" zIndex="6" backColor="rgba(169, 169, 169, 1)" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMachineState" top="25" left="700" width="548" height="335" zIndex="1" borderWidth="5px">
@@ -26,18 +28,18 @@
         <Widget xsi:type="widgets.brease.Label" id="LabelConveyorPosition" top="172" left="19" width="179" zIndex="4" text="$IAT/Main/Auto_CurrConvPos" />
         <Widget xsi:type="widgets.brease.Label" id="LabelConveyorSpeed" top="224" left="19" width="179" zIndex="5" text="$IAT/Main/Auto_CurrConvSpeed" />
         <Widget xsi:type="widgets.brease.Label" id="LabelMachineStep" top="24" left="18" width="201" height="29" zIndex="6" text="$IAT/Main/Auto_CurrentMachineStep" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelPistonActuatorStatus" top="275" left="19" width="151" zIndex="7" text="$IAT/Main/Auto_ActuatingPiston" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelPistonActuatorStatus" top="275" left="19" width="171" zIndex="7" text="$IAT/Main/Auto_ActuatingPiston" />
         <Widget xsi:type="widgets.brease.Label" id="LabelPistonPushingStatus" top="275" left="313" width="126" zIndex="8" text="$IAT/Main/Auto_PushingPiston" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorRed" top="276" left="196" width="35" height="30" zIndex="12" backColor="rgba(255, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonAcutoatorRed" top="272" left="231" width="5" height="38" zIndex="9" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonPushingGreen" top="274" left="444" width="38" height="30" zIndex="14" backColor="rgba(0, 192, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonPushingGreen" top="272" left="519" width="5" height="34" zIndex="10" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodPushingGreen" top="280" left="479" width="45" height="16" zIndex="11" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonPushingGreen" top="274" left="444" width="38" height="30" zIndex="14" backColor="rgba(0, 192, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonPushingGreen" top="272" left="519" width="5" height="34" zIndex="10" backColor="rgba(0, 0, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodPushingGreen" top="280" left="479" width="45" height="16" zIndex="11" backColor="rgba(0, 0, 0, 1)" visible="false" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonPushingRed" top="274" left="444" width="35" height="30" zIndex="13" backColor="rgba(255, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonPushingRed" top="269" left="479" width="5" height="38" zIndex="15" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorGreen" top="276" left="195" width="38" height="30" zIndex="18" backColor="rgba(0, 192, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonActuatorGreen" top="270" left="270" width="5" height="38" zIndex="16" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="282" left="230" width="45" height="16" zIndex="17" backColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorGreen" top="276" left="195" width="38" height="30" zIndex="18" backColor="rgba(0, 192, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonActuatorGreen" top="270" left="270" width="5" height="38" zIndex="16" backColor="rgba(0, 0, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="282" left="230" width="45" height="16" zIndex="17" backColor="rgba(0, 0, 0, 1)" visible="false" />
         <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualWeight" top="125" left="240" width="151" height="29" zIndex="19" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight" top="123" left="18" width="179" height="28" zIndex="20" text="$IAT/Main/Auto_ActualWeight" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelCurrentStep" top="24" left="141" width="350" zIndex="21" multiLine="true" text="text" textAlign="center bottom" bold="true" />
@@ -63,14 +65,14 @@
         <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="60" left="248" width="5" height="40" zIndex="9" backColor="rgba(0, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="60" left="333" width="5" height="40" zIndex="10" backColor="rgba(0, 0, 0, 1)" />
         <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="60" left="293" width="5" height="40" zIndex="11" backColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL1" top="90" left="215" width="31" height="10" zIndex="12" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL2" top="80" left="215" width="31" height="10" zIndex="13" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL3" top="70" left="215" width="31" height="10" zIndex="14" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL4" top="60" left="215" width="31" height="10" zIndex="15" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR1" top="90" left="300" width="31" height="10" zIndex="16" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR2" top="80" left="300" width="31" height="10" zIndex="17" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR3" top="70" left="300" width="31" height="10" zIndex="18" backColor="rgba(255, 140, 0, 1)" />
-        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR4" top="60" left="300" width="31" height="10" zIndex="19" backColor="rgba(255, 140, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL1" top="90" left="215" width="31" height="10" zIndex="12" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL2" top="80" left="215" width="31" height="10" zIndex="13" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL3" top="70" left="215" width="31" height="10" zIndex="14" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleL4" top="60" left="215" width="31" height="10" zIndex="15" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR1" top="90" left="300" width="31" height="10" zIndex="16" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR2" top="80" left="300" width="31" height="10" zIndex="17" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR3" top="70" left="300" width="31" height="10" zIndex="18" backColor="rgba(255, 140, 0, 1)" visible="false" />
+        <Widget xsi:type="widgets.brease.Rectangle" id="RectangleR4" top="60" left="300" width="31" height="10" zIndex="19" backColor="rgba(255, 140, 0, 1)" visible="false" />
         <Widget xsi:type="widgets.brease.Label" id="LabelLeftStorageColor" top="110" left="198" width="65" height="23" zIndex="20" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelRightStorageColor" top="110" left="283" width="65" height="23" zIndex="21" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelRightStorageLogo" top="110" left="283" width="65" height="23" zIndex="22" multiLine="true" text="text" textAlign="center" bold="true" />
@@ -94,8 +96,6 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="ButtonSetToAuto" top="40" left="34" zIndex="3" text="$IAT/Main/Auto_setAuto" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeBack" top="88" left="36" width="40" height="40" zIndex="4" backColor="rgba(169, 169, 169, 1)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseAutoDiodeOn" top="88" left="36" width="40" height="40" zIndex="5" backColor="rgba(127, 255, 0, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Button" id="ButtonSetToAuto" top="40" left="90" zIndex="3" text="$IAT/Main/Auto_setAuto" />
   </Widgets>
 </Content>

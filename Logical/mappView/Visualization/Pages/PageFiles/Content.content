@@ -3,27 +3,27 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Table" id="Table1" top="110" left="50" width="620" height="380" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="130" text="Name" />
-        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="Size" />
-        <Widget xsi:type="widgets.brease.TableItemDateTime" id="TableItemDateTime1" zIndex="2" columnWidth="390" text="Date" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="130" text="$IAT/Main/File_Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="$IAT/Main/File_Size" />
+        <Widget xsi:type="widgets.brease.TableItemDateTime" id="TableItemDateTime1" zIndex="2" columnWidth="390" text="$IAT/Main/File_Date" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="460" left="680" width="130" zIndex="1" text="Refresh" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="160" left="680" width="130" zIndex="2" text="Folder Up" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="120" left="680" width="130" zIndex="3" text="Enter Folder" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="236" left="680" width="130" zIndex="4" text="Copy" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="277" left="680" width="130" zIndex="5" text="Cut" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="319" left="680" width="130" zIndex="6" text="Paste" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="360" left="680" width="130" zIndex="7" text="Delete" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="430" left="1005" width="130" zIndex="8" text="Rename" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="460" left="680" width="150" zIndex="1" text="$IAT/Main/File_Refresh" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="160" left="680" width="150" zIndex="2" text="$IAT/Main/File_Folder_Up" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="120" left="680" width="150" zIndex="3" text="$IAT/Main/File_Enter" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="236" left="680" width="150" zIndex="4" text="$IAT/Main/File_Copy" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="277" left="680" width="150" zIndex="5" text="$IAT/Main/File_Cut" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="319" left="680" width="150" zIndex="6" text="Paste" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="360" left="680" width="150" zIndex="7" text="$IAT/Main/File_Delete" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton11" top="430" left="1005" width="130" zIndex="8" text="$IAT/Main/File_Rename" />
     <Widget xsi:type="widgets.brease.TextInput" id="TextInput1" top="370" left="950" width="240" zIndex="9" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="10" left="870" width="5" height="540" zIndex="10" backColor="rgba(255, 140, 0, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="320" left="940" width="260" zIndex="11" text="Rename selected file" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton12" top="220" left="1005" width="130" zIndex="12" text="Create" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="320" left="940" width="260" zIndex="11" text="$IAT/Main/File_Rename_Selec" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton12" top="220" left="1005" width="130" zIndex="12" text="$IAT/Main/File_Create" />
     <Widget xsi:type="widgets.brease.TextInput" id="TextInput2" top="160" left="950" width="240" zIndex="13" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="110" left="940" width="260" zIndex="14" text="Create new file" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="110" left="940" width="260" zIndex="14" text="$IAT/Main/File_Create_New" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.TextInput" id="TextInput3" top="70" left="140" width="240" zIndex="15" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="70" left="50" width="100" zIndex="16" text="Search:" textAlign="left" bold="true" />
-    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="70" left="450" width="220" zIndex="17" dataProvider="[{'value':'  0','text':'Sort by name'},{'value':'1','text':'Sort by name'},{'value':'2','text':'Sort by size'},{'value':'3','text':'Sort by size'},{'value':'4','text':'Sort by modificaion time'},{'value':'5','text':'Sort by modification time'}]" listPosition="bottom" selectedValue="  0" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="70" left="50" width="100" zIndex="16" text="$IAT/Main/File_Search" textAlign="left" bold="true" />
+    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="70" left="450" width="220" zIndex="17" dataProvider="[{'value':'  0','text':'$IAT/Main/File_Sort_A_Up'},{'value':'1','text':'$IAT/Main/File_Sort_Z_Up'},{'value':'2','text':'$IAT/Main/File_Sort_Size_Up'},{'value':'3','text':'$IAT/Main/File_Sort_Size_Down'},{'value':'4','text':'$IAT/Main/File_Sort_Mod_T'},{'value':'5','text':'$IAT/Main/File_Sort_Mod_TDown'}]" listPosition="bottom" selectedValue="  0" textAlign="right" />
   </Widgets>
 </Content>

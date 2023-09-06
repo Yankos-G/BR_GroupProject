@@ -5,14 +5,6 @@
     <prop type="x-BR-TS:Namespace">IAT/Main</prop>
   </header>
   <body>
-    <tu tuid="Camera_test">
-      <tuv xml:lang="pl">
-        <seg>Test led</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Test led</seg>
-      </tuv>
-    </tu>
     <tu tuid="AddUser_AvaibleRoles">
       <tuv xml:lang="pl">
         <seg>Dostępne role</seg>
@@ -133,6 +125,55 @@
         <seg>State:</seg>
       </tuv>
     </tu>
+    <tu tuid="Auto_1Heavy">
+      <tuv xml:lang="pl">
+        <seg>Cieżkie
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heavy</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_2Light">
+      <tuv xml:lang="pl">
+        <seg>Lekkie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Light</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_3BR">
+      <tuv xml:lang="pl">
+        <seg>Logo BR</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo BR</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_4AS">
+      <tuv xml:lang="pl">
+        <seg>Logo AS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo AS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_5Grey">
+      <tuv xml:lang="pl">
+        <seg>Szary</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Grey</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_6Orange">
+      <tuv xml:lang="pl">
+        <seg>Oranż</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Orange</seg>
+      </tuv>
+    </tu>
     <tu tuid="Auto_ActualWeight">
       <tuv xml:lang="pl">
         <seg>Aktualna waga:</seg>
@@ -197,6 +238,46 @@
         <seg>Current step:</seg>
       </tuv>
     </tu>
+    <tu tuid="Auto_Det_AS">
+      <tuv xml:lang="pl">
+        <seg>AS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_BR">
+      <tuv xml:lang="pl">
+        <seg>BR</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>BR</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Grey">
+      <tuv xml:lang="pl">
+        <seg>Szary</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Grey</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Orang">
+      <tuv xml:lang="pl">
+        <seg>Oranż</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Orange</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_Det_Unrec">
+      <tuv xml:lang="pl">
+        <seg>Nie rozpoznano</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Unrecognized</seg>
+      </tuv>
+    </tu>
     <tu tuid="Auto_DetectedItem">
       <tuv xml:lang="pl">
         <seg>Wykryty przedmiot:</seg>
@@ -243,6 +324,22 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Sorting piston:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Auto_setAuto">
+      <tuv xml:lang="pl">
+        <seg>Auto</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Camera_test">
+      <tuv xml:lang="pl">
+        <seg>Test led</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Test led</seg>
       </tuv>
     </tu>
     <tu tuid="Diagnostics_WaitLabel">
@@ -381,6 +478,22 @@
         <seg>Username: </seg>
       </tuv>
     </tu>
+    <tu tuid="Manual_Actu_Pos">
+      <tuv xml:lang="pl">
+        <seg>Aktualna pozycja:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Actual position:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Actu_Speed">
+      <tuv xml:lang="pl">
+        <seg>Aktualna prędkość:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Actual speed:</seg>
+      </tuv>
+    </tu>
     <tu tuid="Manual_Approve">
       <tuv xml:lang="pl">
         <seg>Zatwierdź</seg>
@@ -413,12 +526,36 @@
         <seg>Dispensing piston</seg>
       </tuv>
     </tu>
+    <tu tuid="Manual_Expo">
+      <tuv xml:lang="pl">
+        <seg>Naświetlanie kamery</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Camera exposure time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Focus">
+      <tuv xml:lang="pl">
+        <seg>Fokus kamery</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Camera focus</seg>
+      </tuv>
+    </tu>
     <tu tuid="Manual_MakePhoto">
       <tuv xml:lang="pl">
         <seg>Zrób zjęcie</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Take photograph</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Mode">
+      <tuv xml:lang="pl">
+        <seg>Tryb kamery:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Camera mode:</seg>
       </tuv>
     </tu>
     <tu tuid="Manual_MoveDistance">
@@ -469,6 +606,22 @@
         <seg>Semi-auto mode</seg>
       </tuv>
     </tu>
+    <tu tuid="Manual_Set_Expo">
+      <tuv xml:lang="pl">
+        <seg>Ustaw. naświetlanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set exposure time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual_Set_Focus">
+      <tuv xml:lang="pl">
+        <seg>Ustaw. fokus</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set focus</seg>
+      </tuv>
+    </tu>
     <tu tuid="Manual_SortingPiston">
       <tuv xml:lang="pl">
         <seg>Tłok sortujący:</seg>
@@ -499,6 +652,102 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>No object detected in starting area. Place an object before starting.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Advance">
+      <tuv xml:lang="pl">
+        <seg>Zaawans.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Advanced</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Color">
+      <tuv xml:lang="pl">
+        <seg>Kolor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Color</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_False">
+      <tuv xml:lang="pl">
+        <seg>NIE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>FALSE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Left">
+      <tuv xml:lang="pl">
+        <seg>Lewy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Logo">
+      <tuv xml:lang="pl">
+        <seg>Logo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logo</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_LStorage">
+      <tuv xml:lang="pl">
+        <seg>Zakres lewego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left storage range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Range">
+      <tuv xml:lang="pl">
+        <seg>Zakres</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Right">
+      <tuv xml:lang="pl">
+        <seg>Prawy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_RStorage">
+      <tuv xml:lang="pl">
+        <seg>Zakres prawego zbiornika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right storage range</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Threshold">
+      <tuv xml:lang="pl">
+        <seg>Graniczna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Threshold</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_True">
+      <tuv xml:lang="pl">
+        <seg>TAK</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>TRUE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Param_Weight">
+      <tuv xml:lang="pl">
+        <seg>Wagowo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Weight</seg>
       </tuv>
     </tu>
     <tu tuid="Parameters_LeftBox">
@@ -653,68 +902,12 @@
         <seg>Username:</seg>
       </tuv>
     </tu>
-    <tu tuid="Top_ActiveUser">
+    <tu tuid="State_Category">
       <tuv xml:lang="pl">
-        <seg>Aktywny użytkownik: </seg>
+        <seg>Kategoryzacja detalu</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Active user: </seg>
-      </tuv>
-    </tu>
-    <tu tuid="Auto_setAuto">
-      <tuv xml:lang="pl">
-        <seg>Auto</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Auto</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Param_Weight">
-      <tuv xml:lang="pl">
-        <seg>Wagowo</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Weight</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Param_Logo">
-      <tuv xml:lang="pl">
-        <seg>Logo</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Logo</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Param_Color">
-      <tuv xml:lang="pl">
-        <seg>Kolor</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Color</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Stop">
-      <tuv xml:lang="pl">
-        <seg>Stop</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Stop</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Init">
-      <tuv xml:lang="pl">
-        <seg>Inicjalizacja</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Initialization</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Start">
-      <tuv xml:lang="pl">
-        <seg>Gotowy do startu</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Ready</seg>
+        <seg>Item categorization</seg>
       </tuv>
     </tu>
     <tu tuid="State_Detect">
@@ -725,22 +918,6 @@
         <seg>Item detection</seg>
       </tuv>
     </tu>
-    <tu tuid="State_Category">
-      <tuv xml:lang="pl">
-        <seg>Kategoryzacja detalu</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Item categorization</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Take_PIC">
-      <tuv xml:lang="pl">
-        <seg>Zrobiono zdjęcie</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Picture done</seg>
-      </tuv>
-    </tu>
     <tu tuid="State_Drop">
       <tuv xml:lang="pl">
         <seg>Dozowanie detalu</seg>
@@ -749,29 +926,13 @@
         <seg>Item dosing</seg>
       </tuv>
     </tu>
-    <tu tuid="State_Sort_Weight">
+    <tu tuid="State_Error">
       <tuv xml:lang="pl">
-        <seg>Sortowanie wagowe</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sorting by weight</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Sort_Logo">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie optyczne - logo
+        <seg>Wystapił błąd
 </seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Optical logo sorting</seg>
-      </tuv>
-    </tu>
-    <tu tuid="State_Sort_Color">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie optyczne - kolor</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Optical sorting - color</seg>
+        <seg>Error</seg>
       </tuv>
     </tu>
     <tu tuid="State_Go_left">
@@ -790,12 +951,77 @@
         <seg>Item transport to the right tank</seg>
       </tuv>
     </tu>
+    <tu tuid="State_Init">
+      <tuv xml:lang="pl">
+        <seg>Inicjalizacja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Initialization</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Advanc">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie zaawansowane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Advanced sorting</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Color">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie optyczne - kolor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Optical sorting - color</seg>
+      </tuv>
+    </tu>
     <tu tuid="State_Sort_Left">
       <tuv xml:lang="pl">
         <seg>Zepchniecie detalu z taśmy do zbiornika lewego</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Pushing the item from the belt to the left tank</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Logo">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie optyczne - logo
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Optical logo sorting</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Sort_Weight">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie wagowe</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sorting by weight</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Start">
+      <tuv xml:lang="pl">
+        <seg>Gotowy do startu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Ready</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Stop">
+      <tuv xml:lang="pl">
+        <seg>Stop</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State_Take_PIC">
+      <tuv xml:lang="pl">
+        <seg>Zrobiono zdjęcie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Picture done</seg>
       </tuv>
     </tu>
     <tu tuid="State_Unrecog">
@@ -806,190 +1032,228 @@
         <seg>Item not recognized</seg>
       </tuv>
     </tu>
-    <tu tuid="State_Error">
+    <tu tuid="Top_ActiveUser">
       <tuv xml:lang="pl">
-        <seg>Wystapił błąd
-</seg>
+        <seg>Aktywny użytkownik: </seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Error</seg>
+        <seg>Active user: </seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_1Heavy">
+    <tu tuid="Charts_Freeze">
       <tuv xml:lang="pl">
-        <seg>Cieżkie
-</seg>
+        <seg>Zamroź</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Heavy</seg>
+        <seg>Freeze</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_2Light">
+    <tu tuid="Charts_UnFreeze">
       <tuv xml:lang="pl">
-        <seg>Lekkie</seg>
+        <seg>Odmroź</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Light</seg>
+        <seg>Unfreeze</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_3BR">
+    <tu tuid="Audit_export">
       <tuv xml:lang="pl">
-        <seg>Logo BR</seg>
+        <seg>Eksportuj dane</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Logo BR</seg>
+        <seg>Export data</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_4AS">
+    <tu tuid="Audit_clear">
       <tuv xml:lang="pl">
-        <seg>Logo AS</seg>
+        <seg>Wyczyść dane</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Logo AS</seg>
+        <seg>Clear data</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_5Grey">
+    <tu tuid="Audit_activity">
       <tuv xml:lang="pl">
-        <seg>Szary</seg>
+        <seg>Aktywność</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Grey</seg>
+        <seg>Activity</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_6Orange">
+    <tu tuid="Audit_time">
       <tuv xml:lang="pl">
-        <seg>Oranż</seg>
+        <seg>Czas</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Orange</seg>
+        <seg>Time</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_Det_BR">
+    <tu tuid="File_Search">
       <tuv xml:lang="pl">
-        <seg>BR</seg>
+        <seg>Szukaj:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>BR</seg>
+        <seg>Search:</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_Det_AS">
+    <tu tuid="File_Enter">
       <tuv xml:lang="pl">
-        <seg>AS</seg>
+        <seg>Wejdź do folderu</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>AS</seg>
+        <seg>Enter folder</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_Det_Unrec">
+    <tu tuid="File_Folder_Up">
       <tuv xml:lang="pl">
-        <seg>Nie rozpoznano</seg>
+        <seg>Wyjdź z folderu</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Unrecognized</seg>
+        <seg>Folder up</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_Det_Grey">
+    <tu tuid="File_Copy">
       <tuv xml:lang="pl">
-        <seg>Szary</seg>
+        <seg>Kopiuj</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Grey</seg>
+        <seg>Copy</seg>
       </tuv>
     </tu>
-    <tu tuid="Auto_Det_Orang">
+    <tu tuid="File_Cut">
       <tuv xml:lang="pl">
-        <seg>Oranż</seg>
+        <seg>Wytnij</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Orange</seg>
+        <seg>Cut</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_Advance">
+    <tu tuid="File_Paste">
       <tuv xml:lang="pl">
-        <seg>Zaawans.</seg>
+        <seg>Wklej</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Advanced</seg>
+        <seg>Paste</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_True">
+    <tu tuid="File_Delete">
       <tuv xml:lang="pl">
-        <seg>TAK</seg>
+        <seg>Usuń</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>TRUE</seg>
+        <seg>Delete</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_False">
+    <tu tuid="File_Refresh">
       <tuv xml:lang="pl">
-        <seg>NIE</seg>
+        <seg>Odśwież</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>FALSE</seg>
+        <seg>Refresh</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_Left">
+    <tu tuid="File_Rename">
       <tuv xml:lang="pl">
-        <seg>Lewy</seg>
+        <seg>Zmień nazwę</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Left</seg>
+        <seg>Rename</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_Right">
+    <tu tuid="File_Create">
       <tuv xml:lang="pl">
-        <seg>Prawy</seg>
+        <seg>Stwórz</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Right</seg>
+        <seg>Create</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_Threshold">
+    <tu tuid="File_Name">
       <tuv xml:lang="pl">
-        <seg>Graniczna</seg>
+        <seg>Nazwa</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Threshold</seg>
+        <seg>Name</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_Range">
+    <tu tuid="File_Size">
       <tuv xml:lang="pl">
-        <seg>Zakres</seg>
+        <seg>Rozmiar</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Range</seg>
+        <seg>Size</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_LStorage">
+    <tu tuid="File_Date">
       <tuv xml:lang="pl">
-        <seg>Zakres lewego zbiornika</seg>
+        <seg>Data</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Left storage range</seg>
+        <seg>Date</seg>
       </tuv>
     </tu>
-    <tu tuid="Param_RStorage">
+    <tu tuid="File_Sort_A_Up">
       <tuv xml:lang="pl">
-        <seg>Zakres prawego zbiornika</seg>
+        <seg>Sortuj alfabetycznie ↑</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Right storage range</seg>
+        <seg>Sort by name ↑</seg>
       </tuv>
     </tu>
-    <tu tuid="Manual_Mode">
+    <tu tuid="File_Sort_Z_Up">
       <tuv xml:lang="pl">
-        <seg>Tryb kamery:</seg>
+        <seg>Sortuj alfabetycznie  ↓</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Camera mode:</seg>
+        <seg>Sort by name  ↓</seg>
       </tuv>
     </tu>
-    <tu tuid="State_Sort_Advanc">
+    <tu tuid="File_Sort_Size_Up">
       <tuv xml:lang="pl">
-        <seg>Sortowanie zaawansowane</seg>
+        <seg>Sortuj po rozmiarze  ↑</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Advanced sorting</seg>
+        <seg>Sort by size ↑</seg>
+      </tuv>
+    </tu>
+    <tu tuid="File_Sort_Size_Down">
+      <tuv xml:lang="pl">
+        <seg>Sortuj po rozmiarze  ↓</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sort by size  ↓</seg>
+      </tuv>
+    </tu>
+    <tu tuid="File_Sort_Mod_T">
+      <tuv xml:lang="pl">
+        <seg>Sortuj modyfikacja ↑</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sort by modification ↑</seg>
+      </tuv>
+    </tu>
+    <tu tuid="File_Sort_Mod_TDown">
+      <tuv xml:lang="pl">
+        <seg>Sortuj modyfikacja ↓</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sort by modification ↓</seg>
+      </tuv>
+    </tu>
+    <tu tuid="File_Create_New">
+      <tuv xml:lang="pl">
+        <seg>Stwórz nowy folder</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Create new folder</seg>
+      </tuv>
+    </tu>
+    <tu tuid="File_Rename_Selec">
+      <tuv xml:lang="pl">
+        <seg>Zmień nazwę wybranego pliku/folderu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Rename seleceted file/foler</seg>
       </tuv>
     </tu>
   </body>
