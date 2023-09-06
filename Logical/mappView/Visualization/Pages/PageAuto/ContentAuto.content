@@ -5,8 +5,8 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.Button" id="ButtonAutoStart" top="431" left="17" width="290" height="60" zIndex="2" text="$IAT/Main/Auto_ButtonStart" cornerRadius="15px" textColor="rgba(0, 128, 0, 1)" fontSize="25px" permissionOperate="['Administrator', 'Operator', 'Service']" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonAutoStop" top="430" left="330" width="290" height="60" zIndex="3" text="$IAT/Main/Auto_ButtonStop" imageColor="rgba(0, 0, 0, 1)" cornerRadius="15px" textColor="rgba(255, 0, 0, 1)" fontSize="25px" permissionOperate="['Administrator', 'Operator', 'Service']" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStarted" top="350" left="140" width="341" height="76" zIndex="0" text="$IAT/Main/Auto_MachineWorking" textColor="rgba(0, 192, 0, 1)" textAlign="center" fontSize="20px" visible="false" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStopped" top="350" left="140" width="341" height="76" zIndex="1" text="$IAT/Main/Auto_MachineStopped" textColor="rgba(255, 0, 0, 1)" textAlign="center" fontSize="20px" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStarted" top="350" left="140" width="341" height="76" zIndex="0" text="$IAT/Main/Auto_MachineWorking" textColor="rgba(0, 192, 0, 1)" textAlign="center" fontSize="20px" bold="true" visible="false" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelMachineStopped" top="349" left="140" width="341" height="76" zIndex="1" text="$IAT/Main/Auto_MachineStopped" textColor="rgba(255, 0, 0, 1)" textAlign="center" fontSize="20px" bold="true" visible="false" />
         <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxDetectedItem" top="319" left="140" width="340" height="40" zIndex="4" borderWidth="3px" visible="false">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="LabelItemdetected" top="-2" left="-2" width="159" height="41" zIndex="0" text="$IAT/Main/Auto_DetectedItem" textAlign="left" fontSize="15px" />

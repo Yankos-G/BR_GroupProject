@@ -8,6 +8,6 @@
     <Widget xsi:type="widgets.brease.Image" id="ImageAlarmRed" top="12" left="680" width="46" height="48" zIndex="4" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 0, 0, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.Image" id="ImageAlarmYellow" top="12" left="680" width="46" height="48" zIndex="5" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 255, 0, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.Label" id="LabelActiveUser" top="20" left="260" width="180" height="40" zIndex="6" text="$IAT/Main/Top_ActiveUser" textAlign="right" />
-    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="20" left="460" width="200" height="40" zIndex="7" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="20" left="430" width="200" height="40" zIndex="7" />
   </Widgets>
 </Content>

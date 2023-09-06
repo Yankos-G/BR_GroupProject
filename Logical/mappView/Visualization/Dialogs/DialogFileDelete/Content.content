@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="contentFileDelete" height="220" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="40" width="320" zIndex="0" text="Czy na pewno chcesz usunąć ten element?" />
-    <Widget xsi:type="widgets.brease.Button" id="Button1" top="130" left="50" width="130" height="40" zIndex="1" text="Potwierdź" />
-    <Widget xsi:type="widgets.brease.Button" id="Button2" top="130" left="220" width="120" height="40" zIndex="2" text="Anuluj" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="30" left="40" width="320" zIndex="0" text="$IAT/Main/Dialog_Quer_Delete" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Button" id="Button1" top="130" left="50" width="130" height="40" zIndex="1" text="$IAT/Main/Dialog_Accept" />
+    <Widget xsi:type="widgets.brease.Button" id="Button2" top="130" left="220" width="120" height="40" zIndex="2" text="$IAT/Main/AddUser_Cancel" />
     <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="70" left="70" width="260" zIndex="3" textAlign="center" />
   </Widgets>
 </Content>
