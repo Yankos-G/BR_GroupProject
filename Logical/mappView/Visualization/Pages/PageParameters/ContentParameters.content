@@ -28,7 +28,7 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="450" left="720" zIndex="11" text="$IAT/Main/Param_Save" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="450" left="610" zIndex="12" text="$IAT/Main/File_Create" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="450" left="830" zIndex="13" text="$IAT/Main/File_Refresh" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="100" left="960" width="620" height="340" zIndex="14" gridSize="145px" modifyAnimation="true">
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="100" left="950" width="620" height="340" zIndex="14" gridSize="145px" modifyAnimation="true">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem4" zIndex="0" collapsedSize="2">
           <Widgets>
@@ -82,6 +82,9 @@
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem5" zIndex="1" collapsedSize="2">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="Label80" top="10" left="80" width="120" zIndex="0" text="Recipe values" bold="true" />
+            <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelWeight4" top="30" left="-10" width="130" height="138" zIndex="1" alignment="vertical" childMainAlign="end" childCrossAlign="start">
+              <Widgets />
+            </Widget>
           </Widgets>
         </Widget>
       </Widgets>

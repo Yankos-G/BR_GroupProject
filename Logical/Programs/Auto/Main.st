@@ -9,7 +9,7 @@ PROGRAM _CYCLIC
 
 	SelectedAuto := (gMode = 0);
 	NotSelectedAuto := NOT SelectedAuto;
-	
+	//aa
 	// CODE WORKS ONLY WHEN AUTO IS ACTIVE
 	IF  SelectedAuto THEN
 

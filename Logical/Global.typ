@@ -14,6 +14,8 @@ TYPE
 		Milk : REAL;
 	END_STRUCT;
 	SortingType : 	STRUCT 
+		RecipeName : STRING[80];
+		Date : DATE_AND_TIME;
 		SortChoice : SortChoiceEnum;
 		SortLeftMin : BOOL;
 		SortLeftBR : BOOL;

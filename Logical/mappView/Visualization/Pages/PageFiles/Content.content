@@ -24,6 +24,6 @@
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="110" left="940" width="260" zIndex="14" text="$IAT/Main/File_Create_New" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.TextInput" id="TextInput3" top="70" left="140" width="240" zIndex="15" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="70" left="50" width="100" zIndex="16" text="$IAT/Main/File_Search" textAlign="left" bold="true" />
-    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="70" left="450" width="220" zIndex="17" dataProvider="[{'value':'  0','text':'$IAT/Main/File_Sort_A_Up'},{'value':'1','text':'$IAT/Main/File_Sort_Z_Up'},{'value':'2','text':'$IAT/Main/File_Sort_Size_Up'},{'value':'3','text':'$IAT/Main/File_Sort_Size_Down'},{'value':'4','text':'$IAT/Main/File_Sort_Mod_T'},{'value':'5','text':'$IAT/Main/File_Sort_Mod_TDown'}]" listPosition="bottom" selectedValue="  0" textAlign="right" />
+    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBox1" top="70" left="450" width="220" zIndex="17" dataProvider="[{'value':'  0','text':'$IAT/Main/File_Sort_A_Up'},{'value':'1','text':'$IAT/Main/File_Sort_Z_Up'},{'value':'2','text':'$IAT/Main/File_Sort_Size_Up'},{'value':'3','text':'$IAT/Main/File_Sort_Size_Down'},{'value':'4','text':'$IAT/Main/File_Sort_Mod_T'},{'value':'5','text':'$IAT/Main/File_Sort_Mod_TDown'}]" listPosition="bottom" listWidth="200" selectedValue="  0" textAlign="right" />
   </Widgets>
 </Content>
