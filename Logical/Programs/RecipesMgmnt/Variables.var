@@ -1,33 +1,43 @@
 VAR
+	BOOLEK : BOOL;
+	ClearAudit : BOOL;
+	swapped : BOOL;
 	Save : BOOL;
-	SelectedIndex : UDINT;
-	FileUISetup : MpFileManagerUISetupType;
-	FileUIConnect : MpFileManagerUIConnectType;
-	MpFileManagerUI_0 : MpFileManagerUI;
-	MpFileManagerConfig_0 : MpFileManagerConfig;
-	Configer : MpFileManagerConfigType;
-	List : ARRAY[0..49] OF STRING[80];
-	i : UDINT;
-	FileName : ARRAY[0..49] OF STRING[80];
 	FileLastModified : ARRAY[0..49] OF DATE_AND_TIME;
-	FileSize : ARRAY[0..49] OF UDINT;
 	a : INT;
 	idx : INT;
-	CurrentFile : STRING[80];
 	Filter_sort_type : INT;
-	AuditConfig : MpAuditTrailConfigType;
-	MpAuditTrailConfig_0 : MpAuditTrailConfig;
-	AuditUISetup : MpAuditTrailUISetupType;
-	AuditUIConnect : MpAuditTrailUIConnectType;
-	MpAuditTrailUI_0 : MpAuditTrailUI;
 	MpAuditTrail_0 : MpAuditTrail;
-	ClearAudit : BOOL;
-	z : UINT := 0;
+	MpAuditTrailConfig_0 : MpAuditTrailConfig;
+	AuditConfig : MpAuditTrailConfigType;
+	MpAuditTrailUI_0 : MpAuditTrailUI;
+	AuditUIConnect : MpAuditTrailUIConnectType;
+	AuditUISetup : MpAuditTrailUISetupType;
+	MpFileManagerConfig_0 : MpFileManagerConfig;
+	Configer : MpFileManagerConfigType;
+	MpFileManagerUI_0 : MpFileManagerUI;
+	FileUIConnect : MpFileManagerUIConnectType;
+	FileUISetup : MpFileManagerUISetupType;
+	temp : SortingType;
+	CLEAR_RECIPE : SortingType := (RecipeName:='empty',Date:='1970-01-01 01:00:00',SortChoice:=WEIGHT,SortLeftMin:=TRUE,SortLeftBR:=TRUE,SortLeftGrey:=TRUE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=TRUE,LeftCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10));
+END_VAR
+VAR RETAIN
 	gContainer : ARRAY[0..49] OF SortingType;
-	CLEAR_RECIPE : SortingType := (SortChoice:=WEIGHT,SortLeftMin:=TRUE,SortLeftBR:=TRUE,SortLeftGrey:=TRUE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=TRUE,LeftCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10));
+END_VAR
+VAR
+	CurrentFile : STRING[80];
+	FileName : ARRAY[0..49] OF STRING[80];
+	List : ARRAY[0..49] OF STRING[80];
+	SelectedIndex : UDINT;
+	i : UDINT;
+	FileSize : ARRAY[0..49] OF UDINT;
 	g : UINT;
-	e : UINT;
-	gTempContainter : ARRAY[0..49] OF SortingType;
-	BOOLEK : BOOL;
+	j : UDINT;
+	y : UDINT;
 	f : UINT;
+	e : UINT;
+	r : UDINT;
+	z : UINT;
+	Save_Activ : BOOL;
+	Refresh_done : BOOL;
 END_VAR

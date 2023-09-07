@@ -40,10 +40,10 @@ PROGRAM _CYCLIC
 		5:
 			FileUIConnect.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_DESC;
 	END_CASE;
-	
 
 	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_CREATE) THEN
 		gContainer[gUIConnect.Recipe.List.MaxSelection] := gSorting;
+		gContainer[gUIConnect.Recipe.List.MaxSelection].Date := (gUIConnect.Recipe.List.LastModified[gUIConnect.Recipe.List.MaxSelection]);
 		g := 0;
 		FOR g := 0 TO gUIConnect.Recipe.List.MaxSelection DO
 			gContainer[g].RecipeName := gUIConnect.Recipe.List.Names[g];
@@ -63,17 +63,53 @@ PROGRAM _CYCLIC
 		END_FOR;
 	END_IF;
 	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_SAVE) THEN
-		gContainer[gUIConnect.Recipe.List.SelectedIndex] := gSorting;
-
+		Save_Activ := TRUE;
 	END_IF;
-//	FOR e := 0 TO gUIConnect.Recipe.List.MaxSelection DO
-//		gTempContainter[e] := gContainer[e];
-//	END_FOR;
-//	f := gUIConnect.Recipe.List.SelectedIndex;
-//	gUIConnect.Recipe.Refresh := TRUE;
-//	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_REFRESH) THEN
-//		gContainer[f] := gTempContainter[f];
-//	END_IF;
+	//to nie dziala XD 8 H ZMARNOWALEM NA TO ;)))))
+	IF Save_Activ THEN
+		gSorting.RecipeName := gUIConnect.Recipe.List.Names[gUIConnect.Recipe.List.SelectedIndex];
+		FOR g := 0 TO gUIConnect.Recipe.List.MaxSelection DO
+			gContainer[g].RecipeName := gUIConnect.Recipe.List.Names[g];
+		END_FOR;
+		IF EDGEPOS(Save_Activ) THEN
+	  		gContainer[gUIConnect.Recipe.List.SelectedIndex] := gSorting;
+		END_IF;
+		gUIConnect.Recipe.Refresh := TRUE;
+		IF EDGEPOS(gUIConnect.Status = mpRECIPE_UI_STATUS_IDLE) THEN
+			Refresh_done := TRUE;
+		END_IF;
+		//----------------------------
+		y := gUIConnect.Recipe.List.MaxSelection;
+		IF y > 0 AND Refresh_done THEN
+			gContainer[gUIConnect.Recipe.List.MaxSelection].Date := gUIConnect.Recipe.List.LastModified[gUIConnect.Recipe.List.MaxSelection];
+			FOR r := 0 TO (y-1) DO
+				swapped := FALSE;
+				FOR j := 0 TO (y-r-2) DO
+					IF gContainer[j].Date > gContainer[j+1].Date THEN
+						// swap values
+						temp := gContainer[j];
+						gContainer[j] := gContainer[j+1];
+						gContainer[j+1] := temp;
+						swapped := TRUE;
+					END_IF;
+				END_FOR;
+				// Optimizaion: if no two elements were swapped by inner loop, then the array is sorted
+				IF NOT swapped THEN
+					EXIT;
+				END_IF;
+			END_FOR;
+			Save_Activ := FALSE;
+		END_IF;
+		//-----------------------------
+	END_IF;
+	//	FOR e := 0 TO gUIConnect.Recipe.List.MaxSelection DO
+	//		gTempContainter[e] := gContainer[e];
+	//	END_FOR;
+	//	f := gUIConnect.Recipe.List.SelectedIndex;
+	//	gUIConnect.Recipe.Refresh := TRUE;
+	//	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_REFRESH) THEN
+	//		gContainer[f] := gTempContainter[f];
+	//	END_IF;
 	// RECIPES
 	gMpRecipeRegPar_0.MpLink := 	ADR(gRecipeXml);
 	gMpRecipeRegPar_0.Enable :=		TRUE;

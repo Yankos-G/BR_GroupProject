@@ -10,6 +10,7 @@ PROGRAM _CYCLIC
 	//CODE WORKS ONLY WHEN MANUAL MODE IS OFF	
 	SemiAutoModeSelected := (gMode=2);
 	IF  SemiAutoModeSelected THEN
+		
 		// MOTOR MANAGEMENT
 		gMotorBeltAxisBasic.Enable 		:= TRUE;
 		gMotorBeltAxisBasic.MpLink 		:= ADR(gAxis_1);
@@ -17,6 +18,8 @@ PROGRAM _CYCLIC
 		MotorMoveDone 					:= gMotorBeltAxisBasic.MoveDone;
 		gMotorBeltAxisBasic.Power 		:= MotorPower;
 		gMotorBeltAxisBasic.Home 		:= MotorHome;
+		
+		gMotorBeltAxisBasic();
 		
 		// IN STATE STOP VALUES DOESN'T FLUCTUATE
 		IF gMotorBeltAxisBasic.Velocity > 15 THEN
@@ -35,22 +38,17 @@ PROGRAM _CYCLIC
 		gMotorBeltParType.Deceleration 	:= MotorReqDec; 
 		gMotorBeltParType.Velocity 		:= MotorReqVel;
 		gMotorBeltParType.Position 		:= MotorReqPosition;
-		
-		gMotorBeltAxisBasic();
 	
 		// ASSIGNING GLOBAL VARIABLES TO LOCAL VARIABLES
 		gActuatorByte					 := ActuatorByte;
 		gMotorBeltAxisBasic.Power 		 := MotorPower;
 		gMotorBeltAxisBasic.MoveAbsolute := MotorMoveAbsolute;
-		gMotorBeltAxisBasic.ErrorReset	 := MotorResetError;
 		gStopState 						 := (State = 0);
 		
 		// ASSIGNING LOCAL VARIABLES TO GLOBAL VARIABLES
 		MotorInPosition 				 := gMotorBeltAxisBasic.InPosition;
 		ItemWeight 						 := gInWeightMeasure;							 
 
-		
-		
 		// ITEM DETECTION CONDITION 
 		ItemDetected := (ItemWeight > 1);
 		gWeightDetected := ItemDetected;
@@ -67,35 +65,38 @@ PROGRAM _CYCLIC
 		TimerTonDetect.PT := TIME_TON_DETECT;
 		TimerAfterDetect := TimerTonDetect.Q;
 		TimerTonDetect();
-	
-		// COUNTERS - PRZENIESIONY NA SZYBKO DO AUTO
+		// delay 
+		TimerTONShowPhoto.IN := gProgCamera.ImageAcq;
+		TimerTONShowPhoto.PT := TIME_TON_SHOW_PHOTO;
+		ShowPhoto := TimerTONShowPhoto.Q;
+		TimerTONShowPhoto();
+		
 
+		
 	END_IF; 
-
+		
 	
-	// ALARM OR STOP OR MANUAL TURNED ON
-	IF	gAlarmHardware THEN	//ALARM
+	// ALARM OR STOP OR AUTO NOT ACTIVE
+	IF	gAlarmHardware THEN	
 		IF NOT (State = ERROR) THEN
 			State := ERROR;
 		END_IF;
-	ELSIF Stop OR NOT SemiAutoModeSelected OR gAlarmExist THEN 
+	ELSIF Stop OR gMode <> 0 OR gAlarmExist THEN 
 		Stop := FALSE;
 		State := STOP;
-	END_IF;
-	
+	END_IF; 
 	
 	// PROGRAM AUTO
 	CASE State OF
 		STOP:
+			State := STOP;
 			IF SemiAutoModeSelected THEN
 				MotorPower 		  := FALSE;
 				MotorMoveAbsolute := FALSE;
 				MotorHome 		  := FALSE;
-				MotorResetError   := FALSE;
 			END_IF;		
 			MotorPos := 0;
 			MotorVel := 0;
-			StringState := 'Stop';
 			TimerTonActuatorIn 	  := FALSE;
 			ActuatorSorting 	  := FALSE;
 			ActuatorPushing  	  := FALSE;
@@ -104,7 +105,8 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		INIT:
-			StringState 		:= 'Inicjalizacja';
+			Sort_left			:= FALSE;
+			Sort_right 			:= FALSE;
 			gAddToRight 		:= FALSE;
 			gAddToLeft 			:= FALSE;
 			TimerTonActuatorIn 	:= FALSE;
@@ -113,29 +115,29 @@ PROGRAM _CYCLIC
 			MotorMoveAbsolute 	:= FALSE;
 			MotorPower 			:= TRUE;
 			MotorHome 			:= TRUE;
-			gPicNotRecognised	:= FALSE; 
+			gPicNotRecognised	:= FALSE;
 			State 				:= START;
 			
 		START: 
-			StringState 		:= 'Gotowy do startu';
-			IF (ItemDetected AND Approval) THEN
+			IF ItemDetected AND Approval THEN
 				ItemWeightMeasured 	:= RESET_ITEM_MEM_WEIGHT;
-				Approval := 0;
 				State := DETECTION;
 			END_IF;
 			
 		DETECTION:
 			MotorHome 	:= FALSE;
-			StringState := 'Wykrycie detalu';
 			IF TimerAfterDetect THEN
 				ItemWeightMeasured := ItemWeight;
 				State := CATEGORIZATION;
 			END_IF;
 				
 		CATEGORIZATION: 
-			StringState := 'Kategoryzacja detalu';
 			IF gSorting.SortChoice = WEIGHT THEN
-				State := DROP;
+				IF NOT gSorting.Threshold AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) THEN
+					State := UNRECOGNISED_PIC;//POTEM TO PRZENIES
+				ELSE 
+					State := CHOOSE_SORT_MODE;
+				END_IF;
 			ELSE
 				State := TAKE_PICT_CAMERA;
 			END_IF;

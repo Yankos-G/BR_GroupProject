@@ -15,7 +15,7 @@ TYPE
 	END_STRUCT;
 	SortingType : 	STRUCT 
 		RecipeName : STRING[80];
-		Date : DATE_AND_TIME;
+		Date : STRING[80];
 		SortChoice : SortChoiceEnum;
 		SortLeftMin : BOOL;
 		SortLeftBR : BOOL;
