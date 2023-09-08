@@ -4,7 +4,6 @@
   <Objects>
     <Object Type="Program" Language="IEC">Auto</Object>
     <Object Type="Program" Language="IEC">Manual</Object>
-    <Object Type="Program" Language="IEC">SemiAuto</Object>
     <Object Type="Program" Language="IEC">RecipesMgmnt</Object>
     <Object Type="Program" Language="IEC">Camera</Object>
     <Object Type="Program" Language="IEC">Alarms</Object>

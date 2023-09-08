@@ -80,4 +80,12 @@ VAR
 	TimerTONShowPhoto : TON;
 	ShowPhoto : BOOL;
 	ShowDetectedLabel : BOOL;
+	SemiAutoModeSelected : BOOL;
+	Approval : BOOL;
+	oldState : ProgramStatesEnum;
+	LeftLimit : BOOL;
+	RightLimit : BOOL;
+	Alarm : BOOL;
+	AlarmLeft : BOOL;
+	AlarmRight : BOOL;
 END_VAR

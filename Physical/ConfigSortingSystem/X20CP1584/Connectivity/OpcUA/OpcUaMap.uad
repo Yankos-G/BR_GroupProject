@@ -77,7 +77,6 @@
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
       <EngineeringUnit Id="2" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
-      <EngineeringUnit Id="3" UnitId="4674125" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="gram" Symbol="g" />
     </EngineeringUnitAliases>
   </Aliases>
   <DefaultView>
@@ -202,6 +201,8 @@
         <Variable Name="SortLeftGrey_USINT" />
         <Variable Name="SortLeftMin_USINT" />
         <Variable Name="ShowDetectedLabel" />
+        <Variable Name="Approval" />
+        <Variable Name="SemiAutoModeSelected" />
       </Task>
       <Task Name="Manual">
         <Variable Name="BeltMoveAdditive" />
@@ -234,25 +235,6 @@
         <Variable Name="JogEnableVar" />
         <Variable Name="MotorPosManual" />
         <Variable Name="MotorVelManual" />
-      </Task>
-      <Task Name="SemiAuto">
-        <Variable Name="ActuatorNotPushing" />
-        <Variable Name="ActuatorNotSorting" />
-        <Variable Name="ActuatorPushing" />
-        <Variable Name="ActuatorSorting" />
-        <Variable Name="ItemDetected" />
-        <Variable Name="ItemWeight" />
-        <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
-        <Variable Name="Start" />
-        <Variable Name="State" />
-        <Variable Name="Stop" />
-        <Variable Name="StringRecognisedModel" />
-        <Variable Name="StringState" />
-        <Variable Name="Approval" />
-        <Variable Name="MotorPos" EngineeringUnitId="1" />
-        <Variable Name="MotorVel" EngineeringUnitId="2" />
-        <Variable Name="IsEnglishSelected" />
-        <Variable Name="SemiAutoModeSelected" />
       </Task>
       <Task Name="ProgramRec">
         <Variable Name="SelectedIndex" />

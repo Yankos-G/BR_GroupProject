@@ -1,27 +1,34 @@
 PROGRAM _INIT
-	// NEED ONLY FOR WATCH
-	gAxis_1;
-	gMotorBeltParType;
-	gMotorBeltAxisBasic;
+
 END_PROGRAM
 
 PROGRAM _CYCLIC
-
 	SelectedAuto := (gMode = 0);
 	NotSelectedAuto := NOT SelectedAuto;
-	//aa
-	// CODE WORKS ONLY WHEN AUTO IS ACTIVE
-	IF  SelectedAuto THEN
+	SemiAutoModeSelected := (gMode=2);
+	// CODE WORKS ONLY WHEN AUTO OR SEMIAUTO IS ACTIVE
+	IF  SelectedAuto OR SemiAutoModeSelected THEN
 
-		// MOTOR MANAGEMENT
+		// MOTOR MANAGEMENT	
 		gMotorBeltAxisBasic.Enable 		:= TRUE;
 		gMotorBeltAxisBasic.MpLink 		:= ADR(gAxis_1);
 		gMotorBeltAxisBasic.Parameters 	:= ADR(gMotorBeltParType);
 		MotorMoveDone 					:= gMotorBeltAxisBasic.MoveDone;
 		gMotorBeltAxisBasic.Power 		:= MotorPower;
 		gMotorBeltAxisBasic.Home 		:= MotorHome;
-		
 		gMotorBeltAxisBasic();
+		
+		// STORAGES OVER LIMIT ACTION
+		IF gQuantityLeftStorage >= gMaxLeftStorage THEN
+			LeftLimit := TRUE;
+		ELSIF gQuantityLeftStorage < gMaxLeftStorage THEN
+			LeftLimit := FALSE;
+		END_IF;
+		IF gQuantityRightStorage >= gMaxRightStorage THEN
+			RightLimit := TRUE;
+		ELSIF gQuantityRightStorage < gMaxRightStorage THEN
+			RightLimit := FALSE;
+		END_IF;
 		
 		// IN STATE STOP VALUES DOESN'T FLUCTUATE
 		IF gMotorBeltAxisBasic.Velocity > 15 THEN
@@ -67,23 +74,19 @@ PROGRAM _CYCLIC
 		TimerTonDetect.PT := TIME_TON_DETECT;
 		TimerAfterDetect := TimerTonDetect.Q;
 		TimerTonDetect();
-		// delay 
+		// delay after photo
 		TimerTONShowPhoto.IN := gProgCamera.ImageAcq;
 		TimerTONShowPhoto.PT := TIME_TON_SHOW_PHOTO;
 		ShowPhoto := TimerTONShowPhoto.Q;
 		TimerTONShowPhoto();
-		
-
-		
 	END_IF; 
 		
-	
 	// ALARM OR STOP OR AUTO NOT ACTIVE
-	IF	gAlarmHardware THEN	
+	IF gAlarmHardware THEN	
 		IF NOT (State = ERROR) THEN
 			State := ERROR;
 		END_IF;
-	ELSIF Stop OR gMode <> 0 OR gAlarmExist THEN 
+	ELSIF Stop OR gMode = 1 OR gAlarmExist THEN 
 		Stop := FALSE;
 		State := STOP;
 	END_IF; 
@@ -93,7 +96,7 @@ PROGRAM _CYCLIC
 
 		STOP:
 			State := STOP;
-			IF SelectedAuto THEN
+			IF SelectedAuto OR SemiAutoModeSelected THEN
 				MotorPower 		  := FALSE;
 				MotorMoveAbsolute := FALSE;
 				MotorHome 		  := FALSE;
@@ -119,6 +122,7 @@ PROGRAM _CYCLIC
 			MotorPower 			:= TRUE;
 			MotorHome 			:= TRUE;
 			gPicNotRecognised	:= FALSE;
+			Approval 			:= FALSE;
 			State 				:= START;
 			
 		START: 
@@ -133,39 +137,60 @@ PROGRAM _CYCLIC
 				ItemWeightMeasured := ItemWeight;
 				State := CATEGORIZATION;
 			END_IF;
-				
-		CATEGORIZATION: 
-			IF gSorting.SortChoice = WEIGHT THEN
-				IF NOT gSorting.Threshold AND NOT (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax) THEN
-					State := UNRECOGNISED_PIC;//POTEM TO PRZENIES
-				ELSE 
+		
+			
+		CATEGORIZATION:
+			IF SelectedAuto THEN
+				IF gSorting.SortChoice = WEIGHT THEN
 					State := CHOOSE_SORT_MODE;
+				ELSE
+					State := TAKE_PICT_CAMERA;
 				END_IF;
-			ELSE
-				State := TAKE_PICT_CAMERA;
+			ELSIF SemiAutoModeSelected AND Approval THEN
+				IF gSorting.SortChoice = WEIGHT THEN
+					Approval := FALSE;
+					State := CHOOSE_SORT_MODE;
+				ELSE
+					Approval := FALSE;
+					State := TAKE_PICT_CAMERA;
+				END_IF;
 			END_IF;
 			
 		TAKE_PICT_CAMERA:
 			gProgCamera.ImageAcq 	:= TRUE;
 			State := TAKE_PICT_CAMERA_2;
 
-			
 		TAKE_PICT_CAMERA_2:
-			IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone THEN
-				gProgCamera.DisplayPhoto := TRUE;
-				IF gPhotoShowed THEN
-					gPhotoShowed := FALSE;
-					IF gRecognisedModel = 0 THEN 						
-						gProgCamera.ImageAcq  := FALSE;
-						State 				  := UNRECOGNISED_PIC;
-					ELSE 
-						State 				  := CHOOSE_SORT_MODE;
+			IF SelectedAuto THEN
+				IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone THEN
+					gProgCamera.DisplayPhoto := TRUE;
+					IF gPhotoShowed THEN
+						gPhotoShowed := FALSE;
+						IF gRecognisedModel = 0 THEN 						
+							gProgCamera.ImageAcq  := FALSE;
+							State 				  := UNRECOGNISED_PIC;
+						ELSE 
+							State 				  := CHOOSE_SORT_MODE;
+						END_IF;
+					END_IF;
+				END_IF;	
+			ELSIF SemiAutoModeSelected THEN
+				IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone AND Approval THEN
+					gProgCamera.DisplayPhoto := TRUE;
+					IF gPhotoShowed THEN
+						gPhotoShowed := FALSE;
+						IF gRecognisedModel = 0 THEN 						
+							gProgCamera.ImageAcq  := FALSE;
+							Approval := FALSE;
+							State 				  := UNRECOGNISED_PIC;
+						ELSE 
+							Approval := FALSE;
+							State 				  := CHOOSE_SORT_MODE;
+						END_IF;
 					END_IF;
 				END_IF;
-				
 			END_IF;
-
-				
+			
 		CHOOSE_SORT_MODE:
 			IF gSorting.SortChoice = OPTIC_LOGO THEN
 				State := SORT_OPTIC_LOGO;
@@ -177,7 +202,7 @@ PROGRAM _CYCLIC
 				State := SORT_ADVANCED;
 			END_IF;
 			
-			//LONG IF TO PREVENT PROGRAM KAPUT
+			//LONG IF TO PREVENT PROGRAMO KAPUTO
 		SORT_WEIGHT:
 			IF NOT gSorting.Threshold THEN
 				IF (ItemWeightMeasured >= gSorting.ItemWeightLeftMin AND ItemWeightMeasured <= gSorting.ItemWeightLeftMax) AND NOT (ItemWeightMeasured >= gSorting.ItemWeightRightMin AND ItemWeightMeasured <= gSorting.ItemWeightRightMax)  THEN
@@ -267,7 +292,7 @@ PROGRAM _CYCLIC
 						State_ADV := LOGO;
 					ELSIF gSorting.LeftCriteria.Grey OR gSorting.LeftCriteria.Orange OR gSorting.RightCriteria.Grey OR gSorting.RightCriteria.Orange THEN
 						State_ADV := COLOR;
-					ELSIF ((gSorting.LeftCriteria.Heavy OR gSorting.LeftCriteria.Light) AND (gSorting.LeftCriteria.Threshold OR gSorting.LeftCriteria.Range)) OR ((gSorting.RightCriteria.Heavy OR gSorting.RightCriteria.Light) AND (gSorting.RightCriteria.Threshold OR gSorting.RightCriteria.Range)) THEN
+					ELSIF (((gSorting.LeftCriteria.Heavy OR gSorting.LeftCriteria.Light) AND (gSorting.LeftCriteria.Threshold OR gSorting.LeftCriteria.Range)) OR ((gSorting.RightCriteria.Heavy OR gSorting.RightCriteria.Light) AND (gSorting.RightCriteria.Threshold OR gSorting.RightCriteria.Range))) THEN
 						State_ADV := ADV_WEIGHT;
 					ELSE 
 						State := UNRECOGNISED_PIC;
@@ -423,11 +448,25 @@ PROGRAM _CYCLIC
 			END_CASE;
 		
 		DROP:
-			State_ADV := WAIT;
-			ActuatorPushing := TRUE;
-			IF TimerActuatorOut THEN
-				ActuatorPushing := FALSE;
-				State := DECIDE_WHERE;
+			IF (Sort_left AND LeftLimit) THEN
+				AlarmLeft := TRUE;
+			ELSIF (Sort_right AND RightLimit) THEN
+				AlarmRight := TRUE;
+			ELSE
+				State_ADV := WAIT;
+				ActuatorPushing := TRUE;
+				IF SelectedAuto THEN
+					IF TimerActuatorOut THEN
+						ActuatorPushing := FALSE;
+						State := DECIDE_WHERE;
+					END_IF;
+				ELSIF SemiAutoModeSelected THEN
+					IF TimerActuatorOut AND Approval THEN
+						ActuatorPushing := FALSE;
+						Approval := FALSE;
+						State := DECIDE_WHERE;
+					END_IF;
+				END_IF;
 			END_IF;
 			
 		DECIDE_WHERE:
@@ -442,40 +481,77 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		GO_STORAGE_LEFT:
-			MotorReqPosition := MOTOR_DIST_LEFT;
-			MotorMoveAbsolute := TRUE;
-			IF MotorInPosition AND MotorMoveDone THEN
-				State := SORT_STORAGE_LEFT;
+			IF SelectedAuto THEN
+				MotorReqPosition := MOTOR_DIST_LEFT;
+				MotorMoveAbsolute := TRUE;
+				IF MotorInPosition AND MotorMoveDone THEN
+					State := SORT_STORAGE_LEFT;
+				END_IF;
+			ELSIF SemiAutoModeSelected AND Approval THEN		
+				MotorReqPosition := MOTOR_DIST_LEFT;
+				MotorMoveAbsolute := TRUE;
+				IF MotorInPosition AND MotorMoveDone THEN
+					Approval := FALSE;
+					State := SORT_STORAGE_LEFT;
+				END_IF;
 			END_IF;
-
-		GO_STORAGE_RIGHT:
 			
-			MotorReqPosition  := MOTOR_DIST_RIGHT;
-			MotorMoveAbsolute := TRUE;
-			IF MotorInPosition AND MotorMoveDone THEN
-				State := SORT_STORAGE_RIGHT;				
+		GO_STORAGE_RIGHT:
+			IF SelectedAuto THEN
+				MotorReqPosition  := MOTOR_DIST_RIGHT;
+				MotorMoveAbsolute := TRUE;
+				IF MotorInPosition AND MotorMoveDone THEN
+					State := SORT_STORAGE_RIGHT;				
+				END_IF;
+			ELSIF SemiAutoModeSelected AND Approval THEN
+				MotorReqPosition  := MOTOR_DIST_RIGHT;
+				MotorMoveAbsolute := TRUE;
+				IF MotorInPosition AND MotorMoveDone THEN
+					Approval := FALSE;
+					State := SORT_STORAGE_RIGHT;				
+				END_IF;
 			END_IF;
 			
 		SORT_STORAGE_LEFT:
-			MotorMoveAbsolute := FALSE;
-			ActuatorSorting   := TRUE;
-			gAddToLeft 		  := TRUE;
-			IF TimerActuatorOut THEN
+			IF SelectedAuto THEN
+				MotorMoveAbsolute := FALSE;
+				ActuatorSorting   := TRUE;
+				gAddToLeft 		  := TRUE;
+				IF TimerActuatorOut THEN
+					State := INIT;
+				END_IF;
+			ELSIF SemiAutoModeSelected THEN
+				MotorMoveAbsolute := FALSE;
+				IF TimerActuatorOut AND Approval THEN
+					Approval := FALSE;
+					State := INIT;
+				END_IF;
+				IF Approval THEN
+					ActuatorSorting   := TRUE;
+					gAddToLeft 		  := TRUE;
+					Approval 		  := FALSE;
+				END_IF;
+			END_IF;
+		
+		SORT_STORAGE_RIGHT:
+			IF SelectedAuto THEN
+				gAddToRight := TRUE;
+				MotorMoveAbsolute := FALSE;
+				State := INIT;
+			ELSIF SemiAutoModeSelected AND Approval THEN
+				Approval := FALSE;
+				gAddToRight := TRUE;
+				MotorMoveAbsolute := FALSE;
 				State := INIT;
 			END_IF;
 
-		SORT_STORAGE_RIGHT:
-			gAddToRight := TRUE;
-			MotorMoveAbsolute := FALSE;
-			State := INIT;
-		
 		UNRECOGNISED_PIC:
 			State_ADV := WAIT;
 			gPicNotRecognised := TRUE; 
 			State := STOP;
 			
 		ERROR: // SPONTANICZNA DECYZJA CTRL V Z STOP DLA LEPSZEJ FUNKCJONALNOŒCI - BRAKLO CZASU NA DOKLADNIEJSZE POPRAWKI
-			IF gMode = 0 THEN
+			IF SelectedAuto OR SemiAutoModeSelected THEN
 				MotorPower 		  := FALSE;
 				MotorMoveAbsolute := FALSE;
 				MotorHome 		  := FALSE;
@@ -495,7 +571,6 @@ PROGRAM _CYCLIC
 			END_IF;
 	END_CASE;
 
-	
 	// TIMER INPUT TRIGGER TO DELAY ACTUATORS
 	IF ActuatorPushing OR ActuatorSorting THEN
 		TimerTonActuatorIn := TRUE;
@@ -506,13 +581,27 @@ PROGRAM _CYCLIC
 	// OPERATION OF BYTE ACTUATORS WITH TIMER
 	IF ActuatorPushing THEN
 		ActuatorByte := ACTUATOR_BYTE_PUSH;	
-		IF TimerActuatorOut THEN
-			ActuatorPushing := FALSE;
+		IF SelectedAuto THEN
+			IF TimerActuatorOut THEN
+				ActuatorPushing := FALSE;
+			END_IF;
+		ELSIF SemiAutoModeSelected THEN
+			IF TimerActuatorOut AND Approval THEN
+				Approval := FALSE;
+				ActuatorPushing := FALSE;
+			END_IF;
 		END_IF;
 	ELSIF ActuatorSorting THEN
 		ActuatorByte := ACTUATOR_BYTE_SORT;
-		IF TimerActuatorOut THEN
-			ActuatorSorting := FALSE;
+		IF SelectedAuto THEN
+			IF TimerActuatorOut THEN
+				ActuatorSorting := FALSE;
+			END_IF;
+		ELSIF SemiAutoModeSelected THEN
+			IF TimerActuatorOut AND Approval  THEN
+				Approval := FALSE;
+				ActuatorSorting := FALSE;
+			END_IF;
 		END_IF;
 	ELSE
 		ActuatorByte := ACTUATOR_BYTE_NOT_ACTIV; 
@@ -527,10 +616,15 @@ PROGRAM _CYCLIC
 	gCTU_QuantityLeft();
 	gCTU_QuantityRight();
 	
-	// HMI GUYS WANTED SOME VARIABLES
-
-
+	IF gCTU_Reset_Left THEN
+		AlarmLeft := FALSE;
+	END_IF;
+	IF gCTU_Reset_Right THEN
+		AlarmRight := FALSE;
+	END_IF;
 	
+	
+	// HMI GUYS WANTED SOME VARIABLES
 	IF gSorting.SortChoice <> WEIGHT THEN
 		gSortChoiceView := TRUE;
 		IF gSorting.SortChoice = ADVANCED THEN
@@ -577,19 +671,14 @@ PROGRAM _CYCLIC
 	
 	//OPC UA - Threshold
 	ItemWeighRightMinBorder := gSorting.ItemWeightLeftMax + 1;
-	ItemWeighLeftMaxBorder := gSorting.ItemWeightRightMin - 1;
-
-	
+	ItemWeighLeftMaxBorder := gSorting.ItemWeightRightMin - 1;	
 	
 	ActuatorNotSorting := NOT ActuatorSorting;
 	ActuatorNotPushing 	:= NOT ActuatorPushing;
 	
 	IF Start THEN
 		Start := FALSE;
-	END_IF;
-	
-
-				
+	END_IF;	
 	
 	//SERVICE PAGE
 	//SCALE WEIGHT RESET
@@ -599,10 +688,10 @@ PROGRAM _CYCLIC
 		ScaleTare := 2#0000;
 	END_IF;
 	
-		END_PROGRAM
+END_PROGRAM
 
 PROGRAM _EXIT
 
 	 
-		END_PROGRAM
+END_PROGRAM
 

@@ -4,7 +4,6 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="Auto" Source="Programs.Auto.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Manual" Source="Programs.Manual.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="SemiAuto" Source="Programs.SemiAuto.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3">

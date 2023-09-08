@@ -513,10 +513,10 @@
     </tu>
     <tu tuid="State_Category">
       <tuv xml:lang="pl">
-        <seg>Kategoryzacja detalu</seg>
+        <seg>Wykryto detal</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Item categorization</seg>
+        <seg>Item detected</seg>
       </tuv>
     </tu>
     <tu tuid="State_Detect">

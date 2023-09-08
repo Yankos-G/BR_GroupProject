@@ -453,6 +453,18 @@
     </EventBinding>
     <EventBinding id="ContentAuto.ButtonSetToAuto.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentAuto" widgetRefId="ButtonSetToAuto" event="Click" />
+      <Operand datatype="ANY_INT" name="MODE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gMode">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="MODE = 2">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auto:Stop">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMode">
@@ -578,66 +590,6 @@
     </EventBinding>
     <EventBinding id="EventBinding_18">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.SortChoice" event="ValueChanged" />
-      <EventHandler condition="newValue &lt; 3">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.AS">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.BR">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="3">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Orange">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Threshold">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="5">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Range">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="6">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Light">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="7">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.RightCriteria.Heavy">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
       <EventHandler condition="newValue = 0">
         <Sequence>
           <Step order="0">
