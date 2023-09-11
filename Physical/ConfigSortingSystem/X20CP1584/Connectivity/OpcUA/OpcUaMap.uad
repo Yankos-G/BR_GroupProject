@@ -154,16 +154,12 @@
         <Variable Name="pendingAlarms" />
         <Variable Name="enableRedIcon" />
         <Variable Name="enableYellowIcon" />
-        <Variable Name="test_alarm" />
-        <Variable Name="IsSemiAutoMode" />
-        <Variable Name="IsManualMode" />
         <Variable Name="ModuleOkActuators" />
         <Variable Name="ModuleOkEncoder" />
         <Variable Name="ModuleOkInverter" />
         <Variable Name="ModuleOkPLC_PLK" />
         <Variable Name="ModuleOkPneu_X67BC" />
         <Variable Name="ModuleOkScale" />
-        <Variable Name="ModuleOkServo" />
         <Variable Name="ExportBool" />
       </Task>
       <Task Name="Auto">
@@ -171,17 +167,14 @@
         <Variable Name="Stop" />
         <Variable Name="State" />
         <Variable Name="ItemDetected" />
-        <Variable Name="ItemWeightMeasured" EngineeringUnitId="3" />
+        <Variable Name="ItemWeightMeasured" />
         <Variable Name="ItemWeight" />
         <Variable Name="ActuatorPushing" />
         <Variable Name="ActuatorSorting" />
-        <Variable Name="StringRecognisedModel" />
-        <Variable Name="StringState" />
         <Variable Name="ActuatorNotPushing" />
         <Variable Name="ActuatorNotSorting" />
         <Variable Name="MotorVel" EngineeringUnitId="2" />
         <Variable Name="MotorPos" EngineeringUnitId="1" />
-        <Variable Name="IsEnglishSelected" />
         <Variable Name="NotSelectedAuto" />
         <Variable Name="SelectedAuto" />
         <Variable Name="ShowBRLeft" />
@@ -215,7 +208,6 @@
         <Variable Name="ManualStop" />
         <Variable Name="DirectionChangeDistance" />
         <Variable Name="DirectionChangeVelocity" />
-        <Variable Name="StartButtonState" />
         <Variable Name="ManualActuatorBoth" />
         <Variable Name="ManualActuatorNone" />
         <Variable Name="ManualStep" />
@@ -237,8 +229,6 @@
         <Variable Name="MotorVelManual" />
       </Task>
       <Task Name="ProgramRec">
-        <Variable Name="SelectedIndex" />
-        <Variable Name="Configer" RecursiveEnable="2" />
         <Variable Name="FileLastModified" RecursiveEnable="2" />
         <Variable Name="FileName" RecursiveEnable="2" />
         <Variable Name="FileSize" RecursiveEnable="2" />

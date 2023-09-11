@@ -6,7 +6,6 @@ VAR
 	Base64srcLen : UDINT;
 	CameraLED : USINT := 0;
 	CameraLED_2 : USINT := 0;
-	httpDecodeBase64_0 : httpDecodeBase64;
 	httpEncodeBase64_0 : httpEncodeBase64;
 END_VAR
 VAR CONSTANT
@@ -31,7 +30,6 @@ VAR
 	TimerTonCameraLED_2 : TON;
 END_VAR
 VAR CONSTANT
-	TIMER_TIME_BLINK : TIME := T#500MS;
 	TIMER_TIME_BLINK_100MS : TIME := T#100MS;
 	TIMER_TIME_BLINK_500MS : TIME := T#500MS;
 	TIME_LAMP_TEST : TIME := T#500MS;

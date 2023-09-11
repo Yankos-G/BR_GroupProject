@@ -1,21 +1,17 @@
 VAR
 	timerCycle : BOOL;
-	test_alarm : BOOL;
 	redIconTimer : TON;
 	pendingAlarms : BOOL;
 	MpUserXConfig_0 : MpUserXConfig;
 	MpUserXConfigType_0 : MpUserXConfigType;
 	MpAlarmXHistory_0 : MpAlarmXHistory;
 	MpAlarmXCore_0 : MpAlarmXCore;
-	ModuleOkServo : BOOL;
 	ModuleOkScale : BOOL;
 	ModuleOkPneu_X67BC : BOOL;
 	ModuleOkPLC_PLK : BOOL;
 	ModuleOkInverter : BOOL;
 	ModuleOkEncoder : BOOL;
 	ModuleOkActuators : BOOL;
-	IsSemiAutoMode : BOOL;
-	IsManualMode : BOOL;
 	isAcknowledged : BOOL;
 	enableYellowIcon : BOOL;
 	enableRedIcon : BOOL;

@@ -6,13 +6,6 @@ TYPE
 		AS_Oranz := 2, (*%ID of AS logo model*)
 		Unrecognised := 0 (*%case of nothing recognised*)
 		);
-	CofeeType : 	STRUCT 
-		Sugar : USINT;
-		Water : REAL;
-		Powder : USINT;
-		Temperature : REAL;
-		Milk : REAL;
-	END_STRUCT;
 	SortingType : 	STRUCT 
 		RecipeName : STRING[80];
 		Date : STRING[80];

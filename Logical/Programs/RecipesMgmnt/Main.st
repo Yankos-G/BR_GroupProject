@@ -1,7 +1,18 @@
 
 PROGRAM _INIT
-
-	 
+// PROGRAM WYMAGA UTWORZENIA 3 FOLDERÓW PONIZEJ (PONIZSZY KOD NIE DZIALA)
+//	FileUIConnect.File.NewName := 'Recipes';
+//	FileUIConnect.File.CreateFolder := TRUE;
+//	FileUIConnect.File.CreateFolder := FALSE;
+//	
+//	FileUIConnect.File.NewName := 'Alarms';
+//	FileUIConnect.File.CreateFolder := TRUE;
+//	FileUIConnect.File.CreateFolder := FALSE;
+//	
+//	FileUIConnect.File.NewName := 'Audit';
+//	FileUIConnect.File.CreateFolder := TRUE;
+//	FileUIConnect.File.CreateFolder := FALSE;
+//	
 END_PROGRAM
 
 PROGRAM _CYCLIC

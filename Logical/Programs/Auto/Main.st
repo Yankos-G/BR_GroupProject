@@ -550,13 +550,11 @@ PROGRAM _CYCLIC
 			gPicNotRecognised := TRUE; 
 			State := STOP;
 			
-		ERROR: // SPONTANICZNA DECYZJA CTRL V Z STOP DLA LEPSZEJ FUNKCJONALNOŒCI - BRAKLO CZASU NA DOKLADNIEJSZE POPRAWKI
-			IF SelectedAuto OR SemiAutoModeSelected THEN
+		ERROR: 
 				MotorPower 		  := FALSE;
 				MotorMoveAbsolute := FALSE;
 				MotorHome 		  := FALSE;
-			END_IF;		
-			MotorPos := 0;
+				MotorPos := 0;
 			MotorVel := 0;
 			TimerTonActuatorIn 	  := FALSE;
 			ActuatorSorting 	  := FALSE;

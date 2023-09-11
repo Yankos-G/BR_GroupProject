@@ -1,11 +1,11 @@
 PROGRAM _INIT	
 	//init variables for displaying taken photo in HMI visualization
 	URL := '<image x=$'0$' y=$'0$' width=$'320px$' height=$'256px$' href=$'data:application/octet-stream;base64,';
-	
 END_PROGRAM
 
 PROGRAM _CYCLIC
-
+	
+	LED_GREEN; //not used, just for some changes
 	// MANAGEMENT OF MODE IN CHEAP CAMERA (NO OTHER WAY TO DO THAT :)) )
 	IF Logo.ModuleOK THEN
 		CameraMode := 'Logo';
@@ -109,7 +109,7 @@ PROGRAM _CYCLIC
 	TimerTonCameraLED();
 	TimerTonCameraLED_2();
 
-	//-----------------TEST--CAMERA-----------------------//
+	//-----------------TEST--CAMERA--LIGHT--------------------//
 
 	ATON1();
 	ATON2();
@@ -183,13 +183,13 @@ PROGRAM _CYCLIC
 			ViBaseGetImage_0.Buffer := ADR(ViBaseBuffer);
 			ViBaseGetImage_0.BufferSize := SIZEOF(ViBaseBuffer);
 			ViBaseGetImage_0.Execute := TRUE;
-			//jakby cos sie dzialo zlego to usun
+
 			IF ViBaseGetImage_0.Error THEN
 				ViBaseGetImage_0.Execute := FALSE;
 				gProgCamera.DisplayPhoto := TRUE;
 				ImageProcess := 0;
 			END_IF;
-			//dotad
+
 			IF ViBaseGetImage_0.Done THEN
 				Base64srcLen := ViBaseGetImage_0.BufferLen;	// save length of buffer on a local variable
 				ViBaseGetImage_0.Execute := FALSE;
@@ -223,7 +223,7 @@ PROGRAM _CYCLIC
 				
 				ImageProcess := 0;
 			END_IF;
-		//dodaj zakonczenie procesu
+
 	END_CASE;
 	ViBaseGetImage_0();	// call FUB
 	httpEncodeBase64_0();	// call FUB

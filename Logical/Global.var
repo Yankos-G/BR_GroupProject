@@ -1,20 +1,17 @@
 (*Insert your comment here.*)
 VAR
-	Coffee : CofeeType;
 	gActuatorByte : UINT;
 	gAddToLeft : BOOL := FALSE;
 	gAddToRight : BOOL := FALSE;
 	gAlarmExist : BOOL := FALSE;
 	gAlarmHardAck : BOOL := FALSE;
 	gAlarmHardware : BOOL := FALSE;
-	gAutoRecipe : USINT;
 	gCTU_QuantityLeft : CTU;
 	gCTU_QuantityRight : CTU;
 	gCTU_Reset_Left : BOOL := FALSE;
 	gCTU_Reset_Right : BOOL := FALSE;
 	gErrorState : BOOL := FALSE;
 	gInWeightMeasure : USINT;
-	gItemWeightChoosen : USINT := 10;
 	gMaxLeftStorage : USINT := 4;
 	gMaxRightStorage : USINT := 4;
 	gMode : USINT := 0;

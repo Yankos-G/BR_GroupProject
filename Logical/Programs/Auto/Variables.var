@@ -1,5 +1,5 @@
 VAR
-	ActuatorByte : INT := 2#0000000000000000;
+	ActuatorByte : USINT := 2#0000000000000000;
 	ActuatorNotPushing : BOOL;
 	ActuatorNotSorting : BOOL;
 	ActuatorPushing : BOOL := FALSE;
@@ -7,13 +7,11 @@ VAR
 END_VAR
 VAR CONSTANT
 	ACTUATOR_BYTE_NOT_ACTIV : USINT := 2#0000000000000000;
-	ACTUATOR_BYTE_PUSH : INT := 2#0000000000000100;
-	ACTUATOR_BYTE_SORT : INT := 2#0000000000000001;
+	ACTUATOR_BYTE_PUSH : USINT := 2#0000000000000100;
+	ACTUATOR_BYTE_SORT : USINT := 2#0000000000000001;
 END_VAR
 VAR
-	CfgSetFTPServer_0 : CfgSetFTPServer;
 	HMI_ScaleTare : BOOL := FALSE;
-	IsEnglishSelected : BOOL := TRUE;
 	ItemDetected : BOOL := FALSE;
 	ItemWeighLeftMaxBorder : USINT;
 	ItemWeighRightMinBorder : USINT;
@@ -29,7 +27,6 @@ VAR
 	MotorReqDec : UINT := 700;
 	MotorReqPosition : UINT := 0;
 	MotorReqVel : {REDUND_UNREPLICABLE} UINT := 300;
-	MotorResetError : BOOL := FALSE;
 	MotorVel : REAL;
 END_VAR
 VAR CONSTANT
@@ -54,10 +51,8 @@ VAR
 	Sort_right : BOOL;
 	Start : BOOL := FALSE;
 	State : ProgramStatesEnum := STOP;
-	State_ADV : State_ADVANCED;
+	State_ADV : State_ADVANCED := WAIT;
 	Stop : BOOL := FALSE;
-	StringRecognisedModel : STRING[80];
-	StringState : STRING[80];
 	TimerActuatorOut : BOOL;
 	TimerAfterDetect : BOOL;
 	TimerCameraPicDone : BOOL;
@@ -72,20 +67,14 @@ VAR CONSTANT
 END_VAR
 VAR
 	TIME_TON_DETECT : TIME := T#2S;
-	LeftWeightAdvMinHigh : USINT;
-	LeftWeightAdvMaxLow : USINT;
-	RightWeightAdvMinHigh : USINT;
-	RightWeightAdvMaxLow : USINT;
 	TIME_TON_SHOW_PHOTO : TIME := T#1S;
 	TimerTONShowPhoto : TON;
 	ShowPhoto : BOOL;
 	ShowDetectedLabel : BOOL;
 	SemiAutoModeSelected : BOOL;
 	Approval : BOOL;
-	oldState : ProgramStatesEnum;
 	LeftLimit : BOOL;
 	RightLimit : BOOL;
-	Alarm : BOOL;
 	AlarmLeft : BOOL;
 	AlarmRight : BOOL;
 END_VAR

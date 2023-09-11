@@ -16,19 +16,19 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="860" width="170" height="50" zIndex="5" text="$IAT/Main/Param_Recipes" textAlign="center" fontSize="30px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="80" width="420" height="50" zIndex="6" text="$IAT/Main/Param_Criteria" textAlign="center" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="490" left="720" zIndex="7" text="$IAT/Main/Param_Load" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="490" left="610" zIndex="8" text="$IAT/Main/File_Delete" />
-    <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="610" width="320" height="340" zIndex="9">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="490" left="740" zIndex="7" text="$IAT/Main/Param_Load" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="490" left="630" zIndex="8" text="$IAT/Main/File_Delete" />
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="630" width="320" height="340" zIndex="9">
       <Widgets>
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="150" text="$IAT/Main/File_Name" />
         <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" columnWidth="170" text="$IAT/Main/File_Date" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="490" left="830" zIndex="10" text="$IAT/Main/File_Rename_1" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="450" left="720" zIndex="11" text="$IAT/Main/Param_Save" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="450" left="610" zIndex="12" text="$IAT/Main/File_Create" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="450" left="830" zIndex="13" text="$IAT/Main/File_Refresh" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="100" left="950" width="620" height="340" zIndex="14" gridSize="145px" modifyAnimation="true">
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton6" top="490" left="850" zIndex="10" text="$IAT/Main/File_Rename_1" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton7" top="450" left="740" zIndex="11" text="$IAT/Main/Param_Save" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton8" top="450" left="630" zIndex="12" text="$IAT/Main/File_Create" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton9" top="450" left="850" zIndex="13" text="$IAT/Main/File_Refresh" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLine1" top="100" left="980" width="300" height="340" zIndex="14" gridSize="145px" modifyAnimation="true">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem4" zIndex="0" collapsedSize="2">
           <Widgets>
@@ -76,14 +76,6 @@
                 <Widget xsi:type="widgets.brease.Label" id="LabelLeftCriteria" top="0" left="0" width="140" zIndex="1" text="$IAT/Main/Param_Left_Criteria" />
                 <Widget xsi:type="widgets.brease.Label" id="LabelRightCriteria" top="0" left="0" width="140" zIndex="2" text="$IAT/Main/Param_Right_Criteria" />
               </Widgets>
-            </Widget>
-          </Widgets>
-        </Widget>
-        <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem5" zIndex="1" collapsedSize="2">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.Label" id="Label80" top="10" left="80" width="120" zIndex="0" text="Recipe values" bold="true" />
-            <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelWeight4" top="30" left="-10" width="130" height="138" zIndex="1" alignment="vertical" childMainAlign="end" childCrossAlign="start">
-              <Widgets />
             </Widget>
           </Widgets>
         </Widget>
