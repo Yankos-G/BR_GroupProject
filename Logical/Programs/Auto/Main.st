@@ -8,11 +8,7 @@ PROGRAM _CYCLIC
 	SemiAutoModeSelected := (gMode=2);
 	// CODE WORKS ONLY WHEN AUTO OR SEMIAUTO IS ACTIVE
 	IF  SelectedAuto OR SemiAutoModeSelected THEN
-		
-		IF SemiAutoModeSelected AND NOT TimerAfterDetect THEN
-	  		Approval := FALSE;
-		END_IF;
-		
+				
 		// MOTOR MANAGEMENT	
 		gMotorBeltAxisBasic.Enable 		:= TRUE;
 		gMotorBeltAxisBasic.MpLink 		:= ADR(gAxis_1);
@@ -131,6 +127,7 @@ PROGRAM _CYCLIC
 			State 				:= START;
 			
 		START: 
+			Approval := FALSE;
 			IF ItemDetected THEN
 				ItemWeightMeasured 	:= RESET_ITEM_MEM_WEIGHT;
 				State := DETECTION;
@@ -138,6 +135,7 @@ PROGRAM _CYCLIC
 			
 		DETECTION:
 			MotorHome 	:= FALSE;
+			Approval := FALSE;
 			IF TimerAfterDetect THEN
 				Detect := TRUE;
 				ItemWeightMeasured := ItemWeight;

@@ -186,12 +186,6 @@ PROGRAM _CYCLIC
 			ViBaseGetImage_0.BufferSize := SIZEOF(ViBaseBuffer);
 			ViBaseGetImage_0.Execute := TRUE;
 
-			IF ViBaseGetImage_0.Error THEN
-				ViBaseGetImage_0.Execute := FALSE;
-				gProgCamera.DisplayPhoto := TRUE;
-				ImageProcess := 0;
-			END_IF;
-
 			IF ViBaseGetImage_0.Done THEN
 				Base64srcLen := ViBaseGetImage_0.BufferLen;	// save length of buffer on a local variable
 				ViBaseGetImage_0.Execute := FALSE;

@@ -38,4 +38,5 @@ VAR
 	ImageShootTON : TON;
 	MotorVelManual : REAL;
 	MotorPosManual : LREAL;
+	ShotAvaible : BOOL;
 END_VAR

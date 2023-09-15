@@ -224,5 +224,9 @@
 <Source xsi:type="opcUa" refId="::Manual:JogEnableVar" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="GroupBox3" attribute="enable" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Manual:ShotAvaible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="ButtonMakePhoto" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>

@@ -412,7 +412,7 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="newValue = 5">
+      <EventHandler condition="newValue = 6">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentManual" widgetRefId="LabelCurrentStep">
             <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/State_Take_PIC" />

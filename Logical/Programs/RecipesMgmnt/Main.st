@@ -17,15 +17,15 @@ PROGRAM _CYCLIC
 	// FILE MANAGEMENT
 	MpFileManagerUI_0(MpLink := ADR(gFileManageUI), Enable := TRUE , UISetup := FileUISetup, UIConnect := ADR(FileUIConnect) );
 	FileUIConnect.DeviceList.DeviceNames[0] := 'EF'; 
-	i := 0;
-	FOR i := 0 TO 15 DO
-		FileName[i] := FileUIConnect.File.List.Items[i].Name;
-		FileLastModified[i] := FileUIConnect.File.List.Items[i].LastModified;
-		FileSize[i] := FileUIConnect.File.List.Items[i].Size;
-	END_FOR;
-	
-	FileUIConnect.File.List.Items[idx].IsSelected := TRUE;
-	CurrentFile := FileUIConnect.File.List.Items[idx].Name;
+//	i := 0;
+//	FOR i := 0 TO 15 DO
+//		FileName[i] := FileUIConnect.File.List.Items[i].Name;
+//		FileLastModified[i] := FileUIConnect.File.List.Items[i].LastModified;
+//		FileSize[i] := FileUIConnect.File.List.Items[i].Size;
+//	END_FOR;
+//	
+//	FileUIConnect.File.List.Items[idx].IsSelected := TRUE;
+//	CurrentFile := FileUIConnect.File.List.Items[idx].Name;
 	
 	CASE Filter_sort_type OF
 		0:

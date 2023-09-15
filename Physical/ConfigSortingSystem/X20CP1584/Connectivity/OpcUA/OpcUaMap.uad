@@ -228,6 +228,7 @@
         <Variable Name="JogEnableVar" />
         <Variable Name="MotorPosManual" />
         <Variable Name="MotorVelManual" />
+        <Variable Name="ShotAvaible" />
       </Task>
       <Task Name="ProgramRec">
         <Variable Name="FileLastModified" RecursiveEnable="2" />
