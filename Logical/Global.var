@@ -33,4 +33,5 @@ VAR
 	gUIConnect : MpRecipeUIConnectType;
 	gUISetup : MpRecipeUISetupType;
 	gWeightDetected : BOOL := FALSE;
+	gCamera_0L_1C : USINT;
 END_VAR

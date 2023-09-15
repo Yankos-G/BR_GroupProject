@@ -65,5 +65,29 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Threshold" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonThresholdR" attribute="visible" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:BR_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonBR" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:AS_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonAS" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:Light_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonLight" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:Heavy_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavy" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:Grey_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonGrey" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ProgramRec:Orange_visible" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrange" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>

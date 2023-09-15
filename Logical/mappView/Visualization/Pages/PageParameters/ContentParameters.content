@@ -129,8 +129,8 @@
                 </Widget>
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="260" left="203" width="150" zIndex="2" imageAlign="right" text="$IAT/Main/Param_Clear" imageColor="rgba(192, 192, 255, 1)" mouseDownImageColor="rgba(128, 255, 255, 1)" disabledImageColor="rgba(255, 128, 128, 1)" backColor="rgba(255, 255, 255, 1)" disabledBackColor="rgba(192, 192, 0, 1)" textColor="rgba(255, 0, 0, 1)" disabledTextColor="rgba(128, 128, 255, 1)" mouseDownBackColor="rgba(128, 255, 128, 1)" mouseDownTextColor="rgba(255, 224, 192, 1)" shadow="4px 4px 7px rgba(62, 79, 92, 0.75)" />
-            <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel5" top="-30" left="200" width="135" height="300" zIndex="3" alignment="vertical" childMainAlign="center" childCrossAlign="center">
+            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="260" left="203" width="150" zIndex="3" imageAlign="right" text="$IAT/Main/Param_Clear" imageColor="rgba(192, 192, 255, 1)" mouseDownImageColor="rgba(128, 255, 255, 1)" disabledImageColor="rgba(255, 128, 128, 1)" backColor="rgba(255, 255, 255, 1)" disabledBackColor="rgba(192, 192, 0, 1)" textColor="rgba(255, 0, 0, 1)" disabledTextColor="rgba(128, 128, 255, 1)" mouseDownBackColor="rgba(128, 255, 128, 1)" mouseDownTextColor="rgba(255, 224, 192, 1)" shadow="4px 4px 7px rgba(62, 79, 92, 0.75)" />
+            <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel5" top="-30" left="200" width="135" height="300" zIndex="2" alignment="vertical" childMainAlign="center" childCrossAlign="center">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Button" id="ButtonBR" top="0" left="0" zIndex="0" draggable="true" text="BR" margin="2px" />
                 <Widget xsi:type="widgets.brease.Button" id="ButtonAS" top="0" left="0" zIndex="1" draggable="true" text="AS" margin="2px" />

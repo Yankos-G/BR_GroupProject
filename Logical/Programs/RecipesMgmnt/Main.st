@@ -65,6 +65,39 @@ PROGRAM _CYCLIC
 		Clear_param := FALSE;
 	END_IF;
 	
+	//-----------management-of-adv-buttons--- (almost -30 bindings) 
+	IF gSorting.LeftCriteria.AS OR gSorting.RightCriteria.AS OR gCamera_0L_1C = 1 THEN
+		AS_visible := FALSE;
+	ELSE
+		AS_visible := TRUE;
+	END_IF;
+	IF gSorting.LeftCriteria.BR OR gSorting.RightCriteria.BR OR gCamera_0L_1C = 1 THEN
+		BR_visible := FALSE;
+	ELSE
+		BR_visible := TRUE;
+	END_IF;
+	IF gSorting.LeftCriteria.Orange OR gSorting.RightCriteria.Orange OR gCamera_0L_1C = 0 THEN
+		Orange_visible := FALSE;
+	ELSE
+		Orange_visible := TRUE;
+	END_IF;
+	
+	IF gSorting.LeftCriteria.Grey OR gSorting.RightCriteria.Grey OR gCamera_0L_1C = 0 THEN
+		Grey_visible := FALSE;
+	ELSE
+		Grey_visible := TRUE;
+	END_IF;
+	IF gSorting.LeftCriteria.Light OR gSorting.RightCriteria.Light THEN
+		Light_visible := FALSE;
+	ELSE
+		Light_visible := TRUE;
+	END_IF;
+	IF gSorting.LeftCriteria.Heavy OR gSorting.RightCriteria.Heavy THEN
+		Heavy_visible := FALSE;
+	ELSE
+		Heavy_visible := TRUE;
+	END_IF;
+	
 	
 END_PROGRAM
 

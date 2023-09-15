@@ -45,5 +45,4 @@ VAR
 	oldFocusColor : UINT;
 	oldExpoColor : UDINT;
 	CameraMode : STRING[80];
-	Camera_0L_1C : INT;
 END_VAR

@@ -634,6 +634,20 @@
               </Target>
             </Action>
           </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT1">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 1">
@@ -691,6 +705,20 @@
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT1">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -754,6 +782,20 @@
               </Target>
             </Action>
           </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT1">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 3">
@@ -767,110 +809,64 @@
           </Step>
           <Step order="1">
             <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.FlexLayoutPanel.Action" contentRefId="ContentAuto" widgetRefId="FlexLayoutPanelADV_LEFT1">
+                <Method xsi:type="widgets.brease.FlexLayoutPanel.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="2">
+          <Step order="4">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelDetectedStringColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="3">
+          <Step order="5">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageWeight">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="4">
+          <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="5">
+          <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageLogo">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="6">
+          <Step order="8">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelLeftStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="7">
+          <Step order="9">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightStorageColor">
                 <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="newValue &lt; 3">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.AS">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.BR">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Grey">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="3">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Orange">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Threshold">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="5">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Range">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="6">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Heavy">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="7">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gSorting.LeftCriteria.Light">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
               </Target>
             </Action>
           </Step>
@@ -1408,20 +1404,20 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_44">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RightCriteria.BR" event="ValueChanged" />
+    <EventBinding id="EventBinding_46">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RightCriteria.Orange" event="ValueChanged" />
       <Operand datatype="BOOL" name="AS">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <Operand datatype="BOOL" name="GREY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
+      <Operand datatype="BOOL" name="BR">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.BR">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <Operand datatype="BOOL" name="ORANGE">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Orange">
+      <Operand datatype="BOOL" name="GREY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -1437,13 +1433,13 @@
           <Step order="1">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightAdvBR_AS_GREY_ORANGE">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_BR" />
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Orang" />
               </Target>
             </Action>
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="newValue = FALSE AND AS = FALSE AND GREY = FALSE AND ORANGE = FALSE">
+      <EventHandler condition="newValue = FALSE AND AS = FALSE AND GREY = FALSE AND GREY = FALSE">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightAdvBR_AS_GREY_ORANGE">
             <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
@@ -1494,20 +1490,20 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_46">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RightCriteria.Orange" event="ValueChanged" />
+    <EventBinding id="EventBinding_44">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.RightCriteria.BR" event="ValueChanged" />
       <Operand datatype="BOOL" name="AS">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.AS">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <Operand datatype="BOOL" name="BR">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.BR">
+      <Operand datatype="BOOL" name="GREY">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <Operand datatype="BOOL" name="GREY">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Grey">
+      <Operand datatype="BOOL" name="ORANGE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.RightCriteria.Orange">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -1523,13 +1519,13 @@
           <Step order="1">
             <Action>
               <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightAdvBR_AS_GREY_ORANGE">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_Orang" />
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Auto_Det_BR" />
               </Target>
             </Action>
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="newValue = FALSE AND AS = FALSE AND GREY = FALSE AND GREY = FALSE">
+      <EventHandler condition="newValue = FALSE AND AS = FALSE AND GREY = FALSE AND ORANGE = FALSE">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentAuto" widgetRefId="LabelRightAdvBR_AS_GREY_ORANGE">
             <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />

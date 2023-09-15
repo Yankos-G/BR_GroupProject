@@ -243,6 +243,12 @@
         <Variable Name="ClearAudit" />
         <Variable Name="Clear_param" />
         <Variable Name="Export_SUCC" />
+        <Variable Name="AS_visible" />
+        <Variable Name="BR_visible" />
+        <Variable Name="Grey_visible" />
+        <Variable Name="Heavy_visible" />
+        <Variable Name="Light_visible" />
+        <Variable Name="Orange_visible" />
       </Task>
       <Task Name="Camera">
         <Variable Name="ViBaseBuffer" />
@@ -256,7 +262,6 @@
           <Variable Name="ModuleOK" />
         </Variable>
         <Variable Name="CameraMode" />
-        <Variable Name="Camera_0L_1C" />
       </Task>
     </Module>
   </DefaultView>
