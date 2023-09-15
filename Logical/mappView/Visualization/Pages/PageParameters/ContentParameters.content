@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentParameters" height="580" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
   <Widgets>
-    <Widget xsi:type="widgets.brease.RadialSlider" id="RadialSlider1" top="60" left="165" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="3" showValueDisplay="false" value="0" bold="false" italic="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="150" left="220" width="142" height="50" zIndex="3" text="text" textAlign="center" fontSize="29px" bold="true" />
+    <Widget xsi:type="widgets.brease.RadialSlider" id="RadialSlider1" top="60" left="163" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':0,'minimumIntegerDigits':1}}" maxValue="3" showValueDisplay="false" value="0" bold="false" italic="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="150" left="217" width="142" height="50" zIndex="3" text="text" textAlign="center" fontSize="29px" bold="true" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="20" left="580" width="10" height="540" zIndex="4" backColor="rgba(255, 140, 0, 1)" />
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxOpticSortColor" top="320" left="170" width="240" height="120" zIndex="1" text="$IAT/Main/Param_Grey_place" permissionView="['Administrator', 'Operator', 'Service']" visible="false">
       <Widgets>
@@ -15,7 +15,7 @@
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="860" width="170" height="50" zIndex="5" text="$IAT/Main/Param_Recipes" textAlign="center" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="80" width="420" height="50" zIndex="6" text="$IAT/Main/Param_Criteria" textAlign="center" fontSize="30px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="10" left="78" width="420" height="50" zIndex="6" text="$IAT/Main/Param_Criteria" textAlign="center" fontSize="30px" bold="true" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton4" top="490" left="740" zIndex="7" text="$IAT/Main/Param_Load" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton5" top="490" left="630" zIndex="8" text="$IAT/Main/File_Delete" />
     <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="630" width="320" height="340" zIndex="9">
@@ -81,7 +81,7 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineADVANCED" top="280" left="10" width="570" height="320" zIndex="16" gridSize="190px">
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineADVANCED" top="270" left="10" width="570" height="350" zIndex="16" gridSize="190px" borderWidth="0px">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItem" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="0px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>
@@ -129,14 +129,19 @@
                 </Widget>
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="ButtonBR" top="10" left="230" zIndex="2" draggable="true" text="BR" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonAS" top="44" left="230" zIndex="3" draggable="true" text="AS" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonLight" top="147" left="230" zIndex="6" draggable="true" text="$IAT/Main/Auto_2Light" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonHeavy" top="181" left="230" zIndex="7" draggable="true" text="$IAT/Main/Auto_1Heavy" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonGrey" top="79" left="230" zIndex="4" draggable="true" text="$IAT/Main/Auto_5Grey" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonOrange" top="113" left="230" zIndex="5" draggable="true" text="$IAT/Main/Auto_6Orange" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonRange" top="216" left="230" zIndex="8" draggable="true" text="$IAT/Main/Param_Range" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonThreshold" top="250" left="230" zIndex="9" draggable="true" text="$IAT/Main/Param_Threshold" shadow="4px 4px 12px rgba(62, 79, 92, 0.75)" />
+            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton10" top="260" left="203" width="150" zIndex="2" imageAlign="right" text="$IAT/Main/Param_Clear" imageColor="rgba(192, 192, 255, 1)" mouseDownImageColor="rgba(128, 255, 255, 1)" disabledImageColor="rgba(255, 128, 128, 1)" backColor="rgba(255, 255, 255, 1)" disabledBackColor="rgba(192, 192, 0, 1)" textColor="rgba(255, 0, 0, 1)" disabledTextColor="rgba(128, 128, 255, 1)" mouseDownBackColor="rgba(128, 255, 128, 1)" mouseDownTextColor="rgba(255, 224, 192, 1)" shadow="4px 4px 7px rgba(62, 79, 92, 0.75)" />
+            <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanel5" top="-30" left="200" width="135" height="300" zIndex="3" alignment="vertical" childMainAlign="center" childCrossAlign="center">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Button" id="ButtonBR" top="0" left="0" zIndex="0" draggable="true" text="BR" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonAS" top="0" left="0" zIndex="1" draggable="true" text="AS" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonLight" top="0" left="0" zIndex="2" draggable="true" text="$IAT/Main/Auto_2Light" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonHeavy" top="0" left="0" zIndex="3" draggable="true" text="$IAT/Main/Auto_1Heavy" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonGrey" top="0" left="0" zIndex="4" draggable="true" text="$IAT/Main/Auto_5Grey" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonOrange" top="0" left="0" zIndex="5" draggable="true" text="$IAT/Main/Auto_6Orange" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonRange" top="0" left="0" zIndex="6" draggable="true" text="$IAT/Main/Param_Range" margin="2px" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonThreshold" top="0" left="0" zIndex="7" draggable="true" text="$IAT/Main/Param_Threshold" margin="2px" shadow="4px 4px 12px rgba(62, 79, 92, 0.75)" />
+              </Widgets>
+            </Widget>
           </Widgets>
         </Widget>
       </Widgets>
@@ -178,9 +183,9 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="275" width="30" height="30" zIndex="20" image="Media/SymbolLib/Arrow/Down2.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="275" width="30" height="30" zIndex="21" image="Media/SymbolLib/Arrow/Up2.svg" visible="false" />
-    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="300" left="10" width="570" height="270" zIndex="17" gridSize="190px" visible="false">
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="260" left="268" width="40" height="30" zIndex="20" image="Media/SymbolLib/Arrow/Down2.svg" sizeMode="fill" borderStyle="double" borderWidth="4px" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="260" left="268" width="40" height="30" zIndex="21" image="Media/SymbolLib/Arrow/Up2.svg" sizeMode="fill" borderStyle="double" borderWidth="4px" visible="false" />
+    <Widget xsi:type="widgets.brease.GridLine" id="GridLineWeightAdvanced" top="290" left="10" width="570" height="270" zIndex="17" gridSize="190px" visible="false">
       <Widgets>
         <Widget xsi:type="widgets.brease.GridLineItem" id="GridLineItemRange1" zIndex="0" collapsedSize="3" expandedSize="3" borderWidth="3px" shadow="0px 0px rgba(255, 255, 255, 1)">
           <Widgets>

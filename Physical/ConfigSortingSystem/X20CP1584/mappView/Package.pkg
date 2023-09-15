@@ -29,5 +29,6 @@
     <Object Type="File">contentFileDelete.eventbinding</Object>
     <Object Type="File">ContentAudit.binding</Object>
     <Object Type="File">ContentAudit.eventbinding</Object>
+    <Object Type="File">ContentAlarmHistory.eventbinding</Object>
   </Objects>
 </Package>

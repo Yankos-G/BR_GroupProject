@@ -10,6 +10,13 @@
           </Target>
         </Action>
       </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OK" message="Audit has been exported" header="Export" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="ContentAudit.MomentaryPushButton2.Click">
       <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentAudit" widgetRefId="MomentaryPushButton2" event="Click" />

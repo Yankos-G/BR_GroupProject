@@ -1,22 +1,12 @@
 
 PROGRAM _INIT
-// PROGRAM WYMAGA UTWORZENIA 3 FOLDERÓW PONIZEJ (PONIZSZY KOD NIE DZIALA)
-//	FileUIConnect.File.NewName := 'Recipes';
-//	FileUIConnect.File.CreateFolder := TRUE;
-//	FileUIConnect.File.CreateFolder := FALSE;
-//	
-//	FileUIConnect.File.NewName := 'Alarms';
-//	FileUIConnect.File.CreateFolder := TRUE;
-//	FileUIConnect.File.CreateFolder := FALSE;
-//	
-//	FileUIConnect.File.NewName := 'Audit';
-//	FileUIConnect.File.CreateFolder := TRUE;
-//	FileUIConnect.File.CreateFolder := FALSE;
-//	
+// ==========================================================================================
+// ====================PROGRAM WYMAGA UTWORZENIA 3 FOLDERÓW NA KARCIE PLC!!!=================
+// =============Nazwy=Folderów====Audit====Recipes====Alarms=================================
+// ==========================================================================================
 END_PROGRAM
 
 PROGRAM _CYCLIC
-
 	// AUDIT
 	MpAuditTrailUI_0(MpLink := ADR(gAuditTrail), Enable := TRUE, UISetup := AuditUISetup, UIConnect := ADR(AuditUIConnect) );
 	MpAuditTrail_0(MpLink := ADR(gAuditTrail), Enable := TRUE, DeviceName := ADR('CF_Au'));
@@ -52,73 +42,10 @@ PROGRAM _CYCLIC
 			FileUIConnect.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_DESC;
 	END_CASE;
 	
-	// SIMPLIFIED TABLE SORTING FUNTION WITH ACTUAL RECIPES
-	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_CREATE) THEN
-		gContainer[gUIConnect.Recipe.List.MaxSelection] := gSorting;
-		gContainer[gUIConnect.Recipe.List.MaxSelection].Date := (gUIConnect.Recipe.List.LastModified[gUIConnect.Recipe.List.MaxSelection]);
-		g := 0;
-		FOR g := 0 TO gUIConnect.Recipe.List.MaxSelection DO
-			gContainer[g].RecipeName := gUIConnect.Recipe.List.Names[g];
-		END_FOR;
-	END_IF;
-	IF EDGEPOS(gUIConnect.Status = mpRECIPE_UI_STATUS_DELETE) THEN
-		gContainer[gUIConnect.Recipe.List.SelectedIndex] := CLEAR_RECIPE;
-		z := gUIConnect.Recipe.List.SelectedIndex;
-		FOR z := gUIConnect.Recipe.List.SelectedIndex TO (gUIConnect.Recipe.List.MaxSelection+1) DO
-			gContainer[z] := gContainer[z+1];
-		END_FOR;
-	END_IF;
-	IF EDGEPOS(gUIConnect.Status = mpRECIPE_UI_STATUS_RENAME) THEN
-		gContainer[gUIConnect.Recipe.List.SelectedIndex] := gSorting;
-		FOR g := 0 TO gUIConnect.Recipe.List.MaxSelection DO
-			gContainer[g].RecipeName := gUIConnect.Recipe.List.Names[g];
-		END_FOR;
-	END_IF;
-	IF EDGENEG(gUIConnect.Status = mpRECIPE_UI_STATUS_SAVE) THEN
-		Save_Activ := TRUE;
-	END_IF;
-//	//to nie dziala XD 8 H ZMARNOWALEM NA TO 
-//	IF Save_Activ THEN
-//		gSorting.RecipeName := gUIConnect.Recipe.List.Names[gUIConnect.Recipe.List.SelectedIndex];
-//		FOR g := 0 TO gUIConnect.Recipe.List.MaxSelection DO
-//			gContainer[g].RecipeName := gUIConnect.Recipe.List.Names[g];
-//		END_FOR;
-//		IF EDGEPOS(Save_Activ) THEN
-//	  		gContainer[gUIConnect.Recipe.List.SelectedIndex] := gSorting;
-//		END_IF;
-//		gUIConnect.Recipe.Refresh := TRUE;
-//		IF EDGEPOS(gUIConnect.Status = mpRECIPE_UI_STATUS_IDLE) THEN
-//			Refresh_done := TRUE;
-//		END_IF;
-//		//----------------------------
-//		y := gUIConnect.Recipe.List.MaxSelection;
-//		IF y > 0 AND Refresh_done THEN
-//			gContainer[gUIConnect.Recipe.List.MaxSelection].Date := gUIConnect.Recipe.List.LastModified[gUIConnect.Recipe.List.MaxSelection];
-//			FOR r := 0 TO (y-1) DO
-//				swapped := FALSE;
-//				FOR j := 0 TO (y-r-2) DO
-//					IF gContainer[j].Date > gContainer[j+1].Date THEN
-//						// swap values
-//						temp := gContainer[j];
-//						gContainer[j] := gContainer[j+1];
-//						gContainer[j+1] := temp;
-//						swapped := TRUE;
-//					END_IF;
-//				END_FOR;
-//				// Optimizaion: if no two elements were swapped by inner loop, then the array is sorted
-//				IF NOT swapped THEN
-//					EXIT;
-//				END_IF;
-//			END_FOR;
-//			Save_Activ := FALSE;
-//		END_IF;
-//		//-----------------------------
-//	END_IF;
-
 	gMpRecipeRegPar_0.MpLink := 	ADR(gRecipeXml);
 	gMpRecipeRegPar_0.Enable :=		TRUE;
 	gMpRecipeRegPar_0.PVName := 	ADR('gSorting');
-	
+
 	gMpRecipeXML_0.MpLink := 		ADR(gRecipeXml);
 	gMpRecipeXML_0.Enable := 		TRUE;
 	gMpRecipeXML_0.DeviceName :=	ADR('CF');  
@@ -132,6 +59,12 @@ PROGRAM _CYCLIC
 	gMpRecipeRegPar_0();
 	gMpRecipeXML_0();
 	gMpRecipeUI_0();
+	
+	IF Clear_param THEN
+		gSorting := CLEAR_ADV_RECIPE;
+		Clear_param := FALSE;
+	END_IF;
+	
 	
 END_PROGRAM
 

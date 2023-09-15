@@ -1520,5 +1520,13 @@
         <seg>Files</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_Clear">
+      <tuv xml:lang="pl">
+        <seg>Wyczyść wszyst.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Clear all</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -185,10 +185,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.RightCriteria.Heavy" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonHeavyR" attribute="visible" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Alarms:ExportBool" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAlarmHistory" widgetRefId="MomentaryPushButton1" attribute="value" />
-</Binding>
+
 
 </Bindings>
 </BindingsSet>

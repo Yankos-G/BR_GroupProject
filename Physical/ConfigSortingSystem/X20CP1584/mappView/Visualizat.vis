@@ -41,6 +41,7 @@
     <EventBindingsSet refId="SubContentParamLeft_eventbinding" />
     <EventBindingsSet refId="contentFileDelete_eventbinding" />
     <EventBindingsSet refId="ContentAudit_eventbinding" />
+    <EventBindingsSet refId="ContentAlarmHistory_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="dialogMessageBoxLogin" />

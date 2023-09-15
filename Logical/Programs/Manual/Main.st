@@ -96,8 +96,6 @@ PROGRAM _CYCLIC
 
 			MANUAL_BELT_SET_ADDITIVE:
 				ManualVelocity := ABS(ManualVelocity);	//to avoid error: velocity and distance cannot have a negative value at the same time)
-				gMotorBeltAxisBasic.Power := 0;
-				gMotorBeltAxisBasic.Power := 1;
 				IF gMotorBeltAxisBasic.PowerOn THEN
 					gMotorBeltAxisBasic.Home := 0;
 					ManualStep := MANUAL_BELT_MOVE_ADDITIVE;	  
@@ -116,8 +114,6 @@ PROGRAM _CYCLIC
 				ManualStep := MANUAL_WAIT;
 			
 			MANUAL_BELT_SET_VELOCITY:
-				gMotorBeltAxisBasic.Power := 0;
-				gMotorBeltAxisBasic.Power := 1;
 				IF gMotorBeltAxisBasic.PowerOn THEN
 					gMotorBeltAxisBasic.MoveVelocity := 1;
 					ManualStep := MANUAL_BELT_MOVE_VELOCITY;	  
@@ -183,7 +179,7 @@ PROGRAM _CYCLIC
 			gMotorBeltAxisBasic.Power :=1;								//Axis power off is enabling by the button that is binded with stop step
 		END_IF;
 		
-		IF FlagVelAddOff AND gMotorBeltAxisBasic.PowerOn THEN			//flag for visualisation purposes
+		IF gMotorBeltAxisBasic.PowerOn THEN			//flag for visualisation purposes
 			JogEnableVar := 1;
 		ELSE
 			JogEnableVar := 0;

@@ -43,6 +43,11 @@
     </EventBinding>
     <EventBinding id="EventBinding_15">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.SortChoice" event="ValueChanged" />
+      <Operand datatype="ANY_INT" name="MODE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Camera:Camera_0L_1C">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler condition="newValue = 0">
         <Sequence>
           <Step order="5">
@@ -126,6 +131,13 @@
             <Action>
               <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
                 <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="18">
+            <Action>
+              <Target xsi:type="widgets.brease.MomentaryPushButton.Action" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton10">
+                <Method xsi:type="widgets.brease.MomentaryPushButton.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -217,6 +229,13 @@
               </Target>
             </Action>
           </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="widgets.brease.MomentaryPushButton.Action" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton10">
+                <Method xsi:type="widgets.brease.MomentaryPushButton.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = 2">
@@ -302,6 +321,13 @@
             <Action>
               <Target xsi:type="widgets.brease.GridLine.Action" contentRefId="ContentParameters" widgetRefId="GridLineWeightAdvanced">
                 <Method xsi:type="widgets.brease.GridLine.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="14">
+            <Action>
+              <Target xsi:type="widgets.brease.MomentaryPushButton.Action" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton10">
+                <Method xsi:type="widgets.brease.MomentaryPushButton.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
@@ -393,9 +419,34 @@
               </Target>
             </Action>
           </Step>
+          <Step order="15">
+            <Action>
+              <Target xsi:type="widgets.brease.MomentaryPushButton.Action" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton10">
+                <Method xsi:type="widgets.brease.MomentaryPushButton.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue &lt; 3">
+        <Sequence>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue &lt; 3 AND MODE = 0">
         <Sequence>
           <Step order="0">
             <Action>
@@ -414,6 +465,38 @@
           <Step order="4">
             <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue &lt; 3 AND MODE = 1">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
               </Target>
             </Action>
@@ -421,20 +504,6 @@
           <Step order="5">
             <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
-                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="6">
-            <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
-                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="7">
-            <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
               </Target>
             </Action>
@@ -1953,6 +2022,103 @@
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.MomentaryPushButton10.Click">
+      <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentParameters" widgetRefId="MomentaryPushButton10" event="Click" />
+      <Operand datatype="ANY_INT" name="MODE">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Camera:Camera_0L_1C">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:Clear_param">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonLight">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonHeavy">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="MODE = 0">
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="MODE = 1">
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonGrey">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonOrange">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonAS">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentParameters" widgetRefId="ButtonBR">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

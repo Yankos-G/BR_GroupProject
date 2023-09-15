@@ -22,7 +22,7 @@ PROGRAM _CYCLIC
 	
 	redIconTimer.PT := T#500ms;
 	redIconTimer();
-
+		
 	// HARDWARE ALARM DETECTION
 	IF NOT ModuleOkActuators OR NOT ModuleOkEncoder OR NOT ModuleOkInverter OR NOT ModuleOkPLC_PLK OR NOT ModuleOkPneu_X67BC OR NOT ModuleOkScale THEN
 		gAlarmHardware := TRUE;

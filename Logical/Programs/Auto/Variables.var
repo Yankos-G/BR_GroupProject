@@ -77,4 +77,5 @@ VAR
 	RightLimit : BOOL;
 	AlarmLeft : BOOL;
 	AlarmRight : BOOL;
+	Detect : BOOL;
 END_VAR

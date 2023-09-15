@@ -8,7 +8,11 @@ PROGRAM _CYCLIC
 	SemiAutoModeSelected := (gMode=2);
 	// CODE WORKS ONLY WHEN AUTO OR SEMIAUTO IS ACTIVE
 	IF  SelectedAuto OR SemiAutoModeSelected THEN
-
+		
+		IF SemiAutoModeSelected AND NOT TimerAfterDetect THEN
+	  		Approval := FALSE;
+		END_IF;
+		
 		// MOTOR MANAGEMENT	
 		gMotorBeltAxisBasic.Enable 		:= TRUE;
 		gMotorBeltAxisBasic.MpLink 		:= ADR(gAxis_1);
@@ -123,6 +127,7 @@ PROGRAM _CYCLIC
 			MotorHome 			:= TRUE;
 			gPicNotRecognised	:= FALSE;
 			Approval 			:= FALSE;
+			Detect 				:= FALSE;
 			State 				:= START;
 			
 		START: 
@@ -134,6 +139,7 @@ PROGRAM _CYCLIC
 		DETECTION:
 			MotorHome 	:= FALSE;
 			IF TimerAfterDetect THEN
+				Detect := TRUE;
 				ItemWeightMeasured := ItemWeight;
 				State := CATEGORIZATION;
 			END_IF;
@@ -221,6 +227,8 @@ PROGRAM _CYCLIC
 						Sort_left := TRUE;
 						State := DROP;
 					END_IF;
+				ELSE 
+					State := UNRECOGNISED_PIC;
 				END_IF;
 			ELSE
 				IF ItemWeightMeasured < gSorting.ItemWeightBorderWeight THEN
@@ -430,7 +438,7 @@ PROGRAM _CYCLIC
 					END_IF;	
 					
 				RANGE_LEFT:
-					IF (ItemWeightMeasured >= gSorting.LeftCriteria.WeightMin AND ItemWeightMeasured <= gSorting.LeftCriteria.WeightMin) THEN
+					IF (ItemWeightMeasured >= gSorting.LeftCriteria.WeightMin AND ItemWeightMeasured <= gSorting.LeftCriteria.WeightMax) THEN
 						Sort_left := TRUE;
 						State := DROP;
 					ELSE

@@ -23,4 +23,7 @@ VAR
 	g : UINT;
 	z : UINT;
 	Save_Activ : BOOL;
+	Clear_param : BOOL;
+	CLEAR_ADV_RECIPE : SortingType := (SortChoice:=ADVANCED,SortLeftMin:=FALSE,SortLeftBR:=FALSE,SortLeftGrey:=FALSE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=FALSE,LeftCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10));
+	Export_SUCC : BOOL;
 END_VAR

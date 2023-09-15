@@ -161,6 +161,7 @@
         <Variable Name="ModuleOkPneu_X67BC" />
         <Variable Name="ModuleOkScale" />
         <Variable Name="ExportBool" />
+        <Variable Name="Export_Hist_Succ" />
       </Task>
       <Task Name="Auto">
         <Variable Name="Start" />
@@ -240,6 +241,8 @@
         <Variable Name="MpAuditTrailUI_0" RecursiveEnable="2" />
         <Variable Name="AuditUIConnect" RecursiveEnable="2" />
         <Variable Name="ClearAudit" />
+        <Variable Name="Clear_param" />
+        <Variable Name="Export_SUCC" />
       </Task>
       <Task Name="Camera">
         <Variable Name="ViBaseBuffer" />
@@ -253,6 +256,7 @@
           <Variable Name="ModuleOK" />
         </Variable>
         <Variable Name="CameraMode" />
+        <Variable Name="Camera_0L_1C" />
       </Task>
     </Module>
   </DefaultView>

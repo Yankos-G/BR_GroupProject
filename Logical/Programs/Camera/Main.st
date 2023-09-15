@@ -4,11 +4,12 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	
+	//asfe
 	LED_GREEN; //not used, just for some changes
 	// MANAGEMENT OF MODE IN CHEAP CAMERA (NO OTHER WAY TO DO THAT :)) )
 	IF Logo.ModuleOK THEN
 		CameraMode := 'Logo';
+		Camera_0L_1C := 0; 
 		IF gProgCamera.SetFocus <> oldFocus  THEN
 			Logo.SetFocus := gProgCamera.SetFocus;			
 		END_IF;
@@ -29,6 +30,7 @@ PROGRAM _CYCLIC
 		gProgCamera.ImageProcessingActive := Logo.ImgProcessingActive;
 	ELSIF Color.ModuleOK THEN
 		CameraMode := 'Color';
+		Camera_0L_1C := 1;
 		IF gProgCamera.SetFocus <> oldFocusColor  THEN
 			Color.SetFocus := gProgCamera.SetFocus;			
 		END_IF;
