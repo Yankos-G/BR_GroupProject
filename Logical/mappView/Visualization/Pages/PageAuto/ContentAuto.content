@@ -21,9 +21,9 @@
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMachineState" top="25" left="700" width="548" height="335" zIndex="1" borderWidth="5px" cornerRadius="8px 8px 8px 8px">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedWeight" top="74" left="240" width="151" height="29" zIndex="0" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorPosition" top="172" left="240" width="151" zIndex="1" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" textAlign="left" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorSpeed" top="222" left="240" width="151" zIndex="2" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedWeight" top="74" left="240" width="151" height="29" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorPosition" top="172" left="240" width="151" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputDetectedConveyorSpeed" top="222" left="240" width="151" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelItemWeight" top="75" left="19" width="179" height="28" zIndex="3" text="$IAT/Main/Auto_ItemWeight" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelConveyorPosition" top="172" left="19" width="179" zIndex="4" text="$IAT/Main/Auto_CurrConvPos" />
         <Widget xsi:type="widgets.brease.Label" id="LabelConveyorSpeed" top="224" left="19" width="179" zIndex="5" text="$IAT/Main/Auto_CurrConvSpeed" />
@@ -40,7 +40,7 @@
         <Widget xsi:type="widgets.brease.Rectangle" id="RectangleBoxPistonActuatorGreen" top="276" left="195" width="38" height="30" zIndex="18" backColor="rgba(0, 192, 0, 1)" visible="false" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonActuatorGreen" top="270" left="270" width="5" height="38" zIndex="16" backColor="rgba(0, 0, 0, 1)" visible="false" />
         <Widget xsi:type="widgets.brease.Rectangle" id="RectanglePistonRodActuatorGreen" top="282" left="230" width="45" height="16" zIndex="17" backColor="rgba(0, 0, 0, 1)" visible="false" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualWeight" top="125" left="240" width="151" height="29" zIndex="19" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualWeight" top="125" left="240" width="151" height="29" zIndex="19" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unit="{'metric':'GRM','imperial':'ONZ','imperial-us':'ONZ'}" unitAlign="right" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight" top="123" left="18" width="179" height="28" zIndex="20" text="$IAT/Main/Auto_ActualWeight" textAlign="left" />
         <Widget xsi:type="widgets.brease.Label" id="LabelCurrentStep" top="24" left="141" width="350" zIndex="21" multiLine="true" text="text" textAlign="center bottom" bold="true" />
       </Widgets>
@@ -79,15 +79,14 @@
         <Widget xsi:type="widgets.brease.Label" id="LabelLeftStorageLogo" top="110" left="198" width="65" height="23" zIndex="23" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelLeftStorageWeight" top="110" left="198" width="65" height="23" zIndex="24" multiLine="true" text="text" textAlign="center" bold="true" />
         <Widget xsi:type="widgets.brease.Label" id="LabelRightStorageWeight" top="110" left="283" width="65" height="23" zIndex="25" multiLine="true" text="text" textAlign="center" bold="true" />
-        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="30" left="205" width="125" zIndex="26" textAlign="center" />
-        <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelADV_LEFT" top="90" left="180" width="80" height="81" zIndex="27" alignment="vertical" childMainAlign="start" childCrossAlign="center" padding="12px">
+        <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelADV_LEFT" top="90" left="180" width="80" height="81" zIndex="26" alignment="vertical" childMainAlign="start" childCrossAlign="center" padding="12px">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="LabelLeftAdvBR_AS_GREY_ORANGE" top="0" left="0" width="65" height="20" zIndex="0" multiLine="true" text="text" textAlign="center" bold="true" visible="false" />
             <Widget xsi:type="widgets.brease.Label" id="LabelLeftAdvLIGHT_HEAVY" top="0" left="0" width="65" height="20" zIndex="1" multiLine="true" text="text" textAlign="center" bold="true" visible="false" />
             <Widget xsi:type="widgets.brease.Label" id="LabelLeftAdvTHRESHOLD_RANGE" top="0" left="-20" width="85" height="20" zIndex="2" multiLine="true" text="text" textAlign="center" bold="true" visible="false" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelADV_LEFT1" top="90" left="266" width="80" height="81" zIndex="28" alignment="vertical" childMainAlign="start" childCrossAlign="center" padding="12px">
+        <Widget xsi:type="widgets.brease.FlexLayoutPanel" id="FlexLayoutPanelADV_LEFT1" top="90" left="266" width="80" height="81" zIndex="27" alignment="vertical" childMainAlign="start" childCrossAlign="center" padding="12px">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="LabelRightAdvBR_AS_GREY_ORANGE" top="0" left="0" width="65" height="20" zIndex="0" multiLine="true" text="text" textAlign="center" bold="true" padding="0px" margin="0px" visible="false" />
             <Widget xsi:type="widgets.brease.Label" id="LabelRightAdvLIGHT_HEAVY" top="0" left="0" width="65" height="20" zIndex="1" multiLine="true" text="text" textAlign="center" bold="true" padding="0px" margin="0px" visible="false" />
