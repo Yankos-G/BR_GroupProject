@@ -23,6 +23,14 @@
           <Selector ID="Title">
             <Property ID="Text" Value="" />
           </Selector>
+          <Group ID="Fonts">
+            <Group ID="[0]">
+              <Property ID="Language" Value="en" />
+            </Group>
+            <Group ID="[1]">
+              <Property ID="Language" Value="pl" />
+            </Group>
+          </Group>
         </Group>
       </Group>
     </Group>

@@ -89,5 +89,5 @@
 <Source xsi:type="opcUa" refId="::ProgramRec:Orange_visible" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrange" attribute="visible" />
 </Binding>
-</Bindings>
+	</Bindings>
 </BindingsSet>

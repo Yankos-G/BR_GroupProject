@@ -7,10 +7,10 @@
   <body>
     <tu tuid="Root">
       <tuv xml:lang="pl">
-        <seg>ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
+        <seg>[%[TIME=%F %T]]  ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Event ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
+        <seg>[%[TIME=%F %T]]  Event ID: [%ev] - [%ev$[TEXT=Audit/Event]]</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>Servus Welt!</seg>

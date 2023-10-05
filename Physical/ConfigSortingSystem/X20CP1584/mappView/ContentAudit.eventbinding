@@ -3,17 +3,51 @@
   <Bindings>
     <EventBinding id="ContentAudit.MomentaryPushButton1.Click">
       <Source xsi:type="widgets.brease.MomentaryPushButton.Event" contentRefId="ContentAudit" widgetRefId="MomentaryPushButton1" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:AuditUIConnect.Export">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+      <Operand datatype="ANY_STRING" name="lang">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.languageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="lang = &quot;pl&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:lang">
+                <Method xsi:type="opcUa.NodeAction.SetValueString" value="pl" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:MpAuditTrail_0.Export">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="lang = &quot;en&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:lang">
+                <Method xsi:type="opcUa.NodeAction.SetValueString" value="en" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:MpAuditTrail_0.Export">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OK" message="Audit has been exported" header="Export" />
+            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OK" message="$IAT/Main/AuditExported" header="" />
           </Target>
         </Action>
       </EventHandler>

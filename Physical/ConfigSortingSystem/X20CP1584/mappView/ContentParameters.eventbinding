@@ -45,13 +45,6 @@
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.SortChoice" event="ValueChanged" />
       <EventHandler condition="newValue = 0">
         <Sequence>
-          <Step order="5">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Weight" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
@@ -140,13 +133,6 @@
       </EventHandler>
       <EventHandler condition="newValue = 1">
         <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Logo" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight">
@@ -235,13 +221,6 @@
       </EventHandler>
       <EventHandler condition="newValue = 2">
         <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Color" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="2">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort">
@@ -330,13 +309,6 @@
       </EventHandler>
       <EventHandler condition="newValue = 3">
         <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label1">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main/Param_Advance" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="3">
             <Action>
               <Target xsi:type="widgets.brease.RadioButtonGroup.Action" contentRefId="ContentParameters" widgetRefId="RadioButtonGroupOpticSort1">

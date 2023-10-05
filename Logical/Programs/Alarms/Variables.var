@@ -16,5 +16,4 @@ VAR
 	enableYellowIcon : BOOL;
 	enableRedIcon : BOOL;
 	ExportBool : BOOL;
-	Export_Hist_Succ : BOOL;
 END_VAR

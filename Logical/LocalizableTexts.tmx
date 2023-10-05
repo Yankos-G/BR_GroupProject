@@ -1528,5 +1528,21 @@
         <seg>Clear all</seg>
       </tuv>
     </tu>
+    <tu tuid="Param_Mode">
+      <tuv xml:lang="pl">
+        <seg>Tryb:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mode:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AuditExported">
+      <tuv xml:lang="pl">
+        <seg>Audyt zostal wyeksportowany.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit has been exported</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

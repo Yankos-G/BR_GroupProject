@@ -10,26 +10,17 @@ VAR
 	MpFileManagerUI_0 : MpFileManagerUI;
 	FileUIConnect : MpFileManagerUIConnectType;
 	FileUISetup : MpFileManagerUISetupType;
-	CLEAR_RECIPE : SortingType := (RecipeName:='empty',Date:='1970-01-01 01:00:00',SortChoice:=WEIGHT,SortLeftMin:=TRUE,SortLeftBR:=TRUE,SortLeftGrey:=TRUE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=TRUE,LeftCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10));
-END_VAR
-VAR RETAIN
-	gContainer : ARRAY[0..49] OF SortingType;
-END_VAR
-VAR
 	CurrentFile : STRING[80];
 	FileName : ARRAY[0..49] OF STRING[80];
 	i : UDINT;
 	FileSize : ARRAY[0..49] OF UDINT;
-	g : UINT;
-	z : UINT;
-	Save_Activ : BOOL;
 	Clear_param : BOOL;
 	CLEAR_ADV_RECIPE : SortingType := (SortChoice:=ADVANCED,SortLeftMin:=FALSE,SortLeftBR:=FALSE,SortLeftGrey:=FALSE,ItemWeightLeftMin:=1,ItemWeightLeftMax:=10,ItemWeightRightMin:=11,ItemWeightRightMax:=20,ItemWeightBorderWeight:=10,Threshold:=FALSE,LeftCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10),RightCriteria:=(AS:=FALSE,BR:=FALSE,Grey:=FALSE,Orange:=FALSE,Threshold:=FALSE,Range:=FALSE,Heavy:=FALSE,Light:=FALSE,WeightMin:=1,WeightMax:=10,WeightBorder:=10));
-	Export_SUCC : BOOL;
 	AS_visible : BOOL;
 	BR_visible : BOOL;
 	Orange_visible : BOOL;
 	Grey_visible : BOOL;
 	Light_visible : BOOL;
 	Heavy_visible : BOOL;
+	lang : STRING[80];
 END_VAR

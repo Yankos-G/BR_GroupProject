@@ -7,9 +7,13 @@
         <Group ID="LanguageDependent">
           <Group ID="[0]">
             <Property ID="Language" Value="en" />
+            <Property ID="DateTimePattern" Value="%m-%d-%y %H:%M" />
+            <Property ID="PrecisionDateTimePattern" Value="%H:%M:%S,%L" />
           </Group>
           <Group ID="[1]">
             <Property ID="Language" Value="pl" />
+            <Property ID="DateTimePattern" Value="%H:%M:%S" />
+            <Property ID="PrecisionDateTimePattern" Value="%H:%M:%S,%L" />
           </Group>
         </Group>
       </Group>
@@ -36,9 +40,7 @@
         </Group>
         <Group ID="Chart">
           <Group ID="PieChart">
-            <Group ID="[0]">
-              <Property ID="Name" Value="Default" />
-            </Group>
+            <Group ID="[0]" />
           </Group>
           <Group ID="LineChart">
             <Group ID="[0]">
@@ -55,9 +57,9 @@
       <Group ID="Reports">
         <Group ID="[0]">
           <Property ID="Name" Value="Report" />
+          <Property ID="FileNamePattern" Value="Name_%F.pdf" />
           <Property ID="PageLayout" Value="Default" />
           <Group ID="[0]">
-            <Property ID="StartOnNewPage" Value="TRUE" />
             <Group ID="Heading">
               <Property ID="Text" Value="Audyt 2023" />
               <Property ID="HorizontalAlign" Value="1" />

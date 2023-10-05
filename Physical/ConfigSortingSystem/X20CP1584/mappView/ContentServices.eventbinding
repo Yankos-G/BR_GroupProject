@@ -31,50 +31,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="LanguageSelector">
-      <Source xsi:type="widgets.brease.LanguageSelector.Event" contentRefId="ContentServices" widgetRefId="LanguageSelector1" event="SelectedIndexChanged" />
-      <Operand datatype="ANY_INT" name="Index">
-        <ReadTarget xsi:type="widgets.brease.LanguageSelector.ReadAction" contentRefId="ContentServices" widgetRefId="LanguageSelector1">
-          <Method xsi:type="widgets.brease.LanguageSelector.Action.GetSelectedIndex" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="Index = 0">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:IsEnglishSelected">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::SemiAuto:IsEnglishSelected">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="Index = 1">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Auto:IsEnglishSelected">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::SemiAuto:IsEnglishSelected">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="ContentServices.ButtonReset.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentServices" widgetRefId="ButtonReset" event="Click" />
       <EventHandler>

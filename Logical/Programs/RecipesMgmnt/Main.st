@@ -10,6 +10,9 @@ PROGRAM _CYCLIC
 	// AUDIT
 	MpAuditTrailUI_0(MpLink := ADR(gAuditTrail), Enable := TRUE, UISetup := AuditUISetup, UIConnect := ADR(AuditUIConnect) );
 	MpAuditTrail_0(MpLink := ADR(gAuditTrail), Enable := TRUE, DeviceName := ADR('CF_Au'));
+	MpAuditTrail_0.Language := ADR(lang);
+	MpAuditTrail_0.Export := FALSE;
+	
 	IF ClearAudit THEN
 		MpAuditClearBuffer(MpLink := gAuditTrail);
 	END_IF;
@@ -98,6 +101,8 @@ PROGRAM _CYCLIC
 	ELSE
 		Heavy_visible := TRUE;
 	END_IF;
+	
+	
 	
 	
 END_PROGRAM
