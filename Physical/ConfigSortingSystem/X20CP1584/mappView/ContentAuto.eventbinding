@@ -1047,17 +1047,7 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_27">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gMpRecipeXML_0.Info.LastLoadedRecipe" event="ValueChanged" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.TextOutput.Action" contentRefId="ContentAuto" widgetRefId="TextOutput1">
-            <Method xsi:type="widgets.brease.TextOutput.Action.SetVisible" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_35" comment="###########TEXT_ADV_1###########">
+		<EventBinding id="EventBinding_35" comment="###########TEXT_ADV_1###########">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gSorting.LeftCriteria.AS" event="ValueChanged" />
       <Operand datatype="BOOL" name="BR">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gSorting.LeftCriteria.BR">

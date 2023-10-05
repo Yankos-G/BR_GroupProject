@@ -35,11 +35,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gUIConnect.Recipe.NewFileName" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentRecipeRename" widgetRefId="TextInput1" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gMpRecipeXML_0.Info.LastLoadedRecipe" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentAuto" widgetRefId="TextOutput1" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.ItemWeightRightMin" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericOutputRMin" attribute="node" />
 </Binding>
