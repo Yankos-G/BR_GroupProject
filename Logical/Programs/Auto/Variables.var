@@ -78,4 +78,10 @@ VAR
 	AlarmLeft : BOOL;
 	AlarmRight : BOOL;
 	Detect : BOOL;
+	TooLongDetect : BOOL;
+	TimerTooLongDetect : BOOL;
+	TON_TooLongDetect : TON;
+END_VAR
+VAR CONSTANT
+	TIME_TON_HOW_LONG_DETECT : TIME := T#2500MS;
 END_VAR

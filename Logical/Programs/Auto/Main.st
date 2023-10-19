@@ -79,6 +79,13 @@ PROGRAM _CYCLIC
 		TimerTONShowPhoto.PT := TIME_TON_SHOW_PHOTO;
 		ShowPhoto := TimerTONShowPhoto.Q;
 		TimerTONShowPhoto();
+		// timer too long detection
+		// delay after photo
+		TON_TooLongDetect.IN := TooLongDetect;
+		TON_TooLongDetect.PT := TIME_TON_HOW_LONG_DETECT;
+		TimerTooLongDetect := TON_TooLongDetect.Q;
+		TON_TooLongDetect();
+		
 	END_IF; 
 		
 	// ALARM OR STOP OR AUTO NOT ACTIVE
@@ -136,10 +143,14 @@ PROGRAM _CYCLIC
 		DETECTION:
 			MotorHome 	:= FALSE;
 			Approval := FALSE;
+			TooLongDetect := TRUE;
 			IF TimerAfterDetect THEN
 				Detect := TRUE;
 				ItemWeightMeasured := ItemWeight;
 				State := CATEGORIZATION;
+			ELSIF TimerTooLongDetect THEN
+				TooLongDetect := FALSE;
+				State := START;
 			END_IF;
 		
 			

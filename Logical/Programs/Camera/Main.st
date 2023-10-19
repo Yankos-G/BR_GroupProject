@@ -4,8 +4,8 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	//asfe
 	LED_GREEN; //not used, just for some changes
+	
 	// MANAGEMENT OF MODE IN CHEAP CAMERA (NO OTHER WAY TO DO THAT :)) )
 	IF Logo.ModuleOK THEN
 		CameraMode := 'Logo';
@@ -92,7 +92,6 @@ PROGRAM _CYCLIC
 		gStopBlink := TRUE;
 	END_IF;
 
-	
 	IF gStopBlink THEN
 		gProgCamera.LED   := LED_PLC_STATUS;
 	ELSE
@@ -166,7 +165,6 @@ PROGRAM _CYCLIC
 	END_IF
 
 	//displaying last taken photo
-	
 	CASE ImageProcess OF	// state machine to process the picture to different destinations
 		0:	// state to wait for commands and set next steps in process
 			IF gProgCamera.DisplayPhoto THEN

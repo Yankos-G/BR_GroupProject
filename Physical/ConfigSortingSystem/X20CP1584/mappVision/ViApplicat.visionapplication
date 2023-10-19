@@ -121,6 +121,13 @@
           <Property ID="VfOutputParameter" Value="ModelNumber" />
         </Group>
       </Group>
+      <Group ID="Output[2]">
+        <Property ID="ChannelID" Value="FunctionProcessingTime" />
+        <Group ID="VpOutputWire">
+          <Property ID="SourceVfName" Value="BlobColor" />
+          <Property ID="VfOutputParameter" Value="FunctionProcessingTime" />
+        </Group>
+      </Group>
     </Group>
     <Group ID="ViewModelDataSet">
       <Group ID="ViewModelData[1]">
@@ -264,6 +271,16 @@
         </Group>
       </Group>
       <Group ID="ViewModelData[15]">
+        <Property ID="ObjectID" Value="FunctionProcessingTime" />
+        <Property ID="ClassId" Value="Channel" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="541" />
+            <Property ID="Y" Value="315" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[16]">
         <Property ID="ObjectID" Value="VP.VP.Enable.VF.BlobColor.Enable" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -277,7 +294,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[16]">
+      <Group ID="ViewModelData[17]">
         <Property ID="ObjectID" Value="VP.VP.NumSearchMax.VF.BlobColor.NumSearchMax" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -291,7 +308,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[17]">
+      <Group ID="ViewModelData[18]">
         <Property ID="ObjectID" Value="VP.VP.RegionFeatures.VF.BlobColor.RegionFeatures" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -305,7 +322,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[18]">
+      <Group ID="ViewModelData[19]">
         <Property ID="ObjectID" Value="VP.VP.EnhancedBlobInfo.VF.BlobColor.EnhancedBlobInformation" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -319,7 +336,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[19]">
+      <Group ID="ViewModelData[20]">
         <Property ID="ObjectID" Value="VP.VP.Alignment.VF.BlobColor.Alignment" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -333,7 +350,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[20]">
+      <Group ID="ViewModelData[21]">
         <Property ID="ObjectID" Value="VP.VP.Input_5.VF.BlobColor.OffsetROIX" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -347,7 +364,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[21]">
+      <Group ID="ViewModelData[22]">
         <Property ID="ObjectID" Value="VP.VP.Input_6.VF.BlobColor.OffsetROIY" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -361,7 +378,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[22]">
+      <Group ID="ViewModelData[23]">
         <Property ID="ObjectID" Value="VP.VP.Input_7.VF.BlobColor.OffsetROIOrientation" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -375,7 +392,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[23]">
+      <Group ID="ViewModelData[24]">
         <Property ID="ObjectID" Value="VP.VP.Input_8.VF.BlobColor.OffsetROIRotCenterX" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -389,7 +406,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[24]">
+      <Group ID="ViewModelData[25]">
         <Property ID="ObjectID" Value="VP.VP.Input_9.VF.BlobColor.OffsetROIRotCenterY" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -403,7 +420,7 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[25]">
+      <Group ID="ViewModelData[26]">
         <Property ID="ObjectID" Value="VF.BlobColor.NumResults.VP.VP.NumResults" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
@@ -417,8 +434,22 @@
           </Group>
         </Group>
       </Group>
-      <Group ID="ViewModelData[26]">
+      <Group ID="ViewModelData[27]">
         <Property ID="ObjectID" Value="VF.BlobColor.ModelNumber.VP.VP.ModelNumber" />
+        <Property ID="ClassId" Value="Wire" />
+        <Group ID="Positioning">
+          <Group ID="Point[1]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+          <Group ID="Point[2]">
+            <Property ID="X" Value="0" />
+            <Property ID="Y" Value="0" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="ViewModelData[28]">
+        <Property ID="ObjectID" Value="VF.BlobColor.FunctionProcessingTime.VP.VP.FunctionProcessingTime" />
         <Property ID="ClassId" Value="Wire" />
         <Group ID="Positioning">
           <Group ID="Point[1]">

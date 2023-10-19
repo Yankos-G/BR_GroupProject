@@ -5,7 +5,6 @@
     <Object Type="File">SettingsVi.vicfg</Object>
     <Object Type="File">viComp1.visioncomponent</Object>
     <Object Type="File">viAppLogo.visionapplication</Object>
-    <Object Type="File">viAppLogoR.visionapplication</Object>
     <Object Type="File">viComp4.visioncomponent</Object>
     <Object Type="File">ViApplicat.visionapplication</Object>
   </Objects>
