@@ -198,12 +198,13 @@ PROGRAM _CYCLIC
 				NewEncodeReq := FALSE;
 			END_IF;
 			
-			httpEncodeBase64_0.pDest := ADR(Base64Buffer);
+			httpEncodeBase64_0.pDest := ADR(Base64Buffer) + strlen(ADR(Base64Buffer));
 			httpEncodeBase64_0.destSize := SIZEOF(Base64Buffer) - strlen(ADR(Base64Buffer)) - strlen(ADR('$' />'));
 			httpEncodeBase64_0.pSrc := ADR(ViBaseBuffer);
 			httpEncodeBase64_0.srcLen := Base64srcLen;
 			httpEncodeBase64_0.enable := TRUE;
-
+			httpEncodeBase64_0();
+			
 			URLLength := strlen(ADR(URL));
 			
 			IF NOT(httpEncodeBase64_0.destLen=0) THEN
@@ -220,7 +221,7 @@ PROGRAM _CYCLIC
 
 	END_CASE;
 	ViBaseGetImage_0();	// call FUB
-	httpEncodeBase64_0();	// call FUB
+	;	// call FUB
 	
 END_PROGRAM
 

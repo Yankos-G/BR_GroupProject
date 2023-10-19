@@ -14,8 +14,8 @@ PROGRAM _CYCLIC
 	
 	//-------VAR---CALL-------//
 	gAxis_1;
-	ImageShootTON.PT := T#1s;
-	ImageDisplayTON.PT := T#2s;
+	ImageShootTON.PT := T#50ms;
+	ImageDisplayTON.PT := T#50ms;
 	
 	//----------ALARM----------//
 	IF gAlarmHardware THEN								//if module is not ok the error will occour and manual mode will be stopped
@@ -207,10 +207,12 @@ PROGRAM _CYCLIC
 			CAMERA_PHOTO_DISPLAY:
 				ImageDisplayTON.IN := 1;
 				IF ImageDisplayTON.Q THEN
-					ImageDisplayTON.IN := 0;
-					gProgCamera.ImageAcq 	:= 0;
-					gProgCamera.DisplayPhoto := TRUE;					
-					sCamera := CAMERA_INIT;
+					IF gPhotoShowed THEN
+						ImageDisplayTON.IN := 0;
+						gProgCamera.ImageAcq 	:= 0;
+						gProgCamera.DisplayPhoto := TRUE;					
+						sCamera := CAMERA_INIT;
+					END_IF;
 				END_IF;
 			
 		END_CASE;
