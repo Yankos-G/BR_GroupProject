@@ -9,5 +9,7 @@
     <Widget xsi:type="widgets.brease.Label" id="LabelActiveUser" top="35" left="260" width="180" height="40" zIndex="5" text="$IAT/Main/Top_ActiveUser" textAlign="right" />
     <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="35" left="430" width="200" height="40" zIndex="6" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="30" left="40" width="95" height="50" zIndex="7" image="Media/SymbolLib/br_logo.svg" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputMode" top="69" left="450" zIndex="8" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight3" top="70" left="340" width="160" height="28" zIndex="9" text="$IAT/Main/Manual_Mode" textAlign="left" />
   </Widgets>
 </Content>

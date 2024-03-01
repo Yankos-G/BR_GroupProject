@@ -11,5 +11,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentTop.ImageAlarmRed.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentTop" widgetRefId="ImageAlarmRed" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="PageAlarms" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentTop.ImageAlarmYellow.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentTop" widgetRefId="ImageAlarmYellow" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.Navigate" pageId="PageAlarms" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

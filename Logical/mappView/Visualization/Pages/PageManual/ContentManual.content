@@ -164,7 +164,5 @@
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Paper" id="PaperImageManual" top="100" left="920" width="320" height="256" zIndex="9" visible="false" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutputMode" top="25" left="640" zIndex="10" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelItemActualWeight3" top="26" left="520" width="160" height="28" zIndex="11" text="$IAT/Main/Manual_Mode" textAlign="left" />
   </Widgets>
 </Content>

@@ -89,27 +89,11 @@
 <Source xsi:type="opcUa" refId="::Auto:ShowRange" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="LabelLeftCriteria" attribute="visible" />
 </Binding>
-	
-
-
-
-
-
-
-
-
-
-
-
-<Binding mode="twoWay">
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.SortLeftMin" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ToggleSwitchBorderWeight1" attribute="value" />
 </Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Camera:CameraMode" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentManual" widgetRefId="TextOutputMode" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
+		<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gSorting.LeftCriteria.WeightMin" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="NumericInput7" attribute="node" />
 </Binding>

@@ -78,8 +78,9 @@
   <Configurations>
     <Configuration key="zoom" value="true" />
     <Configuration key="activityCount" value="false" />
-    <Configuration key="keyboardOperation" value="true" />
-    <Gestures>
+		<Configuration key="keyboardOperation" value="true" />
+		<Configuration key="browserZoom" value="true" /> 
+		<Gestures>
       <!--<SystemGesture1 touchPoints="2" />
 		  <SystemGesture2 touchPoints="2" />
 		  <SystemGesture3 touchPoints="2" />-->

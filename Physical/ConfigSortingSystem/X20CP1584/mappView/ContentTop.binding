@@ -11,5 +11,9 @@
 <Source xsi:type="opcUa" refId="::Alarms:enableYellowIcon" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentTop" widgetRefId="ImageAlarmYellow" attribute="visible" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Camera:CameraMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentTop" widgetRefId="TextOutputMode" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

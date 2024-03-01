@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="ConfigSortingSystem.Hardware.hw" LastWriteTime="08/01/2023 13:29:50" />
+    <TimeStamp LogicalPath="ConfigSortingSystem.Hardware.hw" LastWriteTime="11/16/2023 16:01:03" />
   </TimeStamps>
   <Modules>
     <Module Name="X20CP1584" Type="X20CP1584" X="100" Y="100" />
@@ -122,7 +122,7 @@
       <Point X="676" Y="304" />
       <Point X="676" Y="304" />
     </Link>
-    <Link From="VSS112Q22.042P-000a" To="VSS112Q22.042P-000" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+    <Link From="VSS112Q22.042P-000" To="VSS112Q22.042P-000a" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
       <Point X="827" Y="304" />
       <Point X="827" Y="304" />
       <Point X="827" Y="309" />

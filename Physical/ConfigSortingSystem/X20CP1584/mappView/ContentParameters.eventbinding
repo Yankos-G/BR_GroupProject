@@ -11,6 +11,23 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_27">
+      <Source xsi:type="opcUa.Event" refId="::Camera:CameraMode" event="ValueChanged" />
+      <EventHandler condition="newValue = 'Logo'">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label5">
+            <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 'Color'">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label4">
+            <Method xsi:type="widgets.brease.Label.Action.SetStyle" value="tableConfigurationDialogStyle" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentParameters.RadioButtonOpticSortRight.Click">
       <Source xsi:type="widgets.brease.RadioButton.Event" contentRefId="ContentParameters" widgetRefId="RadioButtonOpticSortRight" event="Click" />
       <EventHandler>
@@ -1651,6 +1668,16 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::ProgramRec:Clear_param">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentParameters.ImageQuestionMark.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentParameters" widgetRefId="ImageQuestionMark" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OK" message="$IAT/Main/Info_txt" header="$IAT/Main/Information" icon="Information" />
           </Target>
         </Action>
       </EventHandler>

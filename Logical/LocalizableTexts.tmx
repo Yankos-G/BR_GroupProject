@@ -1544,5 +1544,21 @@
         <seg>Audit has been exported</seg>
       </tuv>
     </tu>
+    <tu tuid="Information">
+      <tuv xml:lang="pl">
+        <seg>Informacja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Info_txt">
+      <tuv xml:lang="pl">
+        <seg>W przypadku ustawenia parametru Kolor, należy zmienić śrubokrętem numer Node kamery na 12. Analogiczna sytuacja występuje dla ustawienia parametru Logo i wtedy ustawiamy numer Node na 1. Po każdorazowej zmienie trybu sortowania z użyciem kamery (Kolor/Logo) należy odłączyć zasilanie, a następnie ponownie uruchomić stanowisko. Warto zwrócić uwagę na status kamery usytuowany na pasku górnym, który pokazuje obecny tryb kamery. </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>If you set the Color parameter, use a screwdriver to change the Node number of the camera to 12. A similar situation occurs for setting the Logo parameter and then you set the Node number to 1. After each change of the sorting mode using the camera (Color/Logo), disconnect the power supply and then restart run the station. It is worth paying attention to the camera status located in the top bar, which shows the current camera mode.</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

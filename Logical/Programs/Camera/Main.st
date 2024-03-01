@@ -9,6 +9,9 @@ PROGRAM _CYCLIC
 	// MANAGEMENT OF MODE IN CHEAP CAMERA (NO OTHER WAY TO DO THAT :)) )
 	IF Logo.ModuleOK THEN
 		CameraMode := 'Logo';
+		IF gSorting.SortChoice = 2 THEN
+			gSorting.SortChoice := 1;
+		END_IF;
 		gCamera_0L_1C := 0; 
 		IF gProgCamera.SetFocus <> oldFocus  THEN
 			Logo.SetFocus := gProgCamera.SetFocus;			
@@ -30,6 +33,9 @@ PROGRAM _CYCLIC
 		gProgCamera.ImageProcessingActive := Logo.ImgProcessingActive;
 	ELSIF Color.ModuleOK THEN
 		CameraMode := 'Color';
+		IF gSorting.SortChoice = 1 THEN
+			gSorting.SortChoice := 2;
+		END_IF;
 		gCamera_0L_1C := 1;
 		IF gProgCamera.SetFocus <> oldFocusColor  THEN
 			Color.SetFocus := gProgCamera.SetFocus;			
