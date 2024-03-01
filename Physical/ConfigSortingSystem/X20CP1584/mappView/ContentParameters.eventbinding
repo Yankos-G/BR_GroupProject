@@ -11,23 +11,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_27">
-      <Source xsi:type="opcUa.Event" refId="::Camera:CameraMode" event="ValueChanged" />
-      <EventHandler condition="newValue = 'Logo'">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label5">
-            <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = 'Color'">
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentParameters" widgetRefId="Label4">
-            <Method xsi:type="widgets.brease.Label.Action.SetStyle" value="tableConfigurationDialogStyle" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="ContentParameters.RadioButtonOpticSortRight.Click">
       <Source xsi:type="widgets.brease.RadioButton.Event" contentRefId="ContentParameters" widgetRefId="RadioButtonOpticSortRight" event="Click" />
       <EventHandler>

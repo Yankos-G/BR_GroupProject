@@ -89,5 +89,15 @@
 <Source xsi:type="opcUa" refId="::ProgramRec:Orange_visible" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="ButtonOrange" attribute="visible" />
 </Binding>
-	</Bindings>
+	
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Camera:Camera_LOGO" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Image3" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Camera:Camera_COLOR" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentParameters" widgetRefId="Image4" attribute="visible" />
+</Binding>
+</Bindings>
 </BindingsSet>

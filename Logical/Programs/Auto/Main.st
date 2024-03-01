@@ -190,9 +190,9 @@ PROGRAM _CYCLIC
 					END_IF;
 				END_IF;	
 			ELSIF SemiAutoModeSelected THEN
-				IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone AND Approval THEN
+				IF NOT gProgCamera.ImageProcessingActive AND TimerCameraPicDone THEN
 					gProgCamera.DisplayPhoto := TRUE;
-					IF gPhotoShowed THEN
+					IF gPhotoShowed AND Approval THEN
 						gPhotoShowed := FALSE;
 						IF gRecognisedModel = 0 THEN 						
 							gProgCamera.ImageAcq  := FALSE;

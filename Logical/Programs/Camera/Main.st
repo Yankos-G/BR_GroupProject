@@ -12,7 +12,9 @@ PROGRAM _CYCLIC
 		IF gSorting.SortChoice = 2 THEN
 			gSorting.SortChoice := 1;
 		END_IF;
-		gCamera_0L_1C := 0; 
+		gCamera_0L_1C := 0;
+		Camera_LOGO := 1;
+		Camera_COLOR := 0;
 		IF gProgCamera.SetFocus <> oldFocus  THEN
 			Logo.SetFocus := gProgCamera.SetFocus;			
 		END_IF;
@@ -36,6 +38,8 @@ PROGRAM _CYCLIC
 		IF gSorting.SortChoice = 1 THEN
 			gSorting.SortChoice := 2;
 		END_IF;
+		Camera_LOGO := 0;
+		Camera_COLOR := 1;
 		gCamera_0L_1C := 1;
 		IF gProgCamera.SetFocus <> oldFocusColor  THEN
 			Color.SetFocus := gProgCamera.SetFocus;			

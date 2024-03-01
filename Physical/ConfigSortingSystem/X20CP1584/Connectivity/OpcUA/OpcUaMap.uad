@@ -265,6 +265,8 @@
           <Variable Name="ModuleOK" />
         </Variable>
         <Variable Name="CameraMode" />
+        <Variable Name="Camera_LOGO" />
+        <Variable Name="Camera_COLOR" />
       </Task>
     </Module>
   </DefaultView>
