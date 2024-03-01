@@ -137,6 +137,7 @@ PROGRAM _CYCLIC
 			Approval := FALSE;
 			IF ItemDetected THEN
 				ItemWeightMeasured 	:= RESET_ITEM_MEM_WEIGHT;
+				gRecognisedModel := 0; // NOWE W KODZIE 
 				State := DETECTION;
 			END_IF;
 			
