@@ -207,14 +207,13 @@ PROGRAM _CYCLIC
 			CAMERA_PHOTO_DISPLAY:
 				ImageDisplayTON.IN := 1;
 				IF ImageDisplayTON.Q THEN
+					gProgCamera.DisplayPhoto := TRUE;
 					IF gPhotoShowed THEN
 						ImageDisplayTON.IN := 0;
-						gProgCamera.ImageAcq 	:= 0;
-						gProgCamera.DisplayPhoto := TRUE;					
+						gProgCamera.ImageAcq 	:= 0;	
 						sCamera := CAMERA_INIT;
 					END_IF;
 				END_IF;
-			
 		END_CASE;
 			
 	END_IF;
